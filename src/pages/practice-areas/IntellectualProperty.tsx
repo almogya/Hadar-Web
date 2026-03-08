@@ -1,96 +1,60 @@
-import Layout from "@/components/Layout";
-import { Link } from "react-router-dom";
-import { ArrowRight, ArrowLeft, Shield, FileCheck, Settings, Scale } from "lucide-react";
+import { Shield, FileCheck } from "lucide-react";
+import PracticeAreaLayout from "@/components/PracticeAreaLayout";
+import { useLanguage } from "@/i18n/LanguageContext";
 
-const IntellectualProperty = () => (
-  <Layout>
-    <section className="py-24">
-      <div className="container max-w-4xl">
-        <Link to="/practice-areas" className="inline-flex items-center gap-1 text-sm text-gold hover:underline mb-8">
-          <ArrowLeft size={14} /> Back to Practice Areas
-        </Link>
+const items = {
+  en: ["IP portfolio audits and strategy", "Ownership structuring and assignments", "Licensing and technology transfer agreements", "IP due diligence for M&A and fundraising", "Trade secret protection programs", "Freedom-to-operate analysis", "IP clauses in employment and contractor agreements", "International IP coordination"],
+  he: ["ביקורות ואסטרטגיית תיקי IP", "מבנה בעלות והקצאות", "הסכמי רישוי והעברת טכנולוגיה", "בדיקת נאותות IP למיזוגים וגיוסים", "תכניות הגנה על סודות מסחריים", "ניתוח חופש פעולה", "סעיפי IP בהסכמי עבודה וקבלנות", "תיאום IP בינלאומי"],
+};
 
-        <div className="flex items-center gap-3 mb-6">
-          <div className="w-14 h-14 flex items-center justify-center bg-gold-light">
-            <Shield className="text-gold" size={24} />
-          </div>
-          <span className="text-gold text-sm font-medium tracking-widest uppercase">Practice Area</span>
-        </div>
+const whoFor = {
+  en: ["Technology startups building products around proprietary innovations", "Established companies managing existing IP portfolios", "Founders preparing for investment or acquisition (IP due diligence)", "Creators and content businesses protecting original works", "R&D teams navigating freedom-to-operate questions"],
+  he: ["סטארטאפים טכנולוגיים הבונים מוצרים סביב חדשנות קניינית", "חברות מבוססות המנהלות תיקי IP קיימים", "יזמים המתכוננים להשקעה או רכישה (בדיקת נאותות IP)", "יוצרים ועסקי תוכן המגנים על יצירות מקוריות", "צוותי מו\"פ המנווטים שאלות חופש פעולה"],
+};
 
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">Intellectual Property Law</h1>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-          Intellectual property is often a business's most valuable — and most vulnerable — asset. We help companies, startups, and creators develop and execute IP strategies that protect innovation and build lasting competitive advantage.
-        </p>
+const IntellectualProperty = () => {
+  const { lang } = useLanguage();
+  const isHe = lang === "he";
 
-        <div className="space-y-8 text-muted-foreground leading-relaxed">
-          <div>
-            <h2 className="text-2xl font-display font-semibold text-foreground mb-3">What We Do</h2>
-            <p>
-              Our IP practice covers the full lifecycle of intellectual property — from identification and protection through commercialization and enforcement. We work with clients to build IP portfolios that align with their business objectives and growth plans.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-display font-semibold text-foreground mb-3">Who This Is For</h2>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Technology startups building products around proprietary innovations</li>
-              <li>Established companies managing existing IP portfolios</li>
-              <li>Founders preparing for investment or acquisition (IP due diligence)</li>
-              <li>Creators and content businesses protecting original works</li>
-              <li>R&D teams navigating freedom-to-operate questions</li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-display font-semibold text-foreground mb-3">Typical Matters</h2>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                "IP portfolio audits and strategy",
-                "Ownership structuring and assignments",
-                "Licensing and technology transfer agreements",
-                "IP due diligence for M&A and fundraising",
-                "Trade secret protection programs",
-                "Freedom-to-operate analysis",
-                "IP clauses in employment and contractor agreements",
-                "International IP coordination",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-2">
-                  <FileCheck className="text-gold shrink-0 mt-0.5" size={16} />
-                  <span className="text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-section-alt border border-border p-8">
-            <h2 className="text-xl font-display font-semibold text-foreground mb-3">Our Approach</h2>
-            <p>
-              We view intellectual property through a business lens. Rather than treating IP as a purely legal matter, we focus on how IP assets create value, reduce risk, and support strategic goals. Every recommendation is practical, proportionate, and aligned with the client's stage and resources.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl font-display font-semibold text-foreground mb-3">Related Practice Areas</h2>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/practice-areas/trademarks" className="text-sm text-gold hover:underline">Trademarks →</Link>
-              <Link to="/practice-areas/copyright-digital-content" className="text-sm text-gold hover:underline">Copyright & Digital Content →</Link>
-              <Link to="/practice-areas/ai-and-law" className="text-sm text-gold hover:underline">AI & Law →</Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-16 p-8 bg-primary text-primary-foreground text-center">
-          <h2 className="text-2xl font-display font-bold mb-3">Discuss Your IP Strategy</h2>
-          <p className="text-primary-foreground/80 mb-6 text-sm">
-            Every business has unique IP needs. We can help you identify, protect, and maximize the value of your intellectual property.
-          </p>
-          <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-primary text-sm font-semibold tracking-wide hover:bg-gold/90 transition-colors">
-            Schedule a Consultation <ArrowRight size={16} />
-          </Link>
+  return (
+    <PracticeAreaLayout
+      icon={Shield}
+      title="Intellectual Property Law"
+      titleHe="דיני קניין רוחני"
+      intro="Intellectual property is often a business's most valuable — and most vulnerable — asset. We help companies, startups, and creators develop and execute IP strategies that protect innovation and build lasting competitive advantage."
+      introHe="קניין רוחני הוא לעיתים קרובות הנכס החשוב ביותר — והפגיע ביותר — של עסק. אנו עוזרים לחברות, סטארטאפים ויוצרים לפתח ולבצע אסטרטגיות IP שמגנות על חדשנות ובונות יתרון תחרותי."
+      ctaTitle="Discuss Your IP Strategy"
+      ctaTitleHe="בואו נדבר על אסטרטגיית ה‑IP שלכם"
+      relatedLinks={[
+        { path: "/practice-areas/trademarks", labelEn: "Trademarks", labelHe: "סימני מסחר" },
+        { path: "/practice-areas/copyright-digital-content", labelEn: "Copyright & Digital Content", labelHe: "זכויות יוצרים ותוכן דיגיטלי" },
+        { path: "/practice-areas/ai-and-law", labelEn: "AI & Law", labelHe: "בינה מלאכותית ומשפט" },
+      ]}
+    >
+      <div>
+        <h2 className="text-2xl font-display font-semibold text-foreground mb-3">{isHe ? "מה אנחנו עושים" : "What We Do"}</h2>
+        <p>{isHe ? "הפרקטיקה שלנו בקניין רוחני מכסה את כל מחזור החיים של IP — מזיהוי והגנה דרך מסחור ואכיפה. אנו עובדים עם לקוחות לבניית תיקי IP שמתאימים ליעדים העסקיים שלהם." : "Our IP practice covers the full lifecycle of intellectual property — from identification and protection through commercialization and enforcement. We work with clients to build IP portfolios that align with their business objectives and growth plans."}</p>
+      </div>
+      <div>
+        <h2 className="text-2xl font-display font-semibold text-foreground mb-3">{isHe ? "למי זה מיועד" : "Who This Is For"}</h2>
+        <ul className="list-disc ps-6 space-y-2">
+          {(isHe ? whoFor.he : whoFor.en).map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h2 className="text-2xl font-display font-semibold text-foreground mb-3">{isHe ? "עניינים אופייניים" : "Typical Matters"}</h2>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {(isHe ? items.he : items.en).map((item) => (
+            <div key={item} className="flex items-start gap-2"><FileCheck className="text-gold shrink-0 mt-0.5" size={16} /><span className="text-sm">{item}</span></div>
+          ))}
         </div>
       </div>
-    </section>
-  </Layout>
-);
+      <div className="bg-section-alt border border-border p-8">
+        <h2 className="text-xl font-display font-semibold text-foreground mb-3">{isHe ? "הגישה שלנו" : "Our Approach"}</h2>
+        <p>{isHe ? "אנו רואים קניין רוחני דרך עדשה עסקית. במקום להתייחס ל‑IP כעניין משפטי גרידא, אנו מתמקדים באופן שבו נכסי IP יוצרים ערך, מפחיתים סיכון ותומכים ביעדים אסטרטגיים." : "We view intellectual property through a business lens. Rather than treating IP as a purely legal matter, we focus on how IP assets create value, reduce risk, and support strategic goals."}</p>
+      </div>
+    </PracticeAreaLayout>
+  );
+};
 
 export default IntellectualProperty;
