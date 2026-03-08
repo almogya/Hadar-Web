@@ -16,6 +16,8 @@ export default {
       fontFamily: {
         display: ['"Playfair Display"', 'Georgia', 'serif'],
         body: ['"Inter"', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        'display-he': ['"Noto Serif Hebrew"', '"Frank Ruhl Libre"', 'serif'],
+        'body-he': ['"Heebo"', '"Assistant"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
