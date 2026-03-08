@@ -17,7 +17,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-const translations: Record<Lang, Translations> = { en, he };
+const translations: Record<Lang, Translations> = { en, he } as Record<Lang, Translations>;
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const { lang: paramLang } = useParams<{ lang: string }>();
