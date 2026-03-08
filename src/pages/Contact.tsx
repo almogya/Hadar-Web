@@ -1,15 +1,60 @@
 import Layout from "@/components/Layout";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
+const matterTypes = [
+  "Trademark Registration & Protection",
+  "Copyright & Digital Content",
+  "AI & Technology Law",
+  "Commercial Litigation",
+  "IP Strategy & Consulting",
+  "General Inquiry",
+];
+
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    matterType: "",
+    message: "",
+    consent: false,
+  });
+  const [honeypot, setHoneypot] = useState("");
+  const [submitting, setSubmitting] = useState(false);
+  const lastSubmit = useRef(0);
+  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you for your message. We will be in touch shortly.");
-    setForm({ name: "", email: "", phone: "", message: "" });
+
+    // Honeypot check
+    if (honeypot) return;
+
+    // Rate limiting (30 seconds)
+    const now = Date.now();
+    if (now - lastSubmit.current < 30000) {
+      toast.error("Please wait before submitting another inquiry.");
+      return;
+    }
+
+    if (!form.consent) {
+      toast.error("Please confirm that you have read the privacy notice.");
+      return;
+    }
+
+    setSubmitting(true);
+    lastSubmit.current = now;
+
+    // Simulate submission
+    setTimeout(() => {
+      setSubmitting(false);
+      setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
+      navigate("/thank-you");
+    }, 500);
   };
 
   return (
@@ -21,48 +66,68 @@ const Contact = () => {
               <span className="text-gold text-sm font-medium tracking-widest uppercase">Get in Touch</span>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-6">Contact Us</h1>
               <p className="text-muted-foreground text-lg leading-relaxed mb-12">
-                We'd love to hear from you. Whether you need legal counsel, have questions about your intellectual property, or want to discuss a potential matter, please reach out.
+                Whether you need legal counsel on intellectual property, technology law, or a commercial dispute, we are here to help. Reach out to schedule a consultation or send a confidential inquiry.
               </p>
 
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-gold-light shrink-0">
-                    <MapPin className="text-gold" size={20} />
+                    <MapPin className="text-gold" size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-foreground mb-1">Office Location</h3>
-                    <p className="text-sm text-muted-foreground">Tel Aviv, Israel</p>
+                    <p className="text-sm text-muted-foreground">[ADDRESS_UNSPECIFIED], Tel Aviv, Israel</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-gold-light shrink-0">
-                    <Mail className="text-gold" size={20} />
+                    <Mail className="text-gold" size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-foreground mb-1">Email</h3>
-                    <p className="text-sm text-muted-foreground">info@hylaw.co.il</p>
+                    <a href="mailto:[EMAIL_UNSPECIFIED]" className="text-sm text-muted-foreground hover:text-gold transition-colors">[EMAIL_UNSPECIFIED]</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-gold-light shrink-0">
-                    <Phone className="text-gold" size={20} />
+                    <Phone className="text-gold" size={20} aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-foreground mb-1">Phone</h3>
-                    <p className="text-sm text-muted-foreground">+972-3-XXX-XXXX</p>
+                    <a href="tel:[PHONE_UNSPECIFIED]" className="text-sm text-muted-foreground hover:text-gold transition-colors">[PHONE_UNSPECIFIED]</a>
                   </div>
                 </div>
+              </div>
+
+              <div className="mt-8 text-xs text-muted-foreground leading-relaxed p-4 border border-border bg-section-alt">
+                <strong>Privacy notice:</strong> Do not send sensitive or confidential information through this form. Submitting a contact form does not create an attorney-client relationship. A formal engagement is established only through a signed agreement.
               </div>
             </div>
 
             <div className="bg-section-alt p-8 md:p-10 border border-border">
               <h2 className="font-display text-2xl font-semibold text-foreground mb-6">Send a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Full Name</label>
+              <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+                {/* Honeypot */}
+                <div className="sr-only" aria-hidden="true">
+                  <label htmlFor="website">Website</label>
                   <input
                     type="text"
+                    id="website"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">Full Name *</label>
+                  <input
+                    id="name"
+                    type="text"
                     required
+                    maxLength={100}
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     className="w-full px-4 py-3 border border-border bg-background text-foreground text-sm focus:outline-none focus:border-gold transition-colors"
@@ -70,42 +135,89 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Email Address</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email Address *</label>
                   <input
+                    id="email"
                     type="email"
                     required
+                    maxLength={255}
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full px-4 py-3 border border-border bg-background text-foreground text-sm focus:outline-none focus:border-gold transition-colors"
                     placeholder="you@email.com"
                   />
                 </div>
-                <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Phone Number</label>
-                  <input
-                    type="tel"
-                    value={form.phone}
-                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="w-full px-4 py-3 border border-border bg-background text-foreground text-sm focus:outline-none focus:border-gold transition-colors"
-                    placeholder="+972-XX-XXX-XXXX"
-                  />
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-1.5">Phone Number</label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      maxLength={20}
+                      value={form.phone}
+                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      className="w-full px-4 py-3 border border-border bg-background text-foreground text-sm focus:outline-none focus:border-gold transition-colors"
+                      placeholder="+972-XX-XXX-XXXX"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-foreground mb-1.5">Company</label>
+                    <input
+                      id="company"
+                      type="text"
+                      maxLength={100}
+                      value={form.company}
+                      onChange={(e) => setForm({ ...form, company: e.target.value })}
+                      className="w-full px-4 py-3 border border-border bg-background text-foreground text-sm focus:outline-none focus:border-gold transition-colors"
+                      placeholder="Company name"
+                    />
+                  </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-1.5">Message</label>
+                  <label htmlFor="matterType" className="block text-sm font-medium text-foreground mb-1.5">Matter Type</label>
+                  <select
+                    id="matterType"
+                    value={form.matterType}
+                    onChange={(e) => setForm({ ...form, matterType: e.target.value })}
+                    className="w-full px-4 py-3 border border-border bg-background text-foreground text-sm focus:outline-none focus:border-gold transition-colors"
+                  >
+                    <option value="">Select a matter type</option>
+                    {matterTypes.map((t) => (
+                      <option key={t} value={t}>{t}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">Message *</label>
                   <textarea
+                    id="message"
                     required
                     rows={5}
+                    maxLength={2000}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     className="w-full px-4 py-3 border border-border bg-background text-foreground text-sm focus:outline-none focus:border-gold transition-colors resize-none"
                     placeholder="Tell us about your legal needs..."
                   />
                 </div>
+                <div className="flex items-start gap-2">
+                  <input
+                    id="consent"
+                    type="checkbox"
+                    checked={form.consent}
+                    onChange={(e) => setForm({ ...form, consent: e.target.checked })}
+                    className="mt-1 shrink-0"
+                  />
+                  <label htmlFor="consent" className="text-xs text-muted-foreground leading-relaxed">
+                    I confirm that I have read the privacy notice above and understand that submitting this form does not create an attorney-client relationship. *
+                  </label>
+                </div>
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:bg-navy-light transition-colors"
+                  disabled={submitting}
+                  className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:bg-navy-light transition-colors disabled:opacity-50"
                 >
-                  Send Message <Send size={16} />
+                  {submitting ? "Sending..." : "Send Message"} <Send size={16} />
                 </button>
               </form>
             </div>

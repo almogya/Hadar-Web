@@ -6,8 +6,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import PracticeAreas from "./pages/PracticeAreas";
+import IntellectualProperty from "./pages/practice-areas/IntellectualProperty";
+import Trademarks from "./pages/practice-areas/Trademarks";
+import CopyrightDigitalContent from "./pages/practice-areas/CopyrightDigitalContent";
+import AiAndLaw from "./pages/practice-areas/AiAndLaw";
+import TechnologyInternetLaw from "./pages/practice-areas/TechnologyInternetLaw";
+import CommercialLitigation from "./pages/practice-areas/CommercialLitigation";
 import Insights from "./pages/Insights";
 import Contact from "./pages/Contact";
+import ThankYou from "./pages/ThankYou";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
+import Disclaimer from "./pages/Disclaimer";
+import Accessibility from "./pages/Accessibility";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,8 +33,19 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/practice-areas" element={<PracticeAreas />} />
+          <Route path="/practice-areas/intellectual-property" element={<IntellectualProperty />} />
+          <Route path="/practice-areas/trademarks" element={<Trademarks />} />
+          <Route path="/practice-areas/copyright-digital-content" element={<CopyrightDigitalContent />} />
+          <Route path="/practice-areas/ai-and-law" element={<AiAndLaw />} />
+          <Route path="/practice-areas/technology-internet-law" element={<TechnologyInternetLaw />} />
+          <Route path="/practice-areas/commercial-litigation" element={<CommercialLitigation />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/accessibility" element={<Accessibility />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
