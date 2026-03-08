@@ -25,8 +25,8 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const location = useLocation();
 
   const lang: Lang = paramLang === "he" ? "he" : "en";
-  const dir = lang === "he" ? "rtl" : "ltr";
-  const t = translations[lang];
+  const dir: "ltr" | "rtl" = lang === "he" ? "rtl" : "ltr";
+  const t = translations[lang] as Translations;
 
   const switchLang = () => {
     const otherLang = lang === "en" ? "he" : "en";
