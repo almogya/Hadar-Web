@@ -4,7 +4,7 @@ import { en } from "./translations/en";
 import { he } from "./translations/he";
 
 export type Lang = "en" | "he";
-export type Translations = typeof en & { dir: "ltr" | "rtl" };
+export type Translations = Omit<typeof en, 'dir'> & { dir: "ltr" | "rtl" };
 
 interface LanguageContextType {
   lang: Lang;
