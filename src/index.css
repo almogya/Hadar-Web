@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 220 20% 98%;
     --foreground: 220 40% 13%;
 
     --card: 0 0% 100%;
@@ -22,24 +22,24 @@
     --secondary-foreground: 220 40% 13%;
 
     --muted: 210 20% 96%;
-    --muted-foreground: 220 10% 46%;
+    --muted-foreground: 215 16% 30%;
 
-    --accent: 40 40% 55%;
+    --accent: 45 70% 47%;
     --accent-foreground: 220 40% 13%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
     --ring: 220 60% 15%;
 
     --radius: 0.25rem;
 
     --hero-overlay: 220 60% 10%;
-    --section-alt: 210 20% 97%;
-    --gold: 40 40% 55%;
-    --gold-light: 40 30% 90%;
+    --section-alt: 220 20% 97%;
+    --gold: 45 70% 47%;
+    --gold-light: 45 40% 92%;
     --navy: 220 60% 15%;
     --navy-light: 220 40% 25%;
     --teal: 170 35% 55%;
@@ -66,6 +66,11 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
+  }
+
+  /* Skip to content link */
+  .skip-to-content {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:font-medium;
   }
 }
 
