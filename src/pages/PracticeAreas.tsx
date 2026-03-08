@@ -6,11 +6,11 @@ import { useLanguage } from "@/i18n/LanguageContext";
 const areaIcons = [Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb];
 
 const PracticeAreas = () => {
-  const { t, localePath } = useLanguage();
+  const { t, localePath, lang } = useLanguage();
 
   const areas = [
     ...t.practiceSection.areas,
-    { title: t.lang === "he" ? "ייעוץ משפטי לסטארטאפים וחברות טכנולוגיה" : "Legal Consulting for Startups & Tech Companies", desc: t.lang === "he" ? "ליווי משפטי מותאם לסטארטאפים וחברות טכנולוגיה באסטרטגיית IP, הסכמי גיוס, רישוי טכנולוגי וציות רגולטורי." : "Tailored legal counsel on IP strategy, fundraising agreements, technology licensing, and regulatory compliance.", link: "/contact" },
+    { title: lang === "he" ? "ייעוץ משפטי לסטארטאפים וחברות טכנולוגיה" : "Legal Consulting for Startups & Tech Companies", desc: lang === "he" ? "ליווי משפטי מותאם לסטארטאפים וחברות טכנולוגיה באסטרטגיית IP, הסכמי גיוס, רישוי טכנולוגי וציות רגולטורי." : "Tailored legal counsel on IP strategy, fundraising agreements, technology licensing, and regulatory compliance.", link: "/contact" },
   ];
 
   return (
