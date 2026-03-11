@@ -1,7 +1,7 @@
 export const en = {
   langName: "English",
   otherLangName: "עברית",
-  dir: "ltr" as const,
+  dir: "ltr" as "ltr" | "rtl",
 
   // Nav
   nav: {
@@ -15,10 +15,10 @@ export const en = {
 
   // Homepage
   hero: {
-    badge: "HY Law Offices · Tel Aviv",
-    h1: "Intellectual Property and Technology Law",
+    badge: "HY Law Offices · Givatayim, Israel",
+    h1: "Intellectual Property & Technology Law",
     h1Accent: "for AI-Driven Businesses",
-    sub: "Boutique, founder-led counsel on trademarks, copyright, licensing, and digital risk — built for modern products and platforms.",
+    sub: "Boutique, founder-led counsel on trademarks, copyright, licensing, and digital risk—built for modern products and platforms in Israel and beyond.",
     cta1: "Schedule a Consultation",
     cta2: "Send a Confidential Inquiry",
   },
@@ -27,13 +27,13 @@ export const en = {
       { title: "Israel Bar Member", sub: "Licensed Attorney" },
       { title: "LL.M. Law & Technology", sub: "Advanced Degree" },
       { title: "IP & Tech Focus", sub: "Specialized Practice" },
-      { title: "Tel Aviv Based", sub: "Serving Israel & International" },
+      { title: "Givatayim, Israel", sub: "Serving Israel & International" },
     ],
   },
   practiceSection: {
     badge: "What We Do",
     heading: "Practice Areas",
-    sub: "Providing strategic legal counsel at the intersection of law, technology, and intellectual property.",
+    sub: "Strategic legal counsel at the intersection of law, technology, and intellectual property.",
     viewAll: "View All Practice Areas",
     areas: [
       { title: "Intellectual Property", desc: "Comprehensive IP protection strategies for businesses and creators.", link: "/practice-areas/intellectual-property" },
@@ -48,9 +48,9 @@ export const en = {
     badge: "Our Process",
     heading: "How We Work",
     steps: [
-      { title: "Initial Consultation", desc: "We discuss your situation, identify risks, and outline potential strategies — confidentially and with no obligation." },
+      { title: "Initial Consultation", desc: "We discuss your situation, identify risks, and outline potential strategies—confidentially and with no obligation." },
       { title: "Strategic Assessment", desc: "We analyze the legal landscape, review relevant documents, and develop a tailored plan aligned with your business goals." },
-      { title: "Execution & Protection", desc: "We implement the agreed strategy — whether filing applications, drafting agreements, or pursuing enforcement actions." },
+      { title: "Execution & Protection", desc: "We implement the agreed strategy—whether filing applications, drafting agreements, or pursuing enforcement actions." },
     ],
   },
   insights: {
@@ -68,7 +68,7 @@ export const en = {
     heading: "Frequently Asked Questions",
     items: [
       { q: "What types of intellectual property can be protected in Israel?", a: "Israeli law provides protection for trademarks, copyrights, patents, designs, and trade secrets. The appropriate form of protection depends on the nature of your creation or innovation. We help clients identify which protections apply and develop a strategy to secure them." },
-      { q: "Do I need to register my copyright in Israel?", a: "Copyright protection in Israel arises automatically upon creation of an original work — registration is not required. However, documenting authorship and maintaining clear records can be important for enforcement purposes." },
+      { q: "Do I need to register my copyright in Israel?", a: "Copyright protection in Israel arises automatically upon creation of an original work—registration is not required. However, documenting authorship and maintaining clear records can be important for enforcement purposes." },
       { q: "How long does trademark registration take in Israel?", a: "The trademark registration process in Israel typically takes 12–18 months, depending on whether objections or oppositions are filed. We guide clients through the process from search and filing to registration." },
       { q: "Can AI-generated content be protected by copyright?", a: "This is an evolving area of law globally. Current Israeli copyright law requires a human author, which raises questions about AI outputs. We advise clients on practical strategies to protect AI-related works and manage associated risks." },
       { q: "What should startups prioritize regarding intellectual property?", a: "Early-stage companies should focus on securing their brand (trademark filings), confirming IP ownership (especially with co-founders and contractors), and understanding any open-source or third-party licensing obligations. An IP audit early on can prevent costly issues later." },
@@ -91,10 +91,11 @@ export const en = {
   // About page
   about: {
     badge: "About the Firm",
-    h1: "Hadar Yatzkan",
+    h1: "Counsel at the Intersection of Innovation and Legal Clarity",
+    sub: "Practical, business-aligned legal support for IP, technology, and AI—from strategy to disputes.",
     bio: [
-      "Hadar Yatzkan is the founder and managing attorney of HY Law Offices, a boutique law firm based in Tel Aviv specializing in intellectual property, technology law, and commercial litigation.",
-      "With an LL.M. in Law and Technology, Hadar brings a unique combination of legal expertise and technological understanding to every case. Her practice focuses on helping businesses, startups, and creative professionals protect their innovations and navigate the rapidly evolving legal landscape.",
+      "Hadar Yatzkan is the founder and managing attorney of HY Law Offices, a boutique law firm based in Givatayim, Israel, specializing in intellectual property, technology law, and commercial litigation.",
+      "With an LL.M. in Law and Technology, Hadar brings a unique combination of legal expertise and technological understanding to every matter. Her practice focuses on helping businesses, startups, and creative professionals protect their innovations and navigate the rapidly evolving legal landscape.",
       "Hadar's areas of expertise include copyright law, trademark registration and enforcement, digital platform regulations, and emerging legal issues related to artificial intelligence and digital content. She advises technology-driven businesses on IP strategy, data protection, and regulatory compliance.",
       "Prior to founding HY Law Offices, Hadar gained extensive experience in intellectual property law and litigation at leading Israeli law firms, where she handled complex IP disputes and advised major technology companies.",
     ],
@@ -104,7 +105,7 @@ export const en = {
       { title: "LL.M. in Law & Technology", desc: "Advanced degree focusing on the intersection of legal frameworks and emerging technology." },
       { title: "Intellectual Property Specialist", desc: "Extensive experience in trademark registration, copyright enforcement, and IP portfolio management." },
       { title: "Technology Law Expert", desc: "Deep expertise advising tech companies, digital platforms, and AI-driven businesses." },
-      { title: "Litigation Experience", desc: "Proven track record in commercial litigation and IP dispute resolution." },
+      { title: "Litigation Experience", desc: "Experience in commercial litigation and IP dispute resolution." },
     ],
   },
 
@@ -114,8 +115,12 @@ export const en = {
     h1: "Contact Us",
     sub: "Whether you need legal counsel on intellectual property, technology law, or a commercial dispute, we are here to help. Reach out to schedule a consultation or send a confidential inquiry.",
     officeLabel: "Office Location",
+    officeAddress: "46 Weizmann St, Givatayim, Israel",
     emailLabel: "Email",
+    emailAddress: "Hadaryatzkan@gmail.com",
     phoneLabel: "Phone",
+    phoneDisplay: "054-223-4726",
+    phoneTel: "+972542234726",
     formHeading: "Send a Message",
     nameLabel: "Full Name *",
     namePlaceholder: "Your name",
@@ -136,24 +141,29 @@ export const en = {
     consentError: "Please confirm that you have read the privacy notice.",
     privacyNotice: "Do not send sensitive or confidential information through this form. Submitting a contact form does not create an attorney-client relationship. A formal engagement is established only through a signed agreement.",
     privacyLabel: "Privacy notice:",
-    matterTypes: [
-      "Trademark Registration & Protection",
-      "Copyright & Digital Content",
-      "AI & Technology Law",
-      "Commercial Litigation",
-      "IP Strategy & Consulting",
-      "General Inquiry",
-    ],
+    matterTypes: {
+      ip: "Intellectual Property",
+      trademarks: "Trademark Registration & Protection",
+      copyright: "Copyright & Digital Content",
+      ai: "AI & Technology Law",
+      tech: "Technology & Internet Law",
+      litigation: "Commercial Litigation",
+      general: "General Inquiry",
+    } as Record<string, string>,
   },
 
   // Footer
   footer: {
     firmName: "HY Law Offices",
-    firmDesc: "Boutique intellectual property, technology, and AI law firm. Tel Aviv, Israel.",
-    barNumber: "Israel Bar No. [BAR_NUMBER_UNSPECIFIED]",
+    firmDesc: "Boutique intellectual property, technology, and AI law firm. Givatayim, Israel.",
+    barNumber: "Israel Bar No. [UNSPECIFIED]",
     practiceAreasTitle: "Practice Areas",
     quickLinksTitle: "Quick Links",
     contactTitle: "Contact",
+    officeAddress: "46 Weizmann St, Givatayim, Israel",
+    emailAddress: "Hadaryatzkan@gmail.com",
+    phoneDisplay: "054-223-4726",
+    phoneTel: "+972542234726",
     copyright: `© ${new Date().getFullYear()} HY Law Offices. All rights reserved.`,
     disclaimer: "This website provides general information and does not constitute legal advice. No attorney-client relationship is formed until a formal engagement is agreed upon.",
     quickLinks: [
@@ -172,18 +182,143 @@ export const en = {
     h1: "Legal Insights & Guides",
     sub: "Practical perspectives on intellectual property, technology law, AI regulation, and legal strategy for founders, creators, and business leaders.",
     filterAll: "All",
-    categories: ["IP", "Trademarks", "Copyright", "AI", "Tech Law", "Litigation"],
+    categories: {
+      ip: "IP",
+      trademarks: "Trademarks",
+      copyright: "Copyright",
+      ai: "AI",
+      techLaw: "Tech Law",
+      litigation: "Litigation",
+    } as Record<string, string>,
     readMore: "Read More",
     readTime: "min read",
     lastReviewed: "Last reviewed",
+    pillarHeading: "Featured Pillar Guides",
+    disclaimer: "The articles on this page provide general information and do not constitute legal advice. Each situation is unique—consult with a qualified attorney for guidance specific to your circumstances.",
+    readGuide: "Read Guide",
+    articles: [
+      {
+        title: "AI-Generated Content and Copyright: Who Owns What?",
+        excerpt: "As generative AI tools become mainstream, courts and legislators worldwide are grappling with fundamental questions about authorship, ownership, and copyright protection for AI-created works.",
+        date: "February 2026",
+        category: "ai",
+        pillar: true,
+      },
+      {
+        title: "Trademark Protection in the Digital Age: Strategies for Online Brands",
+        excerpt: "The digital marketplace presents unique challenges for trademark owners. Learn how to protect your brand across e-commerce platforms, social media, and domain names.",
+        date: "January 2026",
+        category: "trademarks",
+        pillar: true,
+      },
+      {
+        title: "The Legal Framework for AI in Israel: What Businesses Need to Know",
+        excerpt: "Israel's approach to AI regulation is evolving rapidly. This article examines the current legal landscape and upcoming regulatory developments affecting AI-driven businesses.",
+        date: "December 2025",
+        category: "ai",
+        pillar: true,
+      },
+      {
+        title: "IP Strategy for Startups: Building Value from Day One",
+        excerpt: "Intellectual property can be a startup's most valuable asset. This guide covers essential IP strategies for early-stage companies looking to protect their innovations.",
+        date: "November 2025",
+        category: "ip",
+        pillar: true,
+      },
+      {
+        title: "Protecting Digital Content: Copyright Enforcement on Social Platforms",
+        excerpt: "Content creators face growing challenges in protecting their work online. We examine the legal tools and strategies available for enforcing copyright in the social media era.",
+        date: "October 2025",
+        category: "copyright",
+        pillar: true,
+      },
+      {
+        title: "AI and Copyright in Israel: Practical Risk Map for Startups",
+        excerpt: "A practical overview of how Israeli copyright law applies to AI-generated content, with specific guidance for startups developing or deploying generative AI tools.",
+        date: "September 2025",
+        category: "ai",
+      },
+      {
+        title: "Trademark Clearance: What to Check Before You Invest in a Brand",
+        excerpt: "Before investing in a brand name, thorough clearance is essential. This checklist covers the key steps in evaluating trademark availability and risk.",
+        date: "August 2025",
+        category: "trademarks",
+      },
+      {
+        title: "Copyright Ownership in Tech Teams: Employees, Contractors, and Assignments",
+        excerpt: "Who owns the code your team writes? This article examines copyright ownership rules for employees and contractors under Israeli law.",
+        date: "July 2025",
+        category: "copyright",
+      },
+    ],
   },
 
   // Practice areas hub
   practiceAreasPage: {
     badge: "Our Services",
     h1: "Practice Areas",
-    sub: "We provide targeted legal counsel across a focused set of practice areas — all centered on protecting innovation, creative output, and digital business interests.",
+    sub: "We provide targeted legal counsel across a focused set of practice areas—all centered on protecting innovation, creative output, and digital business interests.",
     learnMore: "Learn More",
+  },
+
+  // Legal pages
+  privacyPolicy: {
+    h1: "Privacy Policy",
+    lastUpdated: "Last updated: March 2026",
+    sections: [
+      { heading: "1. Introduction", body: "HY Law Offices (\"we,\" \"our,\" or \"the Firm\") respects your privacy and is committed to protecting personal information you share with us through this website. This Privacy Policy explains how we collect, use, and safeguard your information." },
+      { heading: "2. Information We Collect", body: "We may collect personal information you voluntarily provide through our contact form, including your name, email address, phone number, company name, and message content. We also collect standard web analytics data (page views, browser type, device information) through analytics tools." },
+      { heading: "3. How We Use Your Information", body: "We use collected information to: respond to inquiries, provide legal services, improve our website, and comply with legal obligations. We do not sell, trade, or rent your personal information to third parties." },
+      { heading: "4. Data Security", body: "We implement reasonable security measures to protect your personal information. However, no method of transmission over the Internet is completely secure, and we cannot guarantee absolute security." },
+      { heading: "5. Cookies and Analytics", body: "This website may use cookies and analytics services to understand how visitors use our site. You can control cookie preferences through your browser settings." },
+      { heading: "6. Your Rights", body: "Under applicable privacy laws, you may have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at Hadaryatzkan@gmail.com." },
+      { heading: "7. Contact", body: "For questions about this Privacy Policy, please contact us at Hadaryatzkan@gmail.com." },
+    ],
+  },
+  terms: {
+    h1: "Terms of Use",
+    lastUpdated: "Last updated: March 2026",
+    sections: [
+      { heading: "1. Acceptance", body: "By accessing and using this website, you agree to be bound by these Terms of Use. If you do not agree, please do not use this site." },
+      { heading: "2. Informational Purpose", body: "The content on this website is provided for general informational purposes only. It does not constitute legal advice and should not be relied upon as such. The information may not reflect the most current legal developments." },
+      { heading: "3. No Attorney-Client Relationship", body: "Use of this website or contacting us through this site does not create an attorney-client relationship. Such a relationship is only established through a formal written engagement agreement." },
+      { heading: "4. Intellectual Property", body: "All content on this website, including text, graphics, logos, and design, is the property of HY Law Offices and is protected by applicable intellectual property laws." },
+      { heading: "5. Limitation of Liability", body: "HY Law Offices is not liable for any damages arising from your use of or inability to use this website or reliance on any information provided herein." },
+      { heading: "6. Governing Law", body: "These Terms of Use are governed by the laws of the State of Israel. Any disputes shall be subject to the exclusive jurisdiction of the competent courts in the Tel Aviv district, Israel." },
+    ],
+  },
+  disclaimer: {
+    h1: "Legal Disclaimer",
+    lastUpdated: "Last updated: March 2026",
+    sections: [
+      { heading: "No Legal Advice", body: "The materials on this website are provided for general informational purposes only and do not constitute legal advice. Reading or accessing the content on this site does not create an attorney-client relationship between you and HY Law Offices or any of its attorneys." },
+      { heading: "No Attorney-Client Relationship", body: "An attorney-client relationship with HY Law Offices is established only through a signed, written engagement agreement. Do not send confidential or sensitive information through this website or by email until such a relationship has been formally established." },
+      { heading: "No Guarantees", body: "The information on this website, including descriptions of practice areas and past experience, is not intended as a guarantee, warranty, or prediction regarding the outcome of any legal matter. Each case is unique, and past results do not guarantee future outcomes." },
+      { heading: "Jurisdiction", body: "HY Law Offices is licensed to practice law in Israel. The information on this website may not apply in other jurisdictions. If you require legal assistance outside of Israel, we recommend consulting with locally licensed counsel." },
+      { heading: "External Links", body: "This website may contain links to third-party websites. These links are provided for convenience only. HY Law Offices does not endorse or control the content of external sites and is not responsible for their content or privacy practices." },
+    ],
+  },
+  accessibility: {
+    h1: "Accessibility Statement",
+    lastUpdated: "Last updated: March 2026",
+    intro: "HY Law Offices is committed to ensuring that our website is accessible to people with disabilities. We strive to meet the Web Content Accessibility Guidelines (WCAG) 2.2, Level AA standards.",
+    effortsHeading: "Our Efforts",
+    efforts: [
+      "Semantic HTML structure with proper heading hierarchy",
+      "Keyboard navigation support throughout the site",
+      "Descriptive alt text for all meaningful images",
+      "Sufficient color contrast ratios",
+      "Clear and consistent navigation",
+      "Form labels and error messages for assistive technologies",
+      "Skip-to-content functionality",
+    ],
+    feedbackHeading: "Feedback",
+    feedbackBody: "We welcome feedback on the accessibility of this website. If you encounter any barriers or have suggestions for improvement, please contact us at Hadaryatzkan@gmail.com or call 054-223-4726. We will make reasonable efforts to address your concerns.",
+  },
+  notFound: {
+    h1: "404",
+    sub: "Page not found",
+    back: "Return to Home",
   },
 
   // Step label

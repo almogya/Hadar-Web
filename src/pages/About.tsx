@@ -15,7 +15,8 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-gold text-sm font-medium tracking-widest uppercase">{t.about.badge}</span>
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-8">{t.about.h1}</h1>
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-4">{t.about.h1}</h1>
+              <p className="text-lg text-muted-foreground mb-8">{t.about.sub}</p>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 {t.about.bio.map((p, i) => <p key={i}>{p}</p>)}
               </div>
@@ -23,7 +24,7 @@ const About = () => {
             <div className="flex justify-center">
               <div className="relative">
                 <div className="w-full max-w-sm h-[500px] overflow-hidden shadow-2xl">
-                  <img src={headshot} alt={t.about.h1} className="w-full h-full object-cover" />
+                  <img src={headshot} alt={t.founder.name} className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-full max-w-sm h-[500px] border-2 border-gold -z-10" />
               </div>

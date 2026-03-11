@@ -5,6 +5,8 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
+const MATTER_KEYS = ["ip", "trademarks", "copyright", "ai", "tech", "litigation", "general"] as const;
+
 const Contact = () => {
   const { t, localePath } = useLanguage();
   const [form, setForm] = useState({
@@ -43,15 +45,15 @@ const Contact = () => {
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-gold-light shrink-0"><MapPin className="text-gold" size={20} /></div>
-                  <div><h3 className="font-display font-semibold text-foreground mb-1">{t.contact.officeLabel}</h3><p className="text-sm text-muted-foreground">[ADDRESS_UNSPECIFIED], Tel Aviv, Israel</p></div>
+                  <div><h3 className="font-display font-semibold text-foreground mb-1">{t.contact.officeLabel}</h3><p className="text-sm text-muted-foreground">{t.contact.officeAddress}</p></div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-gold-light shrink-0"><Mail className="text-gold" size={20} /></div>
-                  <div><h3 className="font-display font-semibold text-foreground mb-1">{t.contact.emailLabel}</h3><a href="mailto:[EMAIL_UNSPECIFIED]" className="text-sm text-muted-foreground hover:text-gold transition-colors">[EMAIL_UNSPECIFIED]</a></div>
+                  <div><h3 className="font-display font-semibold text-foreground mb-1">{t.contact.emailLabel}</h3><a href={`mailto:${t.contact.emailAddress}`} className="text-sm text-muted-foreground hover:text-gold transition-colors">{t.contact.emailAddress}</a></div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 flex items-center justify-center bg-gold-light shrink-0"><Phone className="text-gold" size={20} /></div>
-                  <div><h3 className="font-display font-semibold text-foreground mb-1">{t.contact.phoneLabel}</h3><a href="tel:[PHONE_UNSPECIFIED]" className="text-sm text-muted-foreground hover:text-gold transition-colors">[PHONE_UNSPECIFIED]</a></div>
+                  <div><h3 className="font-display font-semibold text-foreground mb-1">{t.contact.phoneLabel}</h3><a href={`tel:${t.contact.phoneTel}`} className="text-sm text-muted-foreground hover:text-gold transition-colors">{t.contact.phoneDisplay}</a></div>
                 </div>
               </div>
 
@@ -89,7 +91,9 @@ const Contact = () => {
                   <label htmlFor="matterType" className="block text-sm font-medium text-foreground mb-1.5">{t.contact.matterLabel}</label>
                   <select id="matterType" value={form.matterType} onChange={(e) => setForm({ ...form, matterType: e.target.value })} className="w-full px-4 py-3 border border-border bg-background text-foreground text-sm focus:outline-none focus:border-gold transition-colors">
                     <option value="">{t.contact.matterPlaceholder}</option>
-                    {t.contact.matterTypes.map((mt) => <option key={mt} value={mt}>{mt}</option>)}
+                    {MATTER_KEYS.map((key) => (
+                      <option key={key} value={key}>{t.contact.matterTypes[key]}</option>
+                    ))}
                   </select>
                 </div>
                 <div>
