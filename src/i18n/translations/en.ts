@@ -1,7 +1,7 @@
 export const en = {
   langName: "English",
   otherLangName: "עברית",
-  dir: "ltr" as const,
+  dir: "ltr" as "ltr" | "rtl",
 
   // Nav
   nav: {
