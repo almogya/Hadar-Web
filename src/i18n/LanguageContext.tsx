@@ -4,7 +4,7 @@ import { en } from "./translations/en";
 import { he } from "./translations/he";
 
 export type Lang = "en" | "he";
-export type Translations = Omit<typeof en, 'dir'> & { dir: "ltr" | "rtl" };
+export type Translations = typeof en;
 
 interface LanguageContextType {
   lang: Lang;
@@ -17,7 +17,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-const translations: Record<Lang, Translations> = { en, he } as Record<Lang, Translations>;
+const translations: Record<Lang, Translations> = { en, he: he as unknown as Translations };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const { lang: paramLang } = useParams<{ lang: string }>();
@@ -26,7 +26,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
 
   const lang: Lang = paramLang === "he" ? "he" : "en";
   const dir: "ltr" | "rtl" = lang === "he" ? "rtl" : "ltr";
-  const t = translations[lang] as Translations;
+  const t = translations[lang];
 
   const switchLang = () => {
     const otherLang = lang === "en" ? "he" : "en";

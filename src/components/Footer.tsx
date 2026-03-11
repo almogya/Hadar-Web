@@ -46,20 +46,15 @@ const Footer = () => {
             <h4 className="font-display text-lg font-semibold mb-4">{t.footer.contactTitle}</h4>
             <address className="not-italic flex flex-col gap-3 text-sm opacity-80">
               <span className="flex items-center gap-2">
-                <MapPin size={14} aria-hidden="true" /> [ADDRESS_UNSPECIFIED], Tel Aviv, Israel
+                <MapPin size={14} aria-hidden="true" /> {t.footer.officeAddress}
               </span>
-              <a href="tel:[PHONE_UNSPECIFIED]" className="flex items-center gap-2 hover:opacity-100 transition-opacity">
-                <Phone size={14} aria-hidden="true" /> [PHONE_UNSPECIFIED]
+              <a href={`tel:${t.footer.phoneTel}`} className="flex items-center gap-2 hover:opacity-100 transition-opacity">
+                <Phone size={14} aria-hidden="true" /> {t.footer.phoneDisplay}
               </a>
-              <a href="mailto:[EMAIL_UNSPECIFIED]" className="flex items-center gap-2 hover:opacity-100 transition-opacity">
-                <Mail size={14} aria-hidden="true" /> [EMAIL_UNSPECIFIED]
+              <a href={`mailto:${t.footer.emailAddress}`} className="flex items-center gap-2 hover:opacity-100 transition-opacity">
+                <Mail size={14} aria-hidden="true" /> {t.footer.emailAddress}
               </a>
             </address>
-            <div className="mt-4 flex gap-3">
-              <a href="[SOCIAL_LINKS_UNSPECIFIED]" aria-label="LinkedIn" className="text-sm opacity-60 hover:opacity-100">
-                LinkedIn
-              </a>
-            </div>
           </div>
         </div>
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm opacity-60">
