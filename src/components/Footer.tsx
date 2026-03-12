@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const Footer = () => {
-  const { t, localePath } = useLanguage();
+  const { t, localePath, lang } = useLanguage();
 
   const practiceLinks = t.practiceSection.areas.map((a) => ({
     label: a.title,
@@ -12,54 +12,93 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground" role="contentinfo">
-      <div className="container py-16">
-        <div className="grid md:grid-cols-4 gap-12">
-          <div className="md:col-span-1">
-            <h3 className="font-display text-xl font-semibold mb-4">{t.footer.firmName}</h3>
-            <p className="text-sm opacity-80 leading-relaxed mb-4">{t.footer.firmDesc}</p>
-            <p className="text-xs opacity-60">{t.footer.barNumber}</p>
+      {/* Main Footer */}
+      <div className="container py-20">
+        <div className="grid md:grid-cols-12 gap-12">
+          {/* Firm Info */}
+          <div className="md:col-span-4">
+            <h3 className="font-display text-xl font-semibold mb-4 tracking-tight">
+              {t.footer.firmName}
+            </h3>
+            <p className="text-sm opacity-70 leading-relaxed mb-6">
+              {t.footer.firmDesc}
+            </p>
+            <div className="w-10 h-px bg-accent mb-4" />
+            <p className="text-xs opacity-40">{t.footer.barNumber}</p>
           </div>
 
-          <div>
-            <h4 className="font-display text-lg font-semibold mb-4">{t.footer.practiceAreasTitle}</h4>
-            <nav aria-label={t.footer.practiceAreasTitle} className="flex flex-col gap-2">
+          {/* Practice Areas */}
+          <div className="md:col-span-3">
+            <h4 className="text-xs font-semibold tracking-[0.2em] uppercase mb-6 opacity-60">
+              {t.footer.practiceAreasTitle}
+            </h4>
+            <nav aria-label={t.footer.practiceAreasTitle} className="flex flex-col gap-2.5">
               {practiceLinks.map((item) => (
-                <Link key={item.path} to={localePath(item.path)} className="text-sm opacity-80 hover:opacity-100 transition-opacity">
+                <Link
+                  key={item.path}
+                  to={localePath(item.path)}
+                  className="text-sm opacity-70 hover:opacity-100 hover:text-accent transition-all"
+                >
                   {item.label}
                 </Link>
               ))}
             </nav>
           </div>
 
-          <div>
-            <h4 className="font-display text-lg font-semibold mb-4">{t.footer.quickLinksTitle}</h4>
-            <nav aria-label={t.footer.quickLinksTitle} className="flex flex-col gap-2">
+          {/* Quick Links */}
+          <div className="md:col-span-2">
+            <h4 className="text-xs font-semibold tracking-[0.2em] uppercase mb-6 opacity-60">
+              {t.footer.quickLinksTitle}
+            </h4>
+            <nav aria-label={t.footer.quickLinksTitle} className="flex flex-col gap-2.5">
               {t.footer.quickLinks.map((item) => (
-                <Link key={item.path} to={localePath(item.path)} className="text-sm opacity-80 hover:opacity-100 transition-opacity">
+                <Link
+                  key={item.path}
+                  to={localePath(item.path)}
+                  className="text-sm opacity-70 hover:opacity-100 hover:text-accent transition-all"
+                >
                   {item.label}
                 </Link>
               ))}
             </nav>
           </div>
 
-          <div>
-            <h4 className="font-display text-lg font-semibold mb-4">{t.footer.contactTitle}</h4>
-            <address className="not-italic flex flex-col gap-3 text-sm opacity-80">
-              <span className="flex items-center gap-2">
-                <MapPin size={14} aria-hidden="true" /> {t.footer.officeAddress}
+          {/* Contact */}
+          <div className="md:col-span-3">
+            <h4 className="text-xs font-semibold tracking-[0.2em] uppercase mb-6 opacity-60">
+              {t.footer.contactTitle}
+            </h4>
+            <address className="not-italic flex flex-col gap-4 text-sm">
+              <span className="flex items-start gap-3 opacity-70">
+                <MapPin size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
+                <span>{t.footer.officeAddress}</span>
               </span>
-              <a href={`tel:${t.footer.phoneTel}`} className="flex items-center gap-2 hover:opacity-100 transition-opacity">
-                <Phone size={14} aria-hidden="true" /> {t.footer.phoneDisplay}
+              <a
+                href={`tel:${t.footer.phoneTel}`}
+                className="flex items-center gap-3 opacity-70 hover:opacity-100 hover:text-accent transition-all"
+              >
+                <Phone size={14} className="shrink-0" aria-hidden="true" />
+                <span>{t.footer.phoneDisplay}</span>
               </a>
-              <a href={`mailto:${t.footer.emailAddress}`} className="flex items-center gap-2 hover:opacity-100 transition-opacity">
-                <Mail size={14} aria-hidden="true" /> {t.footer.emailAddress}
+              <a
+                href={`mailto:${t.footer.emailAddress}`}
+                className="flex items-center gap-3 opacity-70 hover:opacity-100 hover:text-accent transition-all"
+              >
+                <Mail size={14} className="shrink-0" aria-hidden="true" />
+                <span>{t.footer.emailAddress}</span>
               </a>
             </address>
           </div>
         </div>
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm opacity-60">
-          <p>{t.footer.copyright}</p>
-          <p className="text-xs max-w-md text-center sm:text-end">{t.footer.disclaimer}</p>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-primary-foreground/10">
+        <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs opacity-50">{t.footer.copyright}</p>
+          <p className="text-[11px] opacity-40 max-w-lg text-center md:text-end leading-relaxed">
+            {t.footer.disclaimer}
+          </p>
         </div>
       </div>
     </footer>

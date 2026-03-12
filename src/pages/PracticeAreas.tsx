@@ -10,35 +10,61 @@ const PracticeAreas = () => {
 
   const areas = [
     ...t.practiceSection.areas,
-    { title: lang === "he" ? "ייעוץ משפטי לסטארטאפים וחברות טכנולוגיה" : "Legal Consulting for Startups & Tech Companies", desc: lang === "he" ? "ליווי משפטי מותאם לסטארטאפים וחברות טכנולוגיה באסטרטגיית IP, הסכמי גיוס, רישוי טכנולוגי וציות רגולטורי." : "Tailored legal counsel on IP strategy, fundraising agreements, technology licensing, and regulatory compliance.", link: "/contact" },
+    {
+      title: lang === "he" ? "ייעוץ משפטי לסטארטאפים וחברות טכנולוגיה" : "Legal Consulting for Startups & Tech Companies",
+      desc: lang === "he"
+        ? "ליווי משפטי מותאם לסטארטאפים וחברות טכנולוגיה באסטרטגיית IP, הסכמי גיוס, רישוי טכנולוגי וציות רגולטורי."
+        : "Tailored legal counsel on IP strategy, fundraising agreements, technology licensing, and regulatory compliance.",
+      link: "/contact",
+    },
   ];
 
   return (
     <Layout>
-      <section className="py-24">
+      {/* Hero */}
+      <section className="py-28 bg-section-alt">
         <div className="container">
-          <div className="max-w-3xl mb-16">
-            <span className="text-gold text-sm font-medium tracking-widest uppercase">{t.practiceAreasPage.badge}</span>
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mt-3 mb-6">{t.practiceAreasPage.h1}</h1>
-            <p className="text-muted-foreground text-lg leading-relaxed">{t.practiceAreasPage.sub}</p>
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-12 h-px bg-accent" />
+              <span className="text-accent text-xs font-semibold tracking-[0.3em] uppercase">
+                {t.practiceAreasPage.badge}
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6 tracking-tight">
+              {t.practiceAreasPage.h1}
+            </h1>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {t.practiceAreasPage.sub}
+            </p>
           </div>
-          <div className="space-y-6">
+        </div>
+      </section>
+
+      {/* Areas List */}
+      <section className="py-20">
+        <div className="container">
+          <div className="space-y-4">
             {areas.map((area, i) => {
               const Icon = areaIcons[i] || Lightbulb;
               return (
                 <Link
                   to={localePath(area.link)}
                   key={area.title}
-                  className="group bg-background border border-border p-8 md:p-10 hover:border-gold/50 transition-all duration-300 hover:shadow-lg flex flex-col md:flex-row gap-6 block"
+                  className="group border border-border p-8 md:p-10 hover:border-accent/40 transition-all duration-300 flex flex-col md:flex-row gap-6 items-start"
                 >
-                  <div className="shrink-0 w-14 h-14 flex items-center justify-center bg-gold-light">
-                    <Icon className="text-gold" size={24} aria-hidden="true" />
+                  <div className="shrink-0 w-14 h-14 flex items-center justify-center border border-accent/30">
+                    <Icon className="text-accent" size={22} strokeWidth={1.5} aria-hidden="true" />
                   </div>
                   <div className="flex-1">
-                    <h2 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-gold transition-colors">{area.title}</h2>
-                    <p className="text-muted-foreground leading-relaxed">{area.desc}</p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-gold">
-                      {t.practiceAreasPage.learnMore} <ArrowRight size={14} />
+                    <h2 className="font-display text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors">
+                      {area.title}
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed text-[15px]">
+                      {area.desc}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-accent tracking-wide group-hover:gap-2 transition-all">
+                      {t.practiceAreasPage.learnMore} <ArrowRight size={12} />
                     </span>
                   </div>
                 </Link>
@@ -48,9 +74,10 @@ const PracticeAreas = () => {
           <div className="mt-16 text-center">
             <Link
               to={localePath("/contact")}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:bg-navy-light transition-colors"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm font-semibold tracking-widest uppercase hover:bg-primary/90 transition-colors"
             >
-              {t.nav.cta} <ArrowRight size={16} />
+              {t.nav.cta}
+              <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </div>
         </div>
