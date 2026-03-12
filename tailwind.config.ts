@@ -14,10 +14,12 @@ export default {
     },
     extend: {
       fontFamily: {
+        // Display: Playfair Display for English headings
         display: ['"Playfair Display"', 'Georgia', 'serif'],
-        body: ['"Inter"', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
-        'display-he': ['"Noto Serif Hebrew"', '"Frank Ruhl Libre"', 'serif'],
-        'body-he': ['"Heebo"', '"Assistant"', 'sans-serif'],
+        // Body: Heebo for all body text and Hebrew
+        body: ['"Heebo"', '"Inter"', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        // Hebrew: Heebo for everything
+        hebrew: ['"Heebo"', '"Assistant"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
