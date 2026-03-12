@@ -9,6 +9,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = dir;
+    // Add language class to body for CSS targeting
+    document.body.classList.remove("lang-en", "lang-he");
+    document.body.classList.add(`lang-${lang}`);
   }, [lang, dir]);
 
   return (
