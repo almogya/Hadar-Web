@@ -1,5 +1,5 @@
 import { createContext, useContext, useMemo, ReactNode } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { en } from "./translations/en";
 import { he } from "./translations/he";
 
