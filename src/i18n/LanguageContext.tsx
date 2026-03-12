@@ -1,5 +1,5 @@
 import { createContext, useContext, useMemo, ReactNode } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { en } from "./translations/en";
 import { he } from "./translations/he";
 
@@ -20,11 +20,12 @@ const LanguageContext = createContext<LanguageContextType | null>(null);
 const translations: Record<Lang, Translations> = { en, he: he as unknown as Translations };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const { lang: paramLang } = useParams<{ lang: string }>();
   const navigate = useNavigate();
   const location = useLocation();
 
-  const lang: Lang = paramLang === "he" ? "he" : "en";
+  // Extract language from URL path (e.g., /he/about → "he")
+  const pathLang = location.pathname.split("/")[1];
+  const lang: Lang = pathLang === "he" ? "he" : "en";
   const dir: "ltr" | "rtl" = lang === "he" ? "rtl" : "ltr";
   const t = translations[lang];
 
