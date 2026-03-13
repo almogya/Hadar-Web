@@ -8,6 +8,7 @@
   :root {
     --background: 220 20% 98%;
     --foreground: 220 40% 13%;
+    --charcoal: 224 50% 10%;
 
     --card: 0 0% 100%;
     --card-foreground: 220 40% 13%;
@@ -22,7 +23,7 @@
     --secondary-foreground: 220 40% 13%;
 
     --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 30%;
+    --muted-foreground: 215 20% 40%;
 
     --accent: 45 70% 47%;
     --accent-foreground: 220 40% 13%;
@@ -64,15 +65,30 @@
     @apply bg-background text-foreground antialiased;
     font-family: "Heebo", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     font-weight: 400;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   /* English headings: Playfair Display */
-  h1, h2, h3 {
+  h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
+  h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 600;
     line-height: 1.2;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
   }
 
   h4, h5, h6 {
@@ -81,7 +97,7 @@
     line-height: 1.3;
   }
 
-  /* Hebrew: Heebo for everything (headings and body) */
+  /* Hebrew: Heebo for everything */
   [dir="rtl"] body,
   [dir="rtl"] h1,
   [dir="rtl"] h2,
@@ -92,19 +108,10 @@
     font-family: "Heebo", "Assistant", sans-serif;
   }
 
-  /* Hebrew headings maintain weight hierarchy */
-  [dir="rtl"] h1,
-  [dir="rtl"] h2,
-  [dir="rtl"] h3 {
-    font-weight: 600;
-    letter-spacing: 0;
-  }
-
-  [dir="rtl"] h4,
-  [dir="rtl"] h5,
-  [dir="rtl"] h6 {
-    font-weight: 500;
-  }
+  [dir="rtl"] h1 { font-weight: 700; letter-spacing: 0; }
+  [dir="rtl"] h2 { font-weight: 600; letter-spacing: 0; }
+  [dir="rtl"] h3 { font-weight: 600; letter-spacing: 0; }
+  [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 { font-weight: 500; }
 
   /* Buttons and UI: Heebo Medium */
   button, .btn, [role="button"] {
@@ -118,25 +125,22 @@
     font-weight: 500;
   }
 
-  /* Form elements: Heebo */
+  /* Form elements */
   input, textarea, select, label {
     font-family: "Heebo", sans-serif;
   }
 
-  /* Skip to content link */
+  /* Skip to content */
   .skip-to-content {
-    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground;
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground;
     font-family: "Heebo", sans-serif;
     font-weight: 500;
+    inset-inline-start: 1rem;
   }
 
-  [dir="rtl"] .skip-to-content {
-    @apply focus:right-4 focus:left-auto;
-  }
-
-  /* Smooth typography */
+  /* Smooth paragraphs */
   p {
-    line-height: 1.7;
+    line-height: 1.75;
   }
 
   /* Elegant subheadings */
@@ -151,70 +155,60 @@
     font-weight: 500;
     font-style: normal;
   }
+
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer utilities {
-  .text-gold {
-    color: hsl(var(--gold));
-  }
-  .bg-gold {
-    background-color: hsl(var(--gold));
-  }
-  .border-gold {
-    border-color: hsl(var(--gold));
-  }
-  .bg-section-alt {
-    background-color: hsl(var(--section-alt));
-  }
-  .bg-navy {
-    background-color: hsl(var(--navy));
-  }
-  .bg-navy-light {
-    background-color: hsl(var(--navy-light));
-  }
-  .text-navy {
-    color: hsl(var(--navy));
-  }
-  .bg-gold-light {
-    background-color: hsl(var(--gold-light));
+  .text-gold { color: hsl(var(--gold)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
+  .border-gold { border-color: hsl(var(--gold)); }
+  .bg-section-alt { background-color: hsl(var(--section-alt)); }
+  .bg-navy { background-color: hsl(var(--navy)); }
+  .bg-navy-light { background-color: hsl(var(--navy-light)); }
+  .text-navy { color: hsl(var(--navy)); }
+  .bg-gold-light { background-color: hsl(var(--gold-light)); }
+
+  .font-display { font-family: "Playfair Display", Georgia, serif; }
+  .font-body { font-family: "Heebo", "Inter", system-ui, sans-serif; }
+  .font-hebrew { font-family: "Heebo", "Assistant", sans-serif; }
+
+  /* Hero type scale */
+  .hero-h1 {
+    font-size: clamp(2.5rem, 5vw + 1rem, 5.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
   }
 
-  /* Typography utilities */
-  .font-display {
-    font-family: "Playfair Display", Georgia, serif;
+  /* Page H1 */
+  .page-h1 {
+    font-size: clamp(2rem, 3vw + 0.5rem, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
   }
 
-  .font-body {
-    font-family: "Heebo", "Inter", system-ui, sans-serif;
+  /* Section H2 */
+  .section-h2 {
+    font-size: clamp(1.625rem, 2.5vw + 0.25rem, 2.375rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
   }
 
-  .font-hebrew {
-    font-family: "Heebo", "Assistant", sans-serif;
-  }
-
-  /* RTL-aware spacing utilities */
-  .ms-2 {
-    margin-inline-start: 0.5rem;
-  }
-  .ms-4 {
-    margin-inline-start: 1rem;
-  }
-  .me-2 {
-    margin-inline-end: 0.5rem;
-  }
-  .me-4 {
-    margin-inline-end: 1rem;
-  }
-  .ps-2 {
-    padding-inline-start: 0.5rem;
-  }
-  .ps-4 {
-    padding-inline-start: 1rem;
-  }
-  .pe-2 {
-    padding-inline-end: 0.5rem;
-  }
-  .pe-4 {
-    padding-inline-end: 1rem;
-  }
+  /* RTL-aware spacing */
+  .ms-2 { margin-inline-start: 0.5rem; }
+  .ms-4 { margin-inline-start: 1rem; }
+  .me-2 { margin-inline-end: 0.5rem; }
+  .me-4 { margin-inline-end: 1rem; }
+  .ps-2 { padding-inline-start: 0.5rem; }
+  .ps-4 { padding-inline-start: 1rem; }
+  .pe-2 { padding-inline-end: 0.5rem; }
+  .pe-4 { padding-inline-end: 1rem; }
 }

@@ -15,6 +15,7 @@ import AiAndLaw from "./pages/practice-areas/AiAndLaw";
 import TechnologyInternetLaw from "./pages/practice-areas/TechnologyInternetLaw";
 import CommercialLitigation from "./pages/practice-areas/CommercialLitigation";
 import Insights from "./pages/Insights";
+import PillarArticle from "./pages/insights/PillarArticle";
 import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -38,6 +39,7 @@ const LocalizedRoutes = () => (
       <Route path="practice-areas/technology-internet-law" element={<TechnologyInternetLaw />} />
       <Route path="practice-areas/commercial-litigation" element={<CommercialLitigation />} />
       <Route path="insights" element={<Insights />} />
+      <Route path="insights/:slug" element={<PillarArticle />} />
       <Route path="contact" element={<Contact />} />
       <Route path="thank-you" element={<ThankYou />} />
       <Route path="privacy-policy" element={<PrivacyPolicy />} />
@@ -59,7 +61,6 @@ const App = () => (
           <Route path="/" element={<LanguageSelector />} />
           <Route path="/en/*" element={<LocalizedRoutes />} />
           <Route path="/he/*" element={<LocalizedRoutes />} />
-          {/* Legacy routes redirect to /en */}
           <Route path="/about" element={<Navigate to="/en/about" replace />} />
           <Route path="/practice-areas/*" element={<Navigate to="/en/practice-areas" replace />} />
           <Route path="/insights" element={<Navigate to="/en/insights" replace />} />
