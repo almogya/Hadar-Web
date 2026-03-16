@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Globe, ChevronDown } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import logo from "@/assets/logo.jpeg";
 
@@ -16,7 +16,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => { setOpen(false); }, [location.pathname]);
 
   const navLinks = [
@@ -44,15 +43,15 @@ const Navbar = () => {
       aria-label={lang === "he" ? "ניווט ראשי" : "Main navigation"}
     >
       <div className="container flex items-center justify-between h-20">
-        {/* Logo */}
+        {/* Logo — more prominent */}
         <Link to={localePath("/")} className="flex items-center gap-3 group">
           <img
             src={logo}
             alt="HY Law Offices"
-            className="h-11 w-11 object-contain"
+            className="h-12 w-12 object-contain"
           />
-          <div className="hidden sm:flex flex-col">
-            <span className="font-display text-lg font-semibold text-foreground tracking-wide leading-tight">
+          <div className="flex flex-col">
+            <span className="font-display text-xl font-bold text-foreground tracking-wide leading-tight">
               HY Law Offices
             </span>
             <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-medium">
@@ -75,7 +74,7 @@ const Navbar = () => {
             >
               {link.label}
               {isActive(link.path) && (
-                <span className="absolute bottom-0 inset-x-4 h-[2px] bg-accent" />
+                <span className="absolute bottom-0 inset-x-4 h-[2px] bg-primary" />
               )}
             </Link>
           ))}

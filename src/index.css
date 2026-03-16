@@ -7,43 +7,44 @@
 @layer base {
   :root {
     --background: 220 20% 98%;
-    --foreground: 220 40% 13%;
-    --charcoal: 224 50% 10%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 40% 13%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 40% 13%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 220 60% 15%;
+    --primary: 216 65% 14%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 20% 96%;
-    --secondary-foreground: 220 40% 13%;
+    --secondary-foreground: 222 47% 11%;
 
     --muted: 210 20% 96%;
-    --muted-foreground: 215 20% 40%;
+    --muted-foreground: 215 16% 37%;
 
     --accent: 45 70% 47%;
-    --accent-foreground: 220 40% 13%;
+    --accent-foreground: 216 65% 14%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 220 60% 15%;
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 216 65% 14%;
 
     --radius: 0.25rem;
 
-    --hero-overlay: 220 60% 10%;
+    /* Extended palette */
+    --hero-overlay: 216 65% 10%;
     --section-alt: 220 20% 97%;
+    --mid-blue: 210 59% 30%;
+    --slate: 220 9% 46%;
+    --navy: 216 65% 14%;
+    --navy-light: 212 45% 25%;
     --gold: 45 70% 47%;
     --gold-light: 45 40% 92%;
-    --navy: 220 60% 15%;
-    --navy-light: 220 40% 25%;
-    --teal: 170 35% 55%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -138,12 +139,10 @@
     inset-inline-start: 1rem;
   }
 
-  /* Smooth paragraphs */
   p {
     line-height: 1.75;
   }
 
-  /* Elegant subheadings */
   .subheading {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 500;
@@ -156,7 +155,6 @@
     font-style: normal;
   }
 
-  /* Respect reduced motion */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
@@ -176,6 +174,9 @@
   .bg-navy-light { background-color: hsl(var(--navy-light)); }
   .text-navy { color: hsl(var(--navy)); }
   .bg-gold-light { background-color: hsl(var(--gold-light)); }
+  .text-mid-blue { color: hsl(var(--mid-blue)); }
+  .bg-mid-blue { background-color: hsl(var(--mid-blue)); }
+  .text-slate-muted { color: hsl(var(--slate)); }
 
   .font-display { font-family: "Playfair Display", Georgia, serif; }
   .font-body { font-family: "Heebo", "Inter", system-ui, sans-serif; }
