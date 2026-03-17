@@ -83,7 +83,7 @@ const Index = () => {
             <div className="flex flex-wrap gap-4">
               <Link
                 to={localePath("/contact")}
-                className="group inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-primary text-sm font-semibold tracking-wide hover:bg-accent/90 transition-all duration-200"
+                className="group inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide hover:bg-accent/90 transition-all duration-200"
               >
                 {t.hero.cta1}
                 <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
