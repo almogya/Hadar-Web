@@ -47,25 +47,25 @@ const Index = () => {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/75 to-primary/95" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/85 to-white/95" />
         </div>
         <div className="container relative z-10 py-32 md:py-40">
           <div className="max-w-3xl">
             {/* Prominent logo */}
             <div className="flex items-center gap-5 mb-12">
-              <img src={logo} alt="HY Law Offices" className="h-20 w-20 md:h-24 md:w-24 object-contain" />
+              <img src={logo} alt="HY Law Offices" className="h-36 w-36 md:h-44 md:w-44 object-contain" />
               <div>
-                <span className="text-primary-foreground font-display text-2xl md:text-3xl font-bold tracking-tight block leading-tight">
+                <span className="font-display text-2xl md:text-3xl font-bold tracking-tight block leading-tight" style={{ color: "#1a1a1a" }}>
                   {t.footer.firmName}
                 </span>
-                <span className="text-accent text-sm md:text-base font-medium tracking-wide">
+                <span className="text-sm md:text-base font-medium tracking-wide" style={{ color: "#0891b2" }}>
                   {lang === "he" ? "קניין רוחני · טכנולוגיה · משפט" : "IP · Technology · Law"}
                 </span>
               </div>
             </div>
 
             {/* H1 */}
-            <h1 className="hero-h1 font-display font-bold text-primary-foreground tracking-tight mb-5">
+            <h1 className="hero-h1 font-display font-bold tracking-tight mb-5" style={{ color: "#1a1a1a" }}>
               {t.hero.h1}
             </h1>
 
@@ -76,7 +76,7 @@ const Index = () => {
 
             {/* Clear specialization statement */}
             <div className="border-s-2 border-accent ps-5 mb-12">
-              <p className="text-base md:text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
+              <p className="text-base md:text-lg max-w-xl leading-relaxed" style={{ color: "#4a4a4a" }}>
                 {t.hero.sub}
               </p>
             </div>
@@ -92,7 +92,8 @@ const Index = () => {
               </Link>
               <Link
                 to={localePath("/contact")}
-                className="inline-flex items-center gap-2 px-10 py-5 border-2 border-primary-foreground/25 text-primary-foreground text-base font-semibold tracking-wide hover:bg-primary-foreground/10 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-10 py-5 border-2 text-base font-semibold tracking-wide transition-all duration-200"
+                style={{ borderColor: "rgba(26,26,26,0.2)", color: "#1a1a1a" }}
               >
                 {t.hero.cta2}
               </Link>
