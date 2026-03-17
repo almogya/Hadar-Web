@@ -173,9 +173,9 @@ export const en = {
     sub: "Practical, business-aligned legal support for IP, technology, and AI—from strategy to disputes.",
     bio: [
       "Hadar Yatzkan is the founder and managing attorney of HY Law Offices, a boutique law firm based in Givatayim, Israel, specializing in intellectual property, technology law, and commercial litigation.",
-      "With an LL.M. in Law and Technology, Hadar brings a distinctive combination of legal expertise and technological understanding to every engagement. Her practice is built on a core belief: legal strategy should serve business objectives, not the other way around.",
+      "With an LL.M. in Law and Technology, Hadar brings a distinctive combination of legal expertise and technological understanding to every engagement. His practice is built on a core belief: legal strategy should serve business objectives, not the other way around.",
       "Hadar advises startups, technology companies, digital content creators, and established brands on the full spectrum of IP matters—from trademark clearance and registration to copyright enforcement, technology licensing, and AI-related legal questions.",
-      "Her areas of specialization include copyright and digital content law, trademark registration and enforcement, platform and internet regulation, and the emerging legal landscape surrounding artificial intelligence. She works closely with founders and in-house teams to build IP portfolios that align with growth plans and investor expectations.",
+      "His areas of specialization include copyright and digital content law, trademark registration and enforcement, platform and internet regulation, and the emerging legal landscape surrounding artificial intelligence. He works closely with founders and in-house teams to build IP portfolios that align with growth plans and investor expectations.",
     ],
     approachBadge: "Our Approach",
     approachHeading: "How We Think About Legal Work",
