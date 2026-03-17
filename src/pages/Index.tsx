@@ -230,19 +230,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── Trust Bar ── */}
-      <section className="py-10 bg-background border-y border-border">
-        <div className="container">
-          <div className="flex flex-wrap justify-center gap-x-16 gap-y-5">
-            {t.trust.items.map((item) => (
-              <div key={item.title} className="text-center">
-                <p className="text-sm font-medium text-foreground">{item.title}</p>
-                <p className="text-[11px] text-muted-foreground tracking-wide mt-0.5">{item.sub}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── Featured Insights ── */}
       <section className="py-24 md:py-32 bg-primary" aria-labelledby="insights-heading">
