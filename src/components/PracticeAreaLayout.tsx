@@ -39,16 +39,16 @@ const PracticeAreaLayout = ({
     <Layout>
       <section className="py-24">
         <div className="container max-w-4xl">
-          <Link to={localePath("/practice-areas")} className="inline-flex items-center gap-1 text-sm text-gold hover:underline mb-8">
+          <Link to={localePath("/practice-areas")} className="inline-flex items-center gap-1 text-sm text-accent hover:underline mb-8">
             {isHe ? <ArrowRight size={14} /> : <ArrowLeft size={14} />}
             {isHe ? "חזרה לתחומי עיסוק" : "Back to Practice Areas"}
           </Link>
 
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-14 h-14 flex items-center justify-center bg-gold-light">
-              <Icon className="text-gold" size={24} />
+            <div className="w-14 h-14 flex items-center justify-center border border-accent/30">
+              <Icon className="text-accent" size={24} strokeWidth={1.5} />
             </div>
-            <span className="text-gold text-sm font-medium tracking-widest uppercase">
+            <span className="text-accent text-sm font-medium tracking-widest uppercase">
               {isHe ? "תחום עיסוק" : "Practice Area"}
             </span>
           </div>
@@ -71,7 +71,7 @@ const PracticeAreaLayout = ({
               </h2>
               <div className="flex flex-wrap gap-3">
                 {relatedLinks.map((rl) => (
-                  <Link key={rl.path} to={localePath(rl.path)} className="text-sm text-gold hover:underline">
+                  <Link key={rl.path} to={localePath(rl.path)} className="text-sm text-accent hover:underline">
                     {isHe ? rl.labelHe : rl.labelEn} →
                   </Link>
                 ))}
@@ -79,14 +79,28 @@ const PracticeAreaLayout = ({
             </div>
           )}
 
-          <div className="mt-16 p-8 bg-primary text-primary-foreground text-center">
-            <h2 className="text-2xl font-display font-bold mb-3">
+          <div style={{ marginTop: "64px", padding: "40px", backgroundColor: "#122a4b", textAlign: "center" }}>
+            <h2 style={{ color: "#ffffff", fontSize: "clamp(1.25rem, 2vw, 1.75rem)", fontWeight: 700, margin: "0 0 12px", lineHeight: 1.3 }}>
               {isHe ? (ctaTitleHe || "בואו נדבר על האסטרטגיה שלכם") : (ctaTitle || "Discuss Your Needs")}
             </h2>
-            <p className="text-primary-foreground/80 mb-6 text-sm">
+            <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "14px", margin: "0 0 24px", lineHeight: 1.7 }}>
               {isHe ? (ctaDescHe || "נשמח לעזור לכם להגן על הקניין הרוחני ולקדם את המטרות העסקיות שלכם.") : (ctaDesc || "We can help you protect your intellectual property and advance your business goals.")}
             </p>
-            <Link to={localePath("/contact")} className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-primary text-sm font-semibold tracking-wide hover:bg-gold/90 transition-colors">
+            <Link
+              to={localePath("/contact")}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "14px 32px",
+                backgroundColor: "#0891b2",
+                color: "#ffffff",
+                fontSize: "15px",
+                fontWeight: 700,
+                textDecoration: "none",
+                borderRadius: "4px",
+              }}
+            >
               {isHe ? "לקביעת ייעוץ" : "Schedule a Consultation"} <ArrowRight size={16} />
             </Link>
           </div>

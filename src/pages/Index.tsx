@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, Users, Building2, Lightbulb, ArrowLeft, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-editorial.jpg";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo.png";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
@@ -164,17 +164,25 @@ const Index = () => {
       </section>
 
       {/* ── Contact CTA strip ── */}
-      <section className="py-14 bg-primary">
-        <div className="container flex flex-col sm:flex-row items-center justify-between gap-6">
-          <p className="text-primary-foreground font-display text-xl md:text-2xl font-semibold tracking-tight text-center sm:text-start">
+      <section style={{ padding: "48px 0", backgroundColor: "#122a4b" }}>
+        <div className="container" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "24px" }}>
+          <p style={{ color: "#ffffff", fontSize: "clamp(1.25rem, 2vw, 1.75rem)", fontWeight: 700, margin: 0 }}>
             {t.ctaSection.heading}
           </p>
           <Link
             to={localePath("/contact")}
-            className="group inline-flex items-center gap-2.5 px-10 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide hover:bg-accent/90 transition-all shrink-0 shadow-lg"
+            style={{
+              display: "inline-block",
+              padding: "14px 32px",
+              backgroundColor: "#0891b2",
+              color: "#ffffff",
+              fontSize: "15px",
+              fontWeight: 700,
+              textDecoration: "none",
+              borderRadius: "4px",
+            }}
           >
             {t.ctaSection.cta1}
-            <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
           </Link>
         </div>
       </section>
@@ -335,29 +343,47 @@ const Index = () => {
       </section>
 
       {/* ── Final CTA ── */}
-      <section className="py-24 md:py-32 bg-section-alt border-t border-border">
-        <div className="container max-w-3xl text-center">
-          <div className="w-12 h-px bg-foreground/20 mx-auto mb-8" />
-          <h2 className="section-h2 font-display font-bold text-foreground mb-6 tracking-tight">
+      <section style={{ padding: "80px 0", backgroundColor: "#122a4b" }}>
+        <div className="container" style={{ maxWidth: "680px", textAlign: "center" }}>
+          <div style={{ width: "48px", height: "1px", backgroundColor: "rgba(255,255,255,0.2)", margin: "0 auto 32px" }} />
+          <h2 style={{ color: "#ffffff", fontSize: "clamp(1.5rem, 3vw, 2.25rem)", fontWeight: 700, margin: "0 0 20px", lineHeight: 1.2 }}>
             {t.ctaSection.heading}
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg mb-4 leading-relaxed">
+          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "16px", lineHeight: 1.8, margin: "0 0 12px" }}>
             {t.ctaSection.sub}
           </p>
-          <p className="text-muted-foreground/60 text-xs max-w-lg mx-auto mb-10 leading-relaxed">
+          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "12px", lineHeight: 1.7, margin: "0 auto 40px", maxWidth: "480px" }}>
             {t.ctaSection.disclaimer}
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "16px" }}>
             <Link
               to={localePath("/contact")}
-              className="group inline-flex items-center gap-2.5 px-10 py-5 bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:bg-primary/90 transition-all shadow-lg"
+              style={{
+                display: "inline-block",
+                padding: "16px 36px",
+                backgroundColor: "#0891b2",
+                color: "#ffffff",
+                fontSize: "16px",
+                fontWeight: 700,
+                textDecoration: "none",
+                borderRadius: "4px",
+              }}
             >
               {t.ctaSection.cta1}
-              <DirectionalIcon size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
             </Link>
             <Link
               to={localePath("/contact")}
-              className="inline-flex items-center gap-2 px-10 py-5 border-2 border-border text-foreground text-sm font-semibold tracking-wide hover:bg-muted/50 transition-all"
+              style={{
+                display: "inline-block",
+                padding: "16px 36px",
+                border: "2px solid rgba(255,255,255,0.3)",
+                color: "#ffffff",
+                fontSize: "16px",
+                fontWeight: 700,
+                textDecoration: "none",
+                borderRadius: "4px",
+                backgroundColor: "transparent",
+              }}
             >
               {t.ctaSection.cta2}
             </Link>

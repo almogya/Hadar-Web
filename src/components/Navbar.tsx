@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import logo from "@/assets/logo.jpeg";
+import logo from "@/assets/logo.png";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
@@ -94,7 +94,17 @@ const Navbar = () => {
           </button>
           <Link
             to={localePath("/contact")}
-            className="px-6 py-2.5 bg-primary text-primary-foreground text-xs font-semibold tracking-widest uppercase hover:bg-primary/90 transition-colors"
+            style={{
+              display: "inline-block",
+              padding: "10px 24px",
+              backgroundColor: "#0891b2",
+              color: "#ffffff",
+              fontSize: "14px",
+              fontWeight: 700,
+              textDecoration: "none",
+              borderRadius: "4px",
+              lineHeight: 1.4,
+            }}
           >
             {t.nav.cta}
           </Link>
@@ -144,7 +154,19 @@ const Navbar = () => {
           </div>
           <Link
             to={localePath("/contact")}
-            className="mt-4 px-6 py-3.5 bg-primary text-primary-foreground text-sm font-semibold tracking-widest uppercase text-center"
+            style={{
+              display: "block",
+              padding: "14px 24px",
+              backgroundColor: "#0891b2",
+              color: "#ffffff",
+              fontSize: "15px",
+              fontWeight: 700,
+              textDecoration: "none",
+              borderRadius: "4px",
+              textAlign: "center" as const,
+              marginTop: "16px",
+              lineHeight: 1.4,
+            }}
           >
             {t.nav.cta}
           </Link>

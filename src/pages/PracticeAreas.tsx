@@ -74,10 +74,21 @@ const PracticeAreas = () => {
           <div className="mt-16 text-center">
             <Link
               to={localePath("/contact")}
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm font-semibold tracking-widest uppercase hover:bg-primary/90 transition-colors"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "14px 32px",
+                backgroundColor: "#0891b2",
+                color: "#ffffff",
+                fontSize: "15px",
+                fontWeight: 700,
+                textDecoration: "none",
+                borderRadius: "4px",
+              }}
             >
               {t.nav.cta}
-              <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
+              <ArrowRight size={16} />
             </Link>
           </div>
         </div>
