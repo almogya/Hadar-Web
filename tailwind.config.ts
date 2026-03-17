@@ -14,12 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        // Display: Cormorant Garamond for English headings (authoritative legal serif)
-        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        // Body: Inter for all body text (clean tech sans)
-        body: ['"Inter"', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
-        // Hebrew display: Noto Serif Hebrew for Hebrew headings
-        hebrew: ['"Noto Serif Hebrew"', '"Heebo"', 'serif'],
+        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        body: ['"Heebo"', 'system-ui', '-apple-system', 'sans-serif'],
+        hebrew: ['"Heebo"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
