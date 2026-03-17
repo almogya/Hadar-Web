@@ -155,7 +155,7 @@ const Index = () => {
           </p>
           <Link
             to={localePath("/contact")}
-            className="group inline-flex items-center gap-2.5 px-8 py-3.5 bg-accent text-primary text-sm font-semibold tracking-wide hover:bg-accent/90 transition-all shrink-0"
+            className="group inline-flex items-center gap-2.5 px-8 py-3.5 bg-accent text-accent-foreground text-sm font-semibold tracking-wide hover:bg-accent/90 transition-all shrink-0"
           >
             {t.ctaSection.cta1}
             <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
