@@ -85,7 +85,7 @@ const About = () => {
         <div className="container max-w-3xl text-center">
           <h2 className="section-h2 font-display font-bold text-primary-foreground mb-6">{t.ctaSection.heading}</h2>
           <p className="text-primary-foreground/75 text-base mb-8 leading-relaxed">{t.ctaSection.sub}</p>
-          <Link to={localePath("/contact")} className="group inline-flex items-center gap-2 px-8 py-4 bg-accent text-primary text-sm font-semibold tracking-wide hover:bg-accent/90 transition-all">
+          <Link to={localePath("/contact")} className="group inline-flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide hover:bg-accent/90 transition-all">
             {t.ctaSection.cta1} <DirectionalIcon size={16} className="group-hover:translate-x-0.5 transition-transform" />
           </Link>
         </div>
