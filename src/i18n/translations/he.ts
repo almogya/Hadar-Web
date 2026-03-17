@@ -165,7 +165,7 @@ export const he: typeof en = {
 
   founder: {
     name: "הדר יצקן",
-    title: "מייסדת ועורכת דין מנהלת",
+    title: "מייסד ועורך דין מנהל",
     credential: "LL.M. במשפט וטכנולוגיה",
   },
 
