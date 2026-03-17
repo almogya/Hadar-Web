@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
@@ -17,7 +17,7 @@ const Contact = () => {
   const lastSubmit = useRef(0);
   const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (honeypot) return;
     const now = Date.now();
@@ -25,11 +25,34 @@ const Contact = () => {
     if (!form.consent) { toast.error(t.contact.consentError); return; }
     setSubmitting(true);
     lastSubmit.current = now;
-    setTimeout(() => {
+
+    try {
+      const formData = new FormData();
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("phone", form.phone);
+      formData.append("company", form.company);
+      formData.append("matterType", form.matterType);
+      formData.append("message", form.message);
+      formData.append("_subject", `New Inquiry from ${form.name} — HY Law`);
+      formData.append("_template", "table");
+
+      const res = await fetch("https://formsubmit.co/ajax/hadaryatzkan@gmail.com", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
+        navigate(localePath("/thank-you"));
+      } else {
+        toast.error(lang === "he" ? "שגיאה בשליחה. נסו שוב." : "Failed to send. Please try again.");
+      }
+    } catch {
+      toast.error(lang === "he" ? "שגיאת רשת. נסו שוב." : "Network error. Please try again.");
+    } finally {
       setSubmitting(false);
-      setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
-      navigate(localePath("/thank-you"));
-    }, 500);
+    }
   };
 
   const inputClasses =
@@ -251,10 +274,19 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm font-semibold tracking-widest uppercase hover:bg-primary/90 transition-colors disabled:opacity-50"
+                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm font-semibold tracking-widest uppercase hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {submitting ? t.contact.submitting : t.contact.submitBtn}
-                    <Send size={16} />
+                    {submitting ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin" />
+                        {t.contact.submitting}
+                      </>
+                    ) : (
+                      <>
+                        {t.contact.submitBtn}
+                        <Send size={16} />
+                      </>
+                    )}
                   </button>
                 </form>
               </div>

@@ -9,7 +9,7 @@ interface SEOHeadProps {
   descriptionHe?: string;
 }
 
-const DOMAIN = "[UNSPECIFIED]"; // Replace with real domain when available
+const DOMAIN = typeof window !== "undefined" ? window.location.origin : "";
 
 const SEOHead = ({ title, description, titleHe, descriptionHe }: SEOHeadProps) => {
   const { lang } = useLanguage();

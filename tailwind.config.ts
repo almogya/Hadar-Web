@@ -14,12 +14,12 @@ export default {
     },
     extend: {
       fontFamily: {
-        // Display: Playfair Display for English headings
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
-        // Body: Heebo for all body text and Hebrew
-        body: ['"Heebo"', '"Inter"', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
-        // Hebrew: Heebo for everything
-        hebrew: ['"Heebo"', '"Assistant"', 'sans-serif'],
+        // Display: Cormorant Garamond for English headings (authoritative legal serif)
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        // Body: Inter for all body text (clean tech sans)
+        body: ['"Inter"', 'system-ui', '-apple-system', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        // Hebrew display: Noto Serif Hebrew for Hebrew headings
+        hebrew: ['"Noto Serif Hebrew"', '"Heebo"', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",

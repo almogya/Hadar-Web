@@ -58,13 +58,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LanguageSelector />} />
+          <Route path="/" element={<Navigate to="/he" replace />} />
           <Route path="/en/*" element={<LocalizedRoutes />} />
           <Route path="/he/*" element={<LocalizedRoutes />} />
-          <Route path="/about" element={<Navigate to="/en/about" replace />} />
-          <Route path="/practice-areas/*" element={<Navigate to="/en/practice-areas" replace />} />
-          <Route path="/insights" element={<Navigate to="/en/insights" replace />} />
-          <Route path="/contact" element={<Navigate to="/en/contact" replace />} />
+          <Route path="/about" element={<Navigate to="/he/about" replace />} />
+          <Route path="/practice-areas/*" element={<Navigate to="/he/practice-areas" replace />} />
+          <Route path="/insights" element={<Navigate to="/he/insights" replace />} />
+          <Route path="/contact" element={<Navigate to="/he/contact" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

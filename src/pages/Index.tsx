@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, Users, Building2, Lightbulb } from "lucide-react";
+import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, Users, Building2, Lightbulb, ArrowLeft, ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-editorial.jpg";
 import logo from "@/assets/logo.jpeg";
 import Layout from "@/components/Layout";
@@ -26,7 +26,7 @@ const STEP_ICON_MAP = [MessageSquare, FileSearch, CheckCircle];
 const AUDIENCE_ICONS = [Building2, Lightbulb, Users];
 
 const Index = () => {
-  const { t, localePath, lang, dir } = useLanguage();
+  const { t, localePath, lang } = useLanguage();
 
   return (
     <Layout>
@@ -37,29 +37,29 @@ const Index = () => {
         descriptionHe="משרד עורכי דין בוטיק לקניין רוחני, טכנולוגיה ובינה מלאכותית בגבעתיים. רישום סימני מסחר, אכיפת זכויות יוצרים, דיני תוכן דיגיטלי וליטיגציה מסחרית."
       />
 
-      {/* ── HERO ── */}
+      {/* ── HERO with prominent logo + specialization ── */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImg}
-            alt={lang === "he" ? "טקסטורה משפטית-טכנולוגית מופשטת" : "Abstract legal-tech texture"}
+            alt=""
             className="w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/75 to-primary/95" />
         </div>
         <div className="container relative z-10 py-32 md:py-40">
           <div className="max-w-3xl">
-            {/* Brand lockup + badge */}
-            <div className="flex items-center gap-4 mb-10">
-              <img src={logo} alt="HY Law Offices" className="h-12 w-12 object-contain" />
+            {/* Prominent logo */}
+            <div className="flex items-center gap-5 mb-12">
+              <img src={logo} alt="HY Law Offices" className="h-20 w-20 md:h-24 md:w-24 object-contain" />
               <div>
-                <span className="text-primary-foreground/90 text-[11px] font-semibold tracking-[0.35em] uppercase block">
-                  {t.hero.badge}
+                <span className="text-primary-foreground font-display text-2xl md:text-3xl font-bold tracking-tight block leading-tight">
+                  {t.footer.firmName}
                 </span>
-                <span className="text-primary-foreground/50 text-[10px] tracking-[0.2em] uppercase">
-                  HY Law Offices
+                <span className="text-accent text-sm md:text-base font-medium tracking-wide">
+                  {lang === "he" ? "קניין רוחני · טכנולוגיה · משפט" : "IP · Technology · Law"}
                 </span>
               </div>
             </div>
@@ -69,28 +69,30 @@ const Index = () => {
               {t.hero.h1}
             </h1>
 
-            {/* Accent line */}
-            <p className="text-2xl md:text-3xl lg:text-4xl font-display text-accent font-medium mb-10 leading-tight tracking-tight">
+            {/* Specialization accent */}
+            <p className="text-2xl md:text-3xl lg:text-4xl font-display text-accent font-medium mb-8 leading-tight tracking-tight">
               {t.hero.h1Accent}
             </p>
 
-            {/* Subhead */}
-            <p className="text-base md:text-lg text-primary-foreground/70 max-w-xl mb-12 leading-relaxed">
-              {t.hero.sub}
-            </p>
+            {/* Clear specialization statement */}
+            <div className="border-s-2 border-accent ps-5 mb-12">
+              <p className="text-base md:text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
+                {t.hero.sub}
+              </p>
+            </div>
 
-            {/* CTAs */}
+            {/* Prominent CTA */}
             <div className="flex flex-wrap gap-4">
               <Link
                 to={localePath("/contact")}
-                className="group inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide hover:bg-accent/90 transition-all duration-200"
+                className="group inline-flex items-center gap-2.5 px-10 py-5 bg-accent text-accent-foreground text-base font-semibold tracking-wide hover:bg-accent/90 transition-all duration-200 shadow-lg"
               >
                 {t.hero.cta1}
-                <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
+                <DirectionalIcon icon="arrow" size={18} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
               </Link>
               <Link
                 to={localePath("/contact")}
-                className="inline-flex items-center gap-2 px-8 py-4 border border-primary-foreground/20 text-primary-foreground text-sm font-semibold tracking-wide hover:bg-primary-foreground/5 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-10 py-5 border-2 border-primary-foreground/25 text-primary-foreground text-base font-semibold tracking-wide hover:bg-primary-foreground/10 transition-all duration-200"
               >
                 {t.hero.cta2}
               </Link>
@@ -99,7 +101,21 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── Practice Areas (immediately after hero) ── */}
+      {/* ── Trust Bar ── */}
+      <section className="py-6 bg-primary border-b border-primary-foreground/10">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {t.trust.items.map((item) => (
+              <div key={item.title} className="text-center">
+                <p className="text-sm font-semibold text-primary-foreground tracking-wide">{item.title}</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">{item.sub}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Practice Areas ── */}
       <section className="py-24 md:py-32 bg-background" aria-labelledby="practice-heading">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-20">
@@ -129,7 +145,7 @@ const Index = () => {
                   <p className="text-sm text-muted-foreground leading-relaxed flex-1">
                     {area.desc}
                   </p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-medium text-mid-blue tracking-wide group-hover:gap-2.5 transition-all">
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-medium text-accent tracking-wide group-hover:gap-2.5 transition-all">
                     {lang === "he" ? "למידע נוסף" : "Learn More"} <DirectionalIcon size={12} />
                   </span>
                 </Link>
@@ -139,7 +155,7 @@ const Index = () => {
           <div className="text-center mt-16">
             <Link
               to={localePath("/practice-areas")}
-              className="inline-flex items-center gap-2 text-sm font-medium text-mid-blue hover:underline tracking-wide"
+              className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline tracking-wide"
             >
               {t.practiceSection.viewAll} <DirectionalIcon size={14} />
             </Link>
@@ -148,14 +164,14 @@ const Index = () => {
       </section>
 
       {/* ── Contact CTA strip ── */}
-      <section className="py-12 bg-primary">
+      <section className="py-14 bg-primary">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-primary-foreground font-display text-xl md:text-2xl font-semibold tracking-tight text-center sm:text-start">
             {t.ctaSection.heading}
           </p>
           <Link
             to={localePath("/contact")}
-            className="group inline-flex items-center gap-2.5 px-8 py-3.5 bg-accent text-accent-foreground text-sm font-semibold tracking-wide hover:bg-accent/90 transition-all shrink-0"
+            className="group inline-flex items-center gap-2.5 px-10 py-4 bg-accent text-accent-foreground text-sm font-semibold tracking-wide hover:bg-accent/90 transition-all shrink-0 shadow-lg"
           >
             {t.ctaSection.cta1}
             <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
@@ -163,7 +179,59 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── Who We Advise ── */}
+      {/* ── How We Work (Dynamic) ── */}
+      <section className="py-24 md:py-32 bg-section-alt" aria-labelledby="process-heading">
+        <div className="container">
+          <div className="max-w-2xl mx-auto text-center mb-20">
+            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase">
+              {t.process.badge}
+            </span>
+            <h2 id="process-heading" className="section-h2 font-display font-bold text-foreground mt-4 tracking-tight">
+              {t.process.heading}
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto relative">
+            {/* Connecting line */}
+            <div className="hidden md:block absolute top-12 start-0 end-0 h-px bg-border" aria-hidden="true" />
+            <div className="grid md:grid-cols-3 gap-12 md:gap-8">
+              {t.process.steps.map((step, i) => {
+                const Icon = STEP_ICON_MAP[i];
+                return (
+                  <div key={step.title} className="group relative text-center">
+                    {/* Step number circle */}
+                    <div className="relative z-10 w-24 h-24 mx-auto mb-8 rounded-full bg-background border-2 border-mid-blue/30 flex flex-col items-center justify-center group-hover:border-accent group-hover:shadow-lg transition-all duration-500">
+                      <span className="text-[10px] text-mid-blue font-bold tracking-[0.3em] uppercase mb-1">
+                        {t.stepLabel}
+                      </span>
+                      <span className="text-2xl font-bold text-accent leading-none">
+                        {i + 1}
+                      </span>
+                    </div>
+                    {/* Icon */}
+                    <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
+                      <Icon className="text-mid-blue group-hover:text-accent transition-colors duration-300" size={28} strokeWidth={1.5} aria-hidden="true" />
+                    </div>
+                    <h3 className="font-display text-lg font-semibold text-foreground mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {step.desc}
+                    </p>
+                    {/* Arrow between steps on mobile */}
+                    {i < t.process.steps.length - 1 && (
+                      <div className="md:hidden flex justify-center my-6">
+                        <div className="w-px h-8 bg-border" />
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Who We Advise (Experience/Customers) ── */}
       <section className="py-24 md:py-32" aria-labelledby="audiences-heading">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center mb-20">
@@ -178,9 +246,9 @@ const Index = () => {
             {t.audiences.items.map((audience, i) => {
               const Icon = AUDIENCE_ICONS[i] || Users;
               return (
-                <div key={audience.title} className="text-center px-6">
-                  <div className="w-14 h-14 mx-auto mb-6 border border-border flex items-center justify-center">
-                    <Icon className="text-mid-blue" size={24} strokeWidth={1.5} aria-hidden="true" />
+                <div key={audience.title} className="group text-center px-6 py-8 border border-transparent hover:border-border hover:bg-muted/20 transition-all duration-300">
+                  <div className="w-16 h-16 mx-auto mb-6 border-2 border-accent/30 rounded-full flex items-center justify-center group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300">
+                    <Icon className="text-mid-blue group-hover:text-accent transition-colors" size={26} strokeWidth={1.5} aria-hidden="true" />
                   </div>
                   <h3 className="font-display text-lg font-semibold text-foreground mb-3">
                     {audience.title}
@@ -194,42 +262,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* ── How We Work ── */}
-      <section className="py-24 md:py-32 bg-section-alt" aria-labelledby="process-heading">
-        <div className="container">
-          <div className="max-w-2xl mx-auto text-center mb-20">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase">
-              {t.process.badge}
-            </span>
-            <h2 id="process-heading" className="section-h2 font-display font-bold text-foreground mt-4 tracking-tight">
-              {t.process.heading}
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-16 max-w-4xl mx-auto">
-            {t.process.steps.map((step, i) => {
-              const Icon = STEP_ICON_MAP[i];
-              return (
-                <div key={step.title} className="text-center group">
-                  <div className="w-16 h-16 mx-auto mb-6 border border-border flex items-center justify-center group-hover:border-mid-blue/40 transition-colors">
-                    <Icon className="text-mid-blue" size={24} strokeWidth={1.5} aria-hidden="true" />
-                  </div>
-                  <div className="text-[11px] text-mid-blue font-semibold tracking-[0.35em] uppercase mb-3">
-                    {t.stepLabel} {i + 1}
-                  </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {step.desc}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
 
       {/* ── Featured Insights ── */}
       <section className="py-24 md:py-32 bg-primary" aria-labelledby="insights-heading">
@@ -318,14 +350,14 @@ const Index = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to={localePath("/contact")}
-              className="group inline-flex items-center gap-2.5 px-8 py-4 bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:bg-primary/90 transition-all"
+              className="group inline-flex items-center gap-2.5 px-10 py-5 bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:bg-primary/90 transition-all shadow-lg"
             >
               {t.ctaSection.cta1}
               <DirectionalIcon size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
             </Link>
             <Link
               to={localePath("/contact")}
-              className="inline-flex items-center gap-2 px-8 py-4 border border-border text-foreground text-sm font-semibold tracking-wide hover:bg-muted/50 transition-all"
+              className="inline-flex items-center gap-2 px-10 py-5 border-2 border-border text-foreground text-sm font-semibold tracking-wide hover:bg-muted/50 transition-all"
             >
               {t.ctaSection.cta2}
             </Link>

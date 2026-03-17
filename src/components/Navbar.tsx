@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import logo from "@/assets/logo.jpeg";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -80,8 +81,9 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Desktop Right: Language + CTA */}
-        <div className="hidden lg:flex items-center gap-4">
+        {/* Desktop Right: Theme + Language + CTA */}
+        <div className="hidden lg:flex items-center gap-3">
+          <ThemeToggle />
           <button
             onClick={switchLang}
             className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground border border-border hover:border-foreground/20 transition-all"
@@ -110,39 +112,44 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {open && (
-        <div className="lg:hidden bg-background border-t border-border animate-fade-in">
-          <div className="container py-8 flex flex-col gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={localePath(link.path)}
-                className={`py-3 px-4 text-base font-medium transition-colors ${
-                  isActive(link.path)
-                    ? "text-foreground bg-muted"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <div className="border-t border-border my-4" />
+      <div
+        className={`lg:hidden bg-background border-t border-border overflow-hidden transition-all duration-300 ease-in-out ${
+          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 border-t-0"
+        }`}
+      >
+        <div className="container py-8 flex flex-col gap-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={localePath(link.path)}
+              className={`py-3 px-4 text-base font-medium transition-colors ${
+                isActive(link.path)
+                  ? "text-foreground bg-muted"
+                  : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="border-t border-border my-4" />
+          <div className="flex items-center gap-3 px-4">
+            <ThemeToggle />
             <button
               onClick={() => { switchLang(); setOpen(false); }}
-              className="flex items-center gap-2 py-3 px-4 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="flex items-center gap-2 py-3 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               <Globe size={18} />
               {t.otherLangName}
             </button>
-            <Link
-              to={localePath("/contact")}
-              className="mt-4 px-6 py-3.5 bg-primary text-primary-foreground text-sm font-semibold tracking-widest uppercase text-center"
-            >
-              {t.nav.cta}
-            </Link>
           </div>
+          <Link
+            to={localePath("/contact")}
+            className="mt-4 px-6 py-3.5 bg-primary text-primary-foreground text-sm font-semibold tracking-widest uppercase text-center"
+          >
+            {t.nav.cta}
+          </Link>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

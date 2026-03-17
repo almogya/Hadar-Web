@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import headshot from "@/assets/attorney-headshot.jpg";
+import officeImg from "@/assets/hero-office.jpg";
 import { Link } from "react-router-dom";
 import DirectionalIcon from "@/components/DirectionalIcon";
 
@@ -42,6 +43,12 @@ const About = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Office Image Banner */}
+      <section className="relative h-48 md:h-64 overflow-hidden">
+        <img src={officeImg} alt="" className="w-full h-full object-cover" loading="lazy" />
+        <div className="absolute inset-0 bg-primary/40" />
       </section>
 
       {/* Approach */}

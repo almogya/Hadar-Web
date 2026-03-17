@@ -2,6 +2,8 @@ import { ReactNode, useEffect } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
+import FloatingContact from "./FloatingContact";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const { lang, dir } = useLanguage();
@@ -24,6 +26,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
         {children}
       </main>
       <Footer />
+      <ScrollToTop />
+      <FloatingContact />
     </div>
   );
 };

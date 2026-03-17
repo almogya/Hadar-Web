@@ -33,7 +33,9 @@ const Footer = () => {
               {t.footer.firmDesc}
             </p>
             <div className="w-10 h-px bg-primary-foreground/20 mb-4" />
-            <p className="text-xs opacity-30">{t.footer.barNumber}</p>
+            {!t.footer.barNumber.includes("[UNSPECIFIED]") && (
+              <p className="text-xs opacity-30">{t.footer.barNumber}</p>
+            )}
           </div>
 
           {/* Practice Areas */}
