@@ -70,7 +70,7 @@ const Index = () => {
             </h1>
 
             {/* Accent line */}
-            <p className="text-2xl md:text-3xl lg:text-4xl font-display text-accent font-medium mb-10 leading-tight tracking-tight">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-display text-accent font-medium mb-10 leading-tight tracking-tight text-[hsl(var(--teal))]">
               {t.hero.h1Accent}
             </p>
 
