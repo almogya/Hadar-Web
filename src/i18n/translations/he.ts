@@ -1,6 +1,6 @@
 import type { en } from "./en";
 
-export const he: typeof en = {
+export const he = {
   langName: "עברית",
   otherLangName: "English",
   dir: "rtl" as const,
@@ -561,4 +561,4 @@ export const he: typeof en = {
       ],
     },
   },
-};
+} satisfies typeof en;

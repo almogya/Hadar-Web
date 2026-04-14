@@ -2,10 +2,18 @@ import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
 import { Link } from "react-router-dom";
-import { Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb } from "lucide-react";
+import { Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb, type LucideIcon } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const areaIcons = [Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb];
+/** Stable href → icon mapping — never index-based */
+const AREA_ICON_MAP: Record<string, LucideIcon> = {
+  "/practice-areas/intellectual-property": Shield,
+  "/practice-areas/trademarks": Scale,
+  "/practice-areas/copyright-digital-content": Gavel,
+  "/practice-areas/technology-internet-law": Globe,
+  "/practice-areas/ai-and-law": Brain,
+  "/practice-areas/commercial-litigation": Briefcase,
+};
 
 const PracticeAreas = () => {
   const { t, localePath, lang } = useLanguage();
@@ -54,8 +62,8 @@ const PracticeAreas = () => {
       <section className="py-20">
         <div className="container">
           <div className="space-y-4">
-            {areas.map((area, i) => {
-              const Icon = areaIcons[i] || Lightbulb;
+            {areas.map((area) => {
+              const Icon = AREA_ICON_MAP[area.link] || Lightbulb;
               return (
                 <Link
                   to={localePath(area.link)}
@@ -88,7 +96,7 @@ const PracticeAreas = () => {
                 alignItems: "center",
                 gap: "8px",
                 padding: "14px 32px",
-                backgroundColor: "#0891b2",
+                backgroundColor: "#1F4B7A",
                 color: "#ffffff",
                 fontSize: "15px",
                 fontWeight: 700,

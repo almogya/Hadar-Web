@@ -5,45 +5,53 @@
 @tailwind utilities;
 
 @layer base {
+  /* ── Design tokens v2: Blue / Gray / White / Gold ────────────────────── */
+  /* Primary Navy  #0B1F3A  hsl(214 68% 13%)                               */
+  /* Mid Blue      #1F4B7A  hsl(213 59% 30%)                               */
+  /* Accent Gold   #C9A227  hsl(42  68% 47%)                               */
+  /* Slate Gray    #6B7280  hsl(220  9% 46%)                               */
+  /* Off-white     #F7F8FA  hsl(220 14% 98%)                               */
+  /* Border Gray   #E5E7EB  hsl(220 13% 91%)                               */
+  /* ─────────────────────────────────────────────────────────────────────── */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --background: 220 14% 98%;        /* #F7F8FA off-white */
+    --foreground: 214 68% 10%;        /* near-black navy */
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 214 68% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 214 68% 10%;
 
-    --primary: 216 65% 14%;
+    --primary: 214 68% 13%;           /* #0B1F3A deep navy */
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 14% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary-foreground: 214 68% 10%;
 
     --muted: 220 14% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted-foreground: 220 9% 46%;   /* #6B7280 slate */
 
-    --accent: 192 91% 36%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 42 68% 47%;             /* #C9A227 gold */
+    --accent-foreground: 214 68% 10%; /* dark text on gold */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%;
+    --border: 220 13% 91%;            /* #E5E7EB */
     --input: 220 13% 91%;
-    --ring: 216 65% 14%;
+    --ring: 214 68% 13%;
 
     --radius: 0.25rem;
 
     /* Extended palette */
     --section-alt: 220 14% 96%;
-    --mid-blue: 210 59% 30%;
-    --slate: 220 9% 46%;
-    --navy: 216 65% 14%;
-    --navy-light: 212 45% 25%;
-    --teal: 192 91% 36%;
-    --teal-light: 192 30% 93%;
+    --mid-blue: 213 59% 30%;          /* #1F4B7A */
+    --slate: 220 9% 46%;              /* #6B7280 */
+    --navy: 214 68% 13%;              /* #0B1F3A */
+    --navy-light: 213 59% 30%;        /* #1F4B7A */
+    --gold: 42 68% 47%;               /* #C9A227 */
+    --gold-light: 42 68% 94%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -52,46 +60,46 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 42 68% 47%;
   }
 
   .dark {
-    --background: 220 20% 7%;
+    --background: 214 40% 7%;
     --foreground: 220 14% 90%;
 
-    --card: 220 20% 10%;
+    --card: 214 40% 10%;
     --card-foreground: 220 14% 90%;
 
-    --popover: 220 20% 10%;
+    --popover: 214 40% 10%;
     --popover-foreground: 220 14% 90%;
 
-    /* Keep primary as navy — this is critical for bg-primary sections */
-    --primary: 216 65% 14%;
+    /* Keep primary as deep navy in dark mode */
+    --primary: 214 68% 13%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 20% 14%;
+    --secondary: 214 30% 14%;
     --secondary-foreground: 220 14% 90%;
 
-    --muted: 220 20% 14%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 214 30% 14%;
+    --muted-foreground: 220 9% 60%;
 
-    --accent: 192 91% 42%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 42 68% 52%;             /* slightly lighter gold in dark */
+    --accent-foreground: 214 68% 10%;
 
     --destructive: 0 63% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 192 91% 42%;
+    --border: 214 25% 20%;
+    --input: 214 25% 20%;
+    --ring: 42 68% 52%;
 
-    --section-alt: 220 20% 10%;
-    --mid-blue: 210 50% 60%;
-    --slate: 220 9% 55%;
-    --navy: 216 65% 14%;
-    --navy-light: 212 35% 40%;
-    --teal: 192 91% 42%;
-    --teal-light: 192 30% 12%;
+    --section-alt: 214 40% 10%;
+    --mid-blue: 213 50% 55%;
+    --slate: 220 9% 60%;
+    --navy: 214 68% 13%;
+    --navy-light: 213 50% 35%;
+    --gold: 42 68% 52%;
+    --gold-light: 42 30% 15%;
   }
 }
 
@@ -241,9 +249,15 @@
 }
 
 @layer utilities {
-  .text-teal { color: hsl(var(--teal)); }
-  .bg-teal { background-color: hsl(var(--teal)); }
-  .border-teal { border-color: hsl(var(--teal)); }
+  /* Gold token utilities */
+  .text-gold { color: hsl(var(--gold)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
+  .border-gold { border-color: hsl(var(--gold)); }
+  .bg-gold-light { background-color: hsl(var(--gold-light)); }
+  /* Legacy teal aliases (kept for compatibility) */
+  .text-teal { color: hsl(var(--mid-blue)); }
+  .bg-teal { background-color: hsl(var(--mid-blue)); }
+  .border-teal { border-color: hsl(var(--mid-blue)); }
   .bg-section-alt { background-color: hsl(var(--section-alt)); }
   .bg-navy { background-color: hsl(var(--navy)); }
   .bg-navy-light { background-color: hsl(var(--navy-light)); }

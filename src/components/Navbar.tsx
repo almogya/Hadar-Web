@@ -97,7 +97,7 @@ const Navbar = () => {
             style={{
               display: "inline-block",
               padding: "10px 24px",
-              backgroundColor: "#0891b2",
+              backgroundColor: "#1F4B7A",
               color: "#ffffff",
               fontSize: "14px",
               fontWeight: 700,
@@ -157,7 +157,7 @@ const Navbar = () => {
             style={{
               display: "block",
               padding: "14px 24px",
-              backgroundColor: "#0891b2",
+              backgroundColor: "#1F4B7A",
               color: "#ffffff",
               fontSize: "15px",
               fontWeight: 700,

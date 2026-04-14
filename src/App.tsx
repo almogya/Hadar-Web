@@ -58,7 +58,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navigate to="/he" replace />} />
+          <Route path="/" element={<LanguageSelector />} />
           <Route path="/en/*" element={<LocalizedRoutes />} />
           <Route path="/he/*" element={<LocalizedRoutes />} />
           <Route path="/about" element={<Navigate to="/he/about" replace />} />

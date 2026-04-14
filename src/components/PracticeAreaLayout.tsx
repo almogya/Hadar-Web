@@ -114,7 +114,7 @@ const PracticeAreaLayout = ({
             </div>
           )}
 
-          <div style={{ marginTop: "64px", padding: "40px", backgroundColor: "#122a4b", textAlign: "center" }}>
+          <div style={{ marginTop: "64px", padding: "40px", backgroundColor: "#0B1F3A", textAlign: "center" }}>
             <h2
               style={{
                 color: "#ffffff",
@@ -140,7 +140,7 @@ const PracticeAreaLayout = ({
                 alignItems: "center",
                 gap: "8px",
                 padding: "14px 32px",
-                backgroundColor: "#0891b2",
+                backgroundColor: "#1F4B7A",
                 color: "#ffffff",
                 fontSize: "15px",
                 fontWeight: 700,

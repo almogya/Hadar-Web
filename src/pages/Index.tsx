@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, Users, Building2, Lightbulb, ArrowLeft, ArrowRight } from "lucide-react";
+import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, Users, Building2, Lightbulb } from "lucide-react";
 import heroImg from "@/assets/hero-editorial.jpg";
 import logo from "@/assets/logo.png";
 import Layout from "@/components/Layout";
@@ -13,6 +13,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+/** Stable href → icon mapping (never index-based) */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
   "/practice-areas/intellectual-property": Shield,
   "/practice-areas/trademarks": Scale,
@@ -22,14 +23,40 @@ const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
   "/practice-areas/commercial-litigation": Briefcase,
 };
 
-const STEP_ICON_MAP = [MessageSquare, FileSearch, CheckCircle];
-const AUDIENCE_ICONS = [Building2, Lightbulb, Users];
+/** Stable process-step icons keyed by position ID */
+const PROCESS_STEPS = [
+  { id: "consultation", Icon: MessageSquare },
+  { id: "assessment",   Icon: FileSearch },
+  { id: "execution",    Icon: CheckCircle },
+] as const;
+
+/** Stable audience icons keyed by segment ID */
+const AUDIENCES = [
+  { id: "startups",  Icon: Building2 },
+  { id: "tech",      Icon: Lightbulb },
+  { id: "creators",  Icon: Users },
+] as const;
 
 const Index = () => {
   const { t, localePath, lang } = useLanguage();
 
+  // FAQPage JSON-LD — injected once, server-crawlable
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: t.faq.items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <Layout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <SEOHead
         title="Hadar Yatzkan | Intellectual Property & Technology Law | Israel"
         description="Boutique IP, technology, and AI law firm in Givatayim, Israel. Trademark registration, copyright enforcement, digital content law, and commercial litigation."
@@ -47,7 +74,7 @@ const Index = () => {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/85 to-white/95" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(247,248,250,0.92) 0%, rgba(247,248,250,0.87) 50%, rgba(247,248,250,0.96) 100%)" }} />
         </div>
         <div className="container relative z-10 py-32 md:py-40">
           <div className="max-w-3xl">
@@ -58,7 +85,7 @@ const Index = () => {
                 <span className="font-display text-2xl md:text-3xl font-bold tracking-tight block leading-tight" style={{ color: "#1a1a1a" }}>
                   {t.footer.firmName}
                 </span>
-                <span className="text-sm md:text-base font-medium tracking-wide" style={{ color: "#0891b2" }}>
+                <span className="text-sm md:text-base font-medium tracking-wide text-gold">
                   {lang === "he" ? "קניין רוחני · טכנולוגיה · משפט" : "IP · Technology · Law"}
                 </span>
               </div>
@@ -158,7 +185,7 @@ const Index = () => {
       </section>
 
       {/* ── Contact CTA strip ── */}
-      <section style={{ padding: "48px 0", backgroundColor: "#122a4b" }}>
+      <section style={{ padding: "48px 0", backgroundColor: "#0B1F3A" }}>
         <div className="container" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "24px" }}>
           <p style={{ color: "#ffffff", fontSize: "clamp(1.25rem, 2vw, 1.75rem)", fontWeight: 700, margin: 0 }}>
             {t.ctaSection.heading}
@@ -168,7 +195,7 @@ const Index = () => {
             style={{
               display: "inline-block",
               padding: "14px 32px",
-              backgroundColor: "#0891b2",
+              backgroundColor: "#1F4B7A",
               color: "#ffffff",
               fontSize: "15px",
               fontWeight: 700,
@@ -196,10 +223,10 @@ const Index = () => {
             {/* Connecting line */}
             <div className="hidden md:block absolute top-12 start-0 end-0 h-px bg-border" aria-hidden="true" />
             <div className="grid md:grid-cols-3 gap-12 md:gap-8">
-              {t.process.steps.map((step, i) => {
-                const Icon = STEP_ICON_MAP[i];
+              {PROCESS_STEPS.map(({ id, Icon }, i) => {
+                const step = t.process.steps[i];
                 return (
-                  <div key={step.title} className="group relative text-center">
+                  <div key={id} className="group relative text-center">
                     {/* Step number circle */}
                     <div className="relative z-10 w-24 h-24 mx-auto mb-8 rounded-full bg-background border-2 border-mid-blue/30 flex flex-col items-center justify-center group-hover:border-accent group-hover:shadow-lg transition-all duration-500">
                       <span className="text-[10px] text-mid-blue font-bold tracking-[0.3em] uppercase mb-1">
@@ -245,10 +272,10 @@ const Index = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {t.audiences.items.map((audience, i) => {
-              const Icon = AUDIENCE_ICONS[i] || Users;
+            {AUDIENCES.map(({ id, Icon }, i) => {
+              const audience = t.audiences.items[i];
               return (
-                <div key={audience.title} className="group text-center px-6 py-8 border border-transparent hover:border-border hover:bg-muted/20 transition-all duration-300">
+                <div key={id} className="group text-center px-6 py-8 border border-transparent hover:border-border hover:bg-muted/20 transition-all duration-300">
                   <div className="w-16 h-16 mx-auto mb-6 border-2 border-accent/30 rounded-full flex items-center justify-center group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300">
                     <Icon className="text-mid-blue group-hover:text-accent transition-colors" size={26} strokeWidth={1.5} aria-hidden="true" />
                   </div>
@@ -337,7 +364,7 @@ const Index = () => {
       </section>
 
       {/* ── Final CTA ── */}
-      <section style={{ padding: "80px 0", backgroundColor: "#122a4b" }}>
+      <section style={{ padding: "80px 0", backgroundColor: "#0B1F3A" }}>
         <div className="container" style={{ maxWidth: "680px", textAlign: "center" }}>
           <div style={{ width: "48px", height: "1px", backgroundColor: "rgba(255,255,255,0.2)", margin: "0 auto 32px" }} />
           <h2 style={{ color: "#ffffff", fontSize: "clamp(1.5rem, 3vw, 2.25rem)", fontWeight: 700, margin: "0 0 20px", lineHeight: 1.2 }}>
@@ -355,7 +382,7 @@ const Index = () => {
               style={{
                 display: "inline-block",
                 padding: "16px 36px",
-                backgroundColor: "#0891b2",
+                backgroundColor: "#1F4B7A",
                 color: "#ffffff",
                 fontSize: "16px",
                 fontWeight: 700,
