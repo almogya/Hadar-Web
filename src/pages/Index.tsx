@@ -90,13 +90,6 @@ const Index = () => {
                 {t.hero.cta1}
                 <DirectionalIcon icon="arrow" size={18} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
               </Link>
-              <Link
-                to={localePath("/contact")}
-                className="inline-flex items-center gap-2 px-10 py-5 border-2 text-base font-semibold tracking-wide transition-all duration-200"
-                style={{ borderColor: "rgba(26,26,26,0.2)", color: "#1a1a1a" }}
-              >
-                {t.hero.cta2}
-              </Link>
             </div>
           </div>
         </div>
@@ -371,22 +364,6 @@ const Index = () => {
               }}
             >
               {t.ctaSection.cta1}
-            </Link>
-            <Link
-              to={localePath("/contact")}
-              style={{
-                display: "inline-block",
-                padding: "16px 36px",
-                border: "2px solid rgba(255,255,255,0.3)",
-                color: "#ffffff",
-                fontSize: "16px",
-                fontWeight: 700,
-                textDecoration: "none",
-                borderRadius: "4px",
-                backgroundColor: "transparent",
-              }}
-            >
-              {t.ctaSection.cta2}
             </Link>
           </div>
         </div>
