@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, Users, Building2, Lightbulb } from "lucide-react";
-import heroImg from "@/assets/hero-editorial.jpg";
 import logo from "@/assets/logo.png";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
@@ -40,7 +39,7 @@ const AUDIENCES = [
 const Index = () => {
   const { t, localePath, lang } = useLanguage();
 
-  // FAQPage JSON-LD — injected once, server-crawlable
+  // FAQPage JSON-LD
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -51,11 +50,39 @@ const Index = () => {
     })),
   };
 
+  // LegalService JSON-LD — authority signal for Google
+  const legalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "HY Law Offices",
+    alternateName: "הדר יצקן, עורכת דין",
+    url: "https://ai-lawyer.co.il",
+    logo: "https://ai-lawyer.co.il/logo.png",
+    description: lang === "he"
+      ? "משרד עורכי דין בוטיק המתמחה בקניין רוחני, דיני טכנולוגיה ובינה מלאכותית בגבעתיים, ישראל."
+      : "Boutique law firm specializing in intellectual property, technology law, and AI in Givatayim, Israel.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "46 Weizmann St",
+      addressLocality: "Givatayim",
+      addressCountry: "IL",
+    },
+    telephone: "+972542234726",
+    email: "Hadaryatzkan@gmail.com",
+    areaServed: ["IL", "US", "GB", "EU"],
+    availableLanguage: ["Hebrew", "English"],
+    priceRange: "$$",
+  };
+
   return (
     <Layout>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }}
       />
       <SEOHead
         title="Hadar Yatzkan | Intellectual Property & Technology Law | Israel"
@@ -64,60 +91,90 @@ const Index = () => {
         descriptionHe="משרד עורכי דין בוטיק לקניין רוחני, טכנולוגיה ובינה מלאכותית בגבעתיים. רישום סימני מסחר, אכיפת זכויות יוצרים, דיני תוכן דיגיטלי וליטיגציה מסחרית."
       />
 
-      {/* ── HERO with prominent logo + specialization ── */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroImg}
-            alt=""
-            className="w-full h-full object-cover"
-            loading="eager"
-            fetchPriority="high"
-          />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(247,248,250,0.92) 0%, rgba(247,248,250,0.87) 50%, rgba(247,248,250,0.96) 100%)" }} />
-        </div>
-        <div className="container relative z-10 py-32 md:py-40">
+      {/* ── HERO — premium gradient, no stock photo ── */}
+      <section
+        className="relative min-h-[92vh] flex items-center overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #0B1F3A 0%, #1A3A6B 55%, #0B1F3A 100%)" }}
+      >
+        {/* Subtle legal-tech texture overlay */}
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)",
+            backgroundSize: "40px 40px",
+          }}
+          aria-hidden="true"
+        />
+        {/* Bottom fade to page background */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-32"
+          style={{ background: "linear-gradient(to bottom, transparent, #F7F8FA)" }}
+          aria-hidden="true"
+        />
+
+        <div className="container relative z-10 py-32 md:py-44">
           <div className="max-w-3xl">
-            {/* Prominent logo */}
-            <div className="flex items-center gap-5 mb-12">
-              <img src={logo} alt="HY Law Offices" className="h-36 w-36 md:h-44 md:w-44 object-contain" />
+            {/* Logo lockup */}
+            <div className="flex items-center gap-4 mb-10">
+              <img src={logo} alt={t.footer.firmName} className="h-16 w-16 md:h-20 md:w-20 object-contain opacity-90" />
               <div>
-                <span className="font-display text-2xl md:text-3xl font-bold tracking-tight block leading-tight" style={{ color: "#1a1a1a" }}>
+                <span className="font-display text-xl md:text-2xl font-bold tracking-tight block leading-tight text-white">
                   {t.footer.firmName}
                 </span>
-                <span className="text-sm md:text-base font-medium tracking-wide text-gold">
+                <span className="text-xs md:text-sm font-medium tracking-[0.2em] uppercase" style={{ color: "#C9A227" }}>
                   {lang === "he" ? "קניין רוחני · טכנולוגיה · משפט" : "IP · Technology · Law"}
                 </span>
               </div>
             </div>
 
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 mb-6">
+              <span className="w-6 h-px" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
+              <span className="text-[11px] font-semibold tracking-[0.35em] uppercase" style={{ color: "#C9A227" }}>
+                {t.hero.badge}
+              </span>
+            </div>
+
             {/* H1 */}
-            <h1 className="hero-h1 font-display font-bold tracking-tight mb-5" style={{ color: "#1a1a1a" }}>
+            <h1 className="hero-h1 font-display font-bold tracking-tight mb-4 text-white">
               {t.hero.h1}
             </h1>
 
-            {/* Specialization accent */}
-            <p className="text-2xl md:text-3xl lg:text-4xl font-display text-accent font-medium mb-8 leading-tight tracking-tight">
+            {/* Accent subheadline */}
+            <p className="text-xl md:text-2xl lg:text-3xl font-display font-medium mb-8 leading-snug" style={{ color: "rgba(255,255,255,0.75)" }}>
               {t.hero.h1Accent}
             </p>
 
-            {/* Clear specialization statement */}
-            <div className="border-s-2 border-accent ps-5 mb-12">
-              <p className="text-base md:text-lg max-w-xl leading-relaxed" style={{ color: "#4a4a4a" }}>
+            {/* Value proposition */}
+            <div className="border-s-2 ps-5 mb-10" style={{ borderColor: "#C9A227" }}>
+              <p className="text-base md:text-lg max-w-xl leading-relaxed" style={{ color: "rgba(255,255,255,0.70)" }}>
                 {t.hero.sub}
               </p>
             </div>
 
-            {/* Prominent CTA */}
-            <div className="flex flex-wrap gap-4">
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4 mb-5">
               <Link
                 to={localePath("/contact")}
-                className="group inline-flex items-center gap-2.5 px-10 py-5 bg-accent text-accent-foreground text-base font-semibold tracking-wide hover:bg-accent/90 transition-all duration-200 shadow-lg"
+                className="group inline-flex items-center gap-2.5 px-9 py-4 text-base font-semibold tracking-wide transition-all duration-200 shadow-lg"
+                style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
               >
                 {t.hero.cta1}
                 <DirectionalIcon icon="arrow" size={18} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
               </Link>
+              <Link
+                to={localePath("/contact")}
+                className="inline-flex items-center gap-2 px-9 py-4 text-base font-semibold tracking-wide border transition-all duration-200"
+                style={{ borderColor: "rgba(255,255,255,0.3)", color: "rgba(255,255,255,0.85)" }}
+              >
+                {t.hero.cta2}
+              </Link>
             </div>
+
+            {/* Microcopy */}
+            <p className="text-xs font-medium tracking-wide" style={{ color: "rgba(255,255,255,0.40)" }}>
+              {t.hero.microcopy}
+            </p>
           </div>
         </div>
       </section>
@@ -395,6 +452,24 @@ const Index = () => {
           </div>
         </div>
       </section>
+      {/* ── Mobile sticky CTA ── */}
+      <div
+        className="fixed bottom-0 left-0 right-0 z-40 md:hidden border-t"
+        style={{ backgroundColor: "#0B1F3A", borderColor: "rgba(255,255,255,0.1)" }}
+        role="complementary"
+        aria-label={lang === "he" ? "קישור מהיר לייעוץ" : "Quick consultation link"}
+      >
+        <div className="container py-3">
+          <Link
+            to={localePath("/contact")}
+            className="flex items-center justify-center gap-2 w-full py-3 text-sm font-bold tracking-wide"
+            style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
+          >
+            {t.hero.cta1}
+            <DirectionalIcon icon="arrow" size={16} />
+          </Link>
+        </div>
+      </div>
     </Layout>
   );
 };

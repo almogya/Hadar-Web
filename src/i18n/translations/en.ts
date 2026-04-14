@@ -19,6 +19,7 @@ export const en = {
     sub: "Strategic counsel for brands, startups, and technology teams navigating trademarks, copyright, licensing, and platform risk.",
     cta1: "Schedule a Consultation",
     cta2: "Send a Confidential Inquiry",
+    microcopy: "Reply within 24 hours · Full confidentiality",
   },
 
   trust: {
@@ -163,34 +164,34 @@ export const en = {
 
   founder: {
     name: "Hadar Yatzkan",
-    title: "Founder & Managing Attorney",
+    title: "Founder & Attorney",
     credential: "LL.M. in Law & Technology",
   },
 
   about: {
-    badge: "About the Firm",
+    badge: "About",
     h1: "Counsel at the Intersection of Innovation and Legal Clarity",
     sub: "Practical, business-aligned legal support for IP, technology, and AI—from strategy to disputes.",
     bio: [
-      "Hadar Yatzkan is the founder and managing attorney of HY Law Offices, a boutique law firm based in Givatayim, Israel, specializing in intellectual property, technology law, and commercial litigation.",
-      "With an LL.M. in Law and Technology, Hadar brings a distinctive combination of legal expertise and technological understanding to every engagement. His practice is built on a core belief: legal strategy should serve business objectives, not the other way around.",
-      "Hadar advises startups, technology companies, digital content creators, and established brands on the full spectrum of IP matters—from trademark clearance and registration to copyright enforcement, technology licensing, and AI-related legal questions.",
-      "His areas of specialization include copyright and digital content law, trademark registration and enforcement, platform and internet regulation, and the emerging legal landscape surrounding artificial intelligence. He works closely with founders and in-house teams to build IP portfolios that align with growth plans and investor expectations.",
+      "I am Hadar Yatzkan, an attorney specializing in intellectual property, technology law, and the legal dimensions of artificial intelligence.",
+      "My practice focuses on the intersection of law, technology, and content — the space where businesses, startups, and creators need precise legal decisions that directly affect their operations.",
+      "I advise clients on a wide range of matters including IP protection and management, trademark registration and enforcement, copyright and digital content, technology contracts, AI legal implications, and commercial and technology disputes.",
+      "The legal counsel I provide is grounded in deep legal expertise combined with a practical business perspective — with the goal of delivering accurate, clear, and actionable solutions.",
     ],
-    approachBadge: "Our Approach",
-    approachHeading: "How We Think About Legal Work",
+    approachBadge: "My Approach",
+    approachHeading: "How I Think About Legal Work",
     approachItems: [
       {
-        title: "Business-First Perspective",
-        desc: "Every legal recommendation starts with understanding your business model, competitive landscape, and growth trajectory. Law should enable your objectives, not create friction.",
+        title: "Direct and Transparent",
+        desc: "I believe in straightforward, transparent legal counsel tailored to each client's needs. Rather than generic solutions, I focus on the specific situation and build a strategy that accounts for risks, opportunities, and business objectives.",
       },
       {
         title: "Clear Communication",
-        desc: "We translate complex legal concepts into plain language. You'll always understand the risks, options, and trade-offs before making decisions.",
+        desc: "I translate complex legal concepts into plain language. You'll always understand the risks, options, and trade-offs before making decisions.",
       },
       {
         title: "Proportionate Counsel",
-        desc: "We calibrate our approach to the stage and scale of your business—avoiding unnecessary complexity while ensuring thorough protection where it matters.",
+        desc: "I calibrate the approach to the stage and scale of your business—avoiding unnecessary complexity while ensuring thorough protection where it matters.",
       },
     ],
     qualBadge: "Expertise",
@@ -345,6 +346,13 @@ export const en = {
         title: "Copyright Ownership in Tech Teams: Employees, Contractors, and Assignments",
         excerpt: "Who owns the code your team writes? Examining copyright ownership rules for employees and contractors under Israeli law, with practical guidance on assignment agreements.",
         date: "October 2025",
+        category: "copyright",
+        pillar: false,
+      },
+      {
+        title: "Copyright Infringement & AKUM in Israel: What Every Business Must Know",
+        excerpt: "Using musical works without a license can expose your business to civil claims and retroactive payment demands. This guide explains AKUM's role, enforcement mechanisms, and how to stay compliant.",
+        date: "April 2026",
         category: "copyright",
         pillar: false,
       },

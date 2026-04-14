@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, ReactNode } from "react";
+import { createContext, useContext, useMemo, useEffect, ReactNode } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { en } from "./translations/en";
 import { he } from "./translations/he";
@@ -17,7 +17,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-const translations: Record<Lang, Translations> = { en, he: he as unknown as Translations };
+const translations: Record<Lang, Translations> = { en, he: he as Translations };
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const navigate = useNavigate();
@@ -28,6 +28,12 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const lang: Lang = pathLang === "he" ? "he" : "en";
   const dir: "ltr" | "rtl" = lang === "he" ? "rtl" : "ltr";
   const t = translations[lang];
+
+  // Keep document lang/dir in sync whenever the language changes
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = dir;
+  }, [lang, dir]);
 
   const switchLang = () => {
     const otherLang = lang === "en" ? "he" : "en";

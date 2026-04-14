@@ -19,7 +19,7 @@ const Footer = () => {
           {/* Firm Lockup */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3 mb-5">
-              <img src={logo} alt="HY Law Offices" className="h-14 w-14 object-contain" />
+              <img src={logo} alt={t.footer.firmName} className="h-14 w-14 object-contain" />
               <div>
                 <h3 className="font-display text-xl font-bold tracking-tight leading-tight">
                   {t.footer.firmName}

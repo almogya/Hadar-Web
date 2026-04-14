@@ -48,7 +48,7 @@ const Navbar = () => {
         <Link to={localePath("/")} className="flex items-center gap-3 group">
           <img
             src={logo}
-            alt="HY Law Offices"
+            alt={t.footer.firmName}
             className="h-12 w-12 object-contain"
           />
           <div className="flex flex-col">
