@@ -45,7 +45,7 @@ const About = () => {
                     <ellipse cx="40" cy="72" rx="30" ry="20" fill="currentColor" />
                   </svg>
                   <span className="text-xs text-muted-foreground font-medium tracking-widest uppercase opacity-50">
-                    {lang === "he" ? "[תמונה נדרשת]" : "[HEADSHOT NEEDED]"}
+                    {lang === "he" ? "[תמונה נדרשת — נא להעלות תמונה מקצועית]" : "[HEADSHOT NEEDED]"}
                   </span>
                 </div>
                 <div className="absolute -bottom-4 -end-4 w-full max-w-sm aspect-[3/4] border-2 border-accent/40 -z-10" />

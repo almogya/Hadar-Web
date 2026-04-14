@@ -176,22 +176,22 @@ export const en = {
       "I am Hadar Yatzkan, an attorney specializing in intellectual property, technology law, and the legal dimensions of artificial intelligence.",
       "My practice focuses on the intersection of law, technology, and content — the space where businesses, startups, and creators need precise legal decisions that directly affect their operations.",
       "I advise clients on a wide range of matters including IP protection and management, trademark registration and enforcement, copyright and digital content, technology contracts, AI legal implications, and commercial and technology disputes.",
-      "The legal counsel I provide is grounded in deep legal expertise combined with a practical business perspective — with the goal of delivering accurate, clear, and actionable solutions.",
+      "The legal counsel I provide is grounded in a combination of deep legal expertise and practical business perspective — with the goal of delivering accurate, clear, and actionable solutions.",
     ],
     approachBadge: "My Approach",
     approachHeading: "How I Think About Legal Work",
     approachItems: [
       {
         title: "Direct and Transparent",
-        desc: "I believe in straightforward, transparent legal counsel tailored to each client's needs. Rather than generic solutions, I focus on the specific situation and build a strategy that accounts for risks, opportunities, and business objectives.",
+        desc: "I believe in straightforward, transparent legal counsel tailored to each client's needs. Rather than generic solutions, I focus on analyzing the specific situation and building a strategy that accounts for risks, opportunities, and business objectives.",
       },
       {
         title: "Clear Communication",
-        desc: "I translate complex legal concepts into plain language. You'll always understand the risks, options, and trade-offs before making decisions.",
+        desc: "I translate complex legal concepts into plain language. You will always understand the risks, options, and trade-offs before making decisions.",
       },
       {
         title: "Proportionate Counsel",
-        desc: "I calibrate the approach to the stage and scale of your business—avoiding unnecessary complexity while ensuring thorough protection where it matters.",
+        desc: "I calibrate my approach to the stage and scale of your business — avoiding unnecessary complexity while ensuring thorough protection where it matters.",
       },
     ],
     qualBadge: "Expertise",
