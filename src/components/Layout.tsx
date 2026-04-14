@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import FloatingContact from "./FloatingContact";
+import AccessibilityMenu from "./AccessibilityMenu";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   const { lang, dir } = useLanguage();
@@ -34,6 +35,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <Footer />
       <ScrollToTop />
       <FloatingContact />
+      <AccessibilityMenu />
     </div>
   );
 };
