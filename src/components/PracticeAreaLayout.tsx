@@ -148,7 +148,7 @@ const PracticeAreaLayout = ({
                 borderRadius: "4px",
               }}
             >
-              {isHe ? "לקביעת ייעוץ" : "Schedule a Consultation"}
+              {isHe ? "לקביעת פגישת ייעוץ" : "Schedule a Consultation"}
               <DirectionalIcon size={16} className="shrink-0" />
             </Link>
           </div>

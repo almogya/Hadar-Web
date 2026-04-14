@@ -102,7 +102,7 @@ const PillarArticle = () => {
               {isHe ? "נשמח לעזור לכם לנווט בסוגיות אלו." : "We can help you navigate these issues."}
             </p>
             <Link to={localePath("/contact")} className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-primary text-sm font-semibold tracking-wide hover:bg-accent/90 transition-colors">
-              {isHe ? "לקביעת ייעוץ" : "Schedule a Consultation"} <DirectionalIcon size={16} />
+              {isHe ? "לקביעת פגישת ייעוץ" : "Schedule a Consultation"} <DirectionalIcon size={16} />
             </Link>
           </div>
         </div>
