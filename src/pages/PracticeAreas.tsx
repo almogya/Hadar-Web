@@ -1,6 +1,8 @@
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
+import DirectionalIcon from "@/components/DirectionalIcon";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb } from "lucide-react";
+import { Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const areaIcons = [Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb];
@@ -21,6 +23,13 @@ const PracticeAreas = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Practice Areas | IP, AI & Technology Law | HY Law Offices Israel"
+        description="Boutique legal counsel across intellectual property, trademarks, copyright, AI law, technology law, and commercial litigation for Israeli and international clients."
+        titleHe="תחומי עיסוק | קניין רוחני, בינה מלאכותית וטכנולוגיה | HY Law Offices"
+        descriptionHe="ייעוץ משפטי בוטיק בקניין רוחני, סימני מסחר, זכויות יוצרים, דיני AI, דיני טכנולוגיה וליטיגציה מסחרית ללקוחות ישראלים ובינלאומיים."
+      />
+
       {/* Hero */}
       <section className="py-28 bg-section-alt">
         <div className="container">
@@ -64,7 +73,7 @@ const PracticeAreas = () => {
                       {area.desc}
                     </p>
                     <span className="mt-4 inline-flex items-center gap-1 text-xs font-medium text-accent tracking-wide group-hover:gap-2 transition-all">
-                      {t.practiceAreasPage.learnMore} <ArrowRight size={12} />
+                      {t.practiceAreasPage.learnMore} <DirectionalIcon size={12} />
                     </span>
                   </div>
                 </Link>
@@ -88,7 +97,7 @@ const PracticeAreas = () => {
               }}
             >
               {t.nav.cta}
-              <ArrowRight size={16} />
+              <DirectionalIcon size={16} />
             </Link>
           </div>
         </div>

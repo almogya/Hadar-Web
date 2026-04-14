@@ -14,8 +14,8 @@ const About = () => {
       <SEOHead
         title="About | Hadar Yatzkan | IP & Technology Attorney | Israel"
         description="Meet Hadar Yatzkan, founder of HY Law Offices. Boutique IP, technology, and AI law practice in Givatayim, Israel."
-        titleHe="אודות | הדר יצקן | עורכת דין קניין רוחני וטכנולוגיה"
-        descriptionHe="הכירו את הדר יצקן, מייסדת HY Law Offices. משרד עורכי דין בוטיק לקניין רוחני, טכנולוגיה ובינה מלאכותית בגבעתיים."
+        titleHe="אודות | הדר יצקן | עורך דין קניין רוחני וטכנולוגיה | ישראל"
+        descriptionHe="הכירו את הדר יצקן, מייסד HY Law Offices. משרד עורכי דין בוטיק לקניין רוחני, טכנולוגיה ובינה מלאכותית בגבעתיים, ישראל."
       />
 
       {/* Hero */}

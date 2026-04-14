@@ -23,6 +23,10 @@ const IntellectualProperty = () => {
       titleHe="דיני קניין רוחני"
       intro="Intellectual property is often a business's most valuable — and most vulnerable — asset. We help companies, startups, and creators develop and execute IP strategies that protect innovation and build lasting competitive advantage."
       introHe="קניין רוחני הוא לעיתים קרובות הנכס החשוב ביותר — והפגיע ביותר — של עסק. אנו עוזרים לחברות, סטארטאפים ויוצרים לפתח ולבצע אסטרטגיות IP שמגנות על חדשנות ובונות יתרון תחרותי."
+      seoTitle="Intellectual Property Lawyer Israel | IP Strategy & Portfolio | HY Law"
+      seoTitleHe="עורך דין קניין רוחני | אסטרטגיית IP ותיק קניין | HY Law Offices"
+      seoDesc="IP strategy, portfolio management, licensing, and enforcement for startups and tech companies in Israel. Boutique intellectual property counsel in Givatayim."
+      seoDescHe="אסטרטגיית IP, ניהול תיקים, רישוי ואכיפה לסטארטאפים וחברות טכנולוגיה בישראל. ייעוץ קניין רוחני בוטיק בגבעתיים."
       ctaTitle="Discuss Your IP Strategy"
       ctaTitleHe="בואו נדבר על אסטרטגיית ה‑IP שלכם"
       relatedLinks={[

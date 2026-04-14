@@ -18,6 +18,10 @@ const Trademarks = () => {
       titleHe="סימני מסחר"
       intro="Your brand is one of your most important business assets. We help clients protect, manage, and enforce their trademarks in Israel and internationally — from initial clearance through registration and beyond."
       introHe="המותג שלכם הוא אחד הנכסים העסקיים החשובים ביותר. אנו עוזרים ללקוחות להגן, לנהל ולאכוף את סימני המסחר שלהם בישראל ובעולם — מבדיקת פינוי ראשונית דרך רישום והלאה."
+      seoTitle="Trademark Lawyer Israel | Registration & Enforcement | HY Law"
+      seoTitleHe="עורך דין סימני מסחר | רישום ואכיפה בישראל | HY Law Offices"
+      seoDesc="Trademark registration, clearance searches, opposition proceedings, and brand enforcement in Israel and internationally. Boutique IP counsel in Givatayim."
+      seoDescHe="רישום סימני מסחר, חיפושי פינוי, הליכי התנגדות ואכיפת מותגים בישראל ובעולם. ייעוץ קניין רוחני בוטיק בגבעתיים."
       ctaTitle="Protect Your Brand"
       ctaTitleHe="הגנו על המותג שלכם"
       relatedLinks={[

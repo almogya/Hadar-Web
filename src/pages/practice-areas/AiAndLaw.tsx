@@ -18,6 +18,10 @@ const AiAndLaw = () => {
       titleHe="בינה מלאכותית ודיני תוכן דיגיטלי"
       intro="As AI reshapes how content is created, distributed, and consumed, the legal questions are evolving rapidly. We help clients navigate the IP, licensing, and compliance challenges of AI-driven businesses."
       introHe="בזמן שבינה מלאכותית משנה את אופן יצירת התוכן, הפצתו וצריכתו, השאלות המשפטיות מתפתחות במהירות. אנו עוזרים ללקוחות לנווט באתגרי IP, רישוי וציות של עסקים מונעי AI."
+      seoTitle="AI Law & Digital Content | IP Lawyer Israel | HY Law Offices"
+      seoTitleHe="עורך דין בינה מלאכותית ותוכן דיגיטלי | HY Law Offices | ישראל"
+      seoDesc="Legal counsel for AI-driven businesses in Israel—AI-generated content ownership, training data licensing, AI vendor contracts, and regulatory compliance."
+      seoDescHe="ייעוץ משפטי לעסקים מבוססי AI בישראל—בעלות על תוכן שנוצר ב-AI, רישוי נתוני אימון, חוזי ספקי AI וציות רגולטורי."
       ctaTitle="Navigate AI Legal Questions"
       ctaTitleHe="ניווט בשאלות משפטיות של AI"
       relatedLinks={[

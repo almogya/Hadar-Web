@@ -18,6 +18,10 @@ const CopyrightDigitalContent = () => {
       titleHe="זכויות יוצרים ותוכן דיגיטלי"
       intro="In the age of digital platforms, protecting creative works requires both legal precision and an understanding of how content is distributed, shared, and monetized online."
       introHe="בעידן הפלטפורמות הדיגיטליות, הגנה על יצירות דורשת דיוק משפטי והבנה של אופן הפצת התוכן, שיתופו ומסחורו ברשת."
+      seoTitle="Copyright & Digital Content Lawyer Israel | HY Law Offices"
+      seoTitleHe="עורך דין זכויות יוצרים ותוכן דיגיטלי | HY Law Offices | ישראל"
+      seoDesc="Copyright protection and enforcement for creators and digital businesses in Israel. Content licensing, platform takedowns, fair use analysis, and digital rights management."
+      seoDescHe="הגנה ואכיפת זכויות יוצרים ליוצרים ועסקים דיגיטליים בישראל. רישוי תוכן, הסרות מפלטפורמות, ניתוח שימוש הוגן וניהול זכויות דיגיטליות."
       ctaTitle="Protect Your Content"
       ctaTitleHe="הגנו על התוכן שלכם"
       relatedLinks={[

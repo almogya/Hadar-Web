@@ -18,6 +18,10 @@ const CommercialLitigation = () => {
       titleHe="ליטיגציה מסחרית"
       intro="When disputes arise, having experienced counsel with a clear strategy makes the difference. We represent clients in complex commercial and IP disputes, prioritizing practical outcomes through negotiation or, when necessary, courtroom advocacy."
       introHe="כשמתעוררים סכסוכים, ייצוג מנוסה עם אסטרטגיה ברורה עושה את ההבדל. אנו מייצגים לקוחות בסכסוכים מסחריים ו‑IP מורכבים, תוך תעדוף תוצאות מעשיות דרך משא ומתן או, בעת הצורך, ייצוג בבית משפט."
+      seoTitle="Commercial Litigation Attorney Israel | IP Disputes | HY Law Offices"
+      seoTitleHe="עורך דין ליטיגציה מסחרית | סכסוכי קניין רוחני בישראל | HY Law"
+      seoDesc="Strategic commercial and IP dispute resolution in Israel—injunctions, trade secret misappropriation, breach of contract, and courtroom advocacy in Israeli courts."
+      seoDescHe="יישוב סכסוכים מסחריים ו-IP אסטרטגי בישראל—צווי מניעה, גזל סודות מסחריים, הפרת חוזה וייצוג בבתי המשפט."
       ctaTitle="Resolve Your Dispute"
       ctaTitleHe="פתרו את הסכסוך שלכם"
       relatedLinks={[

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thank-you
 
-Sitemap: [UNSPECIFIED]/sitemap.xml
+Sitemap: https://ai-lawyer.co.il/sitemap.xml

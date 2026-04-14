@@ -18,6 +18,10 @@ const TechnologyInternetLaw = () => {
       titleHe="דיני טכנולוגיה ואינטרנט"
       intro="Technology companies face a unique and evolving legal landscape. We provide practical legal guidance for SaaS businesses, digital platforms, and online services operating in Israel and internationally."
       introHe="חברות טכנולוגיה מתמודדות עם נוף משפטי ייחודי ומתפתח. אנו מספקים הנחיה משפטית פרקטית לעסקי SaaS, פלטפורמות דיגיטליות ושירותים מקוונים הפועלים בישראל ובעולם."
+      seoTitle="Technology & Internet Law Attorney Israel | SaaS & Platforms | HY Law"
+      seoTitleHe="עורך דין דיני טכנולוגיה ואינטרנט | SaaS ופלטפורמות | HY Law"
+      seoDesc="Legal counsel for SaaS, digital platforms, and tech companies in Israel—terms of service, privacy compliance, data agreements, and technology transactions."
+      seoDescHe="ייעוץ משפטי לחברות SaaS, פלטפורמות דיגיטליות וחברות טכנולוגיה בישראל—תנאי שימוש, ציות פרטיות, הסכמי מידע ועסקאות טכנולוגיה."
       ctaTitle="Get Tech Legal Guidance"
       ctaTitleHe="קבלו ייעוץ משפטי טכנולוגי"
       relatedLinks={[

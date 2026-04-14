@@ -1,5 +1,7 @@
 import Layout from "@/components/Layout";
-import { Calendar, ArrowRight, X } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
+import DirectionalIcon from "@/components/DirectionalIcon";
+import { Calendar, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -28,6 +30,13 @@ const Insights = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Legal Insights & Guides | IP, AI & Technology Law | HY Law Offices"
+        description="Practical guides on intellectual property, AI and copyright law, trademark strategy, and technology law in Israel. Written for founders, creators, and technology businesses."
+        titleHe="מאמרים ומדריכים משפטיים | קניין רוחני, AI וטכנולוגיה | HY Law Offices"
+        descriptionHe="מדריכים מעשיים בנושאי קניין רוחני, AI וזכויות יוצרים, אסטרטגיית סימני מסחר ודיני טכנולוגיה בישראל. כתוב ליזמים, יוצרים ועסקים טכנולוגיים."
+      />
+
       {/* Hero */}
       <section className="py-28 bg-section-alt">
         <div className="container">
@@ -69,7 +78,7 @@ const Insights = () => {
                     {article.title}
                   </h3>
                   <span className="inline-flex items-center gap-1 text-xs text-accent font-medium tracking-wide">
-                    {t.insightsPage.readGuide} <ArrowRight size={12} />
+                    {t.insightsPage.readGuide} <DirectionalIcon size={12} />
                   </span>
                 </Link>
               ))}
@@ -138,7 +147,7 @@ const Insights = () => {
                     {article.excerpt}
                   </p>
                   <span className="mt-6 inline-flex items-center gap-1 text-xs font-medium text-accent tracking-wide group-hover:gap-2 transition-all self-start">
-                    {t.insightsPage.readMore} <ArrowRight size={12} />
+                    {t.insightsPage.readMore} <DirectionalIcon size={12} />
                   </span>
                 </CardWrapper>
               );
@@ -187,7 +196,7 @@ const Insights = () => {
                 className="inline-flex items-center gap-1.5 mt-3 text-sm font-medium text-accent hover:underline"
                 onClick={() => setPreviewArticle(null)}
               >
-                {lang === "he" ? "צרו קשר לייעוץ" : "Contact us for a consultation"} <ArrowRight size={14} />
+                {lang === "he" ? "צרו קשר לייעוץ" : "Contact us for a consultation"} <DirectionalIcon size={14} />
               </Link>
             </div>
           </div>

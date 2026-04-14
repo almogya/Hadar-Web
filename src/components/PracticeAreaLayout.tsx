@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowLeft } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
+import DirectionalIcon from "@/components/DirectionalIcon";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 interface PracticeAreaLayoutProps {
@@ -11,6 +12,14 @@ interface PracticeAreaLayoutProps {
   titleHe: string;
   intro: string;
   introHe: string;
+  /** SEO title tag (English). Falls back to `title` if omitted. */
+  seoTitle?: string;
+  /** SEO title tag (Hebrew). Falls back to `titleHe` if omitted. */
+  seoTitleHe?: string;
+  /** Meta description (English). */
+  seoDesc?: string;
+  /** Meta description (Hebrew). */
+  seoDescHe?: string;
   ctaTitle?: string;
   ctaTitleHe?: string;
   ctaDesc?: string;
@@ -25,6 +34,10 @@ const PracticeAreaLayout = ({
   titleHe,
   intro,
   introHe,
+  seoTitle,
+  seoTitleHe,
+  seoDesc,
+  seoDescHe,
   ctaTitle,
   ctaTitleHe,
   ctaDesc,
@@ -35,18 +48,35 @@ const PracticeAreaLayout = ({
   const { lang, localePath } = useLanguage();
   const isHe = lang === "he";
 
+  const resolvedSeoTitle = seoTitle || `${title} | HY Law Offices | Israel`;
+  const resolvedSeoTitleHe = seoTitleHe || `${titleHe} | HY Law Offices | ישראל`;
+  const resolvedSeoDesc =
+    seoDesc || `${intro.slice(0, 155)}`;
+  const resolvedSeoDescHe =
+    seoDescHe || `${introHe.slice(0, 155)}`;
+
   return (
     <Layout>
+      <SEOHead
+        title={resolvedSeoTitle}
+        description={resolvedSeoDesc}
+        titleHe={resolvedSeoTitleHe}
+        descriptionHe={resolvedSeoDescHe}
+      />
+
       <section className="py-24">
         <div className="container max-w-4xl">
-          <Link to={localePath("/practice-areas")} className="inline-flex items-center gap-1 text-sm text-accent hover:underline mb-8">
-            {isHe ? <ArrowRight size={14} /> : <ArrowLeft size={14} />}
+          <Link
+            to={localePath("/practice-areas")}
+            className="inline-flex items-center gap-1 text-sm text-accent hover:underline mb-8"
+          >
+            <DirectionalIcon icon="arrow" size={14} />
             {isHe ? "חזרה לתחומי עיסוק" : "Back to Practice Areas"}
           </Link>
 
           <div className="flex items-center gap-3 mb-6">
             <div className="w-14 h-14 flex items-center justify-center border border-accent/30">
-              <Icon className="text-accent" size={24} strokeWidth={1.5} />
+              <Icon className="text-accent" size={24} strokeWidth={1.5} aria-hidden="true" />
             </div>
             <span className="text-accent text-sm font-medium tracking-widest uppercase">
               {isHe ? "תחום עיסוק" : "Practice Area"}
@@ -71,8 +101,13 @@ const PracticeAreaLayout = ({
               </h2>
               <div className="flex flex-wrap gap-3">
                 {relatedLinks.map((rl) => (
-                  <Link key={rl.path} to={localePath(rl.path)} className="text-sm text-accent hover:underline">
-                    {isHe ? rl.labelHe : rl.labelEn} →
+                  <Link
+                    key={rl.path}
+                    to={localePath(rl.path)}
+                    className="text-sm text-accent hover:underline inline-flex items-center gap-1"
+                  >
+                    {isHe ? rl.labelHe : rl.labelEn}
+                    <DirectionalIcon size={12} />
                   </Link>
                 ))}
               </div>
@@ -80,11 +115,23 @@ const PracticeAreaLayout = ({
           )}
 
           <div style={{ marginTop: "64px", padding: "40px", backgroundColor: "#122a4b", textAlign: "center" }}>
-            <h2 style={{ color: "#ffffff", fontSize: "clamp(1.25rem, 2vw, 1.75rem)", fontWeight: 700, margin: "0 0 12px", lineHeight: 1.3 }}>
-              {isHe ? (ctaTitleHe || "בואו נדבר על האסטרטגיה שלכם") : (ctaTitle || "Discuss Your Needs")}
+            <h2
+              style={{
+                color: "#ffffff",
+                fontSize: "clamp(1.25rem, 2vw, 1.75rem)",
+                fontWeight: 700,
+                margin: "0 0 12px",
+                lineHeight: 1.3,
+              }}
+            >
+              {isHe
+                ? ctaTitleHe || "בואו נדבר על האסטרטגיה שלכם"
+                : ctaTitle || "Discuss Your Needs"}
             </h2>
             <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "14px", margin: "0 0 24px", lineHeight: 1.7 }}>
-              {isHe ? (ctaDescHe || "נשמח לעזור לכם להגן על הקניין הרוחני ולקדם את המטרות העסקיות שלכם.") : (ctaDesc || "We can help you protect your intellectual property and advance your business goals.")}
+              {isHe
+                ? ctaDescHe || "נשמח לעזור לכם להגן על הקניין הרוחני ולקדם את המטרות העסקיות שלכם."
+                : ctaDesc || "We can help you protect your intellectual property and advance your business goals."}
             </p>
             <Link
               to={localePath("/contact")}
@@ -101,7 +148,8 @@ const PracticeAreaLayout = ({
                 borderRadius: "4px",
               }}
             >
-              {isHe ? "לקביעת ייעוץ" : "Schedule a Consultation"} <ArrowRight size={16} />
+              {isHe ? "לקביעת ייעוץ" : "Schedule a Consultation"}
+              <DirectionalIcon size={16} className="shrink-0" />
             </Link>
           </div>
         </div>
