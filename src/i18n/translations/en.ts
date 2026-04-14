@@ -16,7 +16,7 @@ export const en = {
     badge: "Boutique Israeli Law Firm",
     h1: "Intellectual Property & Technology Law",
     h1Accent: "for the AI and Digital Economy",
-    sub: "Strategic counsel for brands, startups, and technology teams navigating trademarks, copyright, licensing, and platform risk.",
+    sub: "Intellectual Property and Technology Attorney advising businesses in the digital economy.",
     cta1: "Schedule a Consultation",
     cta2: "Send a Confidential Inquiry",
     microcopy: "Reply within 24 hours · Full confidentiality",
@@ -171,7 +171,7 @@ export const en = {
   about: {
     badge: "About",
     h1: "Counsel at the Intersection of Innovation and Legal Clarity",
-    sub: "Practical, business-aligned legal support for IP, technology, and AI—from strategy to disputes.",
+    sub: "Attorney specializing in intellectual property, technology law, and artificial intelligence, advising businesses, startups, and creators on managing and protecting digital assets and rights.",
     bio: [
       "I am Hadar Yatzkan, an attorney specializing in intellectual property, technology law, and the legal aspects of artificial intelligence.",
       "My practice focuses on advising businesses, startups, and creators operating in the digital economy — where complex legal considerations intersect with core business decisions. This includes trademarks, copyright, technology agreements, digital platform activity, and legal risks associated with AI.",
@@ -250,7 +250,7 @@ export const en = {
 
   footer: {
     firmName: "HY Law Offices",
-    firmDesc: "Boutique intellectual property, technology, and AI law firm providing strategic legal counsel for startups, tech companies, and digital businesses. Givatayim, Israel.",
+    firmDesc: "Attorney specializing in intellectual property, technology law, and artificial intelligence, advising businesses, startups, and creators on managing and protecting digital assets and rights. Givatayim, Israel.",
     barNumber: "Israel Bar No. [UNSPECIFIED]",
     practiceAreasTitle: "Practice Areas",
     quickLinksTitle: "Quick Links",
