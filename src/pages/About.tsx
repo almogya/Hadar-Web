@@ -12,10 +12,10 @@ const About = () => {
   return (
     <Layout>
       <SEOHead
-        title="About | Hadar Yatzkan | IP & Technology Attorney | Israel"
-        description="Meet Hadar Yatzkan, founder of HY Law Offices. Boutique IP, technology, and AI law practice in Givatayim, Israel."
-        titleHe="אודות | הדר יצקן | עורך דין קניין רוחני וטכנולוגיה | ישראל"
-        descriptionHe="הכירו את הדר יצקן, מייסד HY Law Offices. משרד עורכי דין בוטיק לקניין רוחני, טכנולוגיה ובינה מלאכותית בגבעתיים, ישראל."
+        title="About Hadar Yatzkan | IP Attorney with Google, Meta & Amazon Experience | Israel"
+        description="Hadar Yatzkan — IP & Technology Attorney at HY Law Offices. LL.M. in Law & Technology. Direct experience against Google, Meta & Amazon. Based in Givatayim, Israel."
+        titleHe="אודות הדר יצקן | עורך דין IP עם ניסיון מול גוגל, מטא ואמזון | ישראל"
+        descriptionHe="הדר יצקן — עורך דין לקניין רוחני וטכנולוגיה ב-HY Law Offices. LL.M בדין וטכנולוגיה. ניסיון ישיר מול גוגל, מטא ואמזון. גבעתיים, ישראל."
       />
 
       {/* Hero */}

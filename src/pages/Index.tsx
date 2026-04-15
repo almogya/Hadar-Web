@@ -82,10 +82,10 @@ const Index = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }} />
 
       <SEOHead
-        title="Hadar Yatzkan | Intellectual Property & AI Attorney | Israel"
-        description="Attorney specializing in intellectual property, technology law, and AI. Advising businesses and startups on trademarks, copyright, and digital rights in Israel."
-        titleHe="עורך דין קניין רוחני ובינה מלאכותית | הדר יצקן"
-        descriptionHe="ליווי משפטי לעסקים וסטארטאפים: סימני מסחר, זכויות יוצרים, AI ודיני טכנולוגיה בישראל"
+        title="Hadar Yatzkan | IP & Technology Attorney | Israel — Google, Meta & Amazon Experience"
+        description="IP and Technology Attorney in Israel. Direct experience representing clients against Google, Meta & Amazon. Advising startups, businesses and creators on trademarks, copyright, and AI law."
+        titleHe="הדר יצקן | עורך דין קניין רוחני וטכנולוגיה | ניסיון מול גוגל, מטא ואמזון"
+        descriptionHe="עורך דין לקניין רוחני וטכנולוגיה בישראל. ניסיון ישיר מול גוגל, מטא ואמזון. ליווי סטארטאפים, עסקים ויוצרים בסימני מסחר, זכויות יוצרים ודיני AI."
       />
 
       {/* ── HERO ── */}
@@ -136,9 +136,19 @@ const Index = () => {
             </p>
 
             {/* Statement — bold single line */}
-            <p className="text-sm md:text-base font-semibold tracking-wide mb-10" style={{ color: "#C9A227" }}>
+            <p className="text-sm md:text-base font-semibold tracking-wide mb-7" style={{ color: "#C9A227" }}>
               {t.hero.statement}
             </p>
+
+            {/* Benefit Bullets */}
+            <ul className="space-y-2.5 mb-10">
+              {t.hero.bullets.map((bullet, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
+                  <span className="text-sm md:text-base font-medium leading-snug" style={{ color: "rgba(255,255,255,0.80)" }}>{bullet}</span>
+                </li>
+              ))}
+            </ul>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-3 mb-5">

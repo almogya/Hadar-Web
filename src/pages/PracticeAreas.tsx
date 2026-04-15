@@ -32,10 +32,10 @@ const PracticeAreas = () => {
   return (
     <Layout>
       <SEOHead
-        title="Practice Areas | IP, AI & Technology Law | HY Law Offices Israel"
-        description="Boutique legal counsel across intellectual property, trademarks, copyright, AI law, technology law, and commercial litigation for Israeli and international clients."
-        titleHe="תחומי עיסוק | קניין רוחני, בינה מלאכותית וטכנולוגיה | HY Law Offices"
-        descriptionHe="ייעוץ משפטי בוטיק בקניין רוחני, סימני מסחר, זכויות יוצרים, דיני AI, דיני טכנולוגיה וליטיגציה מסחרית ללקוחות ישראלים ובינלאומיים."
+        title="Practice Areas | Trademarks, Copyright, AI Law & Tech Litigation | HY Law Offices"
+        description="Specialized IP and technology law: trademarks, copyright, AI law, SaaS agreements, and commercial litigation. Protecting startups, businesses and creators in Israel and internationally."
+        titleHe="תחומי עיסוק | סימני מסחר, זכויות יוצרים, דיני AI וליטיגציה | HY Law Offices"
+        descriptionHe="קניין רוחני וטכנולוגיה: סימני מסחר, זכויות יוצרים, דיני AI, חוזי SaaS וליטיגציה מסחרית. הגנה על סטארטאפים, עסקים ויוצרים בישראל ובינלאומית."
       />
 
       {/* Hero */}

@@ -13,22 +13,27 @@ export const en = {
   },
 
   hero: {
-    badge: "Boutique Israeli Law Firm",
-    h1: "Intellectual Property & Technology Law",
-    h1Accent: "for the AI and Digital Economy",
-    sub: "Intellectual Property and Technology Attorney advising businesses in the digital economy.",
-    cta1: "Schedule a Consultation",
+    badge: "Boutique Law Firm · IP · Technology · AI",
+    h1: "Protect Your Digital Assets",
+    h1Accent: "IP & Technology Attorney — with direct experience against Google, Meta & Amazon",
+    sub: "Legal counsel for startups, businesses, and creators in the digital economy — from trademark registration to courtroom advocacy.",
+    bullets: [
+      "Proven expertise in IP law, technology, and artificial intelligence",
+      "Direct experience representing clients against global tech platforms",
+      "Personal service from the attorney — not a secretary",
+    ],
+    cta1: "Schedule a Free Consultation",
     cta2: "Send a Confidential Inquiry",
-    microcopy: "Reply within 24 hours · Full confidentiality",
+    microcopy: "Reply within 24 hours · Free first call · Full confidentiality",
     statement: "Managing rights, agreements, and legal risks in the AI era.",
   },
 
   trust: {
     items: [
-      { title: "Israel Bar Member", sub: "Licensed Attorney" },
-      { title: "LL.M. Law & Technology", sub: "Advanced Degree" },
-      { title: "IP & Tech Focus", sub: "Specialized Practice" },
-      { title: "Givatayim, Israel", sub: "Serving Israel & International" },
+      { title: "Israel Bar Association", sub: "Licensed Attorney" },
+      { title: "LL.M. Law & Technology", sub: "University of Haifa" },
+      { title: "Google, Meta & Amazon", sub: "Global Platform Experience" },
+      { title: "24-Hour Response", sub: "Personal Direct Service" },
     ],
   },
 
@@ -167,10 +172,10 @@ export const en = {
   },
 
   ctaSection: {
-    heading: "Protect What You've Built",
-    sub: "Whether you're launching a product, scaling a platform, or defending your creative work, we provide clear, strategic legal counsel tailored to your situation.",
+    heading: "Ready to Protect Your Digital Assets?",
+    sub: "Get a clear direction in your first call — no commitment, no cost.",
     disclaimer: "Do not send sensitive or confidential information until a formal engagement has been established.",
-    cta1: "Schedule a Consultation",
+    cta1: "Schedule a Free Consultation",
     cta2: "Send a Confidential Inquiry",
   },
 
