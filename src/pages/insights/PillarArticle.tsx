@@ -5,12 +5,13 @@ import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-type ArticleKey = "aiCopyright" | "trademarkClearance" | "ipOwnership";
+type ArticleKey = "aiCopyright" | "trademarkClearance" | "ipOwnership" | "defamationInternet";
 
 const SLUG_MAP: Record<string, ArticleKey> = {
   "ai-copyright-israel": "aiCopyright",
   "trademark-clearance-checklist": "trademarkClearance",
   "ip-ownership-startups": "ipOwnership",
+  "internet-defamation-israel": "defamationInternet",
 };
 
 const PillarArticle = () => {

@@ -449,6 +449,14 @@ export const en = {
         category: "copyright",
         pillar: false,
       },
+      {
+        title: "Internet Defamation in Israel: What to Do When Someone Damages Your Reputation Online",
+        excerpt: "A false review, a defamatory post, or an anonymous attack online can cause lasting harm to your name and business. A practical guide to Israeli defamation law — takedowns, damages, and civil proceedings.",
+        date: "April 2026",
+        category: "techLaw",
+        pillar: true,
+        slug: "internet-defamation-israel",
+      },
     ],
   },
 
@@ -611,6 +619,53 @@ export const en = {
         "Choosing descriptive marks that face registration difficulties",
         "Investing in marketing before completing clearance",
         "Assuming a domain name purchase equals trademark rights",
+      ],
+    },
+
+    defamationInternet: {
+      title: "Internet Defamation in Israel: What to Do When Someone Damages Your Reputation Online",
+      metaTitle: "Internet Defamation in Israel | Defamation Attorney | HY Law",
+      metaDesc: "Has someone published false or harmful content about you online? A practical guide to Israeli defamation law — takedowns, damages, identifying anonymous posters, and civil proceedings.",
+      intro: "A defamatory post on social media, a false Google review, or an anonymous attack on a news forum can cause serious, lasting harm to personal and professional reputation. The Israeli Defamation Prohibition Law, 1965, provides legal tools to respond — but timing, evidence, and strategic choices matter significantly.",
+      sections: [
+        {
+          heading: "What Constitutes Defamation Under Israeli Law?",
+          body: "The Defamation Prohibition Law defines defamation as a publication that could humiliate a person in the eyes of others, disgrace them, damage their professional standing or business, or make them an object of hatred, contempt, or ridicule. The law applies to all forms of publication: social media posts, forum comments, Google reviews, articles, and even widely circulated WhatsApp messages. Not every negative criticism is defamation — truthful statements, fair commentary, and publications made in good faith often benefit from legal defences. But a false publication that damages your reputation without factual basis is grounds for a legal claim.",
+        },
+        {
+          heading: "Anonymous Posts — Can the Author Be Identified?",
+          body: "Anonymous publication is one of the most common challenges in this field. Social media platforms and digital services protect user data by default, but a court can order disclosure of the poster's identity as part of legal proceedings. It is possible to file an application for a disclosure order against the platform — Facebook, Google, Walla, and others — to obtain identifying details. Technical analysis of writing style, timing, and network activity can also assist in identification. The sooner legal action is initiated, the greater the chance of preserving evidence and tracing the author before data is deleted.",
+        },
+        {
+          heading: "What to Do Immediately When You Discover a Harmful Publication",
+          body: "The documentation stage is the most critical. Screenshot immediately — including the URL, the poster's name or handle, and the date and time of publication. Save copies in multiple locations. Do not delete evidence and do not respond to the publication publicly — a public response can escalate the dispute and potentially expose you to a counter-claim. After initial documentation, consult an attorney. A single demand letter may lead to removal within days, without any formal court proceedings.",
+        },
+        {
+          heading: "Legal Options: Takedown Orders, Damages, and Civil Proceedings",
+          body: "The law provides several routes. First — a demand letter requesting removal: often sufficient, at relatively low cost. Second — an application for a temporary injunction ordering removal of the content in an expedited hearing. Third — a civil lawsuit for damages, both statutory damages without proving actual loss (up to NIS 50,000 per publication) and damages for concrete harm — lost clients, reputational damage, and distress. The choice of route depends on the severity of the publication, the identity of the poster, and your goal: swift removal or financial compensation.",
+        },
+        {
+          heading: "Limitation Period — Do Not Delay",
+          body: "Critically, the limitation period for defamation claims in Israel is only one year from the date of discovering the publication — significantly shorter than the standard seven-year limitation period. This means that if harmful content was published about you and you do not act within a year, you may lose the right to claim. This is one of the principal reasons to seek legal advice as early as possible.",
+        },
+      ],
+      checklist: [
+        "Screenshot immediately — including URL, poster name, date, and time",
+        "Save copies in multiple locations (cloud + local device)",
+        "Do not delete evidence and do not respond online before consulting an attorney",
+        "Assess whether the publication meets the legal definition of defamation (false? harmful? unsupported by fact?)",
+        "Consult an attorney within 14 days of discovering the publication",
+        "Consider a demand letter before filing a claim — often sufficient",
+        "Identify the platform and review its content removal policy",
+        "Remember: the limitation period is one year only",
+      ],
+      pitfalls: [
+        "Responding publicly online and escalating the dispute",
+        "Waiting more than a year — the limitation period closes the door",
+        "Accidentally deleting evidence before documenting it properly",
+        "Requesting removal directly from the platform without a legal letter — rarely effective",
+        "Assuming an anonymous publication cannot be traced",
+        "Publishing a public response that could itself constitute defamation",
       ],
     },
 
