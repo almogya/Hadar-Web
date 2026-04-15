@@ -13,7 +13,7 @@ export const en = {
   },
 
   hero: {
-    badge: "Boutique Law Firm · IP · Technology · AI",
+    badge: "Boutique Law Firm · IP · Internet · Defamation",
     h1: "Protect Your Digital Assets",
     h1Accent: "IP & Technology Attorney — with direct experience against Google, Meta & Amazon",
     sub: "Legal counsel for startups, businesses, and creators in the digital economy — from trademark registration to courtroom advocacy.",
@@ -161,6 +161,11 @@ export const en = {
         title: "Commercial Litigation",
         desc: "Strategic dispute resolution for IP and technology matters—injunctions, breach of contract, trade secret misappropriation, and courtroom advocacy in Israeli courts.",
         link: "/practice-areas/commercial-litigation",
+      },
+      {
+        title: "Internet Defamation",
+        desc: "Rapid legal response to harmful online publications — demand letters, takedown injunctions, civil claims for damages, and identifying anonymous publishers. Representation against individuals, businesses, and global platforms.",
+        link: "/practice-areas/internet-defamation",
       },
     ],
   },
@@ -375,6 +380,7 @@ export const en = {
       ai: "AI",
       techLaw: "Tech Law",
       litigation: "Litigation",
+      defamation: "Defamation",
     } as Record<string, string>,
     readMore: "Read Article",
     readTime: "min read",
@@ -453,7 +459,7 @@ export const en = {
         title: "Internet Defamation in Israel: What to Do When Someone Damages Your Reputation Online",
         excerpt: "A false review, a defamatory post, or an anonymous attack online can cause lasting harm to your name and business. A practical guide to Israeli defamation law — takedowns, damages, and civil proceedings.",
         date: "April 2026",
-        category: "techLaw",
+        category: "defamation",
         pillar: true,
         slug: "internet-defamation-israel",
       },

@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
 import { Link } from "react-router-dom";
-import { Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb, type LucideIcon } from "lucide-react";
+import { Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb, MessageSquareX, type LucideIcon } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 /** Stable href → icon mapping — never index-based */
@@ -13,6 +13,7 @@ const AREA_ICON_MAP: Record<string, LucideIcon> = {
   "/practice-areas/technology-internet-law": Globe,
   "/practice-areas/ai-and-law": Brain,
   "/practice-areas/commercial-litigation": Briefcase,
+  "/practice-areas/internet-defamation": MessageSquareX,
 };
 
 const PracticeAreas = () => {
@@ -32,10 +33,10 @@ const PracticeAreas = () => {
   return (
     <Layout>
       <SEOHead
-        title="Practice Areas | Trademarks, Copyright, AI Law & Tech Litigation | HY Law Offices"
-        description="Specialized IP and technology law: trademarks, copyright, AI law, SaaS agreements, and commercial litigation. Protecting startups, businesses and creators in Israel and internationally."
-        titleHe="תחומי עיסוק | סימני מסחר, זכויות יוצרים, דיני AI וליטיגציה | HY Law Offices"
-        descriptionHe="קניין רוחני וטכנולוגיה: סימני מסחר, זכויות יוצרים, דיני AI, חוזי SaaS וליטיגציה מסחרית. הגנה על סטארטאפים, עסקים ויוצרים בישראל ובינלאומית."
+        title="Practice Areas | Trademarks, Copyright, Internet Defamation, AI Law | HY Law Offices"
+        description="Specialized IP and technology law: trademarks, copyright, internet defamation, AI law, and commercial litigation. Protecting startups, businesses and creators in Israel."
+        titleHe="תחומי עיסוק | סימני מסחר, זכויות יוצרים, לשון הרע באינטרנט, AI | HY Law Offices"
+        descriptionHe="קניין רוחני וטכנולוגיה: סימני מסחר, זכויות יוצרים, לשון הרע באינטרנט, דיני AI וליטיגציה מסחרית. הגנה על עסקים, יוצרים ולקוחות פרטיים בישראל."
       />
 
       {/* Hero */}

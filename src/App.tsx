@@ -14,6 +14,7 @@ import CopyrightDigitalContent from "./pages/practice-areas/CopyrightDigitalCont
 import AiAndLaw from "./pages/practice-areas/AiAndLaw";
 import TechnologyInternetLaw from "./pages/practice-areas/TechnologyInternetLaw";
 import CommercialLitigation from "./pages/practice-areas/CommercialLitigation";
+import InternetDefamation from "./pages/practice-areas/InternetDefamation";
 import Insights from "./pages/Insights";
 import PillarArticle from "./pages/insights/PillarArticle";
 import Contact from "./pages/Contact";
@@ -38,6 +39,7 @@ const LocalizedRoutes = () => (
       <Route path="practice-areas/ai-and-law" element={<AiAndLaw />} />
       <Route path="practice-areas/technology-internet-law" element={<TechnologyInternetLaw />} />
       <Route path="practice-areas/commercial-litigation" element={<CommercialLitigation />} />
+      <Route path="practice-areas/internet-defamation" element={<InternetDefamation />} />
       <Route path="insights" element={<Insights />} />
       <Route path="insights/:slug" element={<PillarArticle />} />
       <Route path="contact" element={<Contact />} />

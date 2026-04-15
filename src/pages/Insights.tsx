@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-const CATEGORY_KEYS = ["ip", "trademarks", "copyright", "ai", "techLaw", "litigation"] as const;
+const CATEGORY_KEYS = ["ip", "trademarks", "copyright", "ai", "techLaw", "litigation", "defamation"] as const;
 
 interface ArticlePreview {
   title: string;
