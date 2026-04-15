@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Globe } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {

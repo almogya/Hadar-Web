@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, Download } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo.webp";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
@@ -123,7 +123,7 @@ const Index = () => {
     name: "HY Law Offices",
     alternateName: lang === "he" ? "הדר יצקן, עורך דין" : "Hadar Yatzkan, Attorney",
     url: "https://ai-lawyer.co.il",
-    logo: "https://ai-lawyer.co.il/logo.png",
+    logo: "https://ai-lawyer.co.il/logo.webp",
     description: lang === "he"
       ? "עורך דין המתמחה בקניין רוחני, דיני טכנולוגיה ובינה מלאכותית בגבעתיים, ישראל."
       : "Attorney specializing in intellectual property, technology law, and AI in Givatayim, Israel.",
