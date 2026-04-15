@@ -71,7 +71,7 @@ const Index = () => {
       addressCountry: "IL",
     },
     telephone: "+972542234726",
-    email: "Hadaryatzkan@gmail.com",
+    email: "Hadar@ai-lawyer.co.il",
     areaServed: ["IL", "US", "GB", "EU"],
     availableLanguage: ["Hebrew", "English"],
   };
