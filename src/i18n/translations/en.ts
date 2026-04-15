@@ -210,7 +210,7 @@ export const en = {
     qualHeading: "Professional Background",
     milestones: [
       { title: "LL.B — Academic Center of Law and Business", desc: "Bachelor of Laws" },
-      { title: "LL.M in Law & Technology — University of Haifa", desc: "Postgraduate specialisation in the legal dimensions of technology" },
+      { title: "LL.M in Law & Technology — University of Haifa", desc: "Postgraduate specialisation in the legal implications of artificial intelligence in the field of law" },
       { title: "Guy Ophir Law Office — Litigation", desc: "Defamation, copyright infringement, internet law, and privacy proceedings" },
       { title: "Tony Greenman & Co.", desc: "Intellectual property, contracts, and digital media advisory" },
     ],
