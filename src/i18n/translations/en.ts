@@ -95,19 +95,10 @@ export const en = {
     heading: "Clients Who Worked With Us",
     items: [
       {
-        quote: "I received clear, practical advice within one day. Hadar understood the problem immediately and offered a solution I hadn't considered.",
-        name: "SaaS Startup Founder",
-        role: "Tel Aviv",
-      },
-      {
-        quote: "He managed a proceeding against a global platform for us — we had the infringement removed within two weeks. Professional and efficient.",
-        name: "Digital Brand Owner",
-        role: "Givatayim",
-      },
-      {
-        quote: "After years of uncertainty about trademark registration — the process was simple, clear and fast. Highly recommended.",
-        name: "Content Creator",
-        role: "Jerusalem",
+        quote: "Hadar helped me recover my Google Business account after it was suspended without cause. He was incredibly professional, kind, and effective throughout the entire process. If you're looking for a top-tier lawyer who offers expert service at a very fair price, I highly recommend him.",
+        name: "Alon Zonenfeld",
+        role: "Google Review ⭐⭐⭐⭐⭐",
+        verified: true,
       },
     ],
   },

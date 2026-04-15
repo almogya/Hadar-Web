@@ -97,19 +97,10 @@ export const he = {
     heading: "לקוחות שעבדו איתנו",
     items: [
       {
-        quote: "קיבלתי ייעוץ ברור ומעשי תוך יום אחד. הדר הבין בדיוק מה הבעיה ונתן פתרון שלא חשבתי עליו.",
-        name: "מייסד סטארטאפ SaaS",
-        role: "תל אביב",
-      },
-      {
-        quote: "ניהל עבורנו הליך מול פלטפורמה גלובלית — בסוף הסרנו את ההפרה תוך שבועיים. מקצועי ויעיל.",
-        name: "בעלת מותג דיגיטלי",
-        role: "גבעתיים",
-      },
-      {
-        quote: "לאחר שנים של חשש מרישום סימן מסחר — תהליך פשוט, ברור ומהיר. ממליצה בחום.",
-        name: "יוצרת תוכן",
-        role: "ירושלים",
+        quote: "Hadar helped me recover my Google Business account after it was suspended without cause. He was incredibly professional, kind, and effective throughout the entire process. If you're looking for a top-tier lawyer who offers expert service at a very fair price, I highly recommend him.",
+        name: "Alon Zonenfeld",
+        role: "ביקורת Google ⭐⭐⭐⭐⭐",
+        verified: true,
       },
     ],
   },
