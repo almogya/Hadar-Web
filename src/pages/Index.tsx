@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, Users, Building2, Lightbulb } from "lucide-react";
+import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle } from "lucide-react";
 import logo from "@/assets/logo.png";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
@@ -12,7 +12,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-/** Stable href → icon mapping (never index-based) */
+/** Stable href → icon mapping */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
   "/practice-areas/intellectual-property": Shield,
   "/practice-areas/trademarks": Scale,
@@ -22,19 +22,22 @@ const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
   "/practice-areas/commercial-litigation": Briefcase,
 };
 
-/** Stable process-step icons keyed by position ID */
+/** Stable process-step icons */
 const PROCESS_STEPS = [
   { id: "consultation", Icon: MessageSquare },
   { id: "assessment",   Icon: FileSearch },
   { id: "execution",    Icon: CheckCircle },
 ] as const;
 
-/** Stable audience icons keyed by segment ID */
+/** Stable audience icons */
 const AUDIENCES = [
-  { id: "startups",  Icon: Building2 },
-  { id: "tech",      Icon: Lightbulb },
-  { id: "creators",  Icon: Users },
+  { id: "startups",  Icon: Briefcase },
+  { id: "brands",    Icon: Shield },
+  { id: "creators",  Icon: FileText },
 ] as const;
+
+/** Stable how-I-help icons */
+const HOW_HELP_ICONS = [Scale, Handshake, Cpu, AlertTriangle] as const;
 
 const Index = () => {
   const { t, localePath, lang } = useLanguage();
@@ -50,17 +53,17 @@ const Index = () => {
     })),
   };
 
-  // LegalService JSON-LD — authority signal for Google
+  // LegalService JSON-LD
   const legalServiceSchema = {
     "@context": "https://schema.org",
     "@type": "LegalService",
     name: "HY Law Offices",
-    alternateName: "הדר יצקן, עורכת דין",
+    alternateName: lang === "he" ? "הדר יצקן, עורך דין" : "Hadar Yatzkan, Attorney",
     url: "https://ai-lawyer.co.il",
     logo: "https://ai-lawyer.co.il/logo.png",
     description: lang === "he"
-      ? "משרד עורכי דין בוטיק המתמחה בקניין רוחני, דיני טכנולוגיה ובינה מלאכותית בגבעתיים, ישראל."
-      : "Boutique law firm specializing in intellectual property, technology law, and AI in Givatayim, Israel.",
+      ? "עורך דין המתמחה בקניין רוחני, דיני טכנולוגיה ובינה מלאכותית בגבעתיים, ישראל."
+      : "Attorney specializing in intellectual property, technology law, and AI in Givatayim, Israel.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "46 Weizmann St",
@@ -71,108 +74,93 @@ const Index = () => {
     email: "Hadaryatzkan@gmail.com",
     areaServed: ["IL", "US", "GB", "EU"],
     availableLanguage: ["Hebrew", "English"],
-    priceRange: "$$",
   };
 
   return (
     <Layout>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }} />
+
       <SEOHead
-        title="Hadar Yatzkan | Intellectual Property & Technology Law | Israel"
-        description="Boutique IP, technology, and AI law firm in Givatayim, Israel. Trademark registration, copyright enforcement, digital content law, and commercial litigation."
-        titleHe="הדר יצקן | קניין רוחני ודיני טכנולוגיה | ישראל"
-        descriptionHe="משרד עורכי דין בוטיק לקניין רוחני, טכנולוגיה ובינה מלאכותית בגבעתיים. רישום סימני מסחר, אכיפת זכויות יוצרים, דיני תוכן דיגיטלי וליטיגציה מסחרית."
+        title="Hadar Yatzkan | Intellectual Property & AI Attorney | Israel"
+        description="Attorney specializing in intellectual property, technology law, and AI. Advising businesses and startups on trademarks, copyright, and digital rights in Israel."
+        titleHe="עורך דין קניין רוחני ובינה מלאכותית | הדר יצקן"
+        descriptionHe="ליווי משפטי לעסקים וסטארטאפים: סימני מסחר, זכויות יוצרים, AI ודיני טכנולוגיה בישראל"
       />
 
-      {/* ── HERO — premium gradient, no stock photo ── */}
+      {/* ── HERO ── */}
       <section
-        className="relative min-h-[92vh] flex items-center overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #0B1F3A 0%, #1A3A6B 55%, #0B1F3A 100%)" }}
+        className="relative min-h-[94vh] flex items-center overflow-hidden"
+        style={{ background: "linear-gradient(150deg, #071628 0%, #0B1F3A 40%, #132D55 70%, #0B1F3A 100%)" }}
       >
-        {/* Subtle legal-tech texture overlay */}
+        {/* Dot-grid texture */}
         <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)",
-            backgroundSize: "40px 40px",
-          }}
+          className="absolute inset-0 opacity-[0.035]"
+          style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)", backgroundSize: "36px 36px" }}
           aria-hidden="true"
         />
-        {/* Bottom fade to page background */}
-        <div
-          className="absolute bottom-0 left-0 right-0 h-32"
-          style={{ background: "linear-gradient(to bottom, transparent, #F7F8FA)" }}
-          aria-hidden="true"
-        />
+        {/* Bottom fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, #F7F8FA)" }} aria-hidden="true" />
 
-        <div className="container relative z-10 py-32 md:py-44">
-          <div className="max-w-3xl">
+        <div className="container relative z-10 py-36 md:py-48">
+          <div className="max-w-2xl">
+
             {/* Logo lockup */}
             <div className="flex items-center gap-4 mb-10">
-              <img src={logo} alt={t.footer.firmName} className="h-16 w-16 md:h-20 md:w-20 object-contain opacity-90" />
+              <img src={logo} alt={t.footer.firmName} className="h-14 w-14 object-contain opacity-90" />
               <div>
-                <span className="font-display text-xl md:text-2xl font-bold tracking-tight block leading-tight text-white">
-                  {t.footer.firmName}
-                </span>
-                <span className="text-xs md:text-sm font-medium tracking-[0.2em] uppercase" style={{ color: "#C9A227" }}>
-                  {lang === "he" ? "קניין רוחני · טכנולוגיה · משפט" : "IP · Technology · Law"}
+                <span className="font-display text-lg font-bold tracking-tight block leading-tight text-white">{t.footer.firmName}</span>
+                <span className="text-[11px] font-semibold tracking-[0.22em] uppercase" style={{ color: "#C9A227" }}>
+                  {lang === "he" ? "קניין רוחני · טכנולוגיה · AI" : "IP · Technology · AI"}
                 </span>
               </div>
             </div>
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 mb-8">
               <span className="w-6 h-px" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
-              <span className="text-[11px] font-semibold tracking-[0.35em] uppercase" style={{ color: "#C9A227" }}>
-                {t.hero.badge}
-              </span>
+              <span className="text-[11px] font-semibold tracking-[0.35em] uppercase" style={{ color: "#C9A227" }}>{t.hero.badge}</span>
             </div>
 
-            {/* H1 */}
-            <h1 className="hero-h1 font-display font-bold tracking-tight mb-4 text-white">
+            {/* H1 — bigger, shorter */}
+            <h1
+              className="font-display font-bold tracking-tight text-white mb-5 leading-[1.05]"
+              style={{ fontSize: "clamp(2.8rem, 5.5vw + 0.5rem, 5rem)", letterSpacing: "-0.025em" }}
+            >
               {t.hero.h1}
             </h1>
 
-            {/* Accent subheadline */}
-            <p className="text-xl md:text-2xl lg:text-3xl font-display font-medium mb-8 leading-snug" style={{ color: "rgba(255,255,255,0.75)" }}>
+            {/* Sub — one clean line */}
+            <p className="text-xl md:text-2xl font-medium mb-6 leading-snug" style={{ color: "rgba(255,255,255,0.72)" }}>
               {t.hero.h1Accent}
             </p>
 
-            {/* Value proposition */}
-            <div className="border-s-2 ps-5 mb-10" style={{ borderColor: "#C9A227" }}>
-              <p className="text-base md:text-lg max-w-xl leading-relaxed" style={{ color: "rgba(255,255,255,0.70)" }}>
-                {t.hero.sub}
-              </p>
-            </div>
+            {/* Statement — bold single line */}
+            <p className="text-sm md:text-base font-semibold tracking-wide mb-10" style={{ color: "#C9A227" }}>
+              {t.hero.statement}
+            </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 mb-5">
+            <div className="flex flex-wrap gap-3 mb-5">
               <Link
                 to={localePath("/contact")}
-                className="group inline-flex items-center gap-2.5 px-9 py-4 text-base font-semibold tracking-wide transition-all duration-200 shadow-lg"
+                className="group inline-flex items-center gap-2.5 px-8 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02]"
                 style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
               >
                 {t.hero.cta1}
-                <DirectionalIcon icon="arrow" size={18} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
+                <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
               </Link>
               <Link
                 to={localePath("/contact")}
-                className="inline-flex items-center gap-2 px-9 py-4 text-base font-semibold tracking-wide border transition-all duration-200"
-                style={{ borderColor: "rgba(255,255,255,0.3)", color: "rgba(255,255,255,0.85)" }}
+                className="inline-flex items-center gap-2 px-8 py-4 text-[15px] font-semibold tracking-wide border transition-all duration-200 hover:bg-white/5"
+                style={{ borderColor: "rgba(255,255,255,0.25)", color: "rgba(255,255,255,0.80)" }}
               >
                 {t.hero.cta2}
               </Link>
             </div>
 
             {/* Microcopy */}
-            <p className="text-xs font-medium tracking-wide" style={{ color: "rgba(255,255,255,0.40)" }}>
+            <p className="text-xs font-medium tracking-wide" style={{ color: "rgba(255,255,255,0.35)" }}>
               {t.hero.microcopy}
             </p>
           </div>
@@ -180,30 +168,74 @@ const Index = () => {
       </section>
 
       {/* ── Trust Bar ── */}
-      <section className="py-6 bg-primary border-b border-primary-foreground/10">
+      <section className="py-5 bg-primary border-b border-primary-foreground/10">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {t.trust.items.map((item) => (
-              <div key={item.title} className="text-center">
+              <div key={item.title} className="text-center py-1">
                 <p className="text-sm font-semibold text-primary-foreground tracking-wide">{item.title}</p>
-                <p className="text-xs text-primary-foreground/50 mt-1">{item.sub}</p>
+                <p className="text-xs text-primary-foreground/45 mt-0.5">{item.sub}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Practice Areas ── */}
-      <section className="py-24 md:py-32 bg-background" aria-labelledby="practice-heading">
+      {/* ── How I Help — authority section ── */}
+      <section className="py-28 md:py-36 bg-background" aria-labelledby="how-help-heading">
         <div className="container">
-          <div className="max-w-2xl mx-auto text-center mb-20">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase">
+          <div className="max-w-xl mb-16">
+            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
+              {t.howIHelp.badge}
+            </span>
+            <h2 id="how-help-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
+              {t.howIHelp.heading}
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {t.howIHelp.items.map((item, i) => {
+              const Icon = HOW_HELP_ICONS[i];
+              return (
+                <div key={item.title} className="group">
+                  <div className="w-11 h-11 mb-5 flex items-center justify-center border border-mid-blue/20 group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300">
+                    <Icon className="text-mid-blue group-hover:text-accent transition-colors" size={20} strokeWidth={1.5} aria-hidden="true" />
+                  </div>
+                  <h3 className="font-display text-base font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-14 pt-8 border-t border-border flex flex-wrap gap-4 items-center">
+            <span className="text-sm text-muted-foreground">
+              {lang === "he" ? "תחומים מרכזיים:" : "Key areas:"}
+            </span>
+            <Link to={localePath("/practice-areas/trademarks")} className="text-sm font-medium text-mid-blue hover:text-accent transition-colors hover:underline">
+              {lang === "he" ? "סימני מסחר" : "Trademarks"}
+            </Link>
+            <span className="text-border">·</span>
+            <Link to={localePath("/practice-areas/copyright-digital-content")} className="text-sm font-medium text-mid-blue hover:text-accent transition-colors hover:underline">
+              {lang === "he" ? "זכויות יוצרים" : "Copyright"}
+            </Link>
+            <span className="text-border">·</span>
+            <Link to={localePath("/practice-areas/ai-and-law")} className="text-sm font-medium text-mid-blue hover:text-accent transition-colors hover:underline">
+              {lang === "he" ? "בינה מלאכותית" : "AI & Law"}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Practice Areas ── */}
+      <section className="py-28 md:py-36 bg-section-alt" aria-labelledby="practice-heading">
+        <div className="container">
+          <div className="max-w-xl mb-16">
+            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
               {t.practiceSection.badge}
             </span>
-            <h2 id="practice-heading" className="section-h2 font-display font-bold text-foreground mt-4 tracking-tight">
+            <h2 id="practice-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
               {t.practiceSection.heading}
             </h2>
-            <p className="text-muted-foreground mt-5 text-base leading-relaxed">
+            <p className="text-muted-foreground mt-4 text-base leading-relaxed">
               {t.practiceSection.sub}
             </p>
           </div>
@@ -214,98 +246,81 @@ const Index = () => {
                 <Link
                   to={localePath(area.link)}
                   key={area.title}
-                  className="group bg-background p-10 hover:bg-muted/30 transition-all duration-300 flex flex-col"
+                  className="group bg-section-alt p-10 hover:bg-background transition-all duration-300 flex flex-col"
                 >
-                  <Icon className="text-mid-blue mb-6" size={26} strokeWidth={1.5} aria-hidden="true" />
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-mid-blue transition-colors">
+                  <Icon className="text-mid-blue mb-5" size={24} strokeWidth={1.5} aria-hidden="true" />
+                  <h3 className="font-display text-base font-semibold text-foreground mb-2.5 group-hover:text-mid-blue transition-colors">
                     {area.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed flex-1">
                     {area.desc}
                   </p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-medium text-accent tracking-wide group-hover:gap-2.5 transition-all">
-                    {lang === "he" ? "למידע נוסף" : "Learn More"} <DirectionalIcon size={12} />
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-accent tracking-wide group-hover:gap-2.5 transition-all">
+                    {lang === "he" ? "למידע נוסף" : "Learn More"} <DirectionalIcon size={11} />
                   </span>
                 </Link>
               );
             })}
           </div>
-          <div className="text-center mt-16">
+          <div className="flex items-center justify-between mt-12 pt-8 border-t border-border">
             <Link
               to={localePath("/practice-areas")}
-              className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline tracking-wide"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline tracking-wide"
             >
-              {t.practiceSection.viewAll} <DirectionalIcon size={14} />
+              {t.practiceSection.viewAll} <DirectionalIcon size={13} />
             </Link>
+            <p className="text-xs text-muted-foreground hidden md:block">
+              {lang === "he" ? "מענה תוך 24 שעות" : "Reply within 24 hours"}
+            </p>
           </div>
         </div>
       </section>
 
-      {/* ── Contact CTA strip ── */}
-      <section style={{ padding: "48px 0", backgroundColor: "#0B1F3A" }}>
-        <div className="container" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "24px" }}>
-          <p style={{ color: "#ffffff", fontSize: "clamp(1.25rem, 2vw, 1.75rem)", fontWeight: 700, margin: 0 }}>
-            {t.ctaSection.heading}
+      {/* ── Mid-page CTA strip ── */}
+      <section className="py-10 border-y border-border bg-background">
+        <div className="container flex flex-wrap items-center justify-between gap-5">
+          <p className="text-lg font-display font-semibold text-foreground">
+            {lang === "he" ? "זקוק לייעוץ בתחום הקניין הרוחני?" : "Need IP or technology legal advice?"}
           </p>
           <Link
             to={localePath("/contact")}
-            style={{
-              display: "inline-block",
-              padding: "14px 32px",
-              backgroundColor: "#1F4B7A",
-              color: "#ffffff",
-              fontSize: "15px",
-              fontWeight: 700,
-              textDecoration: "none",
-              borderRadius: "4px",
-            }}
+            className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold tracking-wide transition-all duration-200 hover:opacity-90"
+            style={{ backgroundColor: "#0B1F3A", color: "#ffffff" }}
           >
-            {t.ctaSection.cta1}
+            {t.hero.cta1} <DirectionalIcon size={14} />
           </Link>
         </div>
       </section>
 
-      {/* ── How We Work (Dynamic) ── */}
-      <section className="py-24 md:py-32 bg-section-alt" aria-labelledby="process-heading">
+      {/* ── How We Work ── */}
+      <section className="py-28 md:py-36 bg-section-alt" aria-labelledby="process-heading">
         <div className="container">
-          <div className="max-w-2xl mx-auto text-center mb-20">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase">
+          <div className="max-w-xl mb-16">
+            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
               {t.process.badge}
             </span>
-            <h2 id="process-heading" className="section-h2 font-display font-bold text-foreground mt-4 tracking-tight">
+            <h2 id="process-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
               {t.process.heading}
             </h2>
           </div>
-          <div className="max-w-4xl mx-auto relative">
-            {/* Connecting line */}
+          <div className="max-w-4xl relative">
             <div className="hidden md:block absolute top-12 start-0 end-0 h-px bg-border" aria-hidden="true" />
-            <div className="grid md:grid-cols-3 gap-12 md:gap-8">
+            <div className="grid md:grid-cols-3 gap-12 md:gap-10">
               {PROCESS_STEPS.map(({ id, Icon }, i) => {
                 const step = t.process.steps[i];
                 return (
-                  <div key={id} className="group relative text-center">
-                    {/* Step number circle */}
-                    <div className="relative z-10 w-24 h-24 mx-auto mb-8 rounded-full bg-background border-2 border-mid-blue/30 flex flex-col items-center justify-center group-hover:border-accent group-hover:shadow-lg transition-all duration-500">
-                      <span className="text-[10px] text-mid-blue font-bold tracking-[0.3em] uppercase mb-1">
-                        {t.stepLabel}
-                      </span>
-                      <span className="text-2xl font-bold text-accent leading-none">
-                        {i + 1}
-                      </span>
+                  <div key={id} className="group relative">
+                    <div className="relative z-10 w-24 h-24 mb-8 rounded-full bg-background border border-mid-blue/20 flex flex-col items-center justify-center group-hover:border-accent group-hover:shadow-md transition-all duration-400">
+                      <span className="text-[9px] text-mid-blue font-bold tracking-[0.3em] uppercase mb-1">{t.stepLabel}</span>
+                      <span className="text-2xl font-bold text-accent leading-none">{i + 1}</span>
                     </div>
-                    {/* Icon */}
-                    <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center">
-                      <Icon className="text-mid-blue group-hover:text-accent transition-colors duration-300" size={28} strokeWidth={1.5} aria-hidden="true" />
+                    <div className="w-10 h-10 mb-4 flex items-center justify-center">
+                      <Icon className="text-mid-blue group-hover:text-accent transition-colors duration-300" size={24} strokeWidth={1.5} aria-hidden="true" />
                     </div>
-                    <h3 className="font-display text-lg font-semibold text-foreground mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {step.desc}
-                    </p>
-                    {/* Arrow between steps on mobile */}
+                    <h3 className="font-display text-base font-semibold text-foreground mb-2">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
                     {i < t.process.steps.length - 1 && (
-                      <div className="md:hidden flex justify-center my-6">
+                      <div className="md:hidden flex justify-start my-6 ps-12">
                         <div className="w-px h-8 bg-border" />
                       </div>
                     )}
@@ -317,98 +332,102 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── Who We Advise (Experience/Customers) ── */}
-      <section className="py-24 md:py-32" aria-labelledby="audiences-heading">
+      {/* ── Who I Work With ── */}
+      <section className="py-28 md:py-36 bg-background" aria-labelledby="audiences-heading">
         <div className="container">
-          <div className="max-w-2xl mx-auto text-center mb-20">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase">
+          <div className="max-w-xl mb-16">
+            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
               {t.audiences.badge}
             </span>
-            <h2 id="audiences-heading" className="section-h2 font-display font-bold text-foreground mt-4 tracking-tight">
+            <h2 id="audiences-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
               {t.audiences.heading}
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {AUDIENCES.map(({ id, Icon }, i) => {
               const audience = t.audiences.items[i];
               return (
-                <div key={id} className="group text-center px-6 py-8 border border-transparent hover:border-border hover:bg-muted/20 transition-all duration-300">
-                  <div className="w-16 h-16 mx-auto mb-6 border-2 border-accent/30 rounded-full flex items-center justify-center group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300">
-                    <Icon className="text-mid-blue group-hover:text-accent transition-colors" size={26} strokeWidth={1.5} aria-hidden="true" />
+                <div key={id} className="group p-8 border border-transparent hover:border-border transition-all duration-300">
+                  <div className="w-12 h-12 mb-6 border border-accent/25 flex items-center justify-center group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300">
+                    <Icon className="text-mid-blue group-hover:text-accent transition-colors" size={22} strokeWidth={1.5} aria-hidden="true" />
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">
-                    {audience.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {audience.desc}
-                  </p>
+                  <h3 className="font-display text-base font-semibold text-foreground mb-2.5">{audience.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{audience.desc}</p>
                 </div>
               );
             })}
+          </div>
+          <div className="mt-12 text-center">
+            <Link
+              to={localePath("/contact")}
+              className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline tracking-wide"
+            >
+              {lang === "he" ? "לקביעת ייעוץ ראשוני" : "Schedule an initial consultation"} <DirectionalIcon size={13} />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* ── Featured Insights ── */}
-      <section className="py-24 md:py-32 bg-primary" aria-labelledby="insights-heading">
+      <section className="py-28 md:py-36 bg-primary" aria-labelledby="insights-heading">
         <div className="container">
-          <div className="max-w-2xl mx-auto text-center mb-16">
-            <span className="text-accent text-[11px] font-semibold tracking-[0.35em] uppercase">
+          <div className="max-w-xl mb-14">
+            <span className="text-accent text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
               {t.insights.badge}
             </span>
-            <h2 id="insights-heading" className="section-h2 font-display font-bold text-primary-foreground mt-4 tracking-tight">
+            <h2 id="insights-heading" className="section-h2 font-display font-bold text-primary-foreground tracking-tight">
               {t.insights.heading}
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-5">
             {t.insights.articles.map((article) => (
               <Link
                 key={article.title}
                 to={localePath(article.link)}
-                className="group border border-primary-foreground/15 p-8 hover:border-primary-foreground/30 transition-all duration-300 flex flex-col"
+                className="group border border-primary-foreground/10 p-8 hover:border-primary-foreground/25 hover:bg-white/5 transition-all duration-300 flex flex-col"
               >
-                <span className="text-[11px] font-semibold text-accent tracking-[0.2em] uppercase">
+                <span className="text-[10px] font-semibold text-accent tracking-[0.25em] uppercase mb-3">
                   {article.category}
                 </span>
-                <h3 className="font-display text-lg font-semibold text-primary-foreground mt-3 mb-4 group-hover:text-accent transition-colors leading-snug">
+                <h3 className="font-display text-base font-semibold text-primary-foreground mb-4 group-hover:text-accent transition-colors leading-snug">
                   {article.title}
                 </h3>
-                <span className="mt-auto inline-flex items-center gap-1.5 text-xs text-accent font-medium tracking-wide group-hover:gap-2.5 transition-all">
-                  {t.insights.readMore} <DirectionalIcon size={12} />
+                <span className="mt-auto inline-flex items-center gap-1.5 text-xs text-accent font-semibold tracking-wide group-hover:gap-2.5 transition-all">
+                  {t.insights.readMore} <DirectionalIcon size={11} />
                 </span>
               </Link>
             ))}
           </div>
-          <div className="text-center mt-14">
+          <div className="mt-12 text-start">
             <Link
               to={localePath("/insights")}
-              className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline tracking-wide"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline tracking-wide"
             >
-              {lang === "he" ? "לכל המאמרים" : "View All Insights"} <DirectionalIcon size={14} />
+              {lang === "he" ? "לכל המאמרים" : "View All Insights"} <DirectionalIcon size={13} />
             </Link>
           </div>
         </div>
       </section>
 
       {/* ── FAQ ── */}
-      <section className="py-24 md:py-32" aria-labelledby="faq-heading">
+      <section className="py-28 md:py-36" aria-labelledby="faq-heading">
         <div className="container max-w-3xl">
-          <div className="text-center mb-16">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase">
+          <div className="mb-14">
+            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
               {t.faq.badge}
             </span>
-            <h2 id="faq-heading" className="section-h2 font-display font-bold text-foreground mt-4 tracking-tight">
+            <h2 id="faq-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
               {t.faq.heading}
             </h2>
           </div>
-          <Accordion type="single" collapsible className="space-y-3">
+          <Accordion type="single" collapsible className="space-y-2">
             {t.faq.items.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="border border-border bg-background px-6 data-[state=open]:border-foreground/20"
+                className="border border-border bg-background px-6 data-[state=open]:border-foreground/15"
               >
-                <AccordionTrigger className="text-start font-display font-semibold text-foreground hover:text-mid-blue py-5 text-[15px]">
+                <AccordionTrigger className="text-start font-display font-semibold text-foreground hover:text-mid-blue py-5 text-[15px] [&>svg]:shrink-0">
                   {faq.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-6">
@@ -421,52 +440,43 @@ const Index = () => {
       </section>
 
       {/* ── Final CTA ── */}
-      <section style={{ padding: "80px 0", backgroundColor: "#0B1F3A" }}>
-        <div className="container" style={{ maxWidth: "680px", textAlign: "center" }}>
-          <div style={{ width: "48px", height: "1px", backgroundColor: "rgba(255,255,255,0.2)", margin: "0 auto 32px" }} />
-          <h2 style={{ color: "#ffffff", fontSize: "clamp(1.5rem, 3vw, 2.25rem)", fontWeight: 700, margin: "0 0 20px", lineHeight: 1.2 }}>
+      <section className="py-24" style={{ backgroundColor: "#0B1F3A" }}>
+        <div className="container max-w-2xl text-center">
+          <div className="w-10 h-px mx-auto mb-10" style={{ backgroundColor: "rgba(201,162,39,0.4)" }} />
+          <h2 className="font-display font-bold text-white mb-5 leading-tight" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
             {t.ctaSection.heading}
           </h2>
-          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "16px", lineHeight: 1.8, margin: "0 0 12px" }}>
+          <p className="mb-3 leading-relaxed" style={{ color: "rgba(255,255,255,0.65)", fontSize: "16px" }}>
             {t.ctaSection.sub}
           </p>
-          <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "12px", lineHeight: 1.7, margin: "0 auto 40px", maxWidth: "480px" }}>
+          <p className="mb-10 mx-auto max-w-md" style={{ color: "rgba(255,255,255,0.35)", fontSize: "11px", lineHeight: 1.7 }}>
             {t.ctaSection.disclaimer}
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "16px" }}>
-            <Link
-              to={localePath("/contact")}
-              style={{
-                display: "inline-block",
-                padding: "16px 36px",
-                backgroundColor: "#1F4B7A",
-                color: "#ffffff",
-                fontSize: "16px",
-                fontWeight: 700,
-                textDecoration: "none",
-                borderRadius: "4px",
-              }}
-            >
-              {t.ctaSection.cta1}
-            </Link>
-          </div>
+          <Link
+            to={localePath("/contact")}
+            className="inline-flex items-center gap-2.5 px-10 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 hover:opacity-90"
+            style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
+          >
+            {t.ctaSection.cta1} <DirectionalIcon size={16} />
+          </Link>
+          <p className="mt-5 text-xs" style={{ color: "rgba(255,255,255,0.30)" }}>{t.hero.microcopy}</p>
         </div>
       </section>
+
       {/* ── Mobile sticky CTA ── */}
       <div
         className="fixed bottom-0 left-0 right-0 z-40 md:hidden border-t"
-        style={{ backgroundColor: "#0B1F3A", borderColor: "rgba(255,255,255,0.1)" }}
+        style={{ backgroundColor: "#0B1F3A", borderColor: "rgba(255,255,255,0.08)" }}
         role="complementary"
         aria-label={lang === "he" ? "קישור מהיר לייעוץ" : "Quick consultation link"}
       >
         <div className="container py-3">
           <Link
             to={localePath("/contact")}
-            className="flex items-center justify-center gap-2 w-full py-3 text-sm font-bold tracking-wide"
+            className="flex items-center justify-center gap-2 w-full py-3.5 text-sm font-bold tracking-wide"
             style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
           >
-            {t.hero.cta1}
-            <DirectionalIcon icon="arrow" size={16} />
+            {t.hero.cta1} <DirectionalIcon icon="arrow" size={15} />
           </Link>
         </div>
       </div>

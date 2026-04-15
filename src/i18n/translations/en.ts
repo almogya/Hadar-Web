@@ -20,6 +20,7 @@ export const en = {
     cta1: "Schedule a Consultation",
     cta2: "Send a Confidential Inquiry",
     microcopy: "Reply within 24 hours · Full confidentiality",
+    statement: "Managing rights, agreements, and legal risks in the AI era.",
   },
 
   trust: {
@@ -50,10 +51,21 @@ export const en = {
     ],
   },
 
+  howIHelp: {
+    badge: "How I Help",
+    heading: "How I Help Clients",
+    items: [
+      { title: "IP Rights Management", desc: "Protection, registration, and strategy for trademarks, copyright, and intellectual property assets." },
+      { title: "Technology Agreements", desc: "Drafting and negotiating contracts for software, SaaS, partnerships, and digital transactions." },
+      { title: "AI Legal Risks", desc: "Advising on AI use — output ownership, liability exposure, and regulatory compliance." },
+      { title: "Commercial Disputes", desc: "Managing disputes, representing clients in proceedings, and resolving IP and technology conflicts." },
+    ],
+  },
+
   practiceSection: {
-    badge: "What We Do",
+    badge: "תחומי התמחות",
     heading: "Practice Areas",
-    sub: "Strategic legal counsel at the intersection of law, technology, and intellectual property—focused on outcomes that matter to your business.",
+    sub: "Representation and counsel across intellectual property, technology, and AI — with a focus on business outcomes.",
     viewAll: "View All Practice Areas",
     areas: [
       {

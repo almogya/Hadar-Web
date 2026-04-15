@@ -1,10 +1,7 @@
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
-// [HEADSHOT_NEEDED] Replace attorney-headshot.jpg with a high-quality professional photo.
-// Until then, a neutral silhouette placeholder is rendered below.
-// Prompt: "Editorial crop and color grade for an existing professional headshot: neutral, premium, magazine style."
-// Format: .webp, min 600×800px.
+import headshotImg from "@/assets/attorney-headshot.jpg";
 import officeImg from "@/assets/hero-office.jpg";
 import { Link } from "react-router-dom";
 import DirectionalIcon from "@/components/DirectionalIcon";
@@ -38,15 +35,8 @@ const About = () => {
             </div>
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative">
-                {/* [HEADSHOT_NEEDED] Replace with real portrait once available */}
-                <div className="w-full max-w-sm aspect-[3/4] overflow-hidden shadow-2xl bg-muted flex flex-col items-center justify-center gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" className="w-24 h-24 opacity-30" fill="none" aria-hidden="true">
-                    <circle cx="40" cy="28" r="18" fill="currentColor" />
-                    <ellipse cx="40" cy="72" rx="30" ry="20" fill="currentColor" />
-                  </svg>
-                  <span className="text-xs text-muted-foreground font-medium tracking-widest uppercase opacity-50">
-                    {lang === "he" ? "[תמונה נדרשת — נא להעלות תמונה מקצועית]" : "[HEADSHOT NEEDED]"}
-                  </span>
+                <div className="w-full max-w-sm aspect-[3/4] overflow-hidden shadow-2xl">
+                  <img src={headshotImg} alt="Hadar Yatzkan" className="w-full h-full object-cover object-top" />
                 </div>
                 <div className="absolute -bottom-4 -end-4 w-full max-w-sm aspect-[3/4] border-2 border-accent/40 -z-10" />
               </div>
