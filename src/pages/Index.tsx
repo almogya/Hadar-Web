@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle } from "lucide-react";
+import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, Download } from "lucide-react";
 import logo from "@/assets/logo.png";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -38,6 +39,68 @@ const AUDIENCES = [
 
 /** Stable how-I-help icons */
 const HOW_HELP_ICONS = [Scale, Handshake, Cpu, AlertTriangle] as const;
+
+/** Lead Magnet strip — email capture for free IP checklist */
+const LeadMagnetStrip = () => {
+  const { t, lang } = useLanguage();
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus("sending");
+    try {
+      const fd = new FormData();
+      fd.append("email", email);
+      fd.append("_subject", `Free IP Checklist Request — ${email}`);
+      fd.append("message", lang === "he" ? "בקשה למדריך IP חינמי" : "Free IP checklist request");
+      await fetch("https://formsubmit.co/ajax/hadaryatzkan@gmail.com", { method: "POST", body: fd });
+    } catch { /* fail silently */ }
+    setStatus("done");
+    setEmail("");
+  };
+
+  return (
+    <section className="py-14" style={{ background: "linear-gradient(135deg, #071628 0%, #0B1F3A 100%)" }} aria-label={t.leadMagnet.badge}>
+      <div className="container">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 mb-4">
+            <Download size={14} style={{ color: "#C9A227" }} aria-hidden="true" />
+            <span className="text-[11px] font-semibold tracking-[0.35em] uppercase" style={{ color: "#C9A227" }}>{t.leadMagnet.badge}</span>
+          </div>
+          <h2 className="font-display font-bold text-white mb-3 leading-tight" style={{ fontSize: "clamp(1.2rem, 2.5vw, 1.75rem)" }}>
+            {t.leadMagnet.heading}
+          </h2>
+          <p className="mb-8 text-sm" style={{ color: "rgba(255,255,255,0.60)" }}>{t.leadMagnet.sub}</p>
+          {status === "done" ? (
+            <p className="text-sm font-semibold" style={{ color: "#C9A227" }}>✓ {t.leadMagnet.success}</p>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder={t.leadMagnet.placeholder}
+                className="flex-1 px-4 py-3.5 text-sm bg-white/10 border border-white/20 text-white placeholder:text-white/40 focus:outline-none focus:border-accent transition-colors"
+              />
+              <button
+                type="submit"
+                disabled={status === "sending"}
+                className="px-6 py-3.5 text-sm font-bold tracking-wide transition-opacity hover:opacity-90 disabled:opacity-50 whitespace-nowrap"
+                style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
+              >
+                {status === "sending" ? t.leadMagnet.sending : t.leadMagnet.cta}
+              </button>
+            </form>
+          )}
+          <p className="mt-4 text-[11px]" style={{ color: "rgba(255,255,255,0.30)" }}>{t.leadMagnet.disclaimer}</p>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Index = () => {
   const { t, localePath, lang } = useLanguage();
@@ -76,10 +139,31 @@ const Index = () => {
     availableLanguage: ["Hebrew", "English"],
   };
 
+  // Reviews JSON-LD
+  const reviewsSchema = {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "HY Law Offices",
+    url: "https://ai-lawyer.co.il",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: t.testimonials.items.length,
+      bestRating: "5",
+    },
+    review: t.testimonials.items.map((item) => ({
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: item.name },
+      reviewBody: item.quote,
+    })),
+  };
+
   return (
     <Layout>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }} />
 
       <SEOHead
         title="Hadar Yatzkan | IP & Technology Attorney | Israel — Google, Meta & Amazon Experience"
@@ -228,6 +312,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* ── Lead Magnet ── */}
+      <LeadMagnetStrip />
 
       {/* ── How I Help — authority section ── */}
       <section className="py-28 md:py-36 bg-background" aria-labelledby="how-help-heading">

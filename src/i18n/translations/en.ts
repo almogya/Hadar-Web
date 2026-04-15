@@ -56,6 +56,17 @@ export const en = {
     ],
   },
 
+  leadMagnet: {
+    badge: "Free Guide",
+    heading: "10 IP Checks Every Founder Must Do Before Fundraising",
+    sub: "A practical checklist — what to protect, what to register, and what could cost you dearly.",
+    placeholder: "Your email address",
+    cta: "Send Me the Guide",
+    sending: "Sending...",
+    success: "The guide is on its way! Check your inbox.",
+    disclaimer: "No spam. Unsubscribe anytime.",
+  },
+
   pain: {
     badge: "Why Clients Come to Us",
     heading: "Do You Recognize This Situation?",
