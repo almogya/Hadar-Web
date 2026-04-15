@@ -17,6 +17,8 @@ import CommercialLitigation from "./pages/practice-areas/CommercialLitigation";
 import InternetDefamation from "./pages/practice-areas/InternetDefamation";
 import Insights from "./pages/Insights";
 import PillarArticle from "./pages/insights/PillarArticle";
+import AiIpArticle from "./pages/insights/AiIpArticle";
+import PrivacyAmendment13Article from "./pages/insights/PrivacyAmendment13Article";
 import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -41,6 +43,8 @@ const LocalizedRoutes = () => (
       <Route path="practice-areas/commercial-litigation" element={<CommercialLitigation />} />
       <Route path="practice-areas/internet-defamation" element={<InternetDefamation />} />
       <Route path="insights" element={<Insights />} />
+      <Route path="insights/ai-ip-ownership-2026" element={<AiIpArticle />} />
+      <Route path="insights/privacy-amendment-13" element={<PrivacyAmendment13Article />} />
       <Route path="insights/:slug" element={<PillarArticle />} />
       <Route path="contact" element={<Contact />} />
       <Route path="thank-you" element={<ThankYou />} />

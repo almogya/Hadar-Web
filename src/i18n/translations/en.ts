@@ -456,6 +456,22 @@ export const en = {
         pillar: false,
       },
       {
+        title: "Intellectual Property in the AI Era: Who Owns AI-Generated Works in Israel?",
+        excerpt: "Who holds copyright over a Midjourney image? Can an AI algorithm be patented? A comprehensive guide for startups and tech companies — the state of Israeli law in 2026.",
+        date: "April 2026",
+        category: "ai",
+        pillar: true,
+        slug: "ai-ip-ownership-2026",
+      },
+      {
+        title: "Privacy Amendment 13: What AI and Tech Companies in Israel Must Do",
+        excerpt: "Amendment 13 introduced DPO obligations, DPIA requirements, significant fines, and transparency duties — what does this mean for companies developing or using AI? A practical preparation guide.",
+        date: "April 2026",
+        category: "techLaw",
+        pillar: true,
+        slug: "privacy-amendment-13",
+      },
+      {
         title: "Internet Defamation in Israel: What to Do When Someone Damages Your Reputation Online",
         excerpt: "A false review, a defamatory post, or an anonymous attack online can cause lasting harm to your name and business. A practical guide to Israeli defamation law — takedowns, damages, and civil proceedings.",
         date: "April 2026",
