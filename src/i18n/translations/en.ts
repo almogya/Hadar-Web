@@ -100,6 +100,18 @@ export const en = {
         role: "Google Review ⭐⭐⭐⭐⭐",
         verified: true,
       },
+      {
+        quote: "Highly recommended. Super professional, kind, and attentive attorney. He was accommodating with payments. Made me feel that the truth mattered to him and that he wanted to win just as much as I did. Number one. Highly recommend!!",
+        name: "Gal Cohen",
+        role: "Google Review ⭐⭐⭐⭐⭐",
+        verified: true,
+      },
+      {
+        quote: "If you're looking for an attorney who will take care of your copyright in a professional manner, down to the smallest details, and who truly listens — contact Hadar Yatzkan. I can personally attest to the excellent service I received. I promise you'll know from the very first call that you're dealing with a true professional!!!",
+        name: "Orly Lucky",
+        role: "Google Review ⭐⭐⭐⭐⭐",
+        verified: true,
+      },
     ],
   },
 
