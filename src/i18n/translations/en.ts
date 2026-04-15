@@ -227,6 +227,22 @@ export const en = {
         q: "What industries do you typically work with?",
         a: "Our clients span technology startups, SaaS platforms, AI companies, digital content creators, e-commerce businesses, and established brands. We focus on clients where intellectual property and technology are central to business value.",
       },
+      {
+        q: "What is internet defamation and what can be done about it?",
+        a: "Internet defamation (lashon hara) is the publication of harmful, false, or degrading content on social media, review platforms, forums, or news sites. A cease-and-desist letter can often lead to removal within days. Where the publisher refuses, we pursue injunctive relief and damages in court. The earlier you act, the less the content spreads.",
+      },
+      {
+        q: "Someone is infringing my copyright — what do I do?",
+        a: "First, document the infringement (screenshots, URLs, dates). Then contact us promptly — an immediate takedown notice or platform complaint can often remove the content quickly. In parallel, we assess whether civil proceedings for damages are warranted. Acting fast significantly improves your chances of a full remedy.",
+      },
+      {
+        q: "How much does an intellectual property attorney cost?",
+        a: "Cost depends on the type of service: trademark registration is typically a fixed fee; advisory retainers are monthly; litigation is billed by the hour or on a case basis. We are transparent about fees from the first call. Contact us for a no-obligation quote tailored to your specific situation.",
+      },
+      {
+        q: "Can a trademark be registered in Israel?",
+        a: "Yes. Trademark registration in Israel is handled through the Israel Patent Office. The process takes 12–18 months and grants exclusive rights to use the mark for ten years, renewable indefinitely. Early filing is advisable — rights are generally granted to the first applicant.",
+      },
     ],
   },
 
