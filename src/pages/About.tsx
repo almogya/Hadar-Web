@@ -45,6 +45,25 @@ const About = () => {
         </div>
       </section>
 
+      {/* Stats Strip */}
+      <section className="py-8 bg-primary border-y border-primary-foreground/10">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { n: "3", label: lang === "he" ? "משרדים מובילים" : "Top Law Firms" },
+              { n: "Google\nMeta\nAmazon", label: lang === "he" ? "ניסיון מול" : "Experience Against", small: true },
+              { n: "LL.M", label: lang === "he" ? "דין וטכנולוגיה — אוניברסיטת חיפה" : "Law & Technology — University of Haifa" },
+              { n: "24h", label: lang === "he" ? "זמן מענה מרבי" : "Maximum Response Time" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className={`font-display font-bold text-primary-foreground leading-tight ${stat.small ? "text-base" : "text-3xl"} whitespace-pre-line`}>{stat.n}</p>
+                <p className="text-xs text-primary-foreground/50 mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Office Image Banner */}
       <section className="relative h-48 md:h-64 overflow-hidden">
         <img src={officeImg} alt="" className="w-full h-full object-cover" loading="lazy" />

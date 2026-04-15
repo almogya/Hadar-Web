@@ -143,9 +143,20 @@ const Contact = () => {
             {/* Right: Form */}
             <div className="lg:col-span-7">
               <div className="bg-section-alt p-8 md:p-12 border border-border">
-                <h2 className="font-display text-2xl font-semibold text-foreground mb-8">
+                {/* Trust strip */}
+                <div className="flex flex-wrap gap-4 mb-8 pb-8 border-b border-border">
+                  {[
+                    lang === "he" ? "✓ ללא עלות לשיחה ראשונה" : "✓ Free first call",
+                    lang === "he" ? "✓ מענה תוך 24 שעות" : "✓ Reply within 24 hours",
+                    lang === "he" ? "✓ דיסקרטיות מלאה" : "✓ Full confidentiality",
+                  ].map((item) => (
+                    <span key={item} className="text-xs font-semibold text-accent tracking-wide">{item}</span>
+                  ))}
+                </div>
+                <h2 className="font-display text-2xl font-semibold text-foreground mb-2">
                   {t.contact.formHeading}
                 </h2>
+                <p className="text-sm text-muted-foreground mb-8">{t.contact.formSub}</p>
                 <form onSubmit={handleSubmit} className="space-y-5" noValidate>
                   {/* Honeypot */}
                   <div className="sr-only" aria-hidden="true">
