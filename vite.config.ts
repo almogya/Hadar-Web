@@ -18,15 +18,31 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          "vendor-react": ["react", "react-dom", "react-router-dom"],
-          "vendor-ui": ["@radix-ui/react-accordion", "@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu", "@radix-ui/react-navigation-menu", "@radix-ui/react-tooltip"],
-          "vendor-query": ["@tanstack/react-query"],
-        },
-      },
+  ssgOptions: {
+    includedRoutes: async (paths: string[]) => {
+      const langs = ["he", "en"];
+      const staticRoutes = [
+        "", "/about", "/practice-areas",
+        "/practice-areas/intellectual-property",
+        "/practice-areas/trademarks",
+        "/practice-areas/copyright-digital-content",
+        "/practice-areas/ai-and-law",
+        "/practice-areas/technology-internet-law",
+        "/practice-areas/commercial-litigation",
+        "/practice-areas/internet-defamation",
+        "/insights",
+        "/insights/ai-ip-ownership-2026",
+        "/insights/privacy-amendment-13",
+        "/insights/ai-copyright-israel",
+        "/insights/trademark-clearance-checklist",
+        "/insights/ip-ownership-startups",
+        "/insights/internet-defamation-israel",
+        "/contact",
+      ];
+      const allRoutes = langs.flatMap(lang =>
+        staticRoutes.map(r => `/${lang}${r}`)
+      );
+      return ["/", ...allRoutes];
     },
   },
 }));

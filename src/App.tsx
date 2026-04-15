@@ -2,8 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { LanguageProvider } from "@/i18n/LanguageContext";
+import { Navigate } from "react-router-dom";
+import type { RouteObject } from "react-router-dom";
+import LanguageLayout from "@/components/LanguageLayout";
 import LanguageSelector from "./pages/LanguageSelector";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -29,53 +30,59 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const LocalizedRoutes = () => (
-  <LanguageProvider>
-    <Routes>
-      <Route index element={<Index />} />
-      <Route path="about" element={<About />} />
-      <Route path="practice-areas" element={<PracticeAreas />} />
-      <Route path="practice-areas/intellectual-property" element={<IntellectualProperty />} />
-      <Route path="practice-areas/trademarks" element={<Trademarks />} />
-      <Route path="practice-areas/copyright-digital-content" element={<CopyrightDigitalContent />} />
-      <Route path="practice-areas/ai-and-law" element={<AiAndLaw />} />
-      <Route path="practice-areas/technology-internet-law" element={<TechnologyInternetLaw />} />
-      <Route path="practice-areas/commercial-litigation" element={<CommercialLitigation />} />
-      <Route path="practice-areas/internet-defamation" element={<InternetDefamation />} />
-      <Route path="insights" element={<Insights />} />
-      <Route path="insights/ai-ip-ownership-2026" element={<AiIpArticle />} />
-      <Route path="insights/privacy-amendment-13" element={<PrivacyAmendment13Article />} />
-      <Route path="insights/:slug" element={<PillarArticle />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="thank-you" element={<ThankYou />} />
-      <Route path="privacy-policy" element={<PrivacyPolicy />} />
-      <Route path="terms" element={<Terms />} />
-      <Route path="disclaimer" element={<Disclaimer />} />
-      <Route path="accessibility" element={<Accessibility />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  </LanguageProvider>
-);
-
-const App = () => (
+const AppShell = ({ children }: { children: React.ReactNode }) => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<LanguageSelector />} />
-          <Route path="/en/*" element={<LocalizedRoutes />} />
-          <Route path="/he/*" element={<LocalizedRoutes />} />
-          <Route path="/about" element={<Navigate to="/he/about" replace />} />
-          <Route path="/practice-areas/*" element={<Navigate to="/he/practice-areas" replace />} />
-          <Route path="/insights" element={<Navigate to="/he/insights" replace />} />
-          <Route path="/contact" element={<Navigate to="/he/contact" replace />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      {children}
     </TooltipProvider>
   </QueryClientProvider>
 );
 
-export default App;
+const localizedChildren: RouteObject[] = [
+  { index: true, element: <Index /> },
+  { path: "about", element: <About /> },
+  { path: "practice-areas", element: <PracticeAreas /> },
+  { path: "practice-areas/intellectual-property", element: <IntellectualProperty /> },
+  { path: "practice-areas/trademarks", element: <Trademarks /> },
+  { path: "practice-areas/copyright-digital-content", element: <CopyrightDigitalContent /> },
+  { path: "practice-areas/ai-and-law", element: <AiAndLaw /> },
+  { path: "practice-areas/technology-internet-law", element: <TechnologyInternetLaw /> },
+  { path: "practice-areas/commercial-litigation", element: <CommercialLitigation /> },
+  { path: "practice-areas/internet-defamation", element: <InternetDefamation /> },
+  { path: "insights", element: <Insights /> },
+  { path: "insights/ai-ip-ownership-2026", element: <AiIpArticle /> },
+  { path: "insights/privacy-amendment-13", element: <PrivacyAmendment13Article /> },
+  { path: "insights/:slug", element: <PillarArticle /> },
+  { path: "contact", element: <Contact /> },
+  { path: "thank-you", element: <ThankYou /> },
+  { path: "privacy-policy", element: <PrivacyPolicy /> },
+  { path: "terms", element: <Terms /> },
+  { path: "disclaimer", element: <Disclaimer /> },
+  { path: "accessibility", element: <Accessibility /> },
+];
+
+export const routes: RouteObject[] = [
+  {
+    path: "/",
+    element: <AppShell><LanguageSelector /></AppShell>,
+  },
+  {
+    path: "/he",
+    element: <AppShell><LanguageLayout /></AppShell>,
+    children: localizedChildren,
+  },
+  {
+    path: "/en",
+    element: <AppShell><LanguageLayout /></AppShell>,
+    children: localizedChildren,
+  },
+  { path: "/about", element: <Navigate to="/he/about" replace /> },
+  { path: "/practice-areas/*", element: <Navigate to="/he/practice-areas" replace /> },
+  { path: "/insights", element: <Navigate to="/he/insights" replace /> },
+  { path: "/contact", element: <Navigate to="/he/contact" replace /> },
+  { path: "*", element: <NotFound /> },
+];
+
+export default routes;

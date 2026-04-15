@@ -1,16 +1,20 @@
-import { createRoot } from "react-dom/client";
+import { ViteReactSSG } from "vite-react-ssg";
 import { Analytics } from "@vercel/analytics/react";
-import App from "./App.tsx";
+import routes from "./App.tsx";
 import "./index.css";
 
-// Ensure clean theme state on load
-if (localStorage.getItem("hy-theme") !== "dark") {
-  document.documentElement.classList.remove("dark");
+// Ensure clean theme state on load (client-only)
+if (typeof window !== "undefined") {
+  if (localStorage.getItem("hy-theme") !== "dark") {
+    document.documentElement.classList.remove("dark");
+  }
 }
 
-createRoot(document.getElementById("root")!).render(
-  <>
-    <App />
-    <Analytics />
-  </>
+export const createRoot = ViteReactSSG(
+  { routes },
+  ({ isClient }) => {
+    if (isClient) {
+      // Analytics is client-only
+    }
+  },
 );
