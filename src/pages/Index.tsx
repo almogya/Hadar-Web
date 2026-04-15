@@ -168,7 +168,7 @@ const Index = () => {
       <SEOHead
         title="Hadar Yatzkan | IP & Technology Attorney | Israel — Google, Meta & Amazon Experience"
         description="IP and Technology Attorney in Israel. Direct experience representing clients against Google, Meta & Amazon. Advising startups, businesses and creators on trademarks, copyright, and AI law."
-        titleHe="הדר יצקן | עורך דין קניין רוחני וטכנולוגיה | ניסיון מול גוגל, מטא ואמזון"
+        titleHe="עורך הדין הדר יצקן | מומחה לדיני קניין רוחני ולשון הרע"
         descriptionHe="עורך דין לקניין רוחני וטכנולוגיה בישראל. ניסיון ישיר מול גוגל, מטא ואמזון. ליווי סטארטאפים, עסקים ויוצרים בסימני מסחר, זכויות יוצרים ודיני AI."
       />
 
