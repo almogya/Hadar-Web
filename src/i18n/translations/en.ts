@@ -56,6 +56,51 @@ export const en = {
     ],
   },
 
+  pain: {
+    badge: "Why Clients Come to Us",
+    heading: "Do You Recognize This Situation?",
+    items: [
+      {
+        problem: "Someone is using your brand",
+        desc: "You discovered a competitor using a name, logo, or slogan similar to yours — and you're not sure what you can do.",
+        solution: "Fast enforcement and legal proceedings",
+      },
+      {
+        problem: "Not sure your IP is protected",
+        desc: "You built a product, app, or content — but it's unclear who owns it, whether it's protected, and what happens when a partner joins.",
+        solution: "IP strategy and tailored registration",
+      },
+      {
+        problem: "A technology contract that puts you at risk",
+        desc: "You received a development, SaaS, or collaboration agreement — and you're not sure what you're actually signing.",
+        solution: "Contract review and smart drafting",
+      },
+    ],
+    cta: "Talk to me about your situation",
+  },
+
+  testimonials: {
+    badge: "Client Feedback",
+    heading: "Clients Who Worked With Us",
+    items: [
+      {
+        quote: "I received clear, practical advice within one day. Hadar understood the problem immediately and offered a solution I hadn't considered.",
+        name: "SaaS Startup Founder",
+        role: "Tel Aviv",
+      },
+      {
+        quote: "He managed a proceeding against a global platform for us — we had the infringement removed within two weeks. Professional and efficient.",
+        name: "Digital Brand Owner",
+        role: "Givatayim",
+      },
+      {
+        quote: "After years of uncertainty about trademark registration — the process was simple, clear and fast. Highly recommended.",
+        name: "Content Creator",
+        role: "Jerusalem",
+      },
+    ],
+  },
+
   howIHelp: {
     badge: "How I Help",
     heading: "How I Help Clients",

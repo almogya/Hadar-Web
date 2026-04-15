@@ -191,6 +191,44 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── Pain Section ── */}
+      <section className="py-24 md:py-32 bg-background" aria-labelledby="pain-heading">
+        <div className="container">
+          <div className="max-w-xl mb-14">
+            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
+              {t.pain.badge}
+            </span>
+            <h2 id="pain-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
+              {t.pain.heading}
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {t.pain.items.map((item, i) => (
+              <div key={i} className="group border border-border hover:border-accent/40 p-8 transition-all duration-300 flex flex-col">
+                <div className="w-8 h-8 mb-5 flex items-center justify-center rounded-full bg-red-50 dark:bg-red-950/30">
+                  <span className="text-red-500 text-lg font-bold leading-none" aria-hidden="true">!</span>
+                </div>
+                <h3 className="font-display text-base font-semibold text-foreground mb-2">{item.problem}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-5">{item.desc}</p>
+                <div className="flex items-center gap-2 pt-4 border-t border-border">
+                  <span className="w-4 h-px flex-shrink-0" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
+                  <span className="text-xs font-semibold tracking-wide" style={{ color: "#C9A227" }}>{item.solution}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              to={localePath("/contact")}
+              className="inline-flex items-center gap-2 px-8 py-3.5 text-sm font-bold tracking-wide transition-all duration-200 hover:opacity-90"
+              style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
+            >
+              {t.pain.cta} <DirectionalIcon icon="arrow" size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── How I Help — authority section ── */}
       <section className="py-28 md:py-36 bg-background" aria-labelledby="how-help-heading">
         <div className="container">
@@ -446,6 +484,38 @@ const Index = () => {
               </AccordionItem>
             ))}
           </Accordion>
+        </div>
+      </section>
+
+      {/* ── Testimonials ── */}
+      <section className="py-24 md:py-32 bg-section-alt" aria-labelledby="testimonials-heading">
+        <div className="container">
+          <div className="max-w-xl mb-14">
+            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
+              {t.testimonials.badge}
+            </span>
+            <h2 id="testimonials-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
+              {t.testimonials.heading}
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {t.testimonials.items.map((item, i) => (
+              <figure key={i} className="bg-background border border-border p-8 flex flex-col">
+                <div className="flex gap-1 mb-5" aria-label="5 stars">
+                  {Array.from({ length: 5 }).map((_, s) => (
+                    <span key={s} style={{ color: "#C9A227" }} aria-hidden="true">★</span>
+                  ))}
+                </div>
+                <blockquote className="text-sm text-foreground leading-relaxed flex-1 mb-6">
+                  &ldquo;{item.quote}&rdquo;
+                </blockquote>
+                <figcaption className="border-t border-border pt-5">
+                  <p className="text-sm font-semibold text-foreground">{item.name}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{item.role}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
