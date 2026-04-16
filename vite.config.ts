@@ -33,6 +33,7 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
     },
   },
   ssgOptions: {
+    dirStyle: "nested",
     includedRoutes: async (paths: string[]) => {
       const langs = ["he", "en"];
       const staticRoutes = [
