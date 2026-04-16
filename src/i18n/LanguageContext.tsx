@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useEffect, ReactNode } from "react";
+import { createContext, useContext, useMemo, useCallback, useEffect, ReactNode } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { en } from "./translations/en";
 import { he } from "./translations/he";
@@ -35,24 +35,27 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     document.documentElement.dir = dir;
   }, [lang, dir]);
 
-  const switchLang = () => {
+  const switchLang = useCallback(() => {
     const otherLang = lang === "en" ? "he" : "en";
     const pathWithoutLang = location.pathname.replace(/^\/(en|he)/, "");
     navigate(`/${otherLang}${pathWithoutLang}`);
     localStorage.setItem("hy-lang", otherLang);
-  };
+  }, [lang, location.pathname, navigate]);
 
-  const localePath = (path: string) => `/${lang}${path === "/" ? "" : path}`;
+  const localePath = useCallback(
+    (path: string) => `/${lang}${path === "/" ? "" : path}`,
+    [lang]
+  );
 
-  const alternatePath = () => {
+  const alternatePath = useCallback(() => {
     const otherLang = lang === "en" ? "he" : "en";
     const pathWithoutLang = location.pathname.replace(/^\/(en|he)/, "");
     return `/${otherLang}${pathWithoutLang}`;
-  };
+  }, [lang, location.pathname]);
 
   const value = useMemo(
     () => ({ lang, dir, t, switchLang, localePath, alternatePath }),
-    [lang, location.pathname]
+    [lang, dir, t, switchLang, localePath, alternatePath]
   );
 
   return (

@@ -3,9 +3,11 @@ import { Analytics } from "@vercel/analytics/react";
 import routes from "./App.tsx";
 import "./index.css";
 
-// Ensure clean theme state on load (client-only)
+// Ensure theme class is correct on load (client-only)
 if (typeof window !== "undefined") {
-  if (localStorage.getItem("hy-theme") !== "dark") {
+  if (localStorage.getItem("hy-theme") === "dark") {
+    document.documentElement.classList.add("dark");
+  } else {
     document.documentElement.classList.remove("dark");
   }
 }

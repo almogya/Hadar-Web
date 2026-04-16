@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,36 +7,43 @@ import { Navigate } from "react-router-dom";
 import type { RouteObject } from "react-router-dom";
 import LanguageLayout from "@/components/LanguageLayout";
 import LanguageSelector from "./pages/LanguageSelector";
-import Index from "./pages/Index";
-import About from "./pages/About";
-import PracticeAreas from "./pages/PracticeAreas";
-import IntellectualProperty from "./pages/practice-areas/IntellectualProperty";
-import Trademarks from "./pages/practice-areas/Trademarks";
-import CopyrightDigitalContent from "./pages/practice-areas/CopyrightDigitalContent";
-import AiAndLaw from "./pages/practice-areas/AiAndLaw";
-import TechnologyInternetLaw from "./pages/practice-areas/TechnologyInternetLaw";
-import CommercialLitigation from "./pages/practice-areas/CommercialLitigation";
-import InternetDefamation from "./pages/practice-areas/InternetDefamation";
-import Insights from "./pages/Insights";
-import PillarArticle from "./pages/insights/PillarArticle";
-import AiIpArticle from "./pages/insights/AiIpArticle";
-import PrivacyAmendment13Article from "./pages/insights/PrivacyAmendment13Article";
-import Contact from "./pages/Contact";
-import ThankYou from "./pages/ThankYou";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Terms from "./pages/Terms";
-import Disclaimer from "./pages/Disclaimer";
-import Accessibility from "./pages/Accessibility";
-import NotFound from "./pages/NotFound";
+
+const Index = lazy(() => import("./pages/Index"));
+const About = lazy(() => import("./pages/About"));
+const PracticeAreas = lazy(() => import("./pages/PracticeAreas"));
+const IntellectualProperty = lazy(() => import("./pages/practice-areas/IntellectualProperty"));
+const Trademarks = lazy(() => import("./pages/practice-areas/Trademarks"));
+const CopyrightDigitalContent = lazy(() => import("./pages/practice-areas/CopyrightDigitalContent"));
+const AiAndLaw = lazy(() => import("./pages/practice-areas/AiAndLaw"));
+const TechnologyInternetLaw = lazy(() => import("./pages/practice-areas/TechnologyInternetLaw"));
+const CommercialLitigation = lazy(() => import("./pages/practice-areas/CommercialLitigation"));
+const InternetDefamation = lazy(() => import("./pages/practice-areas/InternetDefamation"));
+const Insights = lazy(() => import("./pages/Insights"));
+const PillarArticle = lazy(() => import("./pages/insights/PillarArticle"));
+const AiIpArticle = lazy(() => import("./pages/insights/AiIpArticle"));
+const PrivacyAmendment13Article = lazy(() => import("./pages/insights/PrivacyAmendment13Article"));
+const Contact = lazy(() => import("./pages/Contact"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const Disclaimer = lazy(() => import("./pages/Disclaimer"));
+const Accessibility = lazy(() => import("./pages/Accessibility"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
+
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center bg-background" />
+);
 
 const AppShell = ({ children }: { children: React.ReactNode }) => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      {children}
+      <Suspense fallback={<PageLoader />}>
+        {children}
+      </Suspense>
     </TooltipProvider>
   </QueryClientProvider>
 );
@@ -82,7 +90,7 @@ export const routes: RouteObject[] = [
   { path: "/practice-areas/*", element: <Navigate to="/he/practice-areas" replace /> },
   { path: "/insights", element: <Navigate to="/he/insights" replace /> },
   { path: "/contact", element: <Navigate to="/he/contact" replace /> },
-  { path: "*", element: <NotFound /> },
+  { path: "*", element: <AppShell><NotFound /></AppShell> },
 ];
 
 export default routes;
