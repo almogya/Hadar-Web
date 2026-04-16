@@ -122,8 +122,8 @@ const Index = () => {
     "@type": "LegalService",
     name: "HY Law Offices",
     alternateName: lang === "he" ? "הדר יצקן, עורך דין" : "Hadar Yatzkan, Attorney",
-    url: "https://ai-lawyer.co.il",
-    logo: "https://ai-lawyer.co.il/logo.webp",
+    url: "https://ai-law.co.il",
+    logo: "https://ai-law.co.il/logo.webp",
     description: lang === "he"
       ? "עורך דין המתמחה בקניין רוחני, דיני טכנולוגיה ובינה מלאכותית בגבעתיים, ישראל."
       : "Attorney specializing in intellectual property, technology law, and AI in Givatayim, Israel.",
@@ -144,7 +144,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": "LegalService",
     name: "HY Law Offices",
-    url: "https://ai-lawyer.co.il",
+    url: "https://ai-law.co.il",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",

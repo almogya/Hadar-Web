@@ -9,7 +9,7 @@ interface SEOHeadProps {
   descriptionHe?: string;
 }
 
-const DOMAIN = "https://ai-lawyer.co.il";
+const DOMAIN = "https://ai-law.co.il";
 
 const SEOHead = ({ title, description, titleHe, descriptionHe }: SEOHeadProps) => {
   const { lang } = useLanguage();
