@@ -21,7 +21,6 @@ const LanguageSelector = () => {
     <div
       className="min-h-screen flex flex-col items-center justify-center"
       style={{ backgroundColor: "#0B1F3A" }}
-      lang="en"
     >
       {/* Centered lockup */}
       <div className="flex flex-col items-center text-center px-8 max-w-lg">

@@ -17,7 +17,14 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close on navigation
   useEffect(() => { setOpen(false); }, [location.pathname]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
 
   const navLinks = [
     { label: t.nav.home, path: "/" },
@@ -34,145 +41,158 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-background/98 backdrop-blur-md shadow-sm border-b border-border"
-          : "bg-background/95 backdrop-blur-sm border-b border-border/50"
-      }`}
-      role="navigation"
-      aria-label={lang === "he" ? "ניווט ראשי" : "Main navigation"}
-    >
-      <div className="container flex items-center justify-between h-20">
-        {/* Logo — more prominent */}
-        <Link to={localePath("/")} className="flex items-center gap-3 group">
-          <img
-            src={logo}
-            alt={t.footer.firmName}
-            className="h-12 w-12 object-contain"
-          />
-          <div className="flex flex-col">
-            <span className="font-display text-xl font-bold text-foreground tracking-wide leading-tight">
-              HY Law Offices
-            </span>
-            <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-medium">
-              {lang === "he" ? "קניין רוחני · לשון הרע · אינטרנט" : "IP · Defamation · Internet"}
-            </span>
-          </div>
-        </Link>
-
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={localePath(link.path)}
-              className={`relative px-4 py-2 text-[13px] font-medium tracking-wide transition-colors ${
-                isActive(link.path)
-                  ? "text-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
-            >
-              {link.label}
-              {isActive(link.path) && (
-                <span className="absolute bottom-0 inset-x-4 h-[2px] bg-primary" />
-              )}
-            </Link>
-          ))}
-        </div>
-
-        {/* Desktop Right: Theme + Language + CTA */}
-        <div className="hidden lg:flex items-center gap-3">
-          <ThemeToggle />
-          <button
-            onClick={switchLang}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground border border-border hover:border-foreground/20 transition-all"
-            aria-label={`Switch to ${t.otherLangName}`}
-          >
-            <Globe size={14} />
-            {t.otherLangName}
-          </button>
-          <Link
-            to={localePath("/contact")}
-            style={{
-              display: "inline-block",
-              padding: "10px 24px",
-              backgroundColor: "#1F4B7A",
-              color: "#ffffff",
-              fontSize: "14px",
-              fontWeight: 700,
-              textDecoration: "none",
-              borderRadius: "4px",
-              lineHeight: 1.4,
-            }}
-          >
-            {t.nav.cta}
-          </Link>
-        </div>
-
-        {/* Mobile Toggle */}
-        <button
-          className="lg:hidden p-2 text-foreground"
-          onClick={() => setOpen(!open)}
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden bg-background border-t border-border overflow-hidden transition-all duration-300 ease-in-out ${
-          open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 border-t-0"
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled
+            ? "bg-background/98 backdrop-blur-md shadow-sm border-b border-border"
+            : "bg-background/95 backdrop-blur-sm border-b border-border/50"
         }`}
+        role="navigation"
+        aria-label={lang === "he" ? "ניווט ראשי" : "Main navigation"}
       >
-        <div className="container py-8 flex flex-col gap-1">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={localePath(link.path)}
-              className={`py-3 px-4 text-base font-medium transition-colors ${
-                isActive(link.path)
-                  ? "text-foreground bg-muted"
-                  : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <div className="border-t border-border my-4" />
-          <div className="flex items-center gap-3 px-4">
+        <div className="container flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link to={localePath("/")} className="flex items-center gap-3 group">
+            <img
+              src={logo}
+              alt={t.footer.firmName}
+              className="h-12 w-12 object-contain"
+            />
+            <div className="flex flex-col">
+              <span className="font-display text-xl font-bold text-foreground tracking-wide leading-tight">
+                HY Law Offices
+              </span>
+              <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-medium">
+                {lang === "he" ? "שערך לקניין הרוחני" : "Your gate to IP"}
+              </span>
+            </div>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={localePath(link.path)}
+                className={`relative px-4 py-2 text-[13px] font-medium tracking-wide transition-colors ${
+                  isActive(link.path)
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {link.label}
+                {isActive(link.path) && (
+                  <span className="absolute bottom-0 inset-x-4 h-[2px] bg-primary" />
+                )}
+              </Link>
+            ))}
+          </div>
+
+          {/* Desktop Right: Theme + Language + CTA */}
+          <div className="hidden lg:flex items-center gap-3">
             <ThemeToggle />
             <button
-              onClick={() => { switchLang(); setOpen(false); }}
-              className="flex items-center gap-2 py-3 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+              onClick={switchLang}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground border border-border hover:border-foreground/20 transition-all"
+              aria-label={`Switch to ${t.otherLangName}`}
             >
-              <Globe size={18} />
+              <Globe size={14} />
               {t.otherLangName}
             </button>
+            <Link
+              to={localePath("/contact")}
+              style={{
+                display: "inline-block",
+                padding: "10px 24px",
+                backgroundColor: "#1F4B7A",
+                color: "#ffffff",
+                fontSize: "14px",
+                fontWeight: 700,
+                textDecoration: "none",
+                borderRadius: "4px",
+                lineHeight: 1.4,
+              }}
+            >
+              {t.nav.cta}
+            </Link>
           </div>
-          <Link
-            to={localePath("/contact")}
-            style={{
-              display: "block",
-              padding: "14px 24px",
-              backgroundColor: "#1F4B7A",
-              color: "#ffffff",
-              fontSize: "15px",
-              fontWeight: 700,
-              textDecoration: "none",
-              borderRadius: "4px",
-              textAlign: "center" as const,
-              marginTop: "16px",
-              lineHeight: 1.4,
-            }}
+
+          {/* Mobile Toggle */}
+          <button
+            className="lg:hidden p-2 text-foreground"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
-            {t.nav.cta}
-          </Link>
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Mobile Menu — absolute overlay panel below navbar */}
+      {open && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 z-40 bg-black/40 lg:hidden"
+            onClick={() => setOpen(false)}
+            aria-hidden="true"
+          />
+          {/* Panel */}
+          <div
+            id="mobile-menu"
+            className="fixed top-20 left-0 right-0 z-[60] bg-background border-b border-border shadow-xl lg:hidden"
+          >
+            <div className="container py-6 flex flex-col gap-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={localePath(link.path)}
+                  className={`py-3 px-4 text-base font-medium transition-colors ${
+                    isActive(link.path)
+                      ? "text-foreground bg-muted"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="border-t border-border my-4" />
+              <div className="flex items-center gap-3 px-4">
+                <ThemeToggle />
+                <button
+                  onClick={() => { switchLang(); setOpen(false); }}
+                  className="flex items-center gap-2 py-3 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Globe size={18} />
+                  {t.otherLangName}
+                </button>
+              </div>
+              <Link
+                to={localePath("/contact")}
+                style={{
+                  display: "block",
+                  padding: "14px 24px",
+                  backgroundColor: "#1F4B7A",
+                  color: "#ffffff",
+                  fontSize: "15px",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                  borderRadius: "4px",
+                  textAlign: "center" as const,
+                  marginTop: "8px",
+                  lineHeight: 1.4,
+                }}
+              >
+                {t.nav.cta}
+              </Link>
+            </div>
+          </div>
+        </>
+      )}
+    </>
   );
 };
 

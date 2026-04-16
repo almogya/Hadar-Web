@@ -53,6 +53,11 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
         "/insights/ip-ownership-startups",
         "/insights/internet-defamation-israel",
         "/contact",
+        "/thank-you",
+        "/privacy-policy",
+        "/terms",
+        "/disclaimer",
+        "/accessibility",
       ];
       const allRoutes = langs.flatMap(lang =>
         staticRoutes.map(r => `/${lang}${r}`)
