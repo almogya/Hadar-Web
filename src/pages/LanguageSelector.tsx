@@ -48,7 +48,7 @@ const LanguageSelector = () => {
           className="font-body mb-1"
           style={{ color: "rgba(247,248,250,0.65)", fontSize: "13px", letterSpacing: "0.12em" }}
         >
-          Intellectual Property &amp; Technology Law
+          Intellectual Property | Internet | Defamation
         </p>
         <p
           className="font-body mb-14"
@@ -56,7 +56,7 @@ const LanguageSelector = () => {
           lang="he"
           style={{ color: "rgba(247,248,250,0.4)", fontSize: "12px", letterSpacing: "0.06em" }}
         >
-          קניין רוחני ודיני טכנולוגיה
+          קניין רוחני | אינטרנט | לשון הרע
         </p>
 
         {/* Language buttons */}
