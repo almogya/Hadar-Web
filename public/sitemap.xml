@@ -4,420 +4,420 @@
 
   <!-- Root redirect (x-default) -->
   <url>
-    <loc>https://ai-lawyer.co.il/</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en"/>
+    <loc>https://ai-law.co.il/</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Homepage — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/"/>
+    <loc>https://ai-law.co.il/he</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Homepage — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/"/>
+    <loc>https://ai-law.co.il/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/"/>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- About — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/about</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/about"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/about"/>
+    <loc>https://ai-law.co.il/he/about</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/about"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/about"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- About — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/about</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/about"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/about"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/about"/>
+    <loc>https://ai-law.co.il/en/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/about"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/about"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Practice Areas index — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/practice-areas</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas"/>
+    <loc>https://ai-law.co.il/he/practice-areas</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Practice Areas index — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/practice-areas</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas"/>
+    <loc>https://ai-law.co.il/en/practice-areas</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Intellectual Property — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/practice-areas/intellectual-property</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/intellectual-property"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/intellectual-property"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/intellectual-property"/>
+    <loc>https://ai-law.co.il/he/practice-areas/intellectual-property</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/intellectual-property"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/intellectual-property"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/intellectual-property"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Intellectual Property — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/practice-areas/intellectual-property</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/intellectual-property"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/intellectual-property"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/intellectual-property"/>
+    <loc>https://ai-law.co.il/en/practice-areas/intellectual-property</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/intellectual-property"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/intellectual-property"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/intellectual-property"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Trademarks — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/practice-areas/trademarks</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/trademarks"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/trademarks"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/trademarks"/>
+    <loc>https://ai-law.co.il/he/practice-areas/trademarks</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/trademarks"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/trademarks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/trademarks"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Trademarks — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/practice-areas/trademarks</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/trademarks"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/trademarks"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/trademarks"/>
+    <loc>https://ai-law.co.il/en/practice-areas/trademarks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/trademarks"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/trademarks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/trademarks"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Copyright & Digital Content — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/practice-areas/copyright-digital-content</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/copyright-digital-content"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/copyright-digital-content"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/copyright-digital-content"/>
+    <loc>https://ai-law.co.il/he/practice-areas/copyright-digital-content</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/copyright-digital-content"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/copyright-digital-content"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/copyright-digital-content"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Copyright & Digital Content — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/practice-areas/copyright-digital-content</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/copyright-digital-content"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/copyright-digital-content"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/copyright-digital-content"/>
+    <loc>https://ai-law.co.il/en/practice-areas/copyright-digital-content</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/copyright-digital-content"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/copyright-digital-content"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/copyright-digital-content"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- AI & Law — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/practice-areas/ai-and-law</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/ai-and-law"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/ai-and-law"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/ai-and-law"/>
+    <loc>https://ai-law.co.il/he/practice-areas/ai-and-law</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/ai-and-law"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/ai-and-law"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/ai-and-law"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- AI & Law — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/practice-areas/ai-and-law</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/ai-and-law"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/ai-and-law"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/ai-and-law"/>
+    <loc>https://ai-law.co.il/en/practice-areas/ai-and-law</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/ai-and-law"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/ai-and-law"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/ai-and-law"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Technology & Internet Law — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/practice-areas/technology-internet-law</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/technology-internet-law"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/technology-internet-law"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/technology-internet-law"/>
+    <loc>https://ai-law.co.il/he/practice-areas/technology-internet-law</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/technology-internet-law"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/technology-internet-law"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/technology-internet-law"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Technology & Internet Law — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/practice-areas/technology-internet-law</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/technology-internet-law"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/technology-internet-law"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/technology-internet-law"/>
+    <loc>https://ai-law.co.il/en/practice-areas/technology-internet-law</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/technology-internet-law"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/technology-internet-law"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/technology-internet-law"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Commercial Litigation — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/practice-areas/commercial-litigation</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/commercial-litigation"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/commercial-litigation"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/commercial-litigation"/>
+    <loc>https://ai-law.co.il/he/practice-areas/commercial-litigation</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/commercial-litigation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/commercial-litigation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/commercial-litigation"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Commercial Litigation — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/practice-areas/commercial-litigation</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/commercial-litigation"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/commercial-litigation"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/commercial-litigation"/>
+    <loc>https://ai-law.co.il/en/practice-areas/commercial-litigation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/commercial-litigation"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/commercial-litigation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/commercial-litigation"/>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <!-- Insights index — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/insights</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights"/>
+    <loc>https://ai-law.co.il/he/insights</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Insights index — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/insights</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights"/>
+    <loc>https://ai-law.co.il/en/insights</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights"/>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Article: AI & Copyright — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/insights/ai-copyright-israel</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/ai-copyright-israel"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/ai-copyright-israel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/ai-copyright-israel"/>
+    <loc>https://ai-law.co.il/he/insights/ai-copyright-israel</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/ai-copyright-israel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/ai-copyright-israel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/ai-copyright-israel"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Article: AI & Copyright — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/insights/ai-copyright-israel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/ai-copyright-israel"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/ai-copyright-israel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/ai-copyright-israel"/>
+    <loc>https://ai-law.co.il/en/insights/ai-copyright-israel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/ai-copyright-israel"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/ai-copyright-israel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/ai-copyright-israel"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Article: Trademark Clearance — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/insights/trademark-clearance-checklist</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/trademark-clearance-checklist"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/trademark-clearance-checklist"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/trademark-clearance-checklist"/>
+    <loc>https://ai-law.co.il/he/insights/trademark-clearance-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/trademark-clearance-checklist"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/trademark-clearance-checklist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/trademark-clearance-checklist"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Article: Trademark Clearance — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/insights/trademark-clearance-checklist</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/trademark-clearance-checklist"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/trademark-clearance-checklist"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/trademark-clearance-checklist"/>
+    <loc>https://ai-law.co.il/en/insights/trademark-clearance-checklist</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/trademark-clearance-checklist"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/trademark-clearance-checklist"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/trademark-clearance-checklist"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Article: AI & IP Ownership 2026 — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/insights/ai-ip-ownership-2026</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/ai-ip-ownership-2026"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/ai-ip-ownership-2026"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/ai-ip-ownership-2026"/>
+    <loc>https://ai-law.co.il/he/insights/ai-ip-ownership-2026</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/ai-ip-ownership-2026"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/ai-ip-ownership-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/ai-ip-ownership-2026"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ai-lawyer.co.il/en/insights/ai-ip-ownership-2026</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/ai-ip-ownership-2026"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/ai-ip-ownership-2026"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/ai-ip-ownership-2026"/>
+    <loc>https://ai-law.co.il/en/insights/ai-ip-ownership-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/ai-ip-ownership-2026"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/ai-ip-ownership-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/ai-ip-ownership-2026"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Article: Privacy Amendment 13 — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/insights/privacy-amendment-13</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/privacy-amendment-13"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/privacy-amendment-13"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/privacy-amendment-13"/>
+    <loc>https://ai-law.co.il/he/insights/privacy-amendment-13</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/privacy-amendment-13"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/privacy-amendment-13"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/privacy-amendment-13"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://ai-lawyer.co.il/en/insights/privacy-amendment-13</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/privacy-amendment-13"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/privacy-amendment-13"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/privacy-amendment-13"/>
+    <loc>https://ai-law.co.il/en/insights/privacy-amendment-13</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/privacy-amendment-13"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/privacy-amendment-13"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/privacy-amendment-13"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Article: Internet Defamation — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/insights/internet-defamation-israel</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/internet-defamation-israel"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/internet-defamation-israel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/internet-defamation-israel"/>
+    <loc>https://ai-law.co.il/he/insights/internet-defamation-israel</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/internet-defamation-israel"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/internet-defamation-israel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/internet-defamation-israel"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Article: Internet Defamation — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/insights/internet-defamation-israel</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/internet-defamation-israel"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/internet-defamation-israel"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/internet-defamation-israel"/>
+    <loc>https://ai-law.co.il/en/insights/internet-defamation-israel</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/internet-defamation-israel"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/internet-defamation-israel"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/internet-defamation-israel"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Article: IP Ownership in Startups — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/insights/ip-ownership-startups</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/ip-ownership-startups"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/ip-ownership-startups"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/ip-ownership-startups"/>
+    <loc>https://ai-law.co.il/he/insights/ip-ownership-startups</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/ip-ownership-startups"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/ip-ownership-startups"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/ip-ownership-startups"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Article: IP Ownership in Startups — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/insights/ip-ownership-startups</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/ip-ownership-startups"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/ip-ownership-startups"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/ip-ownership-startups"/>
+    <loc>https://ai-law.co.il/en/insights/ip-ownership-startups</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/insights/ip-ownership-startups"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/insights/ip-ownership-startups"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/insights/ip-ownership-startups"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Internet Defamation — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/practice-areas/internet-defamation</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/internet-defamation"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/internet-defamation"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/internet-defamation"/>
+    <loc>https://ai-law.co.il/he/practice-areas/internet-defamation</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/internet-defamation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/internet-defamation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/internet-defamation"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Internet Defamation — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/practice-areas/internet-defamation</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/practice-areas/internet-defamation"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/practice-areas/internet-defamation"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/practice-areas/internet-defamation"/>
+    <loc>https://ai-law.co.il/en/practice-areas/internet-defamation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/internet-defamation"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/internet-defamation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/internet-defamation"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Contact — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/contact</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/contact"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/contact"/>
+    <loc>https://ai-law.co.il/he/contact</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/contact"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/contact"/>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
   <!-- Contact — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/contact</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/contact"/>
+    <loc>https://ai-law.co.il/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/contact"/>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
   <!-- Privacy Policy — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/privacy-policy</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/privacy-policy"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/privacy-policy"/>
+    <loc>https://ai-law.co.il/he/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/privacy-policy"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- Privacy Policy — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/privacy-policy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/privacy-policy"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/privacy-policy"/>
+    <loc>https://ai-law.co.il/en/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/privacy-policy"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/privacy-policy"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- Terms — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/terms</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/terms"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/terms"/>
+    <loc>https://ai-law.co.il/he/terms</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/terms"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/terms"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- Terms — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/terms</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/terms"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/terms"/>
+    <loc>https://ai-law.co.il/en/terms</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/terms"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/terms"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- Disclaimer — Hebrew -->
   <url>
-    <loc>https://ai-lawyer.co.il/he/disclaimer</loc>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/disclaimer"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/disclaimer"/>
+    <loc>https://ai-law.co.il/he/disclaimer</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/disclaimer"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <!-- Disclaimer — English -->
   <url>
-    <loc>https://ai-lawyer.co.il/en/disclaimer</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/disclaimer"/>
-    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/disclaimer"/>
+    <loc>https://ai-law.co.il/en/disclaimer</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/disclaimer"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/disclaimer"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
