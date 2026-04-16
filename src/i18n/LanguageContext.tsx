@@ -29,10 +29,11 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const dir: "ltr" | "rtl" = lang === "he" ? "rtl" : "ltr";
   const t = translations[lang];
 
-  // Keep document lang/dir in sync whenever the language changes
+  // Keep document lang/dir and language preference in sync whenever the language changes
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = dir;
+    localStorage.setItem("hy-lang", lang);
   }, [lang, dir]);
 
   const switchLang = useCallback(() => {
