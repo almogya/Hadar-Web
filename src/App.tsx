@@ -43,7 +43,11 @@ const AppShell = ({ children }: { children: React.ReactNode }) => (
   </ThemeProvider>
 );
 
-const localizedChildren: RouteObject[] = [
+// Children are defined as a factory so each language gets its OWN array of
+// distinct React element instances. Sharing the same array causes React to
+// reuse component instances when navigating between /he and /en, which can
+// prevent a proper re-render of language-sensitive components.
+const makeChildren = (): RouteObject[] => [
   { index: true, element: <Index /> },
   { path: "about", element: <About /> },
   { path: "practice-areas", element: <PracticeAreas /> },
@@ -73,13 +77,16 @@ export const routes: RouteObject[] = [
   },
   {
     path: "/he",
-    element: <AppShell><LanguageLayout /></AppShell>,
-    children: localizedChildren,
+    // key="he" forces React to fully remount LanguageLayout (and its LanguageProvider)
+    // when navigating between /he/* and /en/*. Without the key, React reconciles
+    // the two identical-looking elements as the same instance and may skip re-renders.
+    element: <AppShell><LanguageLayout key="he" /></AppShell>,
+    children: makeChildren(),
   },
   {
     path: "/en",
-    element: <AppShell><LanguageLayout /></AppShell>,
-    children: localizedChildren,
+    element: <AppShell><LanguageLayout key="en" /></AppShell>,
+    children: makeChildren(),
   },
   { path: "/about", element: <Navigate to="/he/about" replace /> },
   { path: "/practice-areas/*", element: <Navigate to="/he/practice-areas" replace /> },
