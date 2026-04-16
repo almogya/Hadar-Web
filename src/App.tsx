@@ -32,7 +32,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const AppShell = ({ children }: { children: React.ReactNode }) => (
-  <ThemeProvider attribute="class" storageKey="hy-theme" disableTransitionOnChange>
+  <ThemeProvider attribute="class" storageKey="hy-theme" defaultTheme="light" disableTransitionOnChange>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />

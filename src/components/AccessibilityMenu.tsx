@@ -73,14 +73,14 @@ const AccessibilityMenu = () => {
   const isModified = fontSize !== 100 || highContrast;
 
   return (
-    <div ref={menuRef} className="fixed bottom-6 start-6 z-40">
+    <div ref={menuRef} className="fixed bottom-6 start-6 z-[70]">
       {/* Accessibility Panel */}
       {open && (
         <div
           id="accessibility-panel"
           role="dialog"
           aria-label={isHe ? "תפריט נגישות" : "Accessibility menu"}
-          className="absolute bottom-16 start-0 w-64 bg-background border border-border shadow-2xl rounded-sm overflow-hidden"
+          className="absolute bottom-16 start-0 w-64 bg-background border border-border shadow-2xl rounded-sm overflow-hidden z-[70]"
         >
           {/* Panel Header */}
           <div className="flex items-center justify-between px-4 py-3 border-b border-border bg-muted/40">

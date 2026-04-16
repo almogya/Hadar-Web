@@ -20,10 +20,10 @@ const Navbar = () => {
   // Close on navigation
   useEffect(() => { setOpen(false); }, [location.pathname]);
 
-  // Lock body scroll when mobile menu is open
+  // Lock body scroll when mobile menu is open (only vertical scroll)
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    document.body.style.overflowY = open ? "hidden" : "";
+    return () => { document.body.style.overflowY = ""; };
   }, [open]);
 
   const navLinks = [
@@ -134,16 +134,16 @@ const Navbar = () => {
       {/* Mobile Menu — absolute overlay panel below navbar */}
       {open && (
         <>
-          {/* Backdrop */}
+          {/* Backdrop — z-[65] so it sits above accessibility button baseline (z-[70] is the menu panel) */}
           <div
-            className="fixed inset-0 z-40 bg-black/40 lg:hidden"
+            className="fixed inset-0 z-[65] bg-black/40 lg:hidden"
             onClick={() => setOpen(false)}
             aria-hidden="true"
           />
-          {/* Panel */}
+          {/* Panel — above backdrop, below accessibility widget */}
           <div
             id="mobile-menu"
-            className="fixed top-20 left-0 right-0 z-[60] bg-background border-b border-border shadow-xl lg:hidden"
+            className="fixed top-20 inset-x-0 z-[68] bg-background border-b border-border shadow-xl lg:hidden"
           >
             <div className="container py-6 flex flex-col gap-1">
               {navLinks.map((link) => (

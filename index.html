@@ -81,6 +81,18 @@
       "inLanguage": ["he", "en"]
     }
     </script>
+
+    <!-- Theme initialisation: runs synchronously before first paint to avoid flash of wrong theme -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("hy-theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var isDark = stored === "dark" || (!stored && prefersDark);
+          if (isDark) document.documentElement.classList.add("dark");
+        } catch (_) {}
+      })();
+    </script>
   </head>
 
   <body>

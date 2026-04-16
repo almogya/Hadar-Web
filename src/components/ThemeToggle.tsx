@@ -6,10 +6,23 @@ const ThemeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Avoid hydration mismatch: only render theme-aware UI after mount
+  // Only render theme-aware UI after mount to avoid hydration mismatch
   useEffect(() => { setMounted(true); }, []);
 
-  const isDark = mounted && resolvedTheme === "dark";
+  // Render a neutral placeholder until mounted so SSG HTML matches
+  if (!mounted) {
+    return (
+      <button
+        aria-label="Toggle theme"
+        disabled
+        className="inline-flex items-center justify-center w-9 h-9 text-muted-foreground border border-border transition-all opacity-50"
+      >
+        <Sun size={16} />
+      </button>
+    );
+  }
+
+  const isDark = resolvedTheme === "dark";
 
   return (
     <button
