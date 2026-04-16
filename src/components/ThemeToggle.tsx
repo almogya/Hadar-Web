@@ -2,12 +2,15 @@ import { useState, useEffect } from "react";
 import { Moon, Sun } from "lucide-react";
 
 const ThemeToggle = () => {
-  const [dark, setDark] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("hy-theme") === "dark";
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("hy-theme") === "dark";
+    setDark(saved);
+    if (saved) {
+      document.documentElement.classList.add("dark");
     }
-    return false;
-  });
+  }, []);
 
   useEffect(() => {
     if (dark) {

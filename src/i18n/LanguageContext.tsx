@@ -38,7 +38,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const switchLang = () => {
     const otherLang = lang === "en" ? "he" : "en";
     const pathWithoutLang = location.pathname.replace(/^\/(en|he)/, "");
-    navigate(`/${otherLang}${pathWithoutLang || "/"}`);
+    navigate(`/${otherLang}${pathWithoutLang}`);
     localStorage.setItem("hy-lang", otherLang);
   };
 
@@ -47,7 +47,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const alternatePath = () => {
     const otherLang = lang === "en" ? "he" : "en";
     const pathWithoutLang = location.pathname.replace(/^\/(en|he)/, "");
-    return `/${otherLang}${pathWithoutLang || "/"}`;
+    return `/${otherLang}${pathWithoutLang}`;
   };
 
   const value = useMemo(
