@@ -308,7 +308,7 @@ export const en = {
     officeLabel: "Office Location",
     officeAddress: "46 Weizmann St, Givatayim, Israel",
     emailLabel: "Email",
-    emailAddress: "Hadar@ai-law.co.il",
+    emailAddress: "Hadar@ai-lawyer.co.il",
     phoneLabel: "Phone",
     phoneDisplay: "054-223-4726",
     phoneTel: "+972542234726",
@@ -353,7 +353,7 @@ export const en = {
     quickLinksTitle: "Quick Links",
     contactTitle: "Contact",
     officeAddress: "46 Weizmann St, Givatayim, Israel",
-    emailAddress: "Hadar@ai-law.co.il",
+    emailAddress: "Hadar@ai-lawyer.co.il",
     phoneDisplay: "054-223-4726",
     phoneTel: "+972542234726",
     copyright: `© ${new Date().getFullYear()} HY Law Offices. All rights reserved.`,
@@ -499,8 +499,8 @@ export const en = {
       { heading: "3. How We Use Your Information", body: "We use collected information to: respond to inquiries, provide legal services, improve our website, and comply with legal obligations. We do not sell, trade, or rent your personal information to third parties." },
       { heading: "4. Data Security", body: "We implement reasonable security measures to protect your personal information. However, no method of transmission over the Internet is completely secure, and we cannot guarantee absolute security." },
       { heading: "5. Cookies and Analytics", body: "This website may use cookies and analytics services to understand how visitors use our site. You can control cookie preferences through your browser settings." },
-      { heading: "6. Your Rights", body: "Under applicable privacy laws, you may have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at Hadar@ai-law.co.il." },
-      { heading: "7. Contact", body: "For questions about this Privacy Policy, please contact us at Hadar@ai-law.co.il." },
+      { heading: "6. Your Rights", body: "Under applicable privacy laws, you may have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at Hadar@ai-lawyer.co.il." },
+      { heading: "7. Contact", body: "For questions about this Privacy Policy, please contact us at Hadar@ai-lawyer.co.il." },
     ],
   },
 
@@ -544,7 +544,7 @@ export const en = {
       "Skip-to-content functionality",
     ],
     feedbackHeading: "Feedback",
-    feedbackBody: "We welcome feedback on the accessibility of this website. If you encounter any barriers or have suggestions for improvement, please contact us at Hadar@ai-law.co.il or call 054-223-4726. We will make reasonable efforts to address your concerns.",
+    feedbackBody: "We welcome feedback on the accessibility of this website. If you encounter any barriers or have suggestions for improvement, please contact us at Hadar@ai-lawyer.co.il or call 054-223-4726. We will make reasonable efforts to address your concerns.",
   },
 
   notFound: {
