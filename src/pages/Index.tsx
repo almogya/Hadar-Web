@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, Download } from "lucide-react";
 import logo from "@/assets/logo.png";
+import officeImg from "@/assets/hero-office.jpg";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
@@ -175,28 +176,13 @@ const Index = () => {
       {/* ── HERO ── */}
       <section
         className="relative min-h-[94vh] flex items-center overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #B8D0E8 0%, #C8DCF0 35%, #D6E6F5 60%, #BFCFE8 100%)" }}
       >
-        {/* Radial glow — top right */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 70% 60% at 80% 20%, rgba(122,188,214,0.30) 0%, transparent 70%)" }}
-          aria-hidden="true"
-        />
-        {/* Radial glow — bottom left */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 50% 50% at 10% 90%, rgba(26,53,102,0.18) 0%, transparent 65%)" }}
-          aria-hidden="true"
-        />
-        {/* Dot-grid texture */}
-        <div
-          className="absolute inset-0 opacity-[0.05]"
-          style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #1A3566 1px, transparent 0)", backgroundSize: "36px 36px" }}
-          aria-hidden="true"
-        />
+        {/* Office background image */}
+        <img src={officeImg} alt="" className="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-primary/60" aria-hidden="true" />
         {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, #F3F7FC)" }} aria-hidden="true" />
+        <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
         <div className="container relative z-10 py-36 md:py-48">
           <div className="max-w-2xl">
@@ -205,7 +191,7 @@ const Index = () => {
             <div className="flex items-center gap-4 mb-10">
               <img src={logo} alt={t.footer.firmName} className="h-44 w-44 object-contain" />
               <div>
-                <span className="text-5xl font-bold block leading-tight" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em", color: "#1A3566" }}>{t.footer.firmName}</span>
+                <span className="text-5xl font-bold block leading-tight text-white" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em" }}>{t.footer.firmName}</span>
               </div>
             </div>
 
@@ -221,7 +207,7 @@ const Index = () => {
               {t.hero.bullets.map((bullet, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
-                  <span className="text-sm md:text-base font-medium leading-snug" style={{ color: "#2B5DAA" }}>{bullet}</span>
+                  <span className="text-sm md:text-base font-medium leading-snug" style={{ color: "rgba(255,255,255,0.80)" }}>{bullet}</span>
                 </li>
               ))}
             </ul>
@@ -239,7 +225,7 @@ const Index = () => {
             </div>
 
             {/* Microcopy */}
-            <p className="text-xs font-medium tracking-wide" style={{ color: "rgba(26,53,102,0.5)" }}>
+            <p className="text-xs font-medium tracking-wide" style={{ color: "rgba(255,255,255,0.35)" }}>
               {t.hero.microcopy}
             </p>
           </div>
