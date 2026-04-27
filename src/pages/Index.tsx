@@ -242,13 +242,6 @@ const Index = () => {
                 {t.hero.cta1}
                 <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
               </Link>
-              <Link
-                to={localePath("/contact")}
-                className="inline-flex items-center gap-2 px-8 py-4 text-[15px] font-semibold tracking-wide border transition-all duration-200 hover:bg-white/5"
-                style={{ borderColor: "rgba(255,255,255,0.25)", color: "rgba(255,255,255,0.80)" }}
-              >
-                {t.hero.cta2}
-              </Link>
             </div>
 
             {/* Microcopy */}
