@@ -418,7 +418,7 @@ const Index = () => {
                 const step = t.process.steps[i];
                 return (
                   <div key={id} className="group relative">
-                    <div className="relative z-10 w-24 h-24 mb-8 rounded-full bg-background border border-mid-blue/20 flex flex-col items-center justify-center group-hover:border-accent group-hover:shadow-md transition-all duration-400">
+                    <div className="relative z-10 w-24 h-24 mb-8 mx-auto rounded-full bg-background border border-mid-blue/20 flex flex-col items-center justify-center group-hover:border-accent group-hover:shadow-md transition-all duration-400">
                       <span className="text-[9px] text-mid-blue font-bold tracking-[0.3em] uppercase mb-1">{t.stepLabel}</span>
                       <span className="text-2xl font-bold text-accent leading-none">{i + 1}</span>
                     </div>
