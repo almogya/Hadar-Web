@@ -184,14 +184,14 @@ const Index = () => {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
-        {/* Top — logo + firm name */}
-        <div className="container relative z-10 flex flex-col items-center text-center pt-36 md:pt-44 flex-1">
-          <img src={logo} alt={t.footer.firmName} className="h-44 w-44 object-contain mb-6" />
-          <span className="text-5xl font-bold block leading-tight text-white" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em" }}>{t.footer.firmName}</span>
+        {/* Top — logo + firm name, positioned just above chair */}
+        <div className="container relative z-10 flex flex-col items-center text-center" style={{ paddingTop: "38vh" }}>
+          <img src={logo} alt={t.footer.firmName} className="h-36 w-36 object-contain mb-5" />
+          <span className="text-5xl font-bold block leading-tight" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em", color: "#7ABCD6" }}>{t.footer.firmName}</span>
         </div>
 
-        {/* Bottom — gold rule + CTA anchored at desk level */}
-        <div className="container relative z-10 flex flex-col items-center text-center pb-24 md:pb-32">
+        {/* Bottom — gold rule + CTA at desk level */}
+        <div className="container relative z-10 flex flex-col items-center text-center" style={{ paddingTop: "6vh", paddingBottom: "8vh" }}>
           <div className="w-16 h-[2px] mb-8" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
           <Link
             to={localePath("/contact")}
