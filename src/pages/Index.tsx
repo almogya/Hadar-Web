@@ -213,43 +213,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── Pain Section ── */}
-      <section className="py-24 md:py-32 bg-background" aria-labelledby="pain-heading">
-        <div className="container">
-          <div className="max-w-xl mb-14">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
-              {t.pain.badge}
-            </span>
-            <h2 id="pain-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
-              {t.pain.heading}
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {t.pain.items.map((item, i) => (
-              <div key={i} className="group border border-border hover:border-accent/40 p-8 transition-all duration-300 flex flex-col">
-                <div className="w-8 h-8 mb-5 flex items-center justify-center rounded-full bg-red-50 dark:bg-red-950/30">
-                  <span className="text-red-500 text-lg font-bold leading-none" aria-hidden="true">!</span>
-                </div>
-                <h3 className="font-display text-base font-semibold text-foreground mb-2">{item.problem}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-5">{item.desc}</p>
-                <div className="flex items-center gap-2 pt-4 border-t border-border">
-                  <span className="w-4 h-px flex-shrink-0" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
-                  <span className="text-xs font-semibold tracking-wide" style={{ color: "#C9A227" }}>{item.solution}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 text-center">
-            <Link
-              to={localePath("/contact")}
-              className="inline-flex items-center gap-2 px-8 py-3.5 text-sm font-bold tracking-wide transition-all duration-200 hover:opacity-90"
-              style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
-            >
-              {t.pain.cta} <DirectionalIcon icon="arrow" size={14} />
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* ── Lead Magnet ── */}
       <LeadMagnetStrip />
