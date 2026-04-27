@@ -191,7 +191,7 @@ const Index = () => {
 
             {/* Logo lockup */}
             <div className="flex items-center gap-4 mb-10">
-              <img src={logo} alt={t.footer.firmName} className="h-40 w-40 object-contain opacity-90" />
+              <img src={logo} alt={t.footer.firmName} className="h-56 w-56 object-contain opacity-90" />
               <div>
                 <span className="text-5xl font-bold block leading-tight text-white" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em" }}>{t.footer.firmName}</span>
               </div>
