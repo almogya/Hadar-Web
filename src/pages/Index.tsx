@@ -157,16 +157,10 @@ const Index = () => {
       {/* ── Practice Areas ── */}
       <section className="py-28 md:py-36 bg-section-alt" aria-labelledby="practice-heading">
         <div className="container">
-          <div className="max-w-xl mb-16">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
-              {t.practiceSection.badge}
-            </span>
-            <h2 id="practice-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
+          <div className="max-w-xl mb-16 mx-auto text-center">
+            <h2 id="practice-heading" className="font-display font-bold text-foreground tracking-tight" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>
               {t.practiceSection.heading}
             </h2>
-            <p className="text-muted-foreground mt-4 text-base leading-relaxed">
-              {t.practiceSection.sub}
-            </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
             {t.practiceSection.areas.map((area) => {
@@ -208,11 +202,8 @@ const Index = () => {
       {/* ── How I Help — authority section ── */}
       <section className="py-28 md:py-36 bg-background" aria-labelledby="how-help-heading">
         <div className="container">
-          <div className="max-w-xl mb-16">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
-              {t.howIHelp.badge}
-            </span>
-            <h2 id="how-help-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
+          <div className="max-w-xl mb-16 mx-auto text-center">
+            <h2 id="how-help-heading" className="font-display font-bold text-foreground tracking-tight" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>
               {t.howIHelp.heading}
             </h2>
           </div>
@@ -220,7 +211,7 @@ const Index = () => {
             {t.howIHelp.items.map((item, i) => {
               const Icon = HOW_HELP_ICONS[i];
               return (
-                <div key={item.title} className="group">
+                <div key={item.title} className="group flex flex-col items-center text-center">
                   <div className="w-11 h-11 mb-5 flex items-center justify-center border border-mid-blue/20 group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300">
                     <Icon className="text-mid-blue group-hover:text-accent transition-colors" size={20} strokeWidth={1.5} aria-hidden="true" />
                   </div>
@@ -268,11 +259,8 @@ const Index = () => {
       {/* ── How We Work ── */}
       <section className="py-28 md:py-36 bg-section-alt" aria-labelledby="process-heading">
         <div className="container">
-          <div className="max-w-xl mb-16">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
-              {t.process.badge}
-            </span>
-            <h2 id="process-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
+          <div className="max-w-xl mb-16 mx-auto text-center">
+            <h2 id="process-heading" className="font-display font-bold text-foreground tracking-tight" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>
               {t.process.heading}
             </h2>
           </div>
@@ -308,11 +296,8 @@ const Index = () => {
       {/* ── Who I Work With ── */}
       <section className="py-28 md:py-36 bg-background" aria-labelledby="audiences-heading">
         <div className="container">
-          <div className="max-w-xl mb-16">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
-              {t.audiences.badge}
-            </span>
-            <h2 id="audiences-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
+          <div className="max-w-xl mb-16 mx-auto text-center">
+            <h2 id="audiences-heading" className="font-display font-bold text-foreground tracking-tight" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>
               {t.audiences.heading}
             </h2>
           </div>
@@ -344,11 +329,8 @@ const Index = () => {
       {/* ── Featured Insights ── */}
       <section className="py-28 md:py-36 bg-primary" aria-labelledby="insights-heading">
         <div className="container">
-          <div className="max-w-xl mb-14">
-            <span className="text-accent text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
-              {t.insights.badge}
-            </span>
-            <h2 id="insights-heading" className="section-h2 font-display font-bold text-primary-foreground tracking-tight">
+          <div className="max-w-xl mb-14 mx-auto text-center">
+            <h2 id="insights-heading" className="font-display font-bold text-primary-foreground tracking-tight" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>
               {t.insights.heading}
             </h2>
           </div>
@@ -385,11 +367,8 @@ const Index = () => {
       {/* ── FAQ ── */}
       <section className="py-28 md:py-36" aria-labelledby="faq-heading">
         <div className="container max-w-3xl">
-          <div className="mb-14">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
-              {t.faq.badge}
-            </span>
-            <h2 id="faq-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
+          <div className="mb-14 text-center">
+            <h2 id="faq-heading" className="font-display font-bold text-foreground tracking-tight" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>
               {t.faq.heading}
             </h2>
           </div>
@@ -415,11 +394,8 @@ const Index = () => {
       {/* ── Testimonials ── */}
       <section className="py-24 md:py-32 bg-section-alt" aria-labelledby="testimonials-heading">
         <div className="container">
-          <div className="max-w-xl mb-14">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
-              {t.testimonials.badge}
-            </span>
-            <h2 id="testimonials-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
+          <div className="max-w-xl mb-14 mx-auto text-center">
+            <h2 id="testimonials-heading" className="font-display font-bold text-foreground tracking-tight" style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>
               {t.testimonials.heading}
             </h2>
           </div>
