@@ -50,7 +50,7 @@ const About = () => {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { n: "3", label: lang === "he" ? "ניסיון במשרדים המובילים בשוק" : "Top Law Firms Experience" },
+              { n: lang === "he" ? "ניסיון מוכח" : "Proven Experience", label: lang === "he" ? "במשרדים המובילים בשוק" : "At Top Law Firms", small: true },
               { n: "Google\nMeta\nAmazon", label: lang === "he" ? "ניסיון מול" : "Experience Against", small: true },
               { n: "LL.M", label: lang === "he" ? "דין וטכנולוגיה — אוניברסיטת חיפה" : "Law & Technology — University of Haifa" },
               { n: "24h", label: lang === "he" ? "זמן מענה מרבי" : "Maximum Response Time" },
