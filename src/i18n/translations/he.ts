@@ -295,7 +295,7 @@ export const he = {
     phoneDisplay: "054-223-4726",
     phoneTel: "+972542234726",
     formHeading: "ספרו בקצרה על המקרה",
-    formSub: "מלא את הפרטים ואחזור אליך תוך 24 שעות עם כיוון ברור — ללא התחייבות.",
+    formSub: "מלאו את הפרטים ואחזור אליכם תוך 24 שעות — ללא התחייבות.",
     nameLabel: "שם מלא *",
     namePlaceholder: "השם שלכם",
     emailFieldLabel: 'כתובת דוא"ל *',
