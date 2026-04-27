@@ -53,7 +53,6 @@ const About = () => {
               { n: lang === "he" ? "ניסיון מוכח" : "Proven Experience", label: lang === "he" ? "במשרדים המובילים בשוק" : "At Top Law Firms", small: true },
               { n: lang === "he" ? "התנהלות מול החברות הגדולות במשק" : "Dealing with the world's largest companies", label: "Google, Meta, Amazon ועוד", small: true },
               { n: "LL.M", label: lang === "he" ? "תואר שני במשפט וטכנולוגיה — אוניברסיטת חיפה" : "LL.M. in Law & Technology — University of Haifa" },
-              { n: "24h", label: lang === "he" ? "זמן מענה מרבי" : "Maximum Response Time" },
             ].map((stat) => (
               <div key={stat.label}>
                 <p className={`font-display font-bold text-primary-foreground leading-tight ${stat.small ? "text-base" : "text-3xl"} whitespace-pre-line`}>{stat.n}</p>
