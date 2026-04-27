@@ -207,7 +207,7 @@ const Index = () => {
             <h1
               dir={lang === "he" ? "rtl" : "ltr"}
               className="font-display font-bold tracking-tight text-white mb-5 leading-[1.05]"
-              style={{ fontSize: "clamp(2.8rem, 5.5vw + 0.5rem, 5rem)", letterSpacing: "-0.025em" }}
+              style={{ fontSize: "clamp(1.8rem, 3vw + 0.5rem, 3rem)", letterSpacing: "-0.025em" }}
             >
               {t.hero.h1}
             </h1>
