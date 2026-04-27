@@ -193,7 +193,7 @@ const Index = () => {
             <div className="flex items-center gap-4 mb-10">
               <img src={logo} alt={t.footer.firmName} className="h-14 w-14 object-contain opacity-90" />
               <div>
-                <span className="font-display text-lg font-bold tracking-tight block leading-tight text-white">{t.footer.firmName}</span>
+                <span className="font-display text-3xl font-bold tracking-tight block leading-tight text-white">{t.footer.firmName}</span>
               </div>
             </div>
 
