@@ -328,6 +328,66 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Terms of Use & Privacy Policies — Hebrew -->
+  <url>
+    <loc>https://ai-law.co.il/he/practice-areas/terms-of-use</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/terms-of-use"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Terms of Use & Privacy Policies — English -->
+  <url>
+    <loc>https://ai-law.co.il/en/practice-areas/terms-of-use</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/terms-of-use"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/terms-of-use"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Accessibility Compliance — Hebrew -->
+  <url>
+    <loc>https://ai-law.co.il/he/practice-areas/accessibility-compliance</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/accessibility-compliance"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/accessibility-compliance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/accessibility-compliance"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Accessibility Compliance — English -->
+  <url>
+    <loc>https://ai-law.co.il/en/practice-areas/accessibility-compliance</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/accessibility-compliance"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/accessibility-compliance"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/accessibility-compliance"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- User Blocking & Account Suspension — Hebrew -->
+  <url>
+    <loc>https://ai-law.co.il/he/practice-areas/user-blocking</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/user-blocking"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/user-blocking"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/user-blocking"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- User Blocking & Account Suspension — English -->
+  <url>
+    <loc>https://ai-law.co.il/en/practice-areas/user-blocking</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/practice-areas/user-blocking"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/practice-areas/user-blocking"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/practice-areas/user-blocking"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Internet Defamation — Hebrew -->
   <url>
     <loc>https://ai-law.co.il/he/practice-areas/internet-defamation</loc>
@@ -366,6 +426,24 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/contact"/>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+  </url>
+
+  <!-- Accessibility Statement — Hebrew -->
+  <url>
+    <loc>https://ai-law.co.il/he/accessibility</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/accessibility"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/accessibility"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Accessibility Statement — English -->
+  <url>
+    <loc>https://ai-law.co.il/en/accessibility</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/accessibility"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/accessibility"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
   <!-- Privacy Policy — Hebrew -->

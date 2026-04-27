@@ -9,8 +9,45 @@ import DirectionalIcon from "@/components/DirectionalIcon";
 const About = () => {
   const { t, localePath, lang } = useLanguage();
 
+  const attorneySchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Hadar Yatzkan",
+    alternateName: "הדר יצקן",
+    jobTitle: lang === "he" ? "עורך דין" : "Attorney-at-Law",
+    url: "https://ai-law.co.il",
+    image: "https://ai-law.co.il/og-image.jpg",
+    email: "Hadar@ai-lawyer.co.il",
+    telephone: "+972542234726",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "46 Weizmann St",
+      addressLocality: "Givatayim",
+      addressCountry: "IL",
+    },
+    alumniOf: [
+      { "@type": "EducationalOrganization", name: "University of Haifa", description: "LL.M. Law & Technology" },
+      { "@type": "EducationalOrganization", name: "Academic Center of Law and Business", description: "LL.B." },
+    ],
+    knowsAbout: [
+      "Intellectual Property Law",
+      "Trademark Law",
+      "Copyright Law",
+      "Technology Law",
+      "Artificial Intelligence Law",
+      "Internet Defamation",
+      "Commercial Litigation",
+    ],
+    worksFor: {
+      "@type": "LegalService",
+      name: "HY Law Offices",
+      url: "https://ai-law.co.il",
+    },
+  };
+
   return (
     <Layout>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(attorneySchema) }} />
       <SEOHead
         title="About Hadar Yatzkan | IP Attorney with Google, Meta & Amazon Experience | Israel"
         description="Hadar Yatzkan — IP & Technology Attorney at HY Law Offices. LL.M. in Law & Technology. Direct experience against Google, Meta & Amazon. Based in Givatayim, Israel."

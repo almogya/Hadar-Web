@@ -502,15 +502,19 @@ export const en = {
 
   privacyPolicy: {
     h1: "Privacy Policy",
-    lastUpdated: "Last updated: March 2026",
+    lastUpdated: "Last updated: April 2026",
     sections: [
-      { heading: "1. Introduction", body: "HY Law Offices (\"we,\" \"our,\" or \"the Firm\") respects your privacy and is committed to protecting personal information you share with us through this website. This Privacy Policy explains how we collect, use, and safeguard your information." },
-      { heading: "2. Information We Collect", body: "We may collect personal information you voluntarily provide through our contact form, including your name, email address, phone number, company name, and message content. We also collect standard web analytics data (page views, browser type, device information) through analytics tools." },
-      { heading: "3. How We Use Your Information", body: "We use collected information to: respond to inquiries, provide legal services, improve our website, and comply with legal obligations. We do not sell, trade, or rent your personal information to third parties." },
-      { heading: "4. Data Security", body: "We implement reasonable security measures to protect your personal information. However, no method of transmission over the Internet is completely secure, and we cannot guarantee absolute security." },
-      { heading: "5. Cookies and Analytics", body: "This website may use cookies and analytics services to understand how visitors use our site. You can control cookie preferences through your browser settings." },
-      { heading: "6. Your Rights", body: "Under applicable privacy laws, you may have the right to access, correct, or delete your personal information. To exercise these rights, please contact us at Hadar@ai-lawyer.co.il." },
-      { heading: "7. Contact", body: "For questions about this Privacy Policy, please contact us at Hadar@ai-lawyer.co.il." },
+      { heading: "1. Data Controller", body: "The data controller for this website is HY Law Offices, operated by Hadar Yatzkan, Attorney-at-Law. Address: 46 Weizmann St., Givatayim, Israel. Contact: Hadar@ai-lawyer.co.il | 054-223-4726." },
+      { heading: "2. Information We Collect", body: "We collect information you voluntarily submit via the contact form: full name, email address, phone number (optional), company name (optional), matter type, and message content. We also collect standard web analytics data automatically (page views, browser type, device type, referral source) via analytics services." },
+      { heading: "3. Voluntary vs. Mandatory Submission", body: "Providing your name and email address is necessary to respond to your inquiry. All other fields (phone, company, matter type) are optional. You are not legally required to provide any information, but without a name and email we cannot process your request." },
+      { heading: "4. Purposes of Processing", body: "We process your information for the following purposes: (a) responding to your contact inquiry; (b) evaluating whether a legal engagement is appropriate; (c) providing legal services where an engagement is established; (d) complying with applicable legal and professional obligations; (e) improving our website through aggregated analytics data." },
+      { heading: "5. Recipients and Data Processors", body: "Contact form submissions are processed by FormSubmit.co, a third-party form-handling service that transmits your submission to our email address. We do not sell or share your personal data with third parties for marketing purposes. We may disclose information where required by law or court order." },
+      { heading: "6. International Data Transfers", body: "FormSubmit.co operates servers outside Israel. By submitting the contact form, your data may be transferred internationally. We take reasonable steps to ensure adequate data protection standards apply. Analytics data is processed by analytics providers who may operate internationally." },
+      { heading: "7. Retention Periods", body: "Contact inquiries and correspondence are retained for up to three years from the date of last interaction, unless a longer retention period is required by law or professional rules. Analytics data is retained per the applicable analytics provider's default policy." },
+      { heading: "8. Data Security", body: "We implement reasonable technical and organisational measures to protect your personal information from unauthorised access, loss, or disclosure. No method of transmission over the Internet is completely secure, and we cannot guarantee absolute security." },
+      { heading: "9. Cookies and Analytics", body: "This website may use cookies and analytics services to understand how visitors use our site. Cookies are small data files stored on your device. You can control cookie preferences through your browser settings. Disabling cookies may affect site functionality." },
+      { heading: "10. Your Rights", body: "Under Israeli Privacy Protection Law and applicable regulations, you have the right to: access your personal data; correct inaccurate data; request deletion of data we are not legally required to retain; object to processing; and lodge a complaint with the Israeli Privacy Protection Authority (PPA). To exercise these rights, contact us at Hadar@ai-lawyer.co.il." },
+      { heading: "11. Contact", body: "For questions or requests regarding this Privacy Policy or your personal data, contact us at Hadar@ai-lawyer.co.il or by post at 46 Weizmann St., Givatayim, Israel." },
     ],
   },
 
