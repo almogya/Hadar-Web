@@ -17,6 +17,9 @@ import AiAndLaw from "./pages/practice-areas/AiAndLaw";
 import TechnologyInternetLaw from "./pages/practice-areas/TechnologyInternetLaw";
 import CommercialLitigation from "./pages/practice-areas/CommercialLitigation";
 import InternetDefamation from "./pages/practice-areas/InternetDefamation";
+import TermsOfUse from "./pages/practice-areas/TermsOfUse";
+import AccessibilityCompliance from "./pages/practice-areas/AccessibilityCompliance";
+import UserBlocking from "./pages/practice-areas/UserBlocking";
 import Insights from "./pages/Insights";
 import PillarArticle from "./pages/insights/PillarArticle";
 import AiIpArticle from "./pages/insights/AiIpArticle";
@@ -58,6 +61,9 @@ const makeChildren = (): RouteObject[] => [
   { path: "practice-areas/technology-internet-law", element: <TechnologyInternetLaw /> },
   { path: "practice-areas/commercial-litigation", element: <CommercialLitigation /> },
   { path: "practice-areas/internet-defamation", element: <InternetDefamation /> },
+  { path: "practice-areas/terms-of-use", element: <TermsOfUse /> },
+  { path: "practice-areas/accessibility-compliance", element: <AccessibilityCompliance /> },
+  { path: "practice-areas/user-blocking", element: <UserBlocking /> },
   { path: "insights", element: <Insights /> },
   { path: "insights/ai-ip-ownership-2026", element: <AiIpArticle /> },
   { path: "insights/privacy-amendment-13", element: <PrivacyAmendment13Article /> },

@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
 import { Link } from "react-router-dom";
-import { Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb, MessageSquareX, type LucideIcon } from "lucide-react";
+import { Shield, Scale, Gavel, Globe, Brain, Briefcase, Lightbulb, MessageSquareX, ScrollText, Eye, UserX, type LucideIcon } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 /** Stable href → icon mapping — never index-based */
@@ -14,6 +14,9 @@ const AREA_ICON_MAP: Record<string, LucideIcon> = {
   "/practice-areas/ai-and-law": Brain,
   "/practice-areas/commercial-litigation": Briefcase,
   "/practice-areas/internet-defamation": MessageSquareX,
+  "/practice-areas/terms-of-use": ScrollText,
+  "/practice-areas/accessibility-compliance": Eye,
+  "/practice-areas/user-blocking": UserX,
 };
 
 const PracticeAreas = () => {

@@ -167,6 +167,21 @@ export const en = {
         desc: "Rapid legal response to harmful online publications — demand letters, takedown injunctions, civil claims for damages, and identifying anonymous publishers. Representation against individuals, businesses, and global platforms.",
         link: "/practice-areas/internet-defamation",
       },
+      {
+        title: "Terms of Use & Privacy Policies",
+        desc: "Drafting, updating, and reviewing terms of use, privacy policies, and platform regulations for websites and apps — in compliance with Israeli law and international regulations (GDPR). Tailored to your actual operations and platform-specific needs.",
+        link: "/practice-areas/terms-of-use",
+      },
+      {
+        title: "Accessibility Compliance",
+        desc: "Guiding businesses to meet website accessibility requirements under Israeli Standard (SI 5568) and international regulations. Drafting accessibility statements, gap analysis, and full compliance strategy — including representation before complaints and regulators.",
+        link: "/practice-areas/accessibility-compliance",
+      },
+      {
+        title: "User Blocking & Account Suspension",
+        desc: "Representing clients whose accounts have been suspended or blocked on global platforms — Google, Meta, Amazon, and others. Handling reinstatement appeals, legal strategy, and representation against tech companies to preserve your digital presence.",
+        link: "/practice-areas/user-blocking",
+      },
     ],
   },
 

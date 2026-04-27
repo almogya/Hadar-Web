@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, Download } from "lucide-react";
+import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, Download, MessageSquareX, ScrollText, Eye, UserX } from "lucide-react";
 import logo from "@/assets/logo.png";
 import officeImg from "@/assets/hero-office.jpg";
 import Layout from "@/components/Layout";
@@ -22,6 +22,10 @@ const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
   "/practice-areas/technology-internet-law": Globe,
   "/practice-areas/ai-and-law": Brain,
   "/practice-areas/commercial-litigation": Briefcase,
+  "/practice-areas/internet-defamation": MessageSquareX,
+  "/practice-areas/terms-of-use": ScrollText,
+  "/practice-areas/accessibility-compliance": Eye,
+  "/practice-areas/user-blocking": UserX,
 };
 
 /** Stable process-step icons */
