@@ -146,7 +146,6 @@ const Contact = () => {
                 {/* Trust strip */}
                 <div className="flex flex-wrap gap-4 mb-8 pb-8 border-b border-border">
                   {[
-                    lang === "he" ? "✓ ללא עלות לשיחה ראשונה" : "✓ Free first call",
                     lang === "he" ? "✓ מענה תוך 24 שעות" : "✓ Reply within 24 hours",
                     lang === "he" ? "✓ דיסקרטיות מלאה" : "✓ Full confidentiality",
                   ].map((item) => (
