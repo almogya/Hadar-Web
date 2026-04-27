@@ -206,19 +206,19 @@ const Index = () => {
             {/* H1 — bigger, shorter */}
             <h1
               dir={lang === "he" ? "rtl" : "ltr"}
-              className="font-display font-bold tracking-tight text-white mb-5 leading-[1.05]"
-              style={{ fontSize: "clamp(1.8rem, 3vw + 0.5rem, 3rem)", letterSpacing: "-0.025em" }}
+              className="font-display font-bold text-white mb-5 leading-[1.05]"
+              style={{ fontSize: "clamp(1.8rem, 3vw + 0.5rem, 3rem)", letterSpacing: "0.01em" }}
             >
               {t.hero.h1}
             </h1>
 
             {/* Sub — one clean line */}
-            <p className="text-xl md:text-2xl font-medium mb-6 leading-snug" style={{ color: "rgba(255,255,255,0.72)" }}>
+            <p className="text-xl md:text-2xl font-medium mb-6 leading-snug" style={{ color: "rgba(255,255,255,0.72)", letterSpacing: "0.02em" }}>
               {t.hero.h1Accent}
             </p>
 
             {/* Statement — bold single line */}
-            <p className="text-sm md:text-base font-semibold tracking-wide mb-7" style={{ color: "#C9A227" }}>
+            <p className="text-sm md:text-base font-semibold mb-7" style={{ color: "#C9A227", letterSpacing: "0.05em" }}>
               {t.hero.statement}
             </p>
 
