@@ -154,50 +154,6 @@ const Index = () => {
 
 
 
-      {/* ── How I Help — authority section ── */}
-      <section className="py-28 md:py-36 bg-background" aria-labelledby="how-help-heading">
-        <div className="container">
-          <div className="max-w-xl mb-16">
-            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
-              {t.howIHelp.badge}
-            </span>
-            <h2 id="how-help-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
-              {t.howIHelp.heading}
-            </h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {t.howIHelp.items.map((item, i) => {
-              const Icon = HOW_HELP_ICONS[i];
-              return (
-                <div key={item.title} className="group">
-                  <div className="w-11 h-11 mb-5 flex items-center justify-center border border-mid-blue/20 group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300">
-                    <Icon className="text-mid-blue group-hover:text-accent transition-colors" size={20} strokeWidth={1.5} aria-hidden="true" />
-                  </div>
-                  <h3 className="font-display text-base font-semibold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-          <div className="mt-14 pt-8 border-t border-border flex flex-wrap gap-4 items-center">
-            <span className="text-sm text-muted-foreground">
-              {lang === "he" ? "תחומים מרכזיים:" : "Key areas:"}
-            </span>
-            <Link to={localePath("/practice-areas/trademarks")} className="text-sm font-medium text-mid-blue hover:text-accent transition-colors hover:underline">
-              {lang === "he" ? "סימני מסחר" : "Trademarks"}
-            </Link>
-            <span className="text-border">·</span>
-            <Link to={localePath("/practice-areas/copyright-digital-content")} className="text-sm font-medium text-mid-blue hover:text-accent transition-colors hover:underline">
-              {lang === "he" ? "זכויות יוצרים" : "Copyright"}
-            </Link>
-            <span className="text-border">·</span>
-            <Link to={localePath("/practice-areas/ai-and-law")} className="text-sm font-medium text-mid-blue hover:text-accent transition-colors hover:underline">
-              {lang === "he" ? "בינה מלאכותית" : "AI & Law"}
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* ── Practice Areas ── */}
       <section className="py-28 md:py-36 bg-section-alt" aria-labelledby="practice-heading">
         <div className="container">
@@ -245,6 +201,50 @@ const Index = () => {
             <p className="text-xs text-muted-foreground hidden md:block">
               {lang === "he" ? "מענה תוך 24 שעות" : "Reply within 24 hours"}
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── How I Help — authority section ── */}
+      <section className="py-28 md:py-36 bg-background" aria-labelledby="how-help-heading">
+        <div className="container">
+          <div className="max-w-xl mb-16">
+            <span className="text-mid-blue text-[11px] font-semibold tracking-[0.35em] uppercase block mb-4">
+              {t.howIHelp.badge}
+            </span>
+            <h2 id="how-help-heading" className="section-h2 font-display font-bold text-foreground tracking-tight">
+              {t.howIHelp.heading}
+            </h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {t.howIHelp.items.map((item, i) => {
+              const Icon = HOW_HELP_ICONS[i];
+              return (
+                <div key={item.title} className="group">
+                  <div className="w-11 h-11 mb-5 flex items-center justify-center border border-mid-blue/20 group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300">
+                    <Icon className="text-mid-blue group-hover:text-accent transition-colors" size={20} strokeWidth={1.5} aria-hidden="true" />
+                  </div>
+                  <h3 className="font-display text-base font-semibold text-foreground mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="mt-14 pt-8 border-t border-border flex flex-wrap gap-4 items-center">
+            <span className="text-sm text-muted-foreground">
+              {lang === "he" ? "תחומים מרכזיים:" : "Key areas:"}
+            </span>
+            <Link to={localePath("/practice-areas/trademarks")} className="text-sm font-medium text-mid-blue hover:text-accent transition-colors hover:underline">
+              {lang === "he" ? "סימני מסחר" : "Trademarks"}
+            </Link>
+            <span className="text-border">·</span>
+            <Link to={localePath("/practice-areas/copyright-digital-content")} className="text-sm font-medium text-mid-blue hover:text-accent transition-colors hover:underline">
+              {lang === "he" ? "זכויות יוצרים" : "Copyright"}
+            </Link>
+            <span className="text-border">·</span>
+            <Link to={localePath("/practice-areas/ai-and-law")} className="text-sm font-medium text-mid-blue hover:text-accent transition-colors hover:underline">
+              {lang === "he" ? "בינה מלאכותית" : "AI & Law"}
+            </Link>
           </div>
         </div>
       </section>
