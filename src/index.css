@@ -5,51 +5,53 @@
 @tailwind utilities;
 
 @layer base {
-  /* ── Design tokens v2: Blue / Gray / White / Gold ────────────────────── */
-  /* Primary Navy  #0B1F3A  hsl(214 68% 13%)                               */
-  /* Mid Blue      #1F4B7A  hsl(213 59% 30%)                               */
+  /* ── Design tokens v3: Logo Blues / White / Gold ─────────────────────── */
+  /* Logo Dark     #1A3566  hsl(220 62% 25%)                               */
+  /* Logo Mid      #2B5DAA  hsl(217 60% 42%)                               */
+  /* Logo Cyan     #7ABCD6  hsl(199 53% 65%)                               */
   /* Accent Gold   #C9A227  hsl(42  68% 47%)                               */
   /* Slate Gray    #6B7280  hsl(220  9% 46%)                               */
-  /* Off-white     #F7F8FA  hsl(220 14% 98%)                               */
-  /* Border Gray   #E5E7EB  hsl(220 13% 91%)                               */
+  /* Off-white     #F3F7FC  hsl(213 50% 97%)                               */
+  /* Border        #D6E4F0  hsl(210 45% 89%)                               */
   /* ─────────────────────────────────────────────────────────────────────── */
   :root {
-    --background: 220 14% 98%;        /* #F7F8FA off-white */
-    --foreground: 214 68% 10%;        /* near-black navy */
+    --background: 213 50% 97%;        /* #F3F7FC blue-tinted white */
+    --foreground: 220 62% 12%;        /* near-black navy */
 
     --card: 0 0% 100%;
-    --card-foreground: 214 68% 10%;
+    --card-foreground: 220 62% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 214 68% 10%;
+    --popover-foreground: 220 62% 12%;
 
-    --primary: 214 68% 13%;           /* #0B1F3A deep navy */
+    --primary: 220 62% 25%;           /* #1A3566 logo dark blue */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 214 68% 10%;
+    --secondary: 213 40% 94%;
+    --secondary-foreground: 220 62% 12%;
 
-    --muted: 220 14% 96%;
+    --muted: 213 40% 94%;
     --muted-foreground: 220 9% 46%;   /* #6B7280 slate */
 
     --accent: 42 68% 47%;             /* #C9A227 gold */
-    --accent-foreground: 214 68% 10%; /* dark text on gold */
+    --accent-foreground: 220 62% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%;            /* #E5E7EB */
-    --input: 220 13% 91%;
-    --ring: 214 68% 13%;
+    --border: 210 45% 89%;            /* #D6E4F0 */
+    --input: 210 45% 89%;
+    --ring: 220 62% 25%;
 
     --radius: 0.25rem;
 
     /* Extended palette */
-    --section-alt: 220 14% 96%;
-    --mid-blue: 213 59% 30%;          /* #1F4B7A */
+    --section-alt: 213 40% 94%;
+    --mid-blue: 217 60% 42%;          /* #2B5DAA logo mid blue */
+    --logo-cyan: 199 53% 65%;         /* #7ABCD6 logo light cyan */
     --slate: 220 9% 46%;              /* #6B7280 */
-    --navy: 214 68% 13%;              /* #0B1F3A */
-    --navy-light: 213 59% 30%;        /* #1F4B7A */
+    --navy: 220 62% 25%;              /* #1A3566 */
+    --navy-light: 217 60% 42%;        /* #2B5DAA */
     --gold: 42 68% 47%;               /* #C9A227 */
     --gold-light: 42 68% 94%;
 
@@ -64,40 +66,40 @@
   }
 
   .dark {
-    --background: 214 40% 7%;
-    --foreground: 220 14% 90%;
+    --background: 220 62% 8%;         /* very dark logo-blue */
+    --foreground: 213 50% 92%;
 
-    --card: 214 40% 10%;
-    --card-foreground: 220 14% 90%;
+    --card: 220 55% 11%;
+    --card-foreground: 213 50% 92%;
 
-    --popover: 214 40% 10%;
-    --popover-foreground: 220 14% 90%;
+    --popover: 220 55% 11%;
+    --popover-foreground: 213 50% 92%;
 
-    /* Keep primary as deep navy in dark mode */
-    --primary: 214 68% 13%;
+    --primary: 220 62% 25%;           /* #1A3566 logo dark blue */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 30% 14%;
-    --secondary-foreground: 220 14% 90%;
+    --secondary: 220 45% 16%;
+    --secondary-foreground: 213 50% 92%;
 
-    --muted: 214 30% 14%;
+    --muted: 220 45% 16%;
     --muted-foreground: 220 9% 60%;
 
-    --accent: 42 68% 52%;             /* slightly lighter gold in dark */
-    --accent-foreground: 214 68% 10%;
+    --accent: 42 68% 52%;
+    --accent-foreground: 220 62% 12%;
 
     --destructive: 0 63% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 25% 20%;
-    --input: 214 25% 20%;
+    --border: 220 40% 22%;
+    --input: 220 40% 22%;
     --ring: 42 68% 52%;
 
-    --section-alt: 214 40% 10%;
-    --mid-blue: 213 50% 55%;
+    --section-alt: 220 55% 11%;
+    --mid-blue: 217 55% 58%;
+    --logo-cyan: 199 53% 65%;
     --slate: 220 9% 60%;
-    --navy: 214 68% 13%;
-    --navy-light: 213 50% 35%;
+    --navy: 220 62% 25%;
+    --navy-light: 217 55% 42%;
     --gold: 42 68% 52%;
     --gold-light: 42 30% 15%;
   }
