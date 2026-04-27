@@ -194,9 +194,6 @@ const Index = () => {
               <img src={logo} alt={t.footer.firmName} className="h-14 w-14 object-contain opacity-90" />
               <div>
                 <span className="font-display text-lg font-bold tracking-tight block leading-tight text-white">{t.footer.firmName}</span>
-                <span className="text-[11px] font-semibold tracking-[0.22em] uppercase" style={{ color: "#C9A227" }}>
-                  {lang === "he" ? "קניין רוחני · טכנולוגיה · AI" : "IP · Technology · AI"}
-                </span>
               </div>
             </div>
 
