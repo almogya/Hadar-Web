@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, Download } from "lucide-react";
-import logo from "@/assets/logo.webp";
+import logo from "@/assets/logo.png";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
@@ -191,7 +191,7 @@ const Index = () => {
 
             {/* Logo lockup */}
             <div className="flex items-center gap-4 mb-10">
-              <img src={logo} alt={t.footer.firmName} className="h-44 w-44 object-contain" style={{ filter: "brightness(0) invert(1) drop-shadow(0 0 18px rgba(122,188,214,0.35))" }} />
+              <img src={logo} alt={t.footer.firmName} className="h-44 w-44 object-contain" />
               <div>
                 <span className="text-5xl font-bold block leading-tight text-white" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em" }}>{t.footer.firmName}</span>
               </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
-import logo from "@/assets/logo.webp";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const { t, localePath, lang } = useLanguage();
