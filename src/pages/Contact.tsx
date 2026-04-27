@@ -63,12 +63,13 @@ const Contact = () => {
       {/* Hero */}
       <section className="py-28 bg-section-alt">
         <div className="container">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <div className="w-12 h-px bg-accent" />
               <span className="text-accent text-xs font-semibold tracking-[0.3em] uppercase">
                 {t.contact.badge}
               </span>
+              <div className="w-12 h-px bg-accent" />
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6 tracking-tight">
               {t.contact.h1}

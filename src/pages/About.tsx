@@ -96,7 +96,7 @@ const About = () => {
           </div>
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {t.about.milestones.map((m) => (
-              <div key={m.title} className="bg-background p-8 border border-border hover:border-accent/30 transition-colors">
+              <div key={m.title} className="bg-background p-8 border border-border hover:border-accent/30 transition-colors text-center">
                 <h3 className="font-display font-semibold text-foreground mb-2">{m.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{m.desc}</p>
               </div>

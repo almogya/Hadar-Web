@@ -40,12 +40,13 @@ const Insights = () => {
       {/* Hero */}
       <section className="py-28 bg-section-alt">
         <div className="container">
-          <div className="max-w-3xl">
-            <div className="flex items-center gap-3 mb-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <div className="w-12 h-px bg-accent" />
               <span className="text-accent text-xs font-semibold tracking-[0.3em] uppercase">
                 {t.insightsPage.badge}
               </span>
+              <div className="w-12 h-px bg-accent" />
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6 tracking-tight">
               {t.insightsPage.h1}
@@ -61,7 +62,7 @@ const Insights = () => {
         <div className="container">
           {/* Featured Pillar Guides */}
           <div className="mb-20">
-            <h2 className="text-xl font-display font-semibold text-foreground mb-8">
+            <h2 className="text-xl font-display font-semibold text-foreground mb-8 text-center">
               {t.insightsPage.pillarHeading}
             </h2>
             <div className="grid md:grid-cols-3 gap-px bg-border">
@@ -86,7 +87,7 @@ const Insights = () => {
           </div>
 
           {/* Category Filters */}
-          <div className="flex flex-wrap gap-2 mb-10" role="tablist" aria-label="Article categories">
+          <div className="flex flex-wrap gap-2 mb-10 justify-center" role="tablist" aria-label="Article categories">
             <button
               onClick={() => setActiveCategory("all")}
               role="tab"
