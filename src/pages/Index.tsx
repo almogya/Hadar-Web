@@ -175,11 +175,23 @@ const Index = () => {
       {/* ── HERO ── */}
       <section
         className="relative min-h-[94vh] flex items-center overflow-hidden"
-        style={{ background: "linear-gradient(150deg, #EAF0F8 0%, #F3F7FC 40%, #DDE8F4 70%, #F3F7FC 100%)" }}
+        style={{ background: "linear-gradient(135deg, #D6E4F0 0%, #EAF2FA 35%, #F3F7FC 60%, #E8F0F8 100%)" }}
       >
+        {/* Radial glow — top right */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 70% 60% at 80% 20%, rgba(122,188,214,0.18) 0%, transparent 70%)" }}
+          aria-hidden="true"
+        />
+        {/* Radial glow — bottom left */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ background: "radial-gradient(ellipse 50% 50% at 10% 90%, rgba(26,53,102,0.08) 0%, transparent 65%)" }}
+          aria-hidden="true"
+        />
         {/* Dot-grid texture */}
         <div
-          className="absolute inset-0 opacity-[0.06]"
+          className="absolute inset-0 opacity-[0.05]"
           style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #1A3566 1px, transparent 0)", backgroundSize: "36px 36px" }}
           aria-hidden="true"
         />
