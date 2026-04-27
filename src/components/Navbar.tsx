@@ -64,7 +64,7 @@ const Navbar = () => {
                 HY Law Offices
               </span>
               <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-medium">
-                {lang === "he" ? "שערך לקניין הרוחני" : "Your gate to IP"}
+                {lang === "he" ? "קניין רוחני, אינטרנט ולשון הרע" : "IP · Internet · Defamation"}
               </span>
             </div>
           </Link>
