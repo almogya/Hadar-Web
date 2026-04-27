@@ -212,15 +212,6 @@ const Index = () => {
               {t.hero.h1}
             </h1>
 
-            {/* Sub — one clean line */}
-            <p className="text-xl md:text-2xl font-medium mb-6 leading-snug" style={{ color: "rgba(255,255,255,0.72)", letterSpacing: "0.02em" }}>
-              {t.hero.h1Accent}
-            </p>
-
-            {/* Statement — bold single line */}
-            <p className="text-sm md:text-base font-semibold mb-7" style={{ color: "#C9A227", letterSpacing: "0.05em" }}>
-              {t.hero.statement}
-            </p>
 
             {/* Benefit Bullets */}
             <ul className="space-y-2.5 mb-10">
