@@ -33,8 +33,8 @@ const LanguageSelector = () => {
 
         {/* Firm name */}
         <h1
-          className="font-display font-bold tracking-tight leading-tight mb-2"
-          style={{ color: "#F7F8FA", fontSize: "clamp(1.75rem, 4vw, 2.5rem)" }}
+          className="font-bold tracking-tight leading-tight mb-2"
+          style={{ color: "#F7F8FA", fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontFamily: '"Playfair Display", Georgia, serif' }}
         >
           HY Law Offices
         </h1>
