@@ -148,7 +148,6 @@ const Contact = () => {
                 <div className="flex flex-wrap gap-4 mb-8 pb-8 border-b border-border">
                   {[
                     lang === "he" ? "✓ מענה תוך 24 שעות" : "✓ Reply within 24 hours",
-                    lang === "he" ? "✓ דיסקרטיות מלאה" : "✓ Full confidentiality",
                   ].map((item) => (
                     <span key={item} className="text-xs font-semibold text-accent tracking-wide">{item}</span>
                   ))}
