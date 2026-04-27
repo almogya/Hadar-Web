@@ -175,18 +175,18 @@ const Index = () => {
       {/* ── HERO ── */}
       <section
         className="relative min-h-[94vh] flex items-center overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #D6E4F0 0%, #EAF2FA 35%, #F3F7FC 60%, #E8F0F8 100%)" }}
+        style={{ background: "linear-gradient(135deg, #B8D0E8 0%, #C8DCF0 35%, #D6E6F5 60%, #BFCFE8 100%)" }}
       >
         {/* Radial glow — top right */}
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 70% 60% at 80% 20%, rgba(122,188,214,0.18) 0%, transparent 70%)" }}
+          style={{ background: "radial-gradient(ellipse 70% 60% at 80% 20%, rgba(122,188,214,0.30) 0%, transparent 70%)" }}
           aria-hidden="true"
         />
         {/* Radial glow — bottom left */}
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: "radial-gradient(ellipse 50% 50% at 10% 90%, rgba(26,53,102,0.08) 0%, transparent 65%)" }}
+          style={{ background: "radial-gradient(ellipse 50% 50% at 10% 90%, rgba(26,53,102,0.18) 0%, transparent 65%)" }}
           aria-hidden="true"
         />
         {/* Dot-grid texture */}
