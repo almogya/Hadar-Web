@@ -184,36 +184,24 @@ const Index = () => {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
-        <div className="container relative z-10 py-36 md:py-48">
-          <div className="max-w-2xl">
+        <div className="container relative z-10 py-36 md:py-48 flex flex-col items-center text-center">
 
             {/* Logo lockup */}
-            <div className="flex items-center gap-4 mb-10">
-              <img src={logo} alt={t.footer.firmName} className="h-44 w-44 object-contain" />
-              <div>
-                <span className="text-5xl font-bold block leading-tight text-white" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em" }}>{t.footer.firmName}</span>
-              </div>
+            <div className="flex flex-col items-center mb-8">
+              <img src={logo} alt={t.footer.firmName} className="h-44 w-44 object-contain mb-6" />
+              <span className="text-5xl font-bold block leading-tight text-white" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em" }}>{t.footer.firmName}</span>
             </div>
 
+            {/* Gold rule */}
+            <div className="w-12 h-px mb-6" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
+
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-8">
-              <span className="w-6 h-px" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
+            <div className="inline-flex items-center gap-2 mb-10">
               <span className="text-[14px] font-semibold tracking-[0.35em] uppercase" style={{ color: "#C9A227" }}>{t.hero.badge}</span>
             </div>
 
-
-            {/* Benefit Bullets */}
-            <ul className="space-y-2.5 mb-10">
-              {t.hero.bullets.map((bullet, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
-                  <span className="text-sm md:text-base font-medium leading-snug" style={{ color: "rgba(255,255,255,0.80)" }}>{bullet}</span>
-                </li>
-              ))}
-            </ul>
-
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mb-5">
+            <div className="flex flex-wrap justify-center gap-3 mb-5">
               <Link
                 to={localePath("/contact")}
                 className="group inline-flex items-center gap-2.5 px-8 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02]"
@@ -228,7 +216,6 @@ const Index = () => {
             <p className="text-xs font-medium tracking-wide" style={{ color: "rgba(255,255,255,0.35)" }}>
               {t.hero.microcopy}
             </p>
-          </div>
         </div>
       </section>
 
