@@ -183,7 +183,7 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
         {/* Gold rule + CTA — absolutely positioned at desk level */}
-        <div className="absolute bottom-[14%] left-0 right-0 z-10 flex flex-col items-center text-center">
+        <div className="absolute bottom-[6%] left-0 right-0 z-10 flex flex-col items-center text-center">
           <div className="w-16 h-[2px] mb-8" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
           <Link
             to={localePath("/contact")}
