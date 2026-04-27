@@ -250,6 +250,23 @@
   }
 }
 
+/* Heading color: logo navy on light-background sections.
+   Selector specificity (element + class) beats .text-foreground alone.
+   Headings on dark sections use .text-primary-foreground/.text-white and are unaffected. */
+h1.text-foreground,
+h2.text-foreground,
+h3.text-foreground,
+h4.text-foreground {
+  color: #1A3566;
+}
+
+.dark h1.text-foreground,
+.dark h2.text-foreground,
+.dark h3.text-foreground,
+.dark h4.text-foreground {
+  color: hsl(var(--foreground));
+}
+
 @layer utilities {
   /* Gold token utilities */
   .text-gold { color: hsl(var(--gold)); }
