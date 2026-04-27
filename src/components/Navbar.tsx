@@ -64,7 +64,10 @@ const Navbar = () => {
                 HY Law Offices
               </span>
               <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-medium">
-                {lang === "he" ? "קניין רוחני, אינטרנט ולשון הרע" : "IP · Internet · Defamation"}
+                {lang === "he"
+                  ? <><span>קניין רוחני</span><span style={{ color: "#C9A227", margin: "0 4px" }}>•</span><span>אינטרנט</span><span style={{ color: "#C9A227", margin: "0 4px" }}>•</span><span>לשון הרע</span></>
+                  : <><span>IP</span><span style={{ color: "#C9A227", margin: "0 4px" }}>•</span><span>Internet</span><span style={{ color: "#C9A227", margin: "0 4px" }}>•</span><span>Defamation</span></>
+                }
               </span>
             </div>
           </Link>

@@ -55,7 +55,7 @@ const LanguageSelector = () => {
           lang="he"
           style={{ color: "rgba(247,248,250,0.4)", fontSize: "12px", letterSpacing: "0.06em" }}
         >
-          קניין רוחני | אינטרנט | לשון הרע
+          קניין רוחני <span style={{ color: "#C9A227" }}>•</span> אינטרנט <span style={{ color: "#C9A227" }}>•</span> לשון הרע
         </p>
 
         {/* Language buttons */}
