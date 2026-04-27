@@ -264,14 +264,14 @@ const Index = () => {
               {t.process.heading}
             </h2>
           </div>
-          <div className="max-w-4xl relative">
+          <div className="max-w-4xl mx-auto relative">
             <div className="hidden md:block absolute top-12 start-0 end-0 h-px bg-border" aria-hidden="true" />
             <div className="grid md:grid-cols-3 gap-12 md:gap-10">
               {PROCESS_STEPS.map(({ id, Icon }, i) => {
                 const step = t.process.steps[i];
                 return (
-                  <div key={id} className="group relative">
-                    <div className="relative z-10 w-24 h-24 mb-8 mx-auto rounded-full bg-background border border-mid-blue/20 flex flex-col items-center justify-center group-hover:border-accent group-hover:shadow-md transition-all duration-400">
+                  <div key={id} className="group relative flex flex-col items-center text-center">
+                    <div className="relative z-10 w-24 h-24 mb-6 rounded-full bg-background border border-mid-blue/20 flex flex-col items-center justify-center group-hover:border-accent group-hover:shadow-md transition-all duration-400">
                       <span className="text-[9px] text-mid-blue font-bold tracking-[0.3em] uppercase mb-1">{t.stepLabel}</span>
                       <span className="text-2xl font-bold text-accent leading-none">{i + 1}</span>
                     </div>
@@ -281,7 +281,7 @@ const Index = () => {
                     <h3 className="font-display text-base font-semibold text-foreground mb-2">{step.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
                     {i < t.process.steps.length - 1 && (
-                      <div className="md:hidden flex justify-start my-6 ps-12">
+                      <div className="md:hidden flex justify-center my-6">
                         <div className="w-px h-8 bg-border" />
                       </div>
                     )}
