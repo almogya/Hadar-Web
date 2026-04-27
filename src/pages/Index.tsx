@@ -175,7 +175,7 @@ const Index = () => {
 
       {/* ── HERO ── */}
       <section
-        className="relative min-h-[94vh] flex items-center overflow-hidden"
+        className="relative min-h-[94vh] flex flex-col overflow-hidden"
       >
         {/* Office background image */}
         <img src={officeImg} alt="" className="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
@@ -184,38 +184,26 @@ const Index = () => {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
-        <div className="container relative z-10 py-36 md:py-48 flex flex-col items-center text-center">
+        {/* Top — logo + firm name */}
+        <div className="container relative z-10 flex flex-col items-center text-center pt-36 md:pt-44 flex-1">
+          <img src={logo} alt={t.footer.firmName} className="h-44 w-44 object-contain mb-6" />
+          <span className="text-5xl font-bold block leading-tight text-white" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em" }}>{t.footer.firmName}</span>
+        </div>
 
-            {/* Logo lockup */}
-            <div className="flex flex-col items-center mb-8">
-              <img src={logo} alt={t.footer.firmName} className="h-44 w-44 object-contain mb-6" />
-              <span className="text-5xl font-bold block leading-tight text-white" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em" }}>{t.footer.firmName}</span>
-            </div>
-
-            {/* Gold rule */}
-            <div className="w-12 h-px mb-6" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
-
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-10">
-              <span className="text-[14px] font-semibold tracking-[0.35em] uppercase" style={{ color: "#C9A227" }}>{t.hero.badge}</span>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap justify-center gap-3 mb-5">
-              <Link
-                to={localePath("/contact")}
-                className="group inline-flex items-center gap-2.5 px-8 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02]"
-                style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
-              >
-                {t.hero.cta1}
-                <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
-              </Link>
-            </div>
-
-            {/* Microcopy */}
-            <p className="text-xs font-medium tracking-wide" style={{ color: "rgba(255,255,255,0.35)" }}>
-              {t.hero.microcopy}
-            </p>
+        {/* Bottom — gold rule + CTA anchored at desk level */}
+        <div className="container relative z-10 flex flex-col items-center text-center pb-24 md:pb-32">
+          <div className="w-16 h-[2px] mb-8" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
+          <Link
+            to={localePath("/contact")}
+            className="group inline-flex items-center gap-2.5 px-10 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] mb-4"
+            style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
+          >
+            {t.hero.cta1}
+            <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
+          </Link>
+          <p className="text-xs font-medium tracking-wide" style={{ color: "rgba(255,255,255,0.35)" }}>
+            {t.hero.microcopy}
+          </p>
         </div>
       </section>
 
