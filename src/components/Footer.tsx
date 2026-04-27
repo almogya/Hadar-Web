@@ -19,14 +19,11 @@ const Footer = () => {
           {/* Firm Lockup */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-3 mb-5">
-              <img src={logo} alt={t.footer.firmName} className="h-14 w-14 object-contain" />
+              <img src={logo} alt={t.footer.firmName} className="h-20 w-20 object-contain" />
               <div>
-                <h3 className="font-display text-xl font-bold tracking-tight leading-tight">
+                <h3 className="font-display text-2xl font-bold tracking-tight leading-tight">
                   {t.footer.firmName}
                 </h3>
-                <span className="text-[10px] tracking-[0.15em] uppercase opacity-50">
-                  {lang === "he" ? "קניין רוחני · טכנולוגיה · משפט" : "IP · Technology · Law"}
-                </span>
               </div>
             </div>
             <p className="text-sm opacity-60 leading-relaxed mb-6">
