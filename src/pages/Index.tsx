@@ -203,15 +203,6 @@ const Index = () => {
               <span className="text-[14px] font-semibold tracking-[0.35em] uppercase" style={{ color: "#C9A227" }}>{t.hero.badge}</span>
             </div>
 
-            {/* H1 — bigger, shorter */}
-            <h1
-              dir={lang === "he" ? "rtl" : "ltr"}
-              className="font-display font-bold text-white mb-5 leading-[1.05]"
-              style={{ fontSize: "clamp(1.8rem, 3vw + 0.5rem, 3rem)", letterSpacing: "0.01em" }}
-            >
-              {t.hero.h1}
-            </h1>
-
 
             {/* Benefit Bullets */}
             <ul className="space-y-2.5 mb-10">
