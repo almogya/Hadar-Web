@@ -146,11 +146,6 @@ export const he = {
         link: "/practice-areas/copyright-digital-content",
       },
       {
-        title: "דיני טכנולוגיה ואינטרנט",
-        desc: "ליווי משפטי לחברות SaaS, מסחר אלקטרוני ופלטפורמות דיגיטליות—תנאי שימוש, ציות פרטיות, הסכמי עיבוד מידע ועסקאות טכנולוגיה.",
-        link: "/practice-areas/technology-internet-law",
-      },
-      {
         title: "בינה מלאכותית ותוכן דיגיטלי",
         desc: "ניווט בנוף המשפטי של הבינה המלאכותית—בעלות על תוכן שנוצר ב‑AI, ציות בנתוני אימון, מדיניות AI אחראי ומוכנות רגולטורית.",
         link: "/practice-areas/ai-and-law",

@@ -148,11 +148,6 @@ export const en = {
         link: "/practice-areas/copyright-digital-content",
       },
       {
-        title: "Technology & Internet Law",
-        desc: "Legal guidance for SaaS, e-commerce, and digital platforms—terms of service, privacy compliance, data processing agreements, and technology transactions.",
-        link: "/practice-areas/technology-internet-law",
-      },
-      {
         title: "AI & Digital Content Law",
         desc: "Navigating the legal landscape of artificial intelligence—AI-generated content ownership, training data compliance, responsible AI policies, and regulatory preparedness.",
         link: "/practice-areas/ai-and-law",
