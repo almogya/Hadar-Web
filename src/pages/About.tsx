@@ -65,7 +65,7 @@ const About = () => {
 
       {/* Office Image Banner */}
       <section className="relative h-56 md:h-80 overflow-hidden">
-        <img src={officeImg} alt={lang === "he" ? "משרד HY Law Offices, גבעתיים" : "HY Law Offices, Givatayim"} className="w-full h-full object-cover object-[50%_85%]" loading="lazy" />
+        <img src={officeImg} alt={lang === "he" ? "משרד HY Law Offices, גבעתיים" : "HY Law Offices, Givatayim"} className="w-full h-full object-cover object-[50%_65%]" loading="lazy" />
         <div className="absolute inset-0 bg-primary/40" />
       </section>
 
