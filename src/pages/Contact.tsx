@@ -85,8 +85,8 @@ const Contact = () => {
       <section className="py-20">
         <div className="container">
           <div className="grid lg:grid-cols-12 gap-16">
-            {/* Left: Contact Details */}
-            <div className="lg:col-span-5">
+            {/* Contact Details */}
+            <div className="lg:col-span-5 lg:order-2">
               <div className="space-y-10">
                 <div className="flex items-start gap-5">
                   <div className="w-12 h-12 flex items-center justify-center border border-accent/30 shrink-0">
@@ -141,8 +141,8 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Right: Form */}
-            <div className="lg:col-span-7">
+            {/* Form */}
+            <div className="lg:col-span-7 lg:order-1">
               <div className="bg-section-alt p-8 md:p-12 border border-border">
                 {/* Trust strip */}
                 <div className="flex flex-wrap gap-4 mb-8 pb-8 border-b border-border">
