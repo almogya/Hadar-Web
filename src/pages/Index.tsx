@@ -455,7 +455,7 @@ const Index = () => {
             {AUDIENCES.map(({ id, Icon }, i) => {
               const audience = t.audiences.items[i];
               return (
-                <div key={id} className="group p-8 border border-transparent hover:border-border transition-all duration-300">
+                <div key={id} className="group p-8 border border-transparent hover:border-border transition-all duration-300 flex flex-col items-center text-center">
                   <div className="w-12 h-12 mb-6 border border-accent/25 flex items-center justify-center group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300">
                     <Icon className="text-mid-blue group-hover:text-accent transition-colors" size={22} strokeWidth={1.5} aria-hidden="true" />
                   </div>
