@@ -200,7 +200,7 @@ const Index = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 mb-8">
               <span className="w-6 h-px" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
-              <span className="text-[11px] font-semibold tracking-[0.35em] uppercase" style={{ color: "#C9A227" }}>{t.hero.badge}</span>
+              <span className="text-[14px] font-semibold tracking-[0.35em] uppercase" style={{ color: "#C9A227" }}>{t.hero.badge}</span>
             </div>
 
             {/* H1 — bigger, shorter */}
