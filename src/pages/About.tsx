@@ -51,7 +51,7 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { n: lang === "he" ? "ניסיון מוכח" : "Proven Experience", label: lang === "he" ? "במשרדים המובילים בשוק" : "At Top Law Firms", small: true },
-              { n: lang === "he" ? "התנהלות מול החברות הגדולות במשק" : "Dealing with the world's largest companies", label: "Google\nMeta\nAmazon\nועוד", small: true },
+              { n: lang === "he" ? "התנהלות מול החברות הגדולות במשק" : "Dealing with the world's largest companies", label: "Google, Meta, Amazon ועוד", small: true },
               { n: "LL.M", label: lang === "he" ? "דין וטכנולוגיה — אוניברסיטת חיפה" : "Law & Technology — University of Haifa" },
               { n: "24h", label: lang === "he" ? "זמן מענה מרבי" : "Maximum Response Time" },
             ].map((stat) => (
