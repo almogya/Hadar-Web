@@ -136,7 +136,7 @@ const Index = () => {
             {t.hero.cta1}
             <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
           </Link>
-          <p className="text-xs font-medium tracking-wide" style={{ color: "#7ABCD6" }}>
+          <p className="text-xs font-medium tracking-wide" style={{ color: "#4A8BA8" }}>
             {t.hero.microcopy}
           </p>
         </div>
