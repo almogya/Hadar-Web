@@ -48,7 +48,7 @@ const About = () => {
       {/* Stats Strip */}
       <section className="py-8 bg-primary border-y border-primary-foreground/10">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center max-w-3xl mx-auto">
             {[
               { n: lang === "he" ? "ניסיון מוכח" : "Proven Experience", label: lang === "he" ? "במשרדים המובילים בשוק" : "At Top Law Firms", small: true },
               { n: lang === "he" ? "התנהלות מול החברות הגדולות במשק" : "Dealing with the world's largest companies", label: "Google, Meta, Amazon ועוד", small: true },
