@@ -21,7 +21,7 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-5">
               <img src={logo} alt={t.footer.firmName} className="h-20 w-20 object-contain" />
               <div>
-                <h3 className="text-2xl font-bold leading-tight" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.25cm" }}>
+                <h3 className="text-2xl font-bold leading-tight" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em" }}>
                   {t.footer.firmName}
                 </h3>
               </div>
