@@ -376,6 +376,7 @@ export const en = {
       { label: "Privacy Policy", path: "/privacy-policy" },
       { label: "Terms of Use", path: "/terms" },
       { label: "Disclaimer", path: "/disclaimer" },
+      { label: "Accessibility", path: "/accessibility" },
     ],
   },
 

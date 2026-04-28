@@ -358,6 +358,7 @@ export const he = {
       { label: "מדיניות פרטיות", path: "/privacy-policy" },
       { label: "תנאי שימוש", path: "/terms" },
       { label: "הבהרה משפטית", path: "/disclaimer" },
+      { label: "הצהרת נגישות", path: "/accessibility" },
     ],
   },
 

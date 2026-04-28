@@ -46,7 +46,7 @@ const he = {
 - פרופיילינג של יחידים (המלצות, אשראי, עבודה)
 - עיבוד נתוני ילדים
 
-**לגבי AI:** כמעט כל מוצר AI צרכני מחייב DPIA. אם המוצר מייצר פרופיל אישי, מעריך נטיות, ממליץ תוכן, מעניק ציון אשראי, או מחליט על קבלה/דחייה — חובה.
+**לגבי AI:** מוצרי AI רבים נכנסים לסף שמחייב DPIA — בעיקר כאשר הם מייצרים פרופיל אישי, מעריכים נטיות, ממליצים תוכן, מעניקים ציון אשראי, או מחליטים על קבלה/דחייה. הבדיקה תלויה בפרטי העיבוד ובהיקפו — ולכן מומלץ לקבל חוות דעת משפטית ספציפית לפני מסקנה גורפת.
 
 **מה DPIA כולל:** תיאור העיבוד וצרכיו, הערכת הכרחיות ומידתיות, זיהוי סיכוני פרטיות, אמצעי הפחתה מתוכננים, תוצאה: הליך בסיכון מקובל vs. הליך הדורש אישור הרשות.`,
     },
@@ -110,7 +110,7 @@ const he = {
   faq: [
     { q: "האם כל חברת AI חייבת למנות DPO?", a: "לא כולן, אך חברות שמעבדות מידע אישי בהיקף נרחב או מידע רגיש — סביר שכן. הבדיקה היא עניין של פרטי הפעילות הספציפית." },
     { q: "מה ההבדל בין DPO ישראלי ל-DPO אירופי?", a: "הדרישות דומות מאוד. DPO ישראלי לפי תיקון 13 נדרש לאותן כישורים ותפקידים כמו DPO אירופי לפי GDPR. אם חברתך כבר מינתה DPO לצורכי GDPR — ייתכן שהוא עונה גם לדרישות ישראליות, בכפוף לבדיקה." },
-    { q: "האם כלי AI שמשתמש בנתוני לקוחות דורש DPIA?", a: "ככלל — כן. שימוש ב-AI לפרופיילינג, המלצות, ניתוח התנהגות, או עיבוד כמויות גדולות של מידע אישי — כמעט תמיד מחייב DPIA." },
+    { q: "האם כלי AI שמשתמש בנתוני לקוחות דורש DPIA?", a: "לא בהכרח — הבדיקה תלויה באופי העיבוד, בהיקפו ובמידת הסיכון לפרטיות. שימוש ב-AI לפרופיילינג, המלצות מותאמות אישית, ניתוח התנהגות בהיקף נרחב, או עיבוד מידע רגיש — מגדיל מאוד את הסבירות שיידרש DPIA. מומלץ לבחון את הסיכון לפי הנסיבות הספציפיות עם ייעוץ משפטי." },
     { q: "מה קורה אם מתגלה פרצת מידע?", a: "על-פי תיקון 13, יש חובת דיווח לרשות להגנת הפרטיות תוך 72 שעות מרגע הגילוי. פרצה מהותית עשויה גם לחייב הודעה לנפגעים." },
     { q: "Synthetic Data — מספיק להחשב כאנונימי?", a: "תלוי באיכות הגנרציה ובמידת 'הזרימה' של מידע מקורי לנתונים הסינתטיים. יש מחקרים שמראים שניתן לשחזר מידע אמיתי מנתונים סינתטיים. ייעוץ טכני-משפטי מומלץ לפני הסתמכות על Synthetic Data כפתרון ציות." },
   ],
@@ -165,7 +165,7 @@ const en = {
 - Profiling of individuals (recommendations, credit, employment)
 - Processing of children's data
 
-**For AI:** Almost every consumer-facing AI product requires a DPIA. If your product generates personal profiles, assesses predispositions, recommends content, assigns credit scores, or makes accept/reject decisions — a DPIA is mandatory.
+**For AI:** Many AI products cross the threshold that triggers a DPIA obligation — particularly when they generate personal profiles, assess predispositions, recommend content, assign credit scores, or make accept/reject decisions. The analysis depends on the nature and scale of the processing. Legal advice specific to your product is strongly recommended before drawing a blanket conclusion.
 
 **What a DPIA includes:** Description of processing and its purposes; necessity and proportionality assessment; identification of privacy risks; planned mitigation measures; outcome: acceptable-risk process vs. process requiring authority approval.`,
     },
@@ -229,7 +229,7 @@ const en = {
   faq: [
     { q: "Must every AI company appoint a DPO?", a: "Not all of them, but companies that process personal data at significant scale or sensitive data — likely yes. The analysis depends on the specifics of your actual activity." },
     { q: "What is the difference between an Israeli DPO and a European DPO?", a: "The requirements are very similar. An Israeli DPO under Amendment 13 requires the same skills and functions as a European DPO under GDPR. If your company has already appointed a DPO for GDPR purposes — they may also meet Israeli requirements, subject to review." },
-    { q: "Does an AI tool that uses customer data require a DPIA?", a: "Generally — yes. Using AI for profiling, recommendations, behavioural analysis, or large-scale personal data processing — almost always requires a DPIA." },
+    { q: "Does an AI tool that uses customer data require a DPIA?", a: "Not necessarily — the analysis depends on the nature, scale, and risk level of the processing. AI used for profiling, personalised recommendations, large-scale behavioural analysis, or processing of sensitive data significantly increases the likelihood that a DPIA will be required. A case-specific legal assessment is recommended before drawing a blanket conclusion." },
     { q: "What happens if a data breach is discovered?", a: "Under Amendment 13, there is an obligation to notify the Privacy Protection Authority within 72 hours of discovery. A material breach may also require notifying the affected individuals." },
     { q: "Is Synthetic Data sufficient to be considered anonymous?", a: "It depends on the quality of generation and the degree to which original data 'flows' into the synthetic data. Research shows that real data can sometimes be recovered from synthetic datasets. Technical-legal advice is recommended before relying on synthetic data as a compliance solution." },
   ],
