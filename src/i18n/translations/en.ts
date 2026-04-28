@@ -30,7 +30,7 @@ export const en = {
 
   trust: {
     items: [
-      { title: "Israel Bar Association", sub: "Licensed Attorney" },
+      { title: "Israel Bar Association", sub: "Licensed Attorney · Admitted 2023" },
       { title: "LL.M. Law & Technology", sub: "University of Haifa" },
       { title: "Google, Meta & Amazon", sub: "Global Platform Experience" },
       { title: "24-Hour Response", sub: "Personal Direct Service" },
@@ -306,6 +306,7 @@ export const en = {
     milestones: [
       { title: "LL.B — Academic Center of Law and Business", desc: "Bachelor of Laws" },
       { title: "LL.M in Law & Technology — University of Haifa", desc: "Postgraduate specialisation in the legal implications of artificial intelligence in the field of law" },
+      { title: "Israel Bar Association — Licensed 2023", desc: "Member in good standing, Israel Bar Association" },
       { title: "Guy Ophir Law Office — Litigation", desc: "Defamation, copyright infringement, internet law, and privacy proceedings" },
       { title: "Tony Greenman & Co.", desc: "Intellectual property, contracts, and digital media advisory" },
     ],

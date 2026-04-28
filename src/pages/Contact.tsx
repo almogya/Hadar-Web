@@ -268,6 +268,15 @@ const Contact = () => {
                     />
                   </div>
 
+                  {/* Section 11 inline privacy notice */}
+                  <div className="text-xs text-muted-foreground leading-relaxed p-4 border border-border bg-background space-y-1.5">
+                    <p className="font-semibold text-foreground">{lang === "he" ? "הודעת פרטיות (סעיף 11)" : "Privacy Notice"}</p>
+                    <p>{lang === "he"
+                      ? "בעל מאגר המידע: עו\"ד הדר יצקן, ויצמן 46, גבעתיים. מסירת השם והדוא\"ל נדרשת למענה לפנייה; שאר השדות רצוניים. המידע ישמש אך ורק לטיפול בפנייתכם ולמתן שירותים משפטיים. המידע מועבר לשרת FormSubmit.co לצורך משלוח. יש לכם זכות לעיין, לתקן ולמחוק את המידע — פנו ל: Hadar@ai-lawyer.co.il."
+                      : "Data controller: Hadar Yatzkan, 46 Weizmann St., Givatayim, Israel. Name and email are required to respond; all other fields are optional. Information is used solely to handle your inquiry and provide legal services. Submissions are routed via FormSubmit.co. You have the right to access, correct, and delete your data — contact Hadar@ai-lawyer.co.il."
+                    }</p>
+                  </div>
+
                   <div className="flex items-start gap-3">
                     <input
                       id="consent"
