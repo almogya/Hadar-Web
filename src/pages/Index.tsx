@@ -155,7 +155,7 @@ const Index = () => {
             {t.trust.items.map((item) => (
               <div key={item.title} className="text-center py-1">
                 <p className="text-sm font-semibold text-primary-foreground tracking-wide">{item.title}</p>
-                <p className="text-xs text-primary-foreground/45 mt-0.5">{item.sub}</p>
+                {item.sub && <p className="text-xs text-primary-foreground/45 mt-0.5">{item.sub}</p>}
               </div>
             ))}
           </div>
