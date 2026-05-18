@@ -130,7 +130,8 @@ const Index = () => {
           <h2 className="font-display font-bold mb-0 leading-snug max-w-2xl"
             style={{ fontSize: "clamp(1.35rem, 3.2vw, 2.2rem)", color: "#C9A227", textShadow: "0 2px 16px rgba(0,0,0,0.5)" }}>
             {lang === "he" ? (
-              <>לשון הרע<br />קניין רוחני<br />אינטרנט וחסימת משתמשים ברשתות חברתיות</>
+              <>עורך דין ללשון הרע, קניין רוחני ודיני אינטרנט</>
+
             ) : (
               <>Business Page & Profile Reinstatement<br />on Social Networks</>
             )}
