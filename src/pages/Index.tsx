@@ -130,7 +130,7 @@ const Index = () => {
           {(lang === "he"
             ? [
                 { label: "לשון הרע",    desc: "ניהול תביעות וסכסוכי לשון הרע והוצאת דיבה", pos: "33%" },
-                { label: "אינטרנט",     desc: "שחרור חסימת דפים עסקיים ופרופילים ברשתות החברתיות", pos: "47%" },
+                { label: "אינטרנט",     desc: <>שחרור חסימת דפים עסקיים<br />ופרופילים ברשתות החברתיות</>, pos: "47%" },
                 { label: "קניין רוחני", desc: "רישום סימני מסחר, זכויות יוצרים ומדיה", pos: "59%" },
               ]
             : [
@@ -152,8 +152,8 @@ const Index = () => {
               </span>
               <div style={{ width: 32, height: 2, backgroundColor: "#C9A227", opacity: 0.7 }} />
               <span
-                className="whitespace-nowrap text-center"
-                style={{ fontSize: "clamp(0.65rem, 1.1vw, 0.85rem)", color: "rgba(255,255,255,0.85)", textShadow: "0 1px 8px rgba(0,0,0,0.8)" }}
+                className="text-center"
+                style={{ fontSize: "clamp(0.65rem, 1.1vw, 0.85rem)", color: "#2B5DAA", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}
               >
                 {desc}
               </span>
