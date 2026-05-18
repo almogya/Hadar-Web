@@ -131,7 +131,7 @@ const Index = () => {
             ? [
                 { label: "לשון הרע",   pos: "33%" },
                 { label: "אינטרנט",    pos: "47%" },
-                { label: "קניין רוחני", pos: "57%" },
+                { label: "קניין רוחני", pos: "59%" },
               ]
             : [
                 { label: "Defamation Law",        pos: "33%" },
