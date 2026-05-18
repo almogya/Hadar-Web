@@ -129,9 +129,11 @@ const Index = () => {
         <div className="absolute bottom-[4%] left-0 right-0 z-10 flex flex-col items-center text-center px-4">
           <h2 className="font-display font-bold mb-6 leading-snug max-w-2xl"
             style={{ fontSize: "clamp(1.35rem, 3.2vw, 2.2rem)", color: "#C9A227", textShadow: "0 2px 16px rgba(0,0,0,0.5)" }}>
-            {lang === "he"
-              ? "שחרור חסימת דפים עסקיים ופרופילים ברשתות חברתיות"
-              : "Business Page & Profile Reinstatement on Social Networks"}
+            {lang === "he" ? (
+              <>שחרור חסימת דפים עסקיים<br />ופרופילים ברשתות חברתיות</>
+            ) : (
+              <>Business Page & Profile Reinstatement<br />on Social Networks</>
+            )}
           </h2>
           <div className="w-16 h-[2px] mb-8" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
           <Link
