@@ -4,24 +4,24 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 const items = {
   en: [
-    "Account reinstatement appeals to Google, Meta, Amazon and others",
-    "Legal representation in platform disputes and policy enforcement",
+    "Reinstatement of blocked business pages on Google, Facebook, Instagram and Amazon",
+    "Reinstatement of personal profiles suspended on social networks",
+    "Legal appeals for account suspension by Google, Meta, Amazon and others",
     "Strategic response to Terms of Service violations and bans",
+    "Representation against automated content moderation decisions",
     "DMCA counter-notices for wrongful content removal",
     "Identifying legal grounds and precedents for reinstatement",
-    "Cross-platform account recovery strategy",
-    "Representation against automated content moderation decisions",
-    "Preserving digital business assets and advertising accounts",
+    "Preserving digital assets and advertising accounts",
   ],
   he: [
+    "שחרור חסימת דפים עסקיים בגוגל, פייסבוק, אינסטגרם ואמזון",
+    "שחרור חסימת פרופילים אישיים ברשתות חברתיות",
     "ערעורים לשחזור חשבונות בגוגל, מטא, אמזון ואחרים",
-    "ייצוג משפטי בסכסוכי פלטפורמה ואכיפת מדיניות",
     "מענה אסטרטגי להפרות תנאי שימוש וחסימות",
+    "ייצוג מול החלטות מודרציה אוטומטיות של תוכן",
     "הגשת מכתבי נגד-DMCA על הסרת תוכן שגויה",
     "זיהוי עילות משפטיות ותקדימים לשחזור החשבון",
-    "אסטרטגיית שחזור חשבונות מרובת פלטפורמות",
-    "ייצוג מול החלטות מודרציה אוטומטיות של תוכן",
-    "שמירה על נכסים עסקיים דיגיטליים וחשבונות פרסום",
+    "שמירה על נכסים דיגיטליים וחשבונות פרסום",
   ],
 };
 
@@ -32,16 +32,16 @@ const UserBlocking = () => {
   return (
     <PracticeAreaLayout
       icon={UserX}
-      title="User Blocking & Account Suspension"
-      titleHe="חסימת משתמשים"
-      intro="Having an account suspended or blocked by Google, Meta, Amazon or another major platform can bring a business to a halt overnight. With direct experience handling such cases against the world's largest tech companies, we provide strategic legal representation to restore your digital presence and protect your rights."
-      introHe="השעיה או חסימה של חשבון בגוגל, מטא, אמזון או פלטפורמה מובילה אחרת עלולה לעצור עסק בין לילה. עם ניסיון ישיר בטיפול בתיקים כאלה מול חברות הטכנולוגיה הגדולות בעולם, אנו מספקים ייצוג משפטי אסטרטגי לשחזור הנוכחות הדיגיטלית שלכם ולהגנה על זכויותיכם."
-      seoTitle="Account Suspension & User Blocking Lawyer Israel | Google, Meta, Amazon | HY Law"
-      seoTitleHe="עורך דין חסימת משתמשים ישראל | גוגל, מטא, אמזון | HY Law"
-      seoDesc="Legal representation for account suspension and user blocking by major platforms. Direct experience with Google, Meta, and Amazon appeals and reinstatement strategy."
-      seoDescHe="ייצוג משפטי בחסימת משתמשים והשעיית חשבונות בפלטפורמות מובילות. ניסיון ישיר עם ערעורים ואסטרטגיית שחזור מול גוגל, מטא ואמזון."
-      ctaTitle="Restore Your Account — Act Fast"
-      ctaTitleHe="לשחזור החשבון — יש לפעול במהירות"
+      title="Business Page & Profile Blocking — Social Networks"
+      titleHe="חסימת דפים עסקיים ופרופילים ברשתות חברתיות"
+      intro="Whether your business page on Google, Meta or Amazon was suspended, or your personal profile was blocked without explanation — I handle the legal process to get you reinstated. I have direct experience dealing with the world's largest tech platforms, and I know how to build the right appeal strategy for each case."
+      introHe="בין אם דפכם העסקי בגוגל, מטא או אמזון הושעה, ובין אם פרופיל אישי נחסם ללא הסבר — אני מטפל בהליך המשפטי להחזרתכם לפעילות. יש לי ניסיון ישיר מול ענקיות הטכנולוגיה הגדולות בעולם, ואני יודע כיצד לבנות את אסטרטגיית הערעור הנכונה לכל מקרה."
+      seoTitle="Business Page & Profile Reinstatement Lawyer Israel | Google, Meta, Amazon | HY Law"
+      seoTitleHe="עורך דין לשחרור חסימת דפים עסקיים ופרופילים | גוגל, מטא, אמזון | HY Law"
+      seoDesc="Legal representation for blocked business pages and personal profiles on Google, Meta, Instagram and Amazon. Direct experience with appeals and reinstatement strategy."
+      seoDescHe="ייצוג משפטי בחסימת דפים עסקיים ופרופילים אישיים בגוגל, מטא, אינסטגרם ואמזון. ניסיון ישיר עם ערעורים ואסטרטגיית שחרור חסימה."
+      ctaTitle="Unblock Your Page — Act Fast"
+      ctaTitleHe="לשחרור החסימה — יש לפעול במהירות"
       relatedLinks={[
         { path: "/practice-areas/internet-defamation", labelEn: "Internet Defamation", labelHe: "לשון הרע באינטרנט" },
         { path: "/practice-areas/technology-internet-law", labelEn: "Technology & Internet Law", labelHe: "דיני טכנולוגיה ואינטרנט" },
