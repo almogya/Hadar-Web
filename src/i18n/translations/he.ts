@@ -196,7 +196,7 @@ export const he = {
   },
 
   insights: {
-    badge: "מרכז ידע",
+    badge: "מרכז הידע",
     heading: "מאמרים נבחרים",
     articles: [
       { title: "הפרת זכויות יוצרים ואקו״ם — מה חשוב לדעת", category: "זכויות יוצרים", link: "/insights/ai-copyright-israel" },
@@ -361,7 +361,7 @@ export const he = {
   },
 
   insightsPage: {
-    badge: "מרכז ידע",
+    badge: "מרכז הידע",
     h1: "מאמרים ומדריכים משפטיים",
     sub: "המאמרים באתר זה נעשו בשיתוף כלי AI, אין לראות בהם המלצה לפעולה או מידע משפטי מאומת אלא המאמרים הם להעשרת הידע בלבד.",
     filterAll: "הכל",
