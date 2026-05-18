@@ -216,7 +216,7 @@ const Index = () => {
       <section className="py-10 border-y border-border bg-background">
         <div className="container flex flex-wrap items-center justify-between gap-5">
           <p className="text-lg font-display font-semibold text-foreground">
-            {lang === "he" ? "זקוק לייעוץ בתחום הקניין הרוחני?" : "Need IP or technology legal advice?"}
+            {lang === "he" ? "העסק נחסם? את צריך עו\"ד שיכול להתנהל מול ענקיות הטכנולוגיה!" : "Business blocked? You need an attorney who can handle Big Tech."}
           </p>
           <Link
             to={localePath("/contact")}
