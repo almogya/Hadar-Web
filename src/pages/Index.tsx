@@ -151,7 +151,7 @@ const Index = () => {
       {/* ── Trust Bar ── */}
       <section className="py-5 bg-primary border-b border-primary-foreground/10">
         <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-12">
             {t.trust.items.map((item) => (
               <div key={item.title} className="text-center py-1">
                 <p className="text-sm font-semibold text-primary-foreground tracking-wide">{item.title}</p>
