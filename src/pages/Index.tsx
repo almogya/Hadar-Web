@@ -203,7 +203,7 @@ const Index = () => {
               {t.practiceSection.viewAll} <DirectionalIcon size={13} />
             </Link>
             <p className="text-xs text-muted-foreground hidden md:block">
-              {lang === "he" ? "מענה תוך 24 שעות" : "Reply within 24 hours"}
+              {lang === "he" ? "מענה מיידי" : "Reply within 24 hours"}
             </p>
           </div>
         </div>
