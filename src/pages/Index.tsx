@@ -130,7 +130,7 @@ const Index = () => {
           <h2 className="font-display font-bold mb-6 leading-snug max-w-2xl"
             style={{ fontSize: "clamp(1.35rem, 3.2vw, 2.2rem)", color: "#C9A227", textShadow: "0 2px 16px rgba(0,0,0,0.5)" }}>
             {lang === "he" ? (
-              <>שחרור חסימת דפים עסקיים<br />ופרופילים ברשתות חברתיות</>
+              <>עורך דין לשחרור חסימת דפים עסקיים<br />ופרופילים ברשתות חברתיות</>
             ) : (
               <>Business Page & Profile Reinstatement<br />on Social Networks</>
             )}
