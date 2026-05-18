@@ -125,20 +125,20 @@ const Index = () => {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
-        {/* Heading — mobile: absolute positioning per window, no descriptions */}
+        {/* Heading — mobile: absolute positioning per window, with descriptions */}
         <div className="md:hidden absolute top-[28%] left-0 right-0 z-10">
           {(lang === "he"
             ? [
-                { label: "לשון הרע",    pos: "75%" },
-                { label: "אינטרנט",     pos: "42%" },
-                { label: "קניין רוחני", pos: "14%" },
+                { label: "לשון הרע",    desc: "הגשת תביעות לשון הרע",       pos: "75%" },
+                { label: "אינטרנט",     desc: "חסימת משתמשים",               pos: "42%" },
+                { label: "קניין רוחני", desc: "סימני מסחר וזכויות יוצרים",   pos: "14%" },
               ]
             : [
-                { label: "Defamation", pos: "78%" },
-                { label: "Internet",   pos: "47%" },
-                { label: "IP",         pos: "14%" },
+                { label: "Defamation", desc: "Defamation claims & lawsuits",  pos: "75%" },
+                { label: "Internet",   desc: "User & page blocking",          pos: "42%" },
+                { label: "IP",         desc: "Trademarks & copyrights",       pos: "14%" },
               ]
-          ).map(({ label, pos }) => (
+          ).map(({ label, desc, pos }) => (
             <div key={label} className="absolute flex flex-col items-center gap-1.5"
               style={{ left: pos, transform: "translateX(-50%)" }}>
               <span className="font-display font-bold text-center whitespace-nowrap"
@@ -146,6 +146,10 @@ const Index = () => {
                 {label}
               </span>
               <div style={{ width: 20, height: 2, backgroundColor: "#C9A227", opacity: 0.7 }} />
+              <span className="text-center whitespace-nowrap"
+                style={{ fontSize: "clamp(0.6rem, 2.5vw, 0.75rem)", color: "#C8E6FA", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
+                {desc}
+              </span>
             </div>
           ))}
         </div>
