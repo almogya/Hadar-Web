@@ -117,7 +117,7 @@ const Index = () => {
       />
 
       {/* ── HERO ── */}
-      <section className="relative h-[94vh] overflow-hidden">
+      <section className="relative h-[94svh] md:h-[94vh] overflow-hidden">
         {/* Office background image */}
         <img src={officeImg} alt="" className="absolute inset-0 w-full h-full object-cover md:object-center object-[65%_center]" aria-hidden="true" />
         {/* Dark overlay */}
