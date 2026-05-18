@@ -126,7 +126,7 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
         {/* Heading — mobile: flex row, no descriptions */}
-        <div className="md:hidden absolute top-[22%] left-0 right-0 z-10 flex justify-around px-4">
+        <div className="md:hidden absolute top-[32%] left-0 right-0 z-10 flex justify-around px-4">
           {(lang === "he"
             ? ["לשון הרע", "אינטרנט", "קניין רוחני"]
             : ["Defamation", "Internet", "IP"]
