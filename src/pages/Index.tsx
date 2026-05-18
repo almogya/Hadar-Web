@@ -126,7 +126,7 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
         {/* Heading — three windows */}
-        <div className="absolute top-[14%] left-0 right-0 z-10 grid grid-cols-3 px-6 md:px-16">
+        <div className="absolute top-[14%] left-0 right-0 z-10 grid grid-cols-3 px-[8%] md:px-[10%]">
           {(lang === "he"
             ? ["לשון הרע", "קניין רוחני", "אינטרנט"]
             : ["Defamation Law", "Intellectual Property", "Internet Law"]
