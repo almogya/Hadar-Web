@@ -129,7 +129,7 @@ const Index = () => {
         <div className="md:hidden absolute top-[28%] left-0 right-0 z-10">
           {(lang === "he"
             ? [
-                { label: "לשון הרע",    desc: "הגשת תביעות לשון הרע",       pos: "70%" },
+                { label: "לשון הרע",    desc: "הגשת תביעות לשון הרע",       pos: "90%" },
                 { label: "אינטרנט",     desc: "חסימת משתמשים",               pos: "50%" },
                 { label: "קניין רוחני", desc: "רישום סימני מסחר",             pos: "16%" },
               ]
