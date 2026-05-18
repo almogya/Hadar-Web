@@ -125,13 +125,22 @@ const Index = () => {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
-        {/* Heading — mobile: flex row, no descriptions */}
-        <div className="md:hidden absolute top-[28%] left-0 right-0 z-10 flex justify-around px-4">
+        {/* Heading — mobile: absolute positioning per window, no descriptions */}
+        <div className="md:hidden absolute top-[28%] left-0 right-0 z-10">
           {(lang === "he"
-            ? ["לשון הרע", "אינטרנט", "קניין רוחני"]
-            : ["Defamation", "Internet", "IP"]
-          ).map((label) => (
-            <div key={label} className="flex flex-col items-center gap-1.5">
+            ? [
+                { label: "לשון הרע",    pos: "78%" },
+                { label: "אינטרנט",     pos: "47%" },
+                { label: "קניין רוחני", pos: "14%" },
+              ]
+            : [
+                { label: "Defamation", pos: "78%" },
+                { label: "Internet",   pos: "47%" },
+                { label: "IP",         pos: "14%" },
+              ]
+          ).map(({ label, pos }) => (
+            <div key={label} className="absolute flex flex-col items-center gap-1.5"
+              style={{ left: pos, transform: "translateX(-50%)" }}>
               <span className="font-display font-bold text-center whitespace-nowrap"
                 style={{ fontSize: "clamp(0.85rem, 3.5vw, 1.1rem)", color: "#C9A227", textShadow: "0 2px 16px rgba(0,0,0,0.7)" }}>
                 {label}
