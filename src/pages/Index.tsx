@@ -125,17 +125,22 @@ const Index = () => {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
-        {/* Heading — top */}
-        <div className="absolute top-[18%] left-0 right-0 z-10 flex flex-col items-center text-center px-4">
-          <h2 className="font-display font-bold mb-0 leading-snug max-w-2xl"
-            style={{ fontSize: "clamp(1.35rem, 3.2vw, 2.2rem)", color: "#C9A227", textShadow: "0 2px 16px rgba(0,0,0,0.5)" }}>
-            {lang === "he" ? (
-              <>עורך דין ללשון הרע, קניין רוחני ודיני אינטרנט</>
-
-            ) : (
-              <>Business Page & Profile Reinstatement<br />on Social Networks</>
-            )}
-          </h2>
+        {/* Heading — three windows */}
+        <div className="absolute top-[14%] left-0 right-0 z-10 grid grid-cols-3 px-6 md:px-16">
+          {(lang === "he"
+            ? ["לשון הרע", "קניין רוחני", "אינטרנט"]
+            : ["Defamation Law", "Intellectual Property", "Internet Law"]
+          ).map((label) => (
+            <div key={label} className="flex flex-col items-center text-center gap-2">
+              <span
+                className="font-display font-bold leading-tight"
+                style={{ fontSize: "clamp(1.1rem, 2.4vw, 1.9rem)", color: "#C9A227", textShadow: "0 2px 20px rgba(0,0,0,0.7)" }}
+              >
+                {label}
+              </span>
+              <div className="w-8 h-[2px]" style={{ backgroundColor: "#C9A227", opacity: 0.7 }} />
+            </div>
+          ))}
         </div>
 
         {/* CTA — bottom */}
