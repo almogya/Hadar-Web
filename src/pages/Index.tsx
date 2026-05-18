@@ -126,7 +126,13 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
         {/* Gold rule + CTA — absolutely positioned at desk level */}
-        <div className="absolute bottom-[6%] left-0 right-0 z-10 flex flex-col items-center text-center">
+        <div className="absolute bottom-[4%] left-0 right-0 z-10 flex flex-col items-center text-center px-4">
+          <h2 className="font-display font-bold text-white mb-6 leading-snug max-w-2xl"
+            style={{ fontSize: "clamp(1.35rem, 3.2vw, 2.2rem)", textShadow: "0 2px 12px rgba(0,0,0,0.45)" }}>
+            {lang === "he"
+              ? "שחרור חסימת דפים עסקיים ופרופילים ברשתות חברתיות"
+              : "Business Page & Profile Reinstatement on Social Networks"}
+          </h2>
           <div className="w-16 h-[2px] mb-8" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
           <Link
             to={localePath("/contact")}
