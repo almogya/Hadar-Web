@@ -178,7 +178,7 @@ export const he = {
   },
 
   process: {
-    badge: "התהליך שלי",
+    badge: "איך אנחנו עובדים",
     heading: "שלבי הטיפול של המשרד",
     steps: [
       {
