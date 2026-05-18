@@ -223,7 +223,7 @@ const Index = () => {
             className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold tracking-wide transition-all duration-200 hover:opacity-90"
             style={{ backgroundColor: "#0B1F3A", color: "#ffffff" }}
           >
-            {t.hero.cta1} <DirectionalIcon size={14} />
+            {lang === "he" ? "לקביעת פגישת ייעוץ" : "Schedule a Consultation"} <DirectionalIcon size={14} />
           </Link>
         </div>
       </section>
