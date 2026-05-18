@@ -445,7 +445,7 @@ const Index = () => {
           >
             {t.ctaSection.cta1} <DirectionalIcon size={16} />
           </Link>
-          <p className="mt-5 text-xs" style={{ color: "rgba(255,255,255,0.30)" }}>{t.hero.microcopy}</p>
+
         </div>
       </section>
 
