@@ -129,7 +129,7 @@ const Index = () => {
         <div className="md:hidden absolute top-[28%] left-0 right-0 z-10">
           {(lang === "he"
             ? [
-                { label: "לשון הרע",    pos: "78%" },
+                { label: "לשון הרע",    pos: "75%" },
                 { label: "אינטרנט",     pos: "42%" },
                 { label: "קניין רוחני", pos: "14%" },
               ]
