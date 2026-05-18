@@ -131,7 +131,7 @@ const Index = () => {
             ? [
                 { label: "לשון הרע",    desc: "הגשת תביעות לשון הרע",       pos: "75%" },
                 { label: "אינטרנט",     desc: "חסימת משתמשים",               pos: "42%" },
-                { label: "קניין רוחני", desc: "סימני מסחר וזכויות יוצרים",   pos: "14%" },
+                { label: "קניין רוחני", desc: "רישום סימני מסחר",             pos: "14%" },
               ]
             : [
                 { label: "Defamation", desc: "Defamation claims & lawsuits",  pos: "75%" },
