@@ -210,7 +210,7 @@ const Index = () => {
       <section className="py-10 border-y border-border bg-background">
         <div className="container flex flex-wrap items-center justify-between gap-5">
           <p className="text-lg font-display font-semibold text-foreground">
-            {lang === "he" ? "העסק נחסם? אתם צריכים עו\"ד שיודע להתנהל מול ענקיות הטכנולוגיה!" : "Business blocked? You need an attorney who knows how to handle Big Tech!"}
+            {lang === "he" ? "העסק בגוגל נחסם ואין עם מי לדבר? מטא סגרו לכם את הפרופיל באינסטגרם?" : "Google blocked your business with no one to talk to? Meta shut down your Instagram profile?"}
           </p>
           <Link
             to={localePath("/contact")}
