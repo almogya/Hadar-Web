@@ -181,18 +181,12 @@ const Index = () => {
                 <Link
                   to={localePath(area.link)}
                   key={area.title}
-                  className="group bg-section-alt p-10 hover:bg-background transition-all duration-300 flex flex-col items-center text-center"
+                  className="group bg-section-alt p-8 hover:bg-background transition-all duration-300 flex flex-col items-center text-center"
                 >
-                  <Icon className="text-mid-blue mb-5" size={24} strokeWidth={1.5} aria-hidden="true" />
-                  <h3 className="font-display text-base font-semibold text-foreground mb-2.5 group-hover:text-mid-blue transition-colors">
+                  <Icon className="text-mid-blue mb-4" size={24} strokeWidth={1.5} aria-hidden="true" />
+                  <h3 className="font-display text-base font-semibold text-foreground group-hover:text-mid-blue transition-colors">
                     {area.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                    {area.desc}
-                  </p>
-                  <span className="mt-5 inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-accent tracking-wide group-hover:gap-2.5 transition-all">
-                    {lang === "he" ? "למידע נוסף" : "Learn More"} <DirectionalIcon size={11} />
-                  </span>
                 </Link>
               );
             })}
