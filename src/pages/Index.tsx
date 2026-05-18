@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, Download, MessageSquareX, ScrollText, Eye, UserX } from "lucide-react";
+import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, Download, MessageSquareX, ScrollText, Eye, UserX, Camera } from "lucide-react";
 import logo from "@/assets/logo.png";
 import officeImg from "@/assets/hero-office.jpg";
 import Layout from "@/components/Layout";
@@ -39,7 +39,7 @@ const PROCESS_STEPS = [
 const AUDIENCES = [
   { id: "startups",  Icon: Briefcase },
   { id: "brands",    Icon: Shield },
-  { id: "creators",  Icon: FileText },
+  { id: "creators",  Icon: Camera },
 ] as const;
 
 /** Stable how-I-help icons */
