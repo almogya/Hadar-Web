@@ -129,16 +129,16 @@ const Index = () => {
         <div className="absolute top-[14%] left-0 right-0 z-10">
           {(lang === "he"
             ? [
-                { label: "לשון הרע",   pos: "33%" },
-                { label: "אינטרנט",    pos: "47%" },
-                { label: "קניין רוחני", pos: "59%" },
+                { label: "לשון הרע",    desc: "ניהול תביעות וסכסוכי לשון הרע והוצאת דיבה", pos: "33%" },
+                { label: "אינטרנט",     desc: "שחרור חסימת דפים עסקיים ופרופילים ברשתות החברתיות", pos: "47%" },
+                { label: "קניין רוחני", desc: "רישום סימני מסחר, זכויות יוצרים ומדיה", pos: "59%" },
               ]
             : [
-                { label: "Defamation Law",        pos: "33%" },
-                { label: "Internet Law",          pos: "43%" },
-                { label: "Intellectual Property", pos: "67%" },
+                { label: "Defamation Law",        desc: "Defamation and libel claims and disputes", pos: "33%" },
+                { label: "Internet Law",          desc: "Business page & profile unblocking on social networks", pos: "47%" },
+                { label: "Intellectual Property", desc: "Trademark registration, copyright and media", pos: "59%" },
               ]
-          ).map(({ label, pos }) => (
+          ).map(({ label, desc, pos }) => (
             <div
               key={label}
               className="absolute flex flex-col items-center gap-2"
@@ -151,6 +151,12 @@ const Index = () => {
                 {label}
               </span>
               <div style={{ width: 32, height: 2, backgroundColor: "#C9A227", opacity: 0.7 }} />
+              <span
+                className="whitespace-nowrap text-center"
+                style={{ fontSize: "clamp(0.65rem, 1.1vw, 0.85rem)", color: "rgba(255,255,255,0.85)", textShadow: "0 1px 8px rgba(0,0,0,0.8)" }}
+              >
+                {desc}
+              </span>
             </div>
           ))}
         </div>
