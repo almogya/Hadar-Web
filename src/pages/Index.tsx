@@ -126,19 +126,31 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
         {/* Heading — three windows */}
-        <div className="absolute top-[14%] left-0 right-0 z-10 grid grid-cols-3 px-[8%] md:px-[10%]" dir="ltr">
+        <div className="absolute top-[14%] left-0 right-0 z-10">
           {(lang === "he"
-            ? ["אינטרנט", "קניין רוחני", "לשון הרע"]
-            : ["Internet Law", "Intellectual Property", "Defamation Law"]
-          ).map((label) => (
-            <div key={label} className="flex flex-col items-center text-center gap-2">
+            ? [
+                { label: "אינטרנט",    pos: "21%" },
+                { label: "קניין רוחני", pos: "50%" },
+                { label: "לשון הרע",   pos: "79%" },
+              ]
+            : [
+                { label: "Internet Law",          pos: "21%" },
+                { label: "Intellectual Property", pos: "50%" },
+                { label: "Defamation Law",        pos: "79%" },
+              ]
+          ).map(({ label, pos }) => (
+            <div
+              key={label}
+              className="absolute flex flex-col items-center gap-2"
+              style={{ left: pos, transform: "translateX(-50%)" }}
+            >
               <span
-                className="font-display font-bold leading-tight"
+                className="font-display font-bold whitespace-nowrap"
                 style={{ fontSize: "clamp(1.1rem, 2.4vw, 1.9rem)", color: "#C9A227", textShadow: "0 2px 20px rgba(0,0,0,0.7)" }}
               >
                 {label}
               </span>
-              <div className="w-8 h-[2px]" style={{ backgroundColor: "#C9A227", opacity: 0.7 }} />
+              <div style={{ width: 32, height: 2, backgroundColor: "#C9A227", opacity: 0.7 }} />
             </div>
           ))}
         </div>
