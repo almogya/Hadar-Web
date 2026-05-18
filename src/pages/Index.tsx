@@ -129,14 +129,14 @@ const Index = () => {
         <div className="absolute top-[14%] left-0 right-0 z-10">
           {(lang === "he"
             ? [
-                { label: "לשון הרע",   pos: "28%" },
+                { label: "לשון הרע",   pos: "33%" },
                 { label: "אינטרנט",    pos: "50%" },
-                { label: "קניין רוחני", pos: "72%" },
+                { label: "קניין רוחני", pos: "67%" },
               ]
             : [
-                { label: "Defamation Law",        pos: "28%" },
+                { label: "Defamation Law",        pos: "33%" },
                 { label: "Internet Law",          pos: "50%" },
-                { label: "Intellectual Property", pos: "72%" },
+                { label: "Intellectual Property", pos: "67%" },
               ]
           ).map(({ label, pos }) => (
             <div
