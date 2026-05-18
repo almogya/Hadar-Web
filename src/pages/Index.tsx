@@ -153,7 +153,7 @@ const Index = () => {
               <div style={{ width: 32, height: 2, backgroundColor: "#C9A227", opacity: 0.7 }} />
               <span
                 className="text-center"
-                style={{ fontSize: "clamp(0.65rem, 1.1vw, 0.85rem)", color: "#2B5DAA", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}
+                style={{ fontSize: "clamp(0.65rem, 1.1vw, 0.85rem)", color: "#C8E6FA", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}
               >
                 {desc}
               </span>
