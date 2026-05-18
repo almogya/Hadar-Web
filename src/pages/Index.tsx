@@ -125,8 +125,24 @@ const Index = () => {
         {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
 
-        {/* Heading — three windows */}
-        <div className="absolute top-[14%] left-0 right-0 z-10">
+        {/* Heading — mobile: flex row, no descriptions */}
+        <div className="md:hidden absolute top-[10%] left-0 right-0 z-10 flex justify-around px-4">
+          {(lang === "he"
+            ? ["לשון הרע", "אינטרנט", "קניין רוחני"]
+            : ["Defamation", "Internet", "IP"]
+          ).map((label) => (
+            <div key={label} className="flex flex-col items-center gap-1.5">
+              <span className="font-display font-bold text-center whitespace-nowrap"
+                style={{ fontSize: "clamp(0.85rem, 3.5vw, 1.1rem)", color: "#C9A227", textShadow: "0 2px 16px rgba(0,0,0,0.7)" }}>
+                {label}
+              </span>
+              <div style={{ width: 20, height: 2, backgroundColor: "#C9A227", opacity: 0.7 }} />
+            </div>
+          ))}
+        </div>
+
+        {/* Heading — desktop: absolute positioning with descriptions */}
+        <div className="hidden md:block absolute top-[14%] left-0 right-0 z-10">
           {(lang === "he"
             ? [
                 { label: "לשון הרע",    desc: "ניהול תביעות וסכסוכי לשון הרע והוצאת דיבה", pos: "33%" },
@@ -139,22 +155,15 @@ const Index = () => {
                 { label: "Intellectual Property", desc: "Trademark registration, copyright and media", pos: "59%" },
               ]
           ).map(({ label, desc, pos }) => (
-            <div
-              key={label}
-              className="absolute flex flex-col items-center gap-2"
-              style={{ left: pos, transform: "translateX(-50%)" }}
-            >
-              <span
-                className="font-display font-bold whitespace-nowrap"
-                style={{ fontSize: "clamp(1.1rem, 2.4vw, 1.9rem)", color: "#C9A227", textShadow: "0 2px 20px rgba(0,0,0,0.7)" }}
-              >
+            <div key={label} className="absolute flex flex-col items-center gap-2"
+              style={{ left: pos, transform: "translateX(-50%)" }}>
+              <span className="font-display font-bold whitespace-nowrap"
+                style={{ fontSize: "clamp(1.1rem, 2.4vw, 1.9rem)", color: "#C9A227", textShadow: "0 2px 20px rgba(0,0,0,0.7)" }}>
                 {label}
               </span>
               <div style={{ width: 32, height: 2, backgroundColor: "#C9A227", opacity: 0.7 }} />
-              <span
-                className="text-center"
-                style={{ fontSize: "clamp(0.65rem, 1.1vw, 0.85rem)", color: "#C8E6FA", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}
-              >
+              <span className="text-center"
+                style={{ fontSize: "clamp(0.65rem, 1.1vw, 0.85rem)", color: "#C8E6FA", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
                 {desc}
               </span>
             </div>
