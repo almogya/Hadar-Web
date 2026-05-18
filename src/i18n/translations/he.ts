@@ -179,7 +179,7 @@ export const he = {
 
   process: {
     badge: "התהליך שלי",
-    heading: "טיפול בהסרת חסימת משתמשים",
+    heading: "שלבי הטיפול של המשרד",
     steps: [
       {
         title: "פגישה עם הלקוח",
