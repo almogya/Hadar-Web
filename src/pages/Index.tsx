@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, BarChart2, MessageSquareX, ScrollText, Eye, UserX, Camera, User } from "lucide-react";
-import officeImg from "@/assets/hero-office.jpg";
+import heroNightImg from "@/assets/hero-night.jpg";
 import editorialImg from "@/assets/hero-editorial.jpg";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
@@ -141,7 +141,7 @@ const Index = () => {
 
       {/* ── HERO ── */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "100svh" }}>
-        <img src={officeImg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <img src={heroNightImg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(8,21,39,0.85) 0%, rgba(8,21,39,0.75) 60%, rgba(8,21,39,0.92) 100%)" }} aria-hidden="true" />
 
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48">
