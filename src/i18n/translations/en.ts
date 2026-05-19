@@ -201,10 +201,6 @@ export const en = {
         title: "Filing & Representation",
         desc: "We prepare and submit legal documents, manage proceedings with platforms, regulators, and courts.",
       },
-      {
-        title: "Execution & Follow-up",
-        desc: "We accompany you to full resolution, with ongoing updates and full support at every stage.",
-      },
     ],
   },
 

@@ -49,10 +49,9 @@ const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
 
 /** Stable process-step icons */
 const PROCESS_STEPS = [
-  { id: "review",    Icon: FileSearch },
-  { id: "analysis",  Icon: BarChart2 },
-  { id: "filing",    Icon: FileText },
-  { id: "followup",  Icon: CheckCircle },
+  { id: "review",   Icon: FileSearch },
+  { id: "analysis", Icon: BarChart2 },
+  { id: "filing",   Icon: FileText },
 ] as const;
 
 /** Partners section icons */
