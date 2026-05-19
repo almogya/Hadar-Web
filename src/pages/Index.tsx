@@ -199,12 +199,12 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
             {t.trust.items.map((item) => (
               <div key={item.title} className="flex items-center justify-center gap-3">
-                <Laurel flip />
+                <Laurel />
                 <div className="text-center min-w-0">
                   <p className="text-sm font-semibold text-primary-foreground tracking-wide leading-snug">{item.title}</p>
                   {item.sub && <p className="text-xs mt-1 leading-snug" style={{ color: "rgba(255,255,255,0.4)" }}>{item.sub}</p>}
                 </div>
-                <Laurel />
+                <Laurel flip />
               </div>
             ))}
           </div>
