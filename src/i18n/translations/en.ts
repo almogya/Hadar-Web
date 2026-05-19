@@ -86,7 +86,7 @@ export const en = {
         solution: "Contract review and smart drafting",
       },
     ],
-    cta: "Talk to me about your situation",
+    cta: "Talk to us about your situation",
   },
 
   testimonials: {
@@ -115,8 +115,8 @@ export const en = {
   },
 
   howIHelp: {
-    badge: "How I Help",
-    heading: "How I Help Clients",
+    badge: "How We Help",
+    heading: "How We Help Clients",
     items: [
       { title: "IP Rights Management", desc: "Protection, registration, and strategy for trademarks, copyright, and intellectual property assets." },
       { title: "Technology Agreements", desc: "Drafting and negotiating contracts for software, SaaS, partnerships, and digital transactions." },
@@ -323,7 +323,7 @@ export const en = {
     phoneDisplay: "054-223-4726",
     phoneTel: "+972542234726",
     formHeading: "Tell Me About Your Issue",
-    formSub: "Fill in the details and I'll get back to you within 24 hours with a clear direction — no commitment.",
+    formSub: "Fill in the details and we'll get back to you within 24 hours with a clear direction — no commitment.",
     nameLabel: "Full Name *",
     namePlaceholder: "Your name",
     emailFieldLabel: "Email Address *",
@@ -357,7 +357,7 @@ export const en = {
 
   footer: {
     firmName: "HY Law Offices",
-    firmDesc: "Attorney specializing in intellectual property, technology law, and artificial intelligence, advising businesses, startups, and creators on managing and protecting digital assets and rights. Givatayim, Israel.",
+    firmDesc: "A boutique law firm specializing in intellectual property, technology law, and artificial intelligence, advising businesses, startups, and creators on managing and protecting digital assets and rights. Givatayim, Israel.",
     barNumber: "Israel Bar No. [UNSPECIFIED]",
     practiceAreasTitle: "Practice Areas",
     quickLinksTitle: "Quick Links",
