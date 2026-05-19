@@ -31,7 +31,6 @@ export const en = {
   trust: {
     items: [
       { title: "Israel Bar Association", sub: "Licensed Attorney · Admitted 2023" },
-      { title: "LL.M. Law & Technology", sub: "University of Haifa" },
       { title: "Google, Meta & Amazon", sub: "Global Platform Experience" },
       { title: "24-Hour Response", sub: "Personal Direct Service" },
     ],
