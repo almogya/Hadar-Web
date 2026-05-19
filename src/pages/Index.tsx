@@ -13,48 +13,25 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-/** Classical Greek laurel branch — leaves face left/inward on right side; flip=true for left side */
-const Laurel = ({ flip = false }: { flip?: boolean }) => {
-  const gid = flip ? "lgf" : "lgr";
-  return (
-    <svg viewBox="0 0 44 90" width="26" height="52" fill="none" aria-hidden="true"
-      style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
-      <defs>
-        {/* Gradient runs perpendicular to midrib in each leaf's local space */}
-        <linearGradient id={gid} x1="0" y1="-5" x2="0" y2="5" gradientUnits="userSpaceOnUse">
-          <stop offset="0%"   stopColor="#F7DF78" />
-          <stop offset="42%"  stopColor="#D4AA30" />
-          <stop offset="100%" stopColor="#8B5F0A" />
-        </linearGradient>
-      </defs>
-      {/* Curved branch */}
-      <path d="M 25 86 C 24 64 21 38 23 6"
-        stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round" opacity="0.5"/>
-      {/* 7 lanceolate leaves fanning along the branch */}
-      {([
-        [23, 12, -52],
-        [22, 22, -40],
-        [21, 32, -29],
-        [21, 42, -19],
-        [21, 52, -10],
-        [22, 62,  -3],
-        [23, 72,   5],
-      ] as [number, number, number][]).map(([x, y, r], i) => (
-        <g key={i} transform={`translate(${x} ${y}) rotate(${r})`}>
-          {/* Lanceolate leaf — pointed at both ends, natural asymmetric curve */}
-          <path d="M 0 0 C -2 -5 -16 -5.5 -21 0 C -16 5 -2 4.5 0 0 Z"
-            fill={`url(#${gid})`}
-            stroke="rgba(120,65,5,0.2)"
-            strokeWidth="0.4"
-            opacity={0.90 - i * 0.01} />
-          {/* Midrib */}
-          <line x1="0" y1="0" x2="-20" y2="0"
-            stroke="rgba(80,40,0,0.4)" strokeWidth="0.55" />
-        </g>
-      ))}
-    </svg>
-  );
-};
+/** Wheat sprig decoration */
+const Laurel = ({ flip = false }: { flip?: boolean }) => (
+  <svg viewBox="0 0 28 72" width="20" height="54" fill="none" aria-hidden="true"
+    style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
+    <line x1="14" y1="70" x2="14" y2="5" stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round" opacity="0.5"/>
+    {([
+      [14, 10, -38],
+      [14, 19, -28],
+      [14, 28, -20],
+      [14, 37, -14],
+      [14, 46,  -9],
+      [14, 55,  -4],
+    ] as [number, number, number][]).map(([x, y, r], i) => (
+      <g key={i} transform={`translate(${x} ${y}) rotate(${r})`}>
+        <ellipse cx="-7" cy="0" rx="7.5" ry="2.6" fill="#C9A227" opacity={0.80 - i * 0.04} />
+      </g>
+    ))}
+  </svg>
+);
 
 /** Stable href → icon mapping */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
