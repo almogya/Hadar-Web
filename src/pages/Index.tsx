@@ -163,9 +163,9 @@ const Index = () => {
                 { label: "קניין רוחני", desc: "רישום סימני מסחר, זכויות יוצרים ומדיה", pos: "59%" },
               ]
             : [
-                { label: "Defamation Law",        desc: "Defamation and libel claims and disputes", pos: "33%" },
-                { label: "Internet Law",          desc: "Business page & profile unblocking on social networks", pos: "47%" },
-                { label: "Intellectual Property", desc: "Trademark registration, copyright and media", pos: "59%" },
+                { label: "Defamation Law",        desc: "Defamation and libel claims and disputes", pos: "20%" },
+                { label: "Internet Law",          desc: "Business page & profile unblocking", pos: "50%" },
+                { label: "Intellectual Property", desc: "Trademark registration, copyright and media", pos: "80%" },
               ]
           ).map(({ label, desc, pos }) => (
             <div key={label} className="absolute flex flex-col items-center gap-2"
