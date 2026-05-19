@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, Download, MessageSquareX, ScrollText, Eye, UserX, Camera, User } from "lucide-react";
-import logo from "@/assets/logo.png";
+import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, BarChart2, MessageSquareX, ScrollText, Eye, UserX, Camera, User } from "lucide-react";
 import officeImg from "@/assets/hero-office.jpg";
+import editorialImg from "@/assets/hero-editorial.jpg";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -30,10 +29,14 @@ const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
 
 /** Stable process-step icons */
 const PROCESS_STEPS = [
-  { id: "consultation", Icon: MessageSquare },
-  { id: "assessment",   Icon: FileSearch },
-  { id: "execution",    Icon: CheckCircle },
+  { id: "review",    Icon: FileSearch },
+  { id: "analysis",  Icon: BarChart2 },
+  { id: "filing",    Icon: FileText },
+  { id: "followup",  Icon: CheckCircle },
 ] as const;
+
+/** Partners section icons */
+const PARTNER_ICONS = [Handshake, Shield, Briefcase, MessageSquare, FileSearch] as const;
 
 /** Stable audience icons */
 const AUDIENCES = [
@@ -117,84 +120,36 @@ const Index = () => {
       />
 
       {/* ── HERO ── */}
-      <section className="relative h-[94svh] md:h-[94vh] overflow-hidden">
-        {/* Office background image */}
-        <img src={officeImg} alt="" className="absolute inset-0 w-full h-full object-cover md:object-center object-[45%_center] md:scale-100 scale-125" style={{ transformOrigin: "45% center" }} aria-hidden="true" />
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-primary/60" aria-hidden="true" />
-        {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-40" style={{ background: "linear-gradient(to bottom, transparent, hsl(var(--background)))" }} aria-hidden="true" />
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "100svh" }}>
+        <img src={officeImg} alt="" className="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(8,21,39,0.85) 0%, rgba(8,21,39,0.75) 60%, rgba(8,21,39,0.92) 100%)" }} aria-hidden="true" />
 
-        {/* Heading — mobile: absolute positioning per window, with descriptions */}
-        <div className="md:hidden absolute top-[28%] left-0 right-0 z-10">
-          {(lang === "he"
-            ? [
-                { label: "לשון הרע",    desc: "הגשת תביעת לשון הרע",        pos: "87%" },
-                { label: "אינטרנט",     desc: "חסימת משתמשים",               pos: "50%" },
-                { label: "קניין רוחני", desc: "רישום סימני מסחר",             pos: "16%" },
-              ]
-            : [
-                { label: "Defamation", desc: "Defamation claims & lawsuits",  pos: "75%" },
-                { label: "Internet",   desc: "User & page blocking",          pos: "42%" },
-                { label: "IP",         desc: "Trademarks & copyrights",       pos: "14%" },
-              ]
-          ).map(({ label, desc, pos }) => (
-            <div key={label} className="absolute flex flex-col items-center gap-1.5"
-              style={{ left: pos, transform: "translateX(-50%)" }}>
-              <span className="font-display font-bold text-center whitespace-nowrap"
-                style={{ fontSize: "clamp(0.85rem, 3.5vw, 1.1rem)", color: "#C9A227", textShadow: "0 2px 16px rgba(0,0,0,0.7)" }}>
-                {label}
-              </span>
-              <div style={{ width: 20, height: 2, backgroundColor: "#C9A227", opacity: 0.7 }} />
-              <span className="text-center whitespace-nowrap"
-                style={{ fontSize: "clamp(0.6rem, 2.5vw, 0.75rem)", color: "#C8E6FA", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
-                {desc}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Heading — desktop: absolute positioning with descriptions */}
-        <div className="hidden md:block absolute top-[14%] left-0 right-0 z-10">
-          {(lang === "he"
-            ? [
-                { label: "לשון הרע",    desc: "ניהול תביעות וסכסוכי לשון הרע והוצאת דיבה", pos: "33%" },
-                { label: "אינטרנט",     desc: <>שחרור חסימת דפים עסקיים<br />ופרופילים ברשתות החברתיות</>, pos: "47%" },
-                { label: "קניין רוחני", desc: "רישום סימני מסחר, זכויות יוצרים ומדיה", pos: "59%" },
-              ]
-            : [
-                { label: "Defamation Law",        desc: "Defamation and libel claims and disputes", pos: "15%" },
-                { label: "Internet Law",          desc: "Business page & profile unblocking", pos: "25%" },
-                { label: "Intellectual Property", desc: "Trademark registration, copyright and media", pos: "45%" },
-              ]
-          ).map(({ label, desc, pos }) => (
-            <div key={label} className="absolute flex flex-col items-center gap-2"
-              style={{ left: pos, transform: "translateX(-50%)" }}>
-              <span className="font-display font-bold whitespace-nowrap"
-                style={{ fontSize: "clamp(1.1rem, 2.4vw, 1.9rem)", color: "#C9A227", textShadow: "0 2px 20px rgba(0,0,0,0.7)" }}>
-                {label}
-              </span>
-              <div style={{ width: 32, height: 2, backgroundColor: "#C9A227", opacity: 0.7 }} />
-              <span className="text-center"
-                style={{ fontSize: "clamp(0.65rem, 1.1vw, 0.85rem)", color: "#C8E6FA", textShadow: "0 1px 8px rgba(0,0,0,0.6)" }}>
-                {desc}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA — bottom */}
-        <div className="absolute bottom-[4%] left-0 right-0 z-10 flex flex-col items-center text-center px-4">
-          <div className="w-16 h-[2px] mb-8" style={{ backgroundColor: "#C9A227" }} aria-hidden="true" />
-          <Link
-            to={localePath("/contact")}
-            className="group inline-flex items-center gap-2.5 px-10 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] mb-4"
-            style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
-          >
-            {t.hero.cta1}
-            <DirectionalIcon icon="arrow" size={16} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
-          </Link>
-          <p className="text-xs font-medium tracking-wide" style={{ color: "#2B5DAA" }}>
+        <div className="relative z-10 w-full text-center px-6 py-40 md:py-48">
+          <div className="w-12 h-[2px] mx-auto mb-10" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
+          <h1 className="text-white font-bold mb-6 mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px" }}>
+            {t.hero.h1}
+          </h1>
+          <p className="mx-auto mb-10 leading-relaxed" style={{ color: "rgba(255,255,255,0.6)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "540px" }}>
+            {t.hero.sub}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              to={localePath("/contact")}
+              className="group inline-flex items-center gap-2.5 px-9 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
+              style={{ backgroundColor: "#C9A227", color: "#081527" }}
+            >
+              <DirectionalIcon icon="arrow" size={15} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
+              {t.hero.cta1}
+            </Link>
+            <Link
+              to={localePath("/contact")}
+              className="inline-flex items-center gap-2 px-9 py-4 text-[15px] font-semibold tracking-wide transition-all duration-200 hover:bg-white/10"
+              style={{ border: "1px solid rgba(255,255,255,0.3)", color: "rgba(255,255,255,0.85)" }}
+            >
+              {t.hero.cta2}
+            </Link>
+          </div>
+          <p className="mt-8 text-xs tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.3)" }}>
             {t.hero.microcopy}
           </p>
         </div>
@@ -265,10 +220,40 @@ const Index = () => {
           <Link
             to={localePath("/contact")}
             className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold tracking-wide transition-all duration-200 hover:opacity-90"
-            style={{ backgroundColor: "#0B1F3A", color: "#ffffff" }}
+            style={{ backgroundColor: "#091A30", color: "#ffffff" }}
           >
             {lang === "he" ? "שלחו פנייה לעורך דין" : "Send a message to the attorney"} <DirectionalIcon size={14} />
           </Link>
+        </div>
+      </section>
+
+      {/* ── Partners / Strategic ── */}
+      <section className="grid md:grid-cols-2" aria-labelledby="partners-heading">
+        {/* Image side */}
+        <div className="relative min-h-[300px] md:min-h-[480px] overflow-hidden">
+          <img src={editorialImg} alt="" className="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(8,21,39,0.55)" }} aria-hidden="true" />
+        </div>
+        {/* Text side */}
+        <div className="flex flex-col justify-center px-8 py-16 md:px-16" style={{ backgroundColor: "#091A30" }}>
+          <div className="w-10 h-[2px] mb-8" style={{ backgroundColor: "#C9A227", opacity: 0.5 }} />
+          <h2 id="partners-heading" className="text-white font-bold mb-5 leading-snug" style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.25rem)" }}>
+            {t.partners.heading}
+          </h2>
+          <p className="leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.9375rem" }}>
+            {t.partners.sub}
+          </p>
+          <div className="flex flex-wrap gap-8">
+            {t.partners.items.map((item, i) => {
+              const Icon = PARTNER_ICONS[i];
+              return (
+                <div key={i} className="flex flex-col items-center gap-2 text-center">
+                  <Icon size={20} style={{ color: "#C9A227" }} aria-hidden="true" />
+                  <span className="text-xs font-medium" style={{ color: "rgba(255,255,255,0.6)" }}>{item}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -448,7 +433,7 @@ const Index = () => {
       </section>
 
       {/* ── Final CTA ── */}
-      <section className="py-24" style={{ backgroundColor: "#0B1F3A" }}>
+      <section className="py-24" style={{ backgroundColor: "#081527" }}>
         <div className="container max-w-2xl text-center">
           <div className="w-10 h-px mx-auto mb-10" style={{ backgroundColor: "rgba(201,162,39,0.4)" }} />
           <h2 className="font-display font-bold text-white mb-5 leading-tight" style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}>
@@ -474,7 +459,7 @@ const Index = () => {
       {/* ── Mobile sticky CTA ── */}
       <div
         className="fixed bottom-0 left-0 right-0 z-40 md:hidden border-t"
-        style={{ backgroundColor: "#0B1F3A", borderColor: "rgba(255,255,255,0.08)" }}
+        style={{ backgroundColor: "#081527", borderColor: "rgba(255,255,255,0.08)" }}
         role="complementary"
         aria-label={lang === "he" ? "קישור מהיר לייעוץ" : "Quick consultation link"}
       >

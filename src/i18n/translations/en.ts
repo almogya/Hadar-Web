@@ -14,31 +14,37 @@ export const en = {
 
   hero: {
     badge: "Boutique Law Firm · IP · Internet · Defamation",
-    h1: "Protect Your Digital Assets",
-    h1Accent: "IP & Technology Attorney — with direct experience against Google, Meta & Amazon",
-    sub: "Legal counsel for startups, businesses, and creators in the digital economy — from trademark registration to courtroom advocacy.",
+    h1: "Smart Legal Protection in the Digital World for Companies, Startups & Businesses.",
+    h1Accent: "IP & Technology Law Firm — with direct experience against Google, Meta & Amazon",
+    sub: "A boutique law firm specializing in IP, trademarks, and digital legal solutions — guiding companies, startups, and creators.",
     bullets: [
       "Proven expertise in IP law, technology, and artificial intelligence",
       "Direct experience representing clients against global tech platforms",
       "Personal service from the attorney — not a secretary",
     ],
-    cta1: "Schedule a Free Consultation",
-    cta2: "Send a Confidential Inquiry",
-    microcopy: "Reply within 24 hours · Free first call · Full confidentiality",
+    cta1: "Schedule Initial Review",
+    cta2: "Send Inquiry",
+    microcopy: "Reply within 24 hours · First call free · Full confidentiality",
     statement: "Managing rights, agreements, and legal risks in the AI era.",
   },
 
   trust: {
     items: [
-      { title: "Israel Bar Association", sub: "Licensed Attorney · Admitted 2023" },
-      { title: "Google, Meta & Amazon", sub: "Global Platform Experience" },
-      { title: "24-Hour Response", sub: "Personal Direct Service" },
+      { title: "Proven Experience", sub: "Trained and practiced at leading firms in the market" },
+      { title: "Google, Meta & Amazon", sub: "Direct experience with global tech platforms" },
+      { title: "Proven Results", sub: "Account reinstatements, content removals and brand protection" },
     ],
+  },
+
+  partners: {
+    heading: "We Are Strategic Partners in Your Success",
+    sub: "We believe that effective legal work in the digital world requires a deep understanding of both worlds — the technological and the legal. Our firm guides clients at every stage to protect their digital assets.",
+    items: ["Strategy", "Asset Protection", "Case Management", "Full Support", "Immediate Counsel"],
   },
 
   audiences: {
     badge: "Who We Advise",
-    heading: "Clients We Serve",
+    heading: "Who Benefits from Our Services",
     items: [
       {
         title: "Startups & Founders",
@@ -181,19 +187,23 @@ export const en = {
 
   process: {
     badge: "Our Process",
-    heading: "How We Work",
+    heading: "How We Approach Your Case",
     steps: [
       {
-        title: "Initial Consultation",
-        desc: "We begin with a focused discussion of your situation, identify key legal risks, and outline potential strategies—confidentially and with no obligation.",
+        title: "Initial Review",
+        desc: "We begin by understanding the facts, identifying legal risks, and defining a focused strategy for your case.",
       },
       {
-        title: "Strategic Assessment",
-        desc: "We analyze the legal and commercial landscape, review relevant documents, and develop a tailored plan aligned with your business objectives and timeline.",
+        title: "Risk Analysis",
+        desc: "We analyze documents, assess legal exposure, and build a tailored plan aligned with your objectives and timeline.",
       },
       {
-        title: "Execution & Protection",
-        desc: "We implement the agreed strategy—filing applications, drafting agreements, pursuing enforcement, or preparing for litigation—keeping you informed at every stage.",
+        title: "Filing & Representation",
+        desc: "We prepare and submit legal documents, manage proceedings with platforms, regulators, and courts.",
+      },
+      {
+        title: "Execution & Follow-up",
+        desc: "We accompany you to full resolution, with ongoing updates and full support at every stage.",
       },
     ],
   },
@@ -261,10 +271,10 @@ export const en = {
   },
 
   ctaSection: {
-    heading: "Ready to Protect Your Digital Assets?",
-    sub: "Get a clear direction in your first call — no commitment, no cost.",
+    heading: "Your Digital Asset Is Worth More.",
+    sub: "We are here to protect it.",
     disclaimer: "Do not send sensitive or confidential information until a formal engagement has been established.",
-    cta1: "Schedule a Free Consultation",
+    cta1: "Schedule Initial Review",
     cta2: "Send a Confidential Inquiry",
   },
 
