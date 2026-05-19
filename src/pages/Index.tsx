@@ -13,17 +13,20 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-/** Laurel branch decoration */
+/** Laurel branch decoration — right-side base (leaves point left/inward), flip for left side */
 const Laurel = ({ flip = false }: { flip?: boolean }) => (
-  <svg viewBox="0 0 36 76" width="22" height="52" fill="none" aria-hidden="true"
-    style={{ transform: flip ? "scaleX(-1)" : undefined, opacity: 0.85, flexShrink: 0 }}>
-    <path d="M22 72C20 64 17 54 16 45C15 36 17 28 20 20C23 13 23 6 21 1"
-      stroke="#C9A227" strokeWidth="1.3" strokeLinecap="round" opacity="0.45"/>
-    <path d="M21 57C21 57 11 52 10 46C9 40 16 39 21 57Z" fill="#C9A227" opacity="0.85"/>
-    <path d="M19 47C19 47 9 42 8 36C7 30 14 29 19 47Z" fill="#C9A227" opacity="0.82"/>
-    <path d="M18 37C18 37 9 32 9 26C9 20 16 20 18 37Z" fill="#C9A227" opacity="0.79"/>
-    <path d="M18 28C18 28 10 23 11 17C12 11 18 13 18 28Z" fill="#C9A227" opacity="0.76"/>
-    <path d="M20 19C20 19 14 14 15 8C16 2 21 5 20 19Z" fill="#C9A227" opacity="0.73"/>
+  <svg viewBox="0 0 46 92" width="28" height="56" fill="none" aria-hidden="true"
+    style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
+    {/* Curved stem — arcs like ")" */}
+    <path d="M 33 4 C 19 22 15 46 19 68 C 22 80 30 88 33 91"
+      stroke="#C9A227" strokeWidth="1.3" strokeLinecap="round" opacity="0.4"/>
+    {/* Leaves growing left (inward when on right side) */}
+    <ellipse cx="19" cy="13" rx="13" ry="4.5" transform="rotate(-42 19 13)" fill="#C9A227" opacity="0.82"/>
+    <ellipse cx="16" cy="27" rx="13" ry="4.5" transform="rotate(-24 16 27)" fill="#C9A227" opacity="0.82"/>
+    <ellipse cx="14" cy="42" rx="13" ry="4.5" transform="rotate(-8 14 42)"  fill="#C9A227" opacity="0.82"/>
+    <ellipse cx="14" cy="57" rx="13" ry="4.5" transform="rotate(8 14 57)"   fill="#C9A227" opacity="0.82"/>
+    <ellipse cx="17" cy="70" rx="13" ry="4.5" transform="rotate(24 17 70)"  fill="#C9A227" opacity="0.82"/>
+    <ellipse cx="23" cy="81" rx="13" ry="4.5" transform="rotate(40 23 81)"  fill="#C9A227" opacity="0.82"/>
   </svg>
 );
 
