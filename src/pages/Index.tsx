@@ -13,22 +13,43 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-/** Laurel branch decoration — right-side base (leaves point left/inward), flip for left side */
-const Laurel = ({ flip = false }: { flip?: boolean }) => (
-  <svg viewBox="0 0 46 92" width="28" height="56" fill="none" aria-hidden="true"
-    style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
-    {/* Curved stem — arcs like ")" */}
-    <path d="M 33 4 C 19 22 15 46 19 68 C 22 80 30 88 33 91"
-      stroke="#C9A227" strokeWidth="1.3" strokeLinecap="round" opacity="0.4"/>
-    {/* Leaves growing left (inward when on right side) */}
-    <ellipse cx="19" cy="13" rx="13" ry="4.5" transform="rotate(-42 19 13)" fill="#C9A227" opacity="0.82"/>
-    <ellipse cx="16" cy="27" rx="13" ry="4.5" transform="rotate(-24 16 27)" fill="#C9A227" opacity="0.82"/>
-    <ellipse cx="14" cy="42" rx="13" ry="4.5" transform="rotate(-8 14 42)"  fill="#C9A227" opacity="0.82"/>
-    <ellipse cx="14" cy="57" rx="13" ry="4.5" transform="rotate(8 14 57)"   fill="#C9A227" opacity="0.82"/>
-    <ellipse cx="17" cy="70" rx="13" ry="4.5" transform="rotate(24 17 70)"  fill="#C9A227" opacity="0.82"/>
-    <ellipse cx="23" cy="81" rx="13" ry="4.5" transform="rotate(40 23 81)"  fill="#C9A227" opacity="0.82"/>
-  </svg>
-);
+/** Laurel branch — right-side base (leaves face left/inward), flip=true for left side */
+const Laurel = ({ flip = false }: { flip?: boolean }) => {
+  const gid = flip ? "lf" : "lr";
+  return (
+    <svg viewBox="0 0 50 100" width="30" height="60" fill="none" aria-hidden="true"
+      style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
+      <defs>
+        {/* Gradient in leaf-local space: bright edge → rich gold → dark amber */}
+        <linearGradient id={gid} x1="0" y1="-6.5" x2="0" y2="6.5" gradientUnits="userSpaceOnUse">
+          <stop offset="0%"   stopColor="#F2D155" />
+          <stop offset="42%"  stopColor="#C9A227" />
+          <stop offset="100%" stopColor="#8A5F0D" />
+        </linearGradient>
+      </defs>
+      <path d="M 35 4 C 24 22 20 48 24 70 C 27 82 33 91 35 96"
+        stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round" opacity="0.5"/>
+      {([
+        [29, 13, -46],
+        [25, 27, -28],
+        [22, 41, -11],
+        [21, 56,   7],
+        [24, 70,  24],
+        [29, 82,  41],
+      ] as [number, number, number][]).map(([x, y, r], i) => (
+        <g key={i} transform={`translate(${x} ${y}) rotate(${r})`}>
+          <path d="M 2 0 C 0 -6.5 -18 -6.5 -21 0 C -18 6.5 0 6.5 2 0 Z"
+            fill={`url(#${gid})`}
+            stroke="rgba(100,55,5,0.22)"
+            strokeWidth="0.5"
+            opacity={0.92 - i * 0.015} />
+          <line x1="1.5" y1="0" x2="-20" y2="0"
+            stroke="rgba(70,35,3,0.48)" strokeWidth="0.65" />
+        </g>
+      ))}
+    </svg>
+  );
+};
 
 /** Stable href → icon mapping */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
