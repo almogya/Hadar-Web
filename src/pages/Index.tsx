@@ -13,6 +13,20 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+/** Laurel branch decoration */
+const Laurel = ({ flip = false }: { flip?: boolean }) => (
+  <svg viewBox="0 0 36 76" width="22" height="52" fill="none" aria-hidden="true"
+    style={{ transform: flip ? "scaleX(-1)" : undefined, opacity: 0.85, flexShrink: 0 }}>
+    <path d="M22 72C20 64 17 54 16 45C15 36 17 28 20 20C23 13 23 6 21 1"
+      stroke="#C9A227" strokeWidth="1.3" strokeLinecap="round" opacity="0.45"/>
+    <path d="M21 57C21 57 11 52 10 46C9 40 16 39 21 57Z" fill="#C9A227" opacity="0.85"/>
+    <path d="M19 47C19 47 9 42 8 36C7 30 14 29 19 47Z" fill="#C9A227" opacity="0.82"/>
+    <path d="M18 37C18 37 9 32 9 26C9 20 16 20 18 37Z" fill="#C9A227" opacity="0.79"/>
+    <path d="M18 28C18 28 10 23 11 17C12 11 18 13 18 28Z" fill="#C9A227" opacity="0.76"/>
+    <path d="M20 19C20 19 14 14 15 8C16 2 21 5 20 19Z" fill="#C9A227" opacity="0.73"/>
+  </svg>
+);
+
 /** Stable href → icon mapping */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
   "/practice-areas/intellectual-property": Shield,
@@ -156,13 +170,17 @@ const Index = () => {
       </section>
 
       {/* ── Trust Bar ── */}
-      <section className="py-5 bg-primary border-b border-primary-foreground/10">
+      <section className="py-8 bg-primary border-b border-primary-foreground/10">
         <div className="container">
-          <div className="flex flex-wrap justify-center gap-6 md:gap-12">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
             {t.trust.items.map((item) => (
-              <div key={item.title} className="text-center py-1">
-                <p className="text-sm font-semibold text-primary-foreground tracking-wide">{item.title}</p>
-                {item.sub && <p className="text-xs text-primary-foreground/45 mt-0.5">{item.sub}</p>}
+              <div key={item.title} className="flex items-center gap-3">
+                <Laurel />
+                <div className="text-center min-w-0">
+                  <p className="text-sm font-semibold text-primary-foreground tracking-wide leading-snug">{item.title}</p>
+                  {item.sub && <p className="text-xs mt-1 leading-snug" style={{ color: "rgba(255,255,255,0.4)" }}>{item.sub}</p>}
+                </div>
+                <Laurel flip />
               </div>
             ))}
           </div>
