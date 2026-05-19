@@ -172,9 +172,9 @@ const Index = () => {
       {/* ── Trust Bar ── */}
       <section className="py-8 bg-primary border-b border-primary-foreground/10">
         <div className="container">
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
             {t.trust.items.map((item) => (
-              <div key={item.title} className="flex items-center gap-3">
+              <div key={item.title} className="flex items-center justify-center gap-3">
                 <Laurel flip />
                 <div className="text-center min-w-0">
                   <p className="text-sm font-semibold text-primary-foreground tracking-wide leading-snug">{item.title}</p>
