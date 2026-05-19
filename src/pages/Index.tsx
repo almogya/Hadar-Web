@@ -13,43 +13,25 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-/** Laurel branch — right-side base (leaves face left/inward), flip=true for left side */
-const Laurel = ({ flip = false }: { flip?: boolean }) => {
-  const gid = flip ? "lf" : "lr";
-  return (
-    <svg viewBox="0 0 50 100" width="30" height="60" fill="none" aria-hidden="true"
-      style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
-      <defs>
-        {/* Gradient in leaf-local space: bright edge → rich gold → dark amber */}
-        <linearGradient id={gid} x1="0" y1="-6.5" x2="0" y2="6.5" gradientUnits="userSpaceOnUse">
-          <stop offset="0%"   stopColor="#F2D155" />
-          <stop offset="42%"  stopColor="#C9A227" />
-          <stop offset="100%" stopColor="#8A5F0D" />
-        </linearGradient>
-      </defs>
-      <path d="M 35 4 C 24 22 20 48 24 70 C 27 82 33 91 35 96"
-        stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round" opacity="0.5"/>
-      {([
-        [29, 13, -46],
-        [25, 27, -28],
-        [22, 41, -11],
-        [21, 56,   7],
-        [24, 70,  24],
-        [29, 82,  41],
-      ] as [number, number, number][]).map(([x, y, r], i) => (
-        <g key={i} transform={`translate(${x} ${y}) rotate(${r})`}>
-          <path d="M 2 0 C 0 -6.5 -18 -6.5 -21 0 C -18 6.5 0 6.5 2 0 Z"
-            fill={`url(#${gid})`}
-            stroke="rgba(100,55,5,0.22)"
-            strokeWidth="0.5"
-            opacity={0.92 - i * 0.015} />
-          <line x1="1.5" y1="0" x2="-20" y2="0"
-            stroke="rgba(70,35,3,0.48)" strokeWidth="0.65" />
-        </g>
-      ))}
-    </svg>
-  );
-};
+/** Wheat sprig — right-side base (husks face left/outward), flip=true mirrors for left side */
+const Laurel = ({ flip = false }: { flip?: boolean }) => (
+  <svg viewBox="0 0 28 72" width="20" height="54" fill="none" aria-hidden="true"
+    style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
+    <line x1="14" y1="70" x2="14" y2="5" stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round" opacity="0.5"/>
+    {([
+      [14, 10, -38],
+      [14, 19, -28],
+      [14, 28, -20],
+      [14, 37, -14],
+      [14, 46,  -9],
+      [14, 55,  -4],
+    ] as [number, number, number][]).map(([x, y, r], i) => (
+      <g key={i} transform={`translate(${x} ${y}) rotate(${r})`}>
+        <ellipse cx="-7" cy="0" rx="7.5" ry="2.6" fill="#C9A227" opacity={0.80 - i * 0.04} />
+      </g>
+    ))}
+  </svg>
+);
 
 /** Stable href → icon mapping */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
