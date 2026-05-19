@@ -164,8 +164,8 @@ const Index = () => {
               ]
             : [
                 { label: "Defamation Law",        desc: "Defamation and libel claims and disputes", pos: "15%" },
-                { label: "Internet Law",          desc: "Business page & profile unblocking", pos: "55%" },
-                { label: "Intellectual Property", desc: "Trademark registration, copyright and media", pos: "65%" },
+                { label: "Internet Law",          desc: "Business page & profile unblocking", pos: "25%" },
+                { label: "Intellectual Property", desc: "Trademark registration, copyright and media", pos: "45%" },
               ]
           ).map(({ label, desc, pos }) => (
             <div key={label} className="absolute flex flex-col items-center gap-2"
