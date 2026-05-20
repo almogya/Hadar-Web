@@ -32,7 +32,7 @@ export const en = {
     items: [
       { title: "Proven Experience", sub: "Trained and practiced at leading firms in the market" },
       { title: "Google, Meta & Amazon", sub: "Direct experience with global tech platforms" },
-      { title: "We Act — and We Win", sub: "Accounts reinstated, harmful content removed, brands protected" },
+      { title: "Personal Attention for Every Client", sub: "Personal service and availability at all times" },
     ],
   },
 
