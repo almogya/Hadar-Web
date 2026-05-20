@@ -14,9 +14,9 @@ export const en = {
 
   hero: {
     badge: "Boutique Law Firm · IP · Internet · Defamation",
-    h1: "Smart Legal Protection in the Digital World for Companies, Startups & Businesses.",
-    h1Accent: "IP & Technology Law Firm — with direct experience against Google, Meta & Amazon",
-    sub: "A boutique law firm specializing in IP, trademarks, and digital legal solutions — guiding companies, startups, and creators.",
+    h1: "Smart Legal Protection for Private and Business Clients.",
+    h1Accent: "Internet Law Firm — with proven experience against Google, Meta & Amazon",
+    sub: "A boutique law firm specializing in intellectual property, internet law, and defamation.",
     bullets: [
       "Proven expertise in IP law, technology, and artificial intelligence",
       "Direct experience representing clients against global tech platforms",
@@ -47,16 +47,16 @@ export const en = {
     heading: "Who Benefits from Our Services",
     items: [
       {
-        title: "Startups & Founders",
-        desc: "Early-stage and growth-stage companies building products around proprietary technology, seeking IP strategy, trademark protection, and investor-ready legal infrastructure.",
+        title: "Businesses with Blocked Pages",
+        desc: "A business page on Google Business, Facebook, Instagram, or Amazon that has been blocked, suspended, or restricted.",
       },
       {
-        title: "Tech & SaaS Companies",
-        desc: "Product teams, in-house counsel, and platform businesses managing copyright, licensing, data rights, and digital content challenges at scale.",
+        title: "Content Creators & Influencers",
+        desc: "A personal or business profile that has been blocked, suspended, or restricted.",
       },
       {
-        title: "Creators & Digital Businesses",
-        desc: "Content creators, agencies, and digital-first brands protecting original works, managing platform disputes, and navigating AI-generated content questions.",
+        title: "Private Accounts",
+        desc: "A private account that has been blocked, suspended, or restricted.",
       },
     ],
   },
@@ -319,8 +319,8 @@ export const en = {
 
   contact: {
     badge: "Get in Touch",
-    h1: "Let's Talk About Your Situation",
-    sub: "First call is free. Describe your issue — and you'll get a clear direction within 24 hours.",
+    h1: "Leave Your Case Details",
+    sub: "Immediate response.",
     officeLabel: "Office Location",
     officeAddress: "46 Weizmann St, Givatayim, Israel",
     emailLabel: "Email",
