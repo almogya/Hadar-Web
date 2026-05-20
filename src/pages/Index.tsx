@@ -13,25 +13,35 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-/** Wheat sprig decoration */
-const Laurel = ({ flip = false }: { flip?: boolean }) => (
-  <svg viewBox="0 0 28 72" width="20" height="54" fill="none" aria-hidden="true"
-    style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
-    <line x1="14" y1="70" x2="14" y2="5" stroke="#C9A227" strokeWidth="1.2" strokeLinecap="round" opacity="0.5"/>
-    {([
-      [14, 10, -38],
-      [14, 19, -28],
-      [14, 28, -20],
-      [14, 37, -14],
-      [14, 46,  -9],
-      [14, 55,  -4],
-    ] as [number, number, number][]).map(([x, y, r], i) => (
-      <g key={i} transform={`translate(${x} ${y}) rotate(${r})`}>
-        <ellipse cx="-7" cy="0" rx="7.5" ry="2.6" fill="#C9A227" opacity={0.80 - i * 0.04} />
-      </g>
-    ))}
-  </svg>
-);
+/** Laurel branch decoration */
+const Laurel = ({ flip = false }: { flip?: boolean }) => {
+  const cx = 16;
+  const leaves = [
+    { y: 11, right: true },
+    { y: 21, right: false },
+    { y: 31, right: true },
+    { y: 41, right: false },
+    { y: 51, right: true },
+    { y: 61, right: false },
+    { y: 69, right: true },
+  ];
+  return (
+    <svg viewBox="0 0 32 80" width="19" height="54" fill="none" aria-hidden="true"
+      style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
+      <path d={`M${cx} 76 Q${cx - 1} 44 ${cx} 6`} stroke="#C9A227" strokeWidth="1.1" strokeLinecap="round" opacity="0.4"/>
+      {leaves.map(({ y, right }, i) => {
+        const s = right ? 1 : -1;
+        const d = `M${cx},${y} C${cx+s*3},${y-2} ${cx+s*12},${y-2} ${cx+s*14},${y-8} C${cx+s*12},${y-16} ${cx+s*2},${y-14} ${cx},${y} Z`;
+        return (
+          <g key={i}>
+            <path d={d} fill="#C9A227" opacity={0.88 - i * 0.035}/>
+            <line x1={cx} y1={y} x2={cx + s * 13} y2={y - 8} stroke="#7A5500" strokeWidth="0.55" opacity={0.3}/>
+          </g>
+        );
+      })}
+    </svg>
+  );
+};
 
 /** Stable href → icon mapping */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {

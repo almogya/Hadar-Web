@@ -1,5 +1,7 @@
 import { Scale, FileCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 import PracticeAreaLayout from "@/components/PracticeAreaLayout";
+import DirectionalIcon from "@/components/DirectionalIcon";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const items = {
@@ -8,7 +10,7 @@ const items = {
 };
 
 const Trademarks = () => {
-  const { lang } = useLanguage();
+  const { lang, localePath } = useLanguage();
   const isHe = lang === "he";
 
   return (
@@ -40,6 +42,19 @@ const Trademarks = () => {
       <div className="bg-section-alt border border-border p-8">
         <h2 className="text-xl font-display font-semibold text-foreground mb-3">{isHe ? "הגישה שלנו" : "Our Approach"}</h2>
         <p>{isHe ? "אנו מספקים ייעוץ מקיף בסימני מסחר הכולל חיפוש, הגשה, ניהול ואכיפה. הגישה שלנו מותאמת ליעדים העסקיים של כל לקוח." : "We provide comprehensive trademark counsel spanning search, filing, management, and enforcement. Our approach is tailored to each client's business goals and growth trajectory."}</p>
+      </div>
+
+      <div className="py-8 border-y border-border bg-background flex flex-wrap items-center justify-between gap-5 md:flex-row flex-col md:items-center items-center md:text-start text-center">
+        <p className="text-lg font-display font-semibold text-foreground">
+          {isHe ? "העסק בגוגל נחסם ואין עם מי לדבר? מטא סגרו לכם את הפרופיל באינסטגרם?" : "Google blocked your business with no one to talk to? Meta shut down your Instagram profile?"}
+        </p>
+        <Link
+          to={localePath("/contact")}
+          className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold tracking-wide transition-all duration-200 hover:opacity-90"
+          style={{ backgroundColor: "#091A30", color: "#ffffff" }}
+        >
+          {isHe ? "שלחו פנייה לעורך דין" : "Send a message to the attorney"} <DirectionalIcon size={14} />
+        </Link>
       </div>
     </PracticeAreaLayout>
   );
