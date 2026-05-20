@@ -45,14 +45,9 @@ const Trademarks = () => {
       </div>
 
       <div className="py-8 border-y border-border bg-background flex flex-wrap items-center justify-between gap-5 md:flex-row flex-col md:items-center items-center md:text-start text-center">
-        <div>
-          <p className="text-lg font-display font-semibold text-foreground">
-            {isHe ? "צריכים ייעוץ והכוונה לגבי סימן המסחר או המוניטין של העסק שלכם?" : "Need guidance on your trademark or business reputation?"}
-          </p>
-          <p className="text-sm text-muted-foreground mt-1">
-            {isHe ? "כל עסק צריך הגנה על המוניטין שלו, אנחנו כאן לעזור לכם בזה." : "Every business needs to protect its reputation — we're here to help."}
-          </p>
-        </div>
+        <p className="text-lg font-display font-semibold text-foreground">
+          {isHe ? "כל עסק צריך הגנה על המוניטין שלו, אנחנו כאן לעזור לכם בזה." : "Every business needs to protect its reputation — we're here to help."}
+        </p>
         <Link
           to={localePath("/contact")}
           className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-bold tracking-wide transition-all duration-200 hover:opacity-90"
