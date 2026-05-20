@@ -13,26 +13,26 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-/** Classic laurel branch decoration */
-const Laurel = ({ flip = false }: { flip?: boolean }) => (
-  <svg viewBox="0 0 32 78" width="19" height="54" fill="none" aria-hidden="true"
-    style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
-    <path d="M16 74 Q15 42 16 6" stroke="#C9A227" strokeWidth="1.1" strokeLinecap="round" opacity="0.4"/>
-    {([
-      [16, 13, -42,  1],
-      [16, 22,  42, -1],
-      [16, 31, -40,  1],
-      [16, 40,  40, -1],
-      [16, 49, -38,  1],
-      [16, 58,  38, -1],
-      [16, 67, -36,  1],
-    ] as [number, number, number, number][]).map(([x, y, rot, side], i) => (
-      <g key={i} transform={`translate(${x} ${y}) rotate(${rot})`}>
-        <ellipse cx={side * 7} cy="0" rx="7" ry="3.2" fill="#C9A227" opacity={0.86 - i * 0.025}/>
-      </g>
-    ))}
-  </svg>
-);
+/** Parenthesis-shaped laurel wreath decoration */
+const Laurel = ({ flip = false }: { flip?: boolean }) => {
+  const angles = [-65, -44, -22, 0, 22, 44, 65];
+  return (
+    <svg viewBox="0 0 32 78" width="22" height="58" fill="none" aria-hidden="true"
+      style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
+      <path d="M8,22 Q23,39 8,56" stroke="#C9A227" strokeWidth="1.1" strokeLinecap="round" opacity="0.4"/>
+      {angles.map((deg, i) => {
+        const rad = deg * Math.PI / 180;
+        const lx = (18 * Math.cos(rad)).toFixed(1);
+        const ly = (39 + 18 * Math.sin(rad)).toFixed(1);
+        return (
+          <g key={i} transform={`translate(${lx},${ly}) rotate(${deg})`}>
+            <ellipse cx="4" cy="0" rx="7.5" ry="2.9" fill="#C9A227" opacity={0.88 - Math.abs(i - 3) * 0.04}/>
+          </g>
+        );
+      })}
+    </svg>
+  );
+};
 
 /** Stable href → icon mapping */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
