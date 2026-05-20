@@ -13,35 +13,26 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-/** Laurel branch decoration */
-const Laurel = ({ flip = false }: { flip?: boolean }) => {
-  const cx = 16;
-  const leaves = [
-    { y: 11, right: true },
-    { y: 21, right: false },
-    { y: 31, right: true },
-    { y: 41, right: false },
-    { y: 51, right: true },
-    { y: 61, right: false },
-    { y: 69, right: true },
-  ];
-  return (
-    <svg viewBox="0 0 32 80" width="19" height="54" fill="none" aria-hidden="true"
-      style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
-      <path d={`M${cx} 76 Q${cx - 1} 44 ${cx} 6`} stroke="#C9A227" strokeWidth="1.1" strokeLinecap="round" opacity="0.4"/>
-      {leaves.map(({ y, right }, i) => {
-        const s = right ? 1 : -1;
-        const d = `M${cx},${y} C${cx+s*3},${y-2} ${cx+s*12},${y-2} ${cx+s*14},${y-8} C${cx+s*12},${y-16} ${cx+s*2},${y-14} ${cx},${y} Z`;
-        return (
-          <g key={i}>
-            <path d={d} fill="#C9A227" opacity={0.88 - i * 0.035}/>
-            <line x1={cx} y1={y} x2={cx + s * 13} y2={y - 8} stroke="#7A5500" strokeWidth="0.55" opacity={0.3}/>
-          </g>
-        );
-      })}
-    </svg>
-  );
-};
+/** Classic laurel branch decoration */
+const Laurel = ({ flip = false }: { flip?: boolean }) => (
+  <svg viewBox="0 0 32 78" width="19" height="54" fill="none" aria-hidden="true"
+    style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
+    <path d="M16 74 Q15 42 16 6" stroke="#C9A227" strokeWidth="1.1" strokeLinecap="round" opacity="0.4"/>
+    {([
+      [16, 13, -42,  1],
+      [16, 22,  42, -1],
+      [16, 31, -40,  1],
+      [16, 40,  40, -1],
+      [16, 49, -38,  1],
+      [16, 58,  38, -1],
+      [16, 67, -36,  1],
+    ] as [number, number, number, number][]).map(([x, y, rot, side], i) => (
+      <g key={i} transform={`translate(${x} ${y}) rotate(${rot})`}>
+        <ellipse cx={side * 7} cy="0" rx="7" ry="3.2" fill="#C9A227" opacity={0.86 - i * 0.025}/>
+      </g>
+    ))}
+  </svg>
+);
 
 /** Stable href → icon mapping */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
