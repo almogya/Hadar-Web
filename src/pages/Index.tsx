@@ -148,7 +148,7 @@ const Index = () => {
       {/* ── Trust Bar ── */}
       <section className="py-10 bg-primary border-b border-primary-foreground/10">
         <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-primary-foreground/10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x rtl:sm:divide-x-reverse divide-primary-foreground/10">
             {([Shield, Globe, CheckCircle] as const).map((Icon, i) => {
               const item = t.trust.items[i];
               return (
