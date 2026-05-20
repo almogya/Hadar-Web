@@ -126,7 +126,7 @@ const Index = () => {
 
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48">
           <div className="w-12 h-[2px] mx-auto mb-10" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
-          <h1 className="text-white font-bold mb-6 mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px" }}>
+          <h1 className="text-white font-bold mb-6 mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px", whiteSpace: "pre-line" }}>
             {t.hero.h1}
           </h1>
           <p className="mx-auto mb-10 leading-relaxed" style={{ color: "rgba(255,255,255,0.6)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "540px" }}>
