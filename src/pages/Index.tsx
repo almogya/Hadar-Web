@@ -36,7 +36,7 @@ const PROCESS_STEPS = [
 ] as const;
 
 /** Partners section icons */
-const PARTNER_ICONS = [Handshake, Shield, Briefcase, MessageSquare, FileSearch] as const;
+const PARTNER_ICONS = [Handshake, Shield, Briefcase, MessageSquare, FileSearch, FileText] as const;
 
 /** Stable audience icons */
 const AUDIENCES = [

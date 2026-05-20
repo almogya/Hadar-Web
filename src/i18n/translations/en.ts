@@ -39,7 +39,7 @@ export const en = {
   partners: {
     heading: "We Are Strategic Partners in Your Success",
     sub: "We believe that effective legal work in the digital world requires a deep understanding of both worlds — the technological and the legal. Our firm guides clients at every stage to protect their digital assets.",
-    items: ["Strategy", "Asset Protection", "Case Management", "Full Support", "Immediate Counsel"],
+    items: ["Strategy", "Asset Protection", "Case Management", "Full Support", "Immediate Counsel", "Agreements & Contracts"],
   },
 
   audiences: {
