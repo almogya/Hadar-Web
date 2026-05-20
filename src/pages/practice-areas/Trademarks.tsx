@@ -1,4 +1,4 @@
-import { Scale, FileCheck } from "lucide-react";
+﻿import { Scale, Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import PracticeAreaLayout from "@/components/PracticeAreaLayout";
 import DirectionalIcon from "@/components/DirectionalIcon";
@@ -35,7 +35,7 @@ const Trademarks = () => {
         <h2 className="text-2xl font-display font-semibold text-foreground mb-3">{isHe ? "עניינים אופייניים" : "Typical Matters"}</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {(isHe ? items.he : items.en).map((item) => (
-            <div key={item} className="flex items-start gap-2"><FileCheck className="text-gold shrink-0 mt-0.5" size={16} /><span className="text-sm">{item}</span></div>
+            <div key={item} className="flex items-start gap-2"><Check className="text-gold shrink-0 mt-0.5" size={16} /><span className="text-sm">{item}</span></div>
           ))}
         </div>
       </div>
@@ -61,3 +61,4 @@ const Trademarks = () => {
 };
 
 export default Trademarks;
+

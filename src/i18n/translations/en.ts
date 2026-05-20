@@ -363,7 +363,7 @@ export const en = {
 
   footer: {
     firmName: "HY Law Offices",
-    firmDesc: "A boutique law firm specializing in intellectual property, technology law, and artificial intelligence, advising businesses, startups, and creators on managing and protecting digital assets and rights. Givatayim, Israel.",
+    firmDesc: "A boutique law firm specializing in intellectual property, trademarks, copyright, internet defamation, commercial litigation, technology law, and AI. Direct experience with Google, Meta, and Amazon. Givatayim, Israel.",
     barNumber: "Israel Bar No. [UNSPECIFIED]",
     practiceAreasTitle: "Practice Areas",
     quickLinksTitle: "Quick Links",

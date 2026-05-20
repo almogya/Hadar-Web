@@ -1,4 +1,4 @@
-import { ScrollText, FileCheck } from "lucide-react";
+﻿import { ScrollText, Check } from "lucide-react";
 import PracticeAreaLayout from "@/components/PracticeAreaLayout";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -54,7 +54,7 @@ const TermsOfUse = () => {
         <div className="grid sm:grid-cols-2 gap-4">
           {(isHe ? items.he : items.en).map((item) => (
             <div key={item} className="flex items-start gap-2">
-              <FileCheck className="text-gold shrink-0 mt-0.5" size={16} />
+              <Check className="text-gold shrink-0 mt-0.5" size={16} />
               <span className="text-sm">{item}</span>
             </div>
           ))}
@@ -65,3 +65,4 @@ const TermsOfUse = () => {
 };
 
 export default TermsOfUse;
+
