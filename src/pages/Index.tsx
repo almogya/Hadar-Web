@@ -135,8 +135,8 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               to={localePath("/contact")}
-              className="group inline-flex items-center gap-2.5 px-9 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
-              style={{ backgroundColor: "#C9A227", color: "#081527" }}
+              className="group inline-flex items-center gap-2.5 px-9 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 hover:opacity-90 hover:scale-[1.02] animate-shimmer-btn"
+              style={{ color: "#081527" }}
             >
               <DirectionalIcon icon="arrow" size={15} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
               {t.hero.cta1}
@@ -153,7 +153,13 @@ const Index = () => {
               const item = t.trust.items[i];
               return (
                 <div key={item.title} className="flex flex-col items-center text-center px-8 py-6 sm:py-3">
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center mb-3" style={{ backgroundColor: "rgba(201,162,39,0.12)" }}>
+                  <div
+                    className="w-9 h-9 rounded-full flex items-center justify-center mb-3"
+                    style={{
+                      backgroundColor: "rgba(201,162,39,0.12)",
+                      animation: `float 3.4s ease-in-out ${i * 0.55}s infinite, glow-gold 2.8s ease-in-out ${i * 0.55}s infinite`,
+                    }}
+                  >
                     <Icon size={17} style={{ color: "#C9A227" }} aria-hidden="true" />
                   </div>
                   <div className="w-8 h-px mb-3" style={{ backgroundColor: "rgba(201,162,39,0.35)" }} aria-hidden="true" />
@@ -185,7 +191,7 @@ const Index = () => {
                   key={area.title}
                   className="group bg-section-alt p-8 hover:bg-background transition-all duration-300 flex flex-col items-center text-center"
                 >
-                  <Icon className="text-mid-blue mb-4" size={24} strokeWidth={1.5} aria-hidden="true" />
+                  <Icon className="text-mid-blue mb-4 transition-all duration-300 group-hover:text-accent group-hover:scale-125" size={24} strokeWidth={1.5} aria-hidden="true" />
                   <h3 className="font-display text-base font-semibold text-foreground group-hover:text-mid-blue transition-colors">
                     {area.title}
                   </h3>
@@ -273,7 +279,10 @@ const Index = () => {
                 const step = t.process.steps[i];
                 return (
                   <div key={id} className="group relative flex flex-col items-center text-center">
-                    <div className="relative z-10 w-24 h-24 mb-6 rounded-full bg-background border border-mid-blue/20 flex flex-col items-center justify-center group-hover:border-accent group-hover:shadow-md transition-all duration-400">
+                    <div
+                      className="relative z-10 w-24 h-24 mb-6 rounded-full bg-background border border-mid-blue/20 flex flex-col items-center justify-center group-hover:border-accent transition-all duration-400"
+                      style={{ animation: `ring-pulse 2.4s ease-out ${i * 0.7}s infinite` }}
+                    >
                       <span className="text-[9px] text-mid-blue font-bold tracking-[0.3em] uppercase mb-1">{t.stepLabel}</span>
                       <span className="text-2xl font-bold text-accent leading-none">{i + 1}</span>
                     </div>
@@ -309,7 +318,7 @@ const Index = () => {
               return (
                 <div key={id} className="group p-8 border border-transparent hover:border-border transition-all duration-300 flex flex-col items-center text-center">
                   <div className="w-12 h-12 mb-6 border border-accent/25 flex items-center justify-center group-hover:border-accent group-hover:bg-accent/5 transition-all duration-300">
-                    <Icon className="text-mid-blue group-hover:text-accent transition-colors" size={22} strokeWidth={1.5} aria-hidden="true" />
+                    <Icon className="text-mid-blue group-hover:text-accent transition-all duration-300 group-hover:scale-110" style={{ animation: `icon-pop 3s ease-in-out ${i * 0.8}s infinite` }} size={22} strokeWidth={1.5} aria-hidden="true" />
                   </div>
                   <h3 className="font-display text-base font-semibold text-foreground mb-2.5">{audience.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{audience.desc}</p>
