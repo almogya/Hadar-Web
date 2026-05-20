@@ -141,17 +141,7 @@ const Index = () => {
               <DirectionalIcon icon="arrow" size={15} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
               {t.hero.cta1}
             </Link>
-            <Link
-              to={localePath("/contact")}
-              className="inline-flex items-center gap-2 px-9 py-4 text-[15px] font-semibold tracking-wide transition-all duration-200 hover:bg-white/10"
-              style={{ border: "1px solid rgba(255,255,255,0.3)", color: "rgba(255,255,255,0.85)" }}
-            >
-              {t.hero.cta2}
-            </Link>
           </div>
-          <p className="mt-8 text-xs tracking-widest uppercase" style={{ color: "rgba(255,255,255,0.3)" }}>
-            {t.hero.microcopy}
-          </p>
         </div>
       </section>
 
@@ -166,6 +156,7 @@ const Index = () => {
                   <div className="w-9 h-9 rounded-full flex items-center justify-center mb-3" style={{ backgroundColor: "rgba(201,162,39,0.12)" }}>
                     <Icon size={17} style={{ color: "#C9A227" }} aria-hidden="true" />
                   </div>
+                  <div className="w-8 h-px mb-3" style={{ backgroundColor: "rgba(201,162,39,0.35)" }} aria-hidden="true" />
                   <p className="text-sm font-bold text-primary-foreground tracking-wide leading-snug mb-1">{item.title}</p>
                   {item.sub && <p className="text-xs leading-snug" style={{ color: "rgba(255,255,255,0.42)" }}>{item.sub}</p>}
                 </div>
