@@ -14,28 +14,6 @@ import {
 } from "@/components/ui/accordion";
 
 
-const LaurelHalf = ({ flip = false }: { flip?: boolean }) => {
-  const n = 7;
-  const W = 20, H = 44;
-  const arcCx = W;
-  const arcCy = H / 2;
-  const R = 17;
-  return (
-    <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} aria-hidden="true" style={flip ? { transform: "scaleX(-1)" } : undefined}>
-      {Array.from({ length: n }).map((_, i) => {
-        const t = i / (n - 1);
-        const angleDeg = 110 + t * 140;
-        const angleRad = (angleDeg * Math.PI) / 180;
-        const lx = arcCx + R * Math.cos(angleRad);
-        const ly = arcCy + R * Math.sin(angleRad);
-        return (
-          <ellipse key={i} cx={lx} cy={ly} rx={5} ry={1.6} fill="#C9A227" opacity={0.78} transform={`rotate(${angleDeg}, ${lx}, ${ly})`} />
-        );
-      })}
-    </svg>
-  );
-};
-
 /** Stable href → icon mapping */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
   "/practice-areas/intellectual-property": Shield,
@@ -182,13 +160,11 @@ const Index = () => {
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
             {t.trust.items.map((item) => (
-              <div key={item.title} className="flex items-center justify-center gap-2">
-                <LaurelHalf />
+              <div key={item.title} className="flex items-center justify-center gap-3">
                 <div className="text-center min-w-0">
                   <p className="text-sm font-semibold text-primary-foreground tracking-wide leading-snug">{item.title}</p>
                   {item.sub && <p className="text-xs mt-1 leading-snug" style={{ color: "rgba(255,255,255,0.4)" }}>{item.sub}</p>}
                 </div>
-                <LaurelHalf flip />
               </div>
             ))}
           </div>
