@@ -30,9 +30,9 @@ export const en = {
 
   trust: {
     items: [
-      { title: "Proven Experience", sub: "Trained and practiced at leading firms in the market" },
-      { title: "Google, Meta & Amazon", sub: "Direct experience with global tech platforms" },
-      { title: "Proven Results", sub: "Account reinstatements, content removals and brand protection" },
+      { title: "Accounts Reinstated", sub: "We've fought — and won — against Google, Meta & Amazon" },
+      { title: "Google · Meta · Amazon", sub: "We know exactly how Big Tech enforcement works" },
+      { title: "24-Hour Response", sub: "First call free · Full confidentiality" },
     ],
   },
 

@@ -156,17 +156,21 @@ const Index = () => {
       </section>
 
       {/* ── Trust Bar ── */}
-      <section className="py-8 bg-primary border-b border-primary-foreground/10">
+      <section className="py-10 bg-primary border-b border-primary-foreground/10">
         <div className="container">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
-            {t.trust.items.map((item) => (
-              <div key={item.title} className="flex items-center justify-center gap-3">
-                <div className="text-center min-w-0">
-                  <p className="text-sm font-semibold text-primary-foreground tracking-wide leading-snug">{item.title}</p>
-                  {item.sub && <p className="text-xs mt-1 leading-snug" style={{ color: "rgba(255,255,255,0.4)" }}>{item.sub}</p>}
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-primary-foreground/10">
+            {([Shield, Globe, CheckCircle] as const).map((Icon, i) => {
+              const item = t.trust.items[i];
+              return (
+                <div key={item.title} className="flex flex-col items-center text-center px-8 py-6 sm:py-3">
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center mb-3" style={{ backgroundColor: "rgba(201,162,39,0.12)" }}>
+                    <Icon size={17} style={{ color: "#C9A227" }} aria-hidden="true" />
+                  </div>
+                  <p className="text-sm font-bold text-primary-foreground tracking-wide leading-snug mb-1">{item.title}</p>
+                  {item.sub && <p className="text-xs leading-snug" style={{ color: "rgba(255,255,255,0.42)" }}>{item.sub}</p>}
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
