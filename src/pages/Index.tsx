@@ -230,6 +230,21 @@ const Index = () => {
         <div className="relative min-h-[300px] md:min-h-[480px] overflow-hidden">
           <img src={editorialImg} alt="" className="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
           <div className="absolute inset-0" style={{ backgroundColor: "rgba(8,21,39,0.55)" }} aria-hidden="true" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="flex flex-wrap gap-10 justify-center px-10">
+              {t.partners.items.map((item, i) => {
+                const Icon = PARTNER_ICONS[i];
+                return (
+                  <div key={i} className="flex flex-col items-center gap-2 text-center">
+                    <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "rgba(201,162,39,0.12)", border: "1px solid rgba(201,162,39,0.25)" }}>
+                      <Icon size={18} style={{ color: "#C9A227" }} aria-hidden="true" />
+                    </div>
+                    <span className="text-xs font-medium" style={{ color: "rgba(255,255,255,0.7)" }}>{item}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
         {/* Text side */}
         <div className="flex flex-col justify-center px-8 py-16 md:px-16" style={{ backgroundColor: "#091A30" }}>
@@ -237,20 +252,9 @@ const Index = () => {
           <h2 id="partners-heading" className="text-white font-bold mb-5 leading-snug" style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.25rem)" }}>
             {t.partners.heading}
           </h2>
-          <p className="leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.9375rem" }}>
+          <p className="leading-relaxed" style={{ color: "rgba(255,255,255,0.55)", fontSize: "0.9375rem" }}>
             {t.partners.sub}
           </p>
-          <div className="flex flex-wrap gap-8">
-            {t.partners.items.map((item, i) => {
-              const Icon = PARTNER_ICONS[i];
-              return (
-                <div key={i} className="flex flex-col items-center gap-2 text-center">
-                  <Icon size={20} style={{ color: "#C9A227" }} aria-hidden="true" />
-                  <span className="text-xs font-medium" style={{ color: "rgba(255,255,255,0.6)" }}>{item}</span>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </section>
 
