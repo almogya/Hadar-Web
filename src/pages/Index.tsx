@@ -13,26 +13,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-/** Parenthesis-shaped laurel wreath decoration */
-const Laurel = ({ flip = false }: { flip?: boolean }) => {
-  const angles = [-65, -44, -22, 0, 22, 44, 65];
-  return (
-    <svg viewBox="0 0 32 78" width="22" height="58" fill="none" aria-hidden="true"
-      style={{ transform: flip ? "scaleX(-1)" : undefined, flexShrink: 0 }}>
-      <path d="M8,22 Q23,39 8,56" stroke="#C9A227" strokeWidth="1.1" strokeLinecap="round" opacity="0.4"/>
-      {angles.map((deg, i) => {
-        const rad = deg * Math.PI / 180;
-        const lx = (18 * Math.cos(rad)).toFixed(1);
-        const ly = (39 + 18 * Math.sin(rad)).toFixed(1);
-        return (
-          <g key={i} transform={`translate(${lx},${ly}) rotate(${deg})`}>
-            <ellipse cx="4" cy="0" rx="7.5" ry="2.9" fill="#C9A227" opacity={0.88 - Math.abs(i - 3) * 0.04}/>
-          </g>
-        );
-      })}
-    </svg>
-  );
-};
 
 /** Stable href → icon mapping */
 const PRACTICE_ICON_MAP: Record<string, typeof Shield> = {
@@ -181,12 +161,10 @@ const Index = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
             {t.trust.items.map((item) => (
               <div key={item.title} className="flex items-center justify-center gap-3">
-                <Laurel flip />
                 <div className="text-center min-w-0">
                   <p className="text-sm font-semibold text-primary-foreground tracking-wide leading-snug">{item.title}</p>
                   {item.sub && <p className="text-xs mt-1 leading-snug" style={{ color: "rgba(255,255,255,0.4)" }}>{item.sub}</p>}
                 </div>
-                <Laurel />
               </div>
             ))}
           </div>
