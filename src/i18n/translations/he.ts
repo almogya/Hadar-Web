@@ -185,7 +185,7 @@ export const he = {
 
   process: {
     badge: "איך אנחנו עובדים",
-    heading: "כך אנחנו ניגשים למקרה שלך",
+    heading: "שלבי הטיפול בתיק",
     steps: [
       {
         title: "בדיקה ראשונית",
