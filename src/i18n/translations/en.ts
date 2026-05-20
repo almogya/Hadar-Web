@@ -30,7 +30,7 @@ export const en = {
 
   trust: {
     items: [
-      { title: "Proven Experience", sub: "Trained and practiced at leading firms in the market" },
+      { title: "Striving for Excellence", sub: "A young boutique firm in constant growth and development" },
       { title: "Google, Meta & Amazon", sub: "Direct experience with global tech platforms" },
       { title: "Personal Attention for Every Client", sub: "Personal service and availability at all times" },
     ],

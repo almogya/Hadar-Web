@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, BarChart2, MessageSquareX, ScrollText, Eye, UserX, Camera, User, Users } from "lucide-react";
+import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, BarChart2, MessageSquareX, ScrollText, Eye, UserX, Camera, User, Users, Award } from "lucide-react";
 import heroNightImg from "@/assets/hero-trademark-shield.png";
 import editorialImg from "@/assets/hero-editorial.jpg";
 import Layout from "@/components/Layout";
@@ -149,7 +149,7 @@ const Index = () => {
       <section className="py-10 bg-primary border-b border-primary-foreground/10">
         <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x rtl:sm:divide-x-reverse divide-primary-foreground/10">
-            {([Shield, Globe, Users] as const).map((Icon, i) => {
+            {([Award, Globe, Users] as const).map((Icon, i) => {
               const item = t.trust.items[i];
               return (
                 <div key={item.title} className="flex flex-col items-center text-center px-8 py-6 sm:py-3">
