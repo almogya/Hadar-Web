@@ -44,19 +44,19 @@ export const en = {
 
   audiences: {
     badge: "Who We Advise",
-    heading: "Who Benefits from Our Services",
+    heading: "Our Clients",
     items: [
       {
-        title: "Businesses with Blocked Pages",
-        desc: "A business page on Google Business, Facebook, Instagram, or Amazon that has been blocked, suspended, or restricted.",
+        title: "Businesses & Startups",
+        desc: "Businesses needing intellectual property protection, trademark registration, contract drafting, and legal guidance in the digital world.",
       },
       {
-        title: "Content Creators & Influencers",
-        desc: "A personal or business profile that has been blocked, suspended, or restricted.",
+        title: "Creators & Digital Brands",
+        desc: "Creators, influencers, and brands needing copyright protection, defense against online defamation, and tailored terms of use.",
       },
       {
-        title: "Private Accounts",
-        desc: "A private account that has been blocked, suspended, or restricted.",
+        title: "Businesses with Blocked Accounts",
+        desc: "Businesses, creators, and private accounts blocked, suspended, or restricted by Google, Meta, Amazon, and other platforms.",
       },
     ],
   },
