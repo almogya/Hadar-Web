@@ -291,22 +291,7 @@ export const en = {
       "His casework has included negotiations and legal proceedings involving global technology platforms — among them Google, Meta, and Amazon — giving him direct insight into how international companies approach intellectual property disputes and content-related legal demands.",
       "Hadar holds an LL.B from the Academic Center of Law and Business and an LL.M in Law & Technology from the University of Haifa, a research-focused programme examining the legal implications of emerging technology.",
     ],
-    approachBadge: "Approach",
-    approachHeading: "Legal. Precise. Practical.",
-    approachItems: [
-      {
-        title: "Business-Oriented Thinking",
-        desc: "Legal advice structured around what the business actually needs — not just what minimises legal exposure in isolation.",
-      },
-      {
-        title: "Risk Identification",
-        desc: "Early recognition of legal vulnerabilities, with targeted, proportionate responses.",
-      },
-      {
-        title: "Industry Perspective",
-        desc: "In-depth familiarity with the technology sector, digital platforms, and the creative industries.",
-      },
-    ],
+    personalNote: "\"My work sits at the crossroads of the technological world and the law — a field evolving faster than ever in the age of AI. I believe that artificial intelligence touches every aspect of legal practice, but must be balanced with professional judgment and responsibility that, at this stage, has no substitute.\"",
     qualBadge: "Education & Experience",
     qualHeading: "Professional Background",
     milestones: [

@@ -106,24 +106,6 @@ const About = () => {
         <div className="absolute inset-0 bg-primary/40" />
       </section>
 
-      {/* Approach */}
-      <section className="py-24 md:py-32">
-        <div className="container">
-          <div className="max-w-2xl mx-auto text-center mb-16">
-            <span className="text-accent text-[11px] font-semibold tracking-[0.35em] uppercase">{t.about.approachBadge}</span>
-            <h2 className="section-h2 font-display font-bold text-foreground mt-4">{t.about.approachHeading}</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-10 max-w-4xl mx-auto">
-            {t.about.approachItems.map((item) => (
-              <div key={item.title} className="text-center">
-                <h3 className="font-display text-lg font-semibold text-foreground mb-3">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Qualifications */}
       <section className="py-24 md:py-32 bg-section-alt">
         <div className="container">
@@ -141,6 +123,18 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Personal Note */}
+      {t.about.personalNote && (
+        <section className="py-16 border-t border-border">
+          <div className="container max-w-2xl text-center">
+            <blockquote className="text-muted-foreground leading-[1.9] text-[15px] italic border-s-2 border-accent ps-5 text-start">
+              {t.about.personalNote}
+            </blockquote>
+            <p className="mt-4 text-xs text-accent font-semibold tracking-wide text-start ps-5">— {t.about.name}</p>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="py-20 bg-primary">
