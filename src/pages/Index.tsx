@@ -129,7 +129,7 @@ const Index = () => {
           <h1 className="text-white font-bold mb-6 mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px", whiteSpace: "pre-line" }}>
             {t.hero.h1}
           </h1>
-          <p className="mx-auto mb-10 leading-relaxed" style={{ color: "rgba(255,255,255,0.6)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "540px" }}>
+          <p className="mx-auto mb-10 leading-relaxed" style={{ color: "rgba(255,255,255,0.6)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "540px", whiteSpace: "pre-line" }}>
             {t.hero.sub}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
