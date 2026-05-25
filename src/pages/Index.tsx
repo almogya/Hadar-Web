@@ -142,6 +142,11 @@ const Index = () => {
               {t.hero.cta1}
             </Link>
           </div>
+          {lang === "he" && (
+            <p className="mt-8 mx-auto max-w-xl text-[11px] leading-relaxed" style={{ color: "rgba(255,255,255,0.28)" }}>
+              *השימוש הנעשה בבינה מלאכותית הוא בהתאם לכללי לשכת עורכי הדין וגילוי הדעת המקדים של לשכת עורכי הדין בעניין שימוש בבינה מלאכותית בעבודת עורכי הדין.
+            </p>
+          )}
         </div>
       </section>
 
