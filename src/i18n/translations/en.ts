@@ -17,6 +17,7 @@ export const en = {
     h1: "Smart Legal Protection for Private and Business Clients.",
     h1Accent: "Internet Law Firm — with proven experience against Google, Meta & Amazon",
     sub: "A boutique law firm specializing in intellectual property, internet law, and defamation.",
+    subDesc: "",
     bullets: [
       "Proven expertise in IP law, technology, and artificial intelligence",
       "Direct experience representing clients against global tech platforms",

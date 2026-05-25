@@ -129,9 +129,14 @@ const Index = () => {
           <h1 className="text-white font-bold mb-6 mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px", whiteSpace: "pre-line" }}>
             {t.hero.h1}
           </h1>
-          <p className="mx-auto mb-10 leading-relaxed" style={{ color: "rgba(255,255,255,0.6)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "540px", whiteSpace: "pre-line" }}>
+          <p className="mx-auto mb-3 leading-relaxed font-semibold" style={{ color: "rgba(255,255,255,0.75)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "580px" }}>
             {t.hero.sub}
           </p>
+          {t.hero.subDesc && (
+            <p className="mx-auto mb-10 leading-relaxed" style={{ color: "rgba(255,255,255,0.5)", fontSize: "clamp(0.875rem, 1.1vw, 1rem)", maxWidth: "580px" }}>
+              {t.hero.subDesc}
+            </p>
+          )}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               to={localePath("/contact")}
@@ -144,7 +149,7 @@ const Index = () => {
           </div>
           {lang === "he" && (
             <p className="mt-8 mx-auto max-w-xl text-[11px] leading-relaxed" style={{ color: "rgba(255,255,255,0.28)" }}>
-              *השימוש הנעשה בבינה מלאכותית הוא בהתאם לכללי לשכת עורכי הדין וגילוי הדעת המקדים של לשכת עורכי הדין בעניין שימוש בבינה מלאכותית בעבודת עורכי הדין.
+              השימוש בכלי בינה מלאכותית נעשה ככלי עזר בלבד, ואינו מחליף בדיקה משפטית, שיקול דעת מקצועי ואחריות מלאה של עורך הדין המטפל.
             </p>
           )}
         </div>
