@@ -121,7 +121,7 @@ const Index = () => {
 
       {/* ── HERO ── */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "100svh" }}>
-        <img src={heroNightImg} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "48% 50%" }} aria-hidden="true" />
+        <img src={heroNightImg} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "46% 50%" }} aria-hidden="true" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(8,21,39,0.85) 0%, rgba(8,21,39,0.75) 60%, rgba(8,21,39,0.92) 100%)" }} aria-hidden="true" />
 
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48">
