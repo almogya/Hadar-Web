@@ -31,6 +31,7 @@ const Navbar = () => {
     { label: t.nav.about, path: "/about" },
     { label: t.nav.practiceAreas, path: "/practice-areas" },
     { label: t.nav.insights, path: "/insights" },
+    { label: t.nav.feeCalculator, path: "/fee-calculator" },
     { label: t.nav.contact, path: "/contact" },
   ];
 

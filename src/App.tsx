@@ -24,6 +24,7 @@ import Insights from "./pages/Insights";
 import PillarArticle from "./pages/insights/PillarArticle";
 import AiIpArticle from "./pages/insights/AiIpArticle";
 import PrivacyAmendment13Article from "./pages/insights/PrivacyAmendment13Article";
+import FeeCalculator from "./pages/FeeCalculator";
 import Contact from "./pages/Contact";
 import ThankYou from "./pages/ThankYou";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -68,6 +69,7 @@ const makeChildren = (): RouteObject[] => [
   { path: "insights/ai-ip-ownership-2026", element: <AiIpArticle /> },
   { path: "insights/privacy-amendment-13", element: <PrivacyAmendment13Article /> },
   { path: "insights/:slug", element: <PillarArticle /> },
+  { path: "fee-calculator", element: <FeeCalculator /> },
   { path: "contact", element: <Contact /> },
   { path: "thank-you", element: <ThankYou /> },
   { path: "privacy-policy", element: <PrivacyPolicy /> },
@@ -97,6 +99,7 @@ export const routes: RouteObject[] = [
   { path: "/about", element: <Navigate to="/he/about" replace /> },
   { path: "/practice-areas/*", element: <Navigate to="/he/practice-areas" replace /> },
   { path: "/insights", element: <Navigate to="/he/insights" replace /> },
+  { path: "/fee-calculator", element: <Navigate to="/he/fee-calculator" replace /> },
   { path: "/contact", element: <Navigate to="/he/contact" replace /> },
   { path: "*", element: <NotFound /> },
 ];

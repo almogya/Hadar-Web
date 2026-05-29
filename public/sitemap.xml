@@ -408,6 +408,26 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Fee Calculator — Hebrew -->
+  <url>
+    <loc>https://ai-law.co.il/he/fee-calculator</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/fee-calculator"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/fee-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/fee-calculator"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Fee Calculator — English -->
+  <url>
+    <loc>https://ai-law.co.il/en/fee-calculator</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-law.co.il/en/fee-calculator"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-law.co.il/he/fee-calculator"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-law.co.il/he/fee-calculator"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Contact — Hebrew -->
   <url>
     <loc>https://ai-law.co.il/he/contact</loc>

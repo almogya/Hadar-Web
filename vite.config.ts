@@ -76,6 +76,7 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
         "/insights/trademark-clearance-checklist",
         "/insights/ip-ownership-startups",
         "/insights/internet-defamation-israel",
+        "/fee-calculator",
         "/contact",
         "/thank-you",
         "/privacy-policy",

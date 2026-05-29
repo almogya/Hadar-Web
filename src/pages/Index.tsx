@@ -146,6 +146,12 @@ const Index = () => {
               <DirectionalIcon icon="arrow" size={15} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
               {t.hero.cta1}
             </Link>
+            <Link
+              to={localePath("/fee-calculator")}
+              className="inline-flex items-center gap-2 px-7 py-4 text-[14px] font-semibold border border-white/30 text-white hover:bg-white/10 hover:border-white/50 transition-all duration-200"
+            >
+              {lang === "he" ? "מחשבון שכר טרחה" : "Fee Estimator"}
+            </Link>
           </div>
           {lang === "he" && (
             <p className="mt-8 mx-auto max-w-xl text-[11px] leading-relaxed" style={{ color: "rgba(255,255,255,0.28)" }}>
