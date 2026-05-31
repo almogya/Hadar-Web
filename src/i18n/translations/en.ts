@@ -820,7 +820,7 @@ export const en = {
     submitBtn: "Send Me a Fee Estimate",
     submitting: "Sending...",
     successTitle: "Request Sent Successfully",
-    successMsg: "Your fee estimate will be sent to the email address you provided within 24 hours. Please also check your spam folder.",
+    successMsg: "Your fee estimate will be sent to the email address you provided within 24 hours.",
     successNote: "The attorney will be in touch shortly.",
     backHome: "Back to Home",
     infoTitle: "What Determines Attorney Fees?",
