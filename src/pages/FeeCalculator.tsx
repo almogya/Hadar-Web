@@ -168,17 +168,21 @@ const FeeCalculator = () => {
     formData.append("_subject", `בקשה לשכר טרחה — ${areaLabel} — ${form.name}`);
     formData.append("_template", "table");
     formData.append("_captcha", "false");
-    formData.append("_cc", "Hadar@ai-lawyer.co.il");
+    formData.append("_cc", form.email);
 
     try {
-      await fetch("https://formsubmit.co/hadaryatzkan@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/hadaryatzkan@gmail.com", {
         method: "POST",
-        mode: "no-cors",
+        headers: { "Accept": "application/json" },
         body: formData,
       });
-
-      setSubmitted(true);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      const json = await res.json();
+      if (json.success === "true" || json.success === true) {
+        setSubmitted(true);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        throw new Error("FormSubmit rejected");
+      }
     } catch {
       toast.error(isHe ? "שגיאת רשת. בדקו את החיבור ונסו שוב." : "Network error. Please try again.");
     } finally {

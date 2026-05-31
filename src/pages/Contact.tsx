@@ -38,16 +38,20 @@ const Contact = () => {
       formData.append("_template", "table");
       formData.append("_captcha", "false");
       formData.append("_replyto", form.email);
-      formData.append("_cc", "Hadar@ai-lawyer.co.il");
+      formData.append("_cc", form.email);
 
-      await fetch("https://formsubmit.co/hadaryatzkan@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/hadaryatzkan@gmail.com", {
         method: "POST",
-        mode: "no-cors",
+        headers: { "Accept": "application/json" },
         body: formData,
       });
-
-      setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
-      navigate(localePath("/thank-you"));
+      const json = await res.json();
+      if (json.success === "true" || json.success === true) {
+        setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
+        navigate(localePath("/thank-you"));
+      } else {
+        throw new Error("FormSubmit rejected");
+      }
     } catch {
       toast.error(lang === "he" ? "שגיאת רשת. נסו שוב." : "Network error. Please try again.");
     } finally {
