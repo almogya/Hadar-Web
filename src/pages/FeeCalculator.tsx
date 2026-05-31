@@ -6,6 +6,7 @@ import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import emailjs from "@emailjs/browser";
+import { EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_FEE_TEMPLATE } from "@/lib/emailConfig";
 
 // Area-specific dynamic questions (bilingual, not in translation files to keep them manageable)
 type AreaQuestion = { key: string; label: { he: string; en: string }; options: { key: string; label: { he: string; en: string } }[] };
@@ -155,8 +156,8 @@ const FeeCalculator = () => {
 
     try {
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_FEE_TEMPLATE_ID,
+        EMAILJS_SERVICE_ID,
+        EMAILJS_FEE_TEMPLATE,
         {
           from_name: form.name,
           from_email: form.email,
@@ -171,7 +172,7 @@ const FeeCalculator = () => {
           contact_time: form.contactTime || "—",
           reply_to: form.email,
         },
-        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+        { publicKey: EMAILJS_PUBLIC_KEY }
       );
       setSubmitted(true);
       window.scrollTo({ top: 0, behavior: "smooth" });

@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
+import { EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_CONTACT_TEMPLATE } from "@/lib/emailConfig";
 
 const MATTER_KEYS = ["ip", "trademarks", "copyright", "ai", "tech", "litigation", "general"] as const;
 
@@ -29,8 +30,8 @@ const Contact = () => {
 
     try {
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID,
+        EMAILJS_SERVICE_ID,
+        EMAILJS_CONTACT_TEMPLATE,
         {
           from_name: form.name,
           from_email: form.email,
@@ -40,7 +41,7 @@ const Contact = () => {
           message: form.message,
           reply_to: form.email,
         },
-        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+        { publicKey: EMAILJS_PUBLIC_KEY }
       );
       setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
       navigate(localePath("/thank-you"));
