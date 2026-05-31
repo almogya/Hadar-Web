@@ -155,7 +155,7 @@ const FeeCalculator = () => {
     formData.append("name", form.name);
     formData.append("email", form.email);
     formData.append("phone", form.phone || "—");
-    formData.append("_cc", form.email);
+    formData.append("_replyto", form.email);
     formData.append("תחום", areaLabel);
     formData.append("שירות", serviceLabel);
     formData.append("פרטים ספציפיים", dynamicAnswersSummary || "—");
@@ -166,13 +166,15 @@ const FeeCalculator = () => {
     formData.append("זמן נוח לשיחה", form.contactTime || "—");
     formData.append("_subject", `בקשה לשכר טרחה — ${areaLabel} — ${form.name}`);
     formData.append("_template", "table");
+    formData.append("_captcha", "false");
 
     try {
       const res = await fetch("https://formsubmit.co/ajax/Hadar@ai-lawyer.co.il", {
         method: "POST",
         body: formData,
       });
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success === "true") {
         setSubmitted(true);
         window.scrollTo({ top: 0, behavior: "smooth" });
       }

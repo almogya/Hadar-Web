@@ -34,15 +34,17 @@ const Contact = () => {
       formData.append("company", form.company);
       formData.append("matterType", form.matterType);
       formData.append("message", form.message);
-      formData.append("_subject", `New Inquiry from ${form.name} — HY Law`);
+      formData.append("_subject", `פנייה חדשה מ-${form.name} — HY Law`);
       formData.append("_template", "table");
+      formData.append("_captcha", "false");
 
       const res = await fetch("https://formsubmit.co/ajax/Hadar@ai-lawyer.co.il", {
         method: "POST",
         body: formData,
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.success === "true") {
         setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
         navigate(localePath("/thank-you"));
       } else {
