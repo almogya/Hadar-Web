@@ -60,7 +60,14 @@ const Navbar = () => {
               className="h-12 w-12 object-contain"
             />
             <div className="flex flex-col">
-              <span className="text-xl font-bold leading-tight" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em", color: "#1A3566" }}>
+              <span
+                className="text-xl font-bold leading-tight"
+                style={{
+                  fontFamily: lang === "he" ? '"Heebo", sans-serif' : '"Playfair Display", Georgia, serif',
+                  letterSpacing: lang === "he" ? "0.01em" : "0.06em",
+                  color: "#1A3566",
+                }}
+              >
                 {lang === "he" ? "הדר יצקן - משרד עורכי דין" : "HY Law Offices"}
               </span>
               <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-medium">
