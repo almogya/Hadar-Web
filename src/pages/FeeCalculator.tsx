@@ -168,9 +168,10 @@ const FeeCalculator = () => {
     formData.append("_subject", `בקשה לשכר טרחה — ${areaLabel} — ${form.name}`);
     formData.append("_template", "table");
     formData.append("_captcha", "false");
+    formData.append("_cc", "Hadar@ai-lawyer.co.il");
 
     try {
-      await fetch("https://formsubmit.co/Hadar@ai-lawyer.co.il", {
+      await fetch("https://formsubmit.co/hadaryatzkan@gmail.com", {
         method: "POST",
         mode: "no-cors",
         body: formData,

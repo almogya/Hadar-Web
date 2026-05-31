@@ -38,8 +38,9 @@ const Contact = () => {
       formData.append("_template", "table");
       formData.append("_captcha", "false");
       formData.append("_replyto", form.email);
+      formData.append("_cc", "Hadar@ai-lawyer.co.il");
 
-      await fetch("https://formsubmit.co/Hadar@ai-lawyer.co.il", {
+      await fetch("https://formsubmit.co/hadaryatzkan@gmail.com", {
         method: "POST",
         mode: "no-cors",
         body: formData,
