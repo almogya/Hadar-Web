@@ -152,29 +152,28 @@ const FeeCalculator = () => {
       return `${qLabel}: ${aLabel}`;
     }).join(" | ");
 
-    const payload = {
-      name: form.name,
-      email: form.email,
-      phone: form.phone || "—",
-      _replyto: form.email,
-      תחום: areaLabel,
-      שירות: serviceLabel,
-      "פרטים ספציפיים": dynamicAnswersSummary || "—",
-      תיאור: form.description || "—",
-      "לוח זמנים": timelineLabel,
-      תקציב: budgetLabels || "—",
-      "סוג התקשרות": engagementLabel || "—",
-      "זמן נוח לשיחה": form.contactTime || "—",
-      _subject: `בקשה לשכר טרחה — ${areaLabel} — ${form.name}`,
-      _template: "table",
-      _captcha: "false",
-    };
+    const formData = new FormData();
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("phone", form.phone || "—");
+    formData.append("_replyto", form.email);
+    formData.append("תחום", areaLabel);
+    formData.append("שירות", serviceLabel);
+    formData.append("פרטים ספציפיים", dynamicAnswersSummary || "—");
+    formData.append("תיאור", form.description || "—");
+    formData.append("לוח זמנים", timelineLabel);
+    formData.append("תקציב", budgetLabels || "—");
+    formData.append("סוג התקשרות", engagementLabel || "—");
+    formData.append("זמן נוח לשיחה", form.contactTime || "—");
+    formData.append("_subject", `בקשה לשכר טרחה — ${areaLabel} — ${form.name}`);
+    formData.append("_template", "table");
+    formData.append("_captcha", "false");
 
     try {
       const res = await fetch("https://formsubmit.co/ajax/Hadar@ai-lawyer.co.il", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
+        headers: { Accept: "application/json" },
+        body: formData,
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.success === "true") {

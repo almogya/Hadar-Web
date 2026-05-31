@@ -27,23 +27,22 @@ const Contact = () => {
     lastSubmit.current = now;
 
     try {
-      const payload = {
-        name: form.name,
-        email: form.email,
-        phone: form.phone || "—",
-        company: form.company || "—",
-        matterType: form.matterType || "—",
-        message: form.message,
-        _subject: `פנייה חדשה מ-${form.name} — HY Law`,
-        _template: "table",
-        _captcha: "false",
-        _replyto: form.email,
-      };
+      const formData = new FormData();
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("phone", form.phone || "—");
+      formData.append("company", form.company || "—");
+      formData.append("matterType", form.matterType || "—");
+      formData.append("message", form.message);
+      formData.append("_subject", `פנייה חדשה מ-${form.name} — HY Law`);
+      formData.append("_template", "table");
+      formData.append("_captcha", "false");
+      formData.append("_replyto", form.email);
 
       const res = await fetch("https://formsubmit.co/ajax/Hadar@ai-lawyer.co.il", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
+        headers: { Accept: "application/json" },
+        body: formData,
       });
 
       const data = await res.json().catch(() => ({}));
