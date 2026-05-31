@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { toast } from "sonner";
 import { Link } from "react-router-dom";
 import { Check, ChevronRight, ChevronLeft, Loader2, CheckCircle2 } from "lucide-react";
 import Layout from "@/components/Layout";
@@ -151,35 +152,39 @@ const FeeCalculator = () => {
       return `${qLabel}: ${aLabel}`;
     }).join(" | ");
 
-    const formData = new FormData();
-    formData.append("name", form.name);
-    formData.append("email", form.email);
-    formData.append("phone", form.phone || "—");
-    formData.append("_replyto", form.email);
-    formData.append("תחום", areaLabel);
-    formData.append("שירות", serviceLabel);
-    formData.append("פרטים ספציפיים", dynamicAnswersSummary || "—");
-    formData.append("תיאור", form.description || "—");
-    formData.append("לוח זמנים", timelineLabel);
-    formData.append("תקציב", budgetLabels || "—");
-    formData.append("סוג התקשרות", engagementLabel || "—");
-    formData.append("זמן נוח לשיחה", form.contactTime || "—");
-    formData.append("_subject", `בקשה לשכר טרחה — ${areaLabel} — ${form.name}`);
-    formData.append("_template", "table");
-    formData.append("_captcha", "false");
+    const payload = {
+      name: form.name,
+      email: form.email,
+      phone: form.phone || "—",
+      _replyto: form.email,
+      תחום: areaLabel,
+      שירות: serviceLabel,
+      "פרטים ספציפיים": dynamicAnswersSummary || "—",
+      תיאור: form.description || "—",
+      "לוח זמנים": timelineLabel,
+      תקציב: budgetLabels || "—",
+      "סוג התקשרות": engagementLabel || "—",
+      "זמן נוח לשיחה": form.contactTime || "—",
+      _subject: `בקשה לשכר טרחה — ${areaLabel} — ${form.name}`,
+      _template: "table",
+      _captcha: "false",
+    };
 
     try {
       const res = await fetch("https://formsubmit.co/ajax/Hadar@ai-lawyer.co.il", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.success === "true") {
         setSubmitted(true);
         window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        toast.error(isHe ? "שגיאה בשליחה. נסו שוב." : "Failed to send. Please try again.");
       }
     } catch {
-      // silently fail — user sees the form still
+      toast.error(isHe ? "שגיאת רשת. בדקו את החיבור ונסו שוב." : "Network error. Please try again.");
     } finally {
       setSubmitting(false);
     }
