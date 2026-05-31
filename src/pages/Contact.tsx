@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import emailjs from "@emailjs/browser";
 
 const MATTER_KEYS = ["ip", "trademarks", "copyright", "ai", "tech", "litigation", "general"] as const;
 
@@ -27,31 +28,22 @@ const Contact = () => {
     lastSubmit.current = now;
 
     try {
-      const formData = new FormData();
-      formData.append("name", form.name);
-      formData.append("email", form.email);
-      formData.append("phone", form.phone || "—");
-      formData.append("company", form.company || "—");
-      formData.append("matterType", form.matterType || "—");
-      formData.append("message", form.message);
-      formData.append("_subject", `פנייה חדשה מ-${form.name} — HY Law`);
-      formData.append("_template", "table");
-      formData.append("_captcha", "false");
-      formData.append("_replyto", form.email);
-      formData.append("_cc", form.email);
-
-      const res = await fetch("https://formsubmit.co/ajax/hadaryatzkan@gmail.com", {
-        method: "POST",
-        headers: { "Accept": "application/json" },
-        body: formData,
-      });
-      const json = await res.json();
-      if (json.success === "true" || json.success === true) {
-        setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
-        navigate(localePath("/thank-you"));
-      } else {
-        throw new Error("FormSubmit rejected");
-      }
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          phone: form.phone || "—",
+          company: form.company || "—",
+          matter_type: form.matterType || "—",
+          message: form.message,
+          reply_to: form.email,
+        },
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+      );
+      setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
+      navigate(localePath("/thank-you"));
     } catch {
       toast.error(lang === "he" ? "שגיאת רשת. נסו שוב." : "Network error. Please try again.");
     } finally {
@@ -276,8 +268,8 @@ const Contact = () => {
                   <div className="text-xs text-muted-foreground leading-relaxed p-4 border border-border bg-background space-y-1.5">
                     <p className="font-semibold text-foreground">{lang === "he" ? "הודעת פרטיות (סעיף 11)" : "Privacy Notice"}</p>
                     <p>{lang === "he"
-                      ? "בעל מאגר המידע: עו\"ד הדר יצקן, ויצמן 46, גבעתיים. מסירת השם והדוא\"ל נדרשת למענה לפנייה; שאר השדות רצוניים. המידע ישמש אך ורק לטיפול בפנייתכם ולמתן שירותים משפטיים. המידע מועבר לשרת FormSubmit.co לצורך משלוח. יש לכם זכות לעיין, לתקן ולמחוק את המידע — פנו ל: Hadar@ai-lawyer.co.il."
-                      : "Data controller: Hadar Yatzkan, 46 Weizmann St., Givatayim, Israel. Name and email are required to respond; all other fields are optional. Information is used solely to handle your inquiry and provide legal services. Submissions are routed via FormSubmit.co. You have the right to access, correct, and delete your data — contact Hadar@ai-lawyer.co.il."
+                      ? "בעל מאגר המידע: עו\"ד הדר יצקן, ויצמן 46, גבעתיים. מסירת השם והדוא\"ל נדרשת למענה לפנייה; שאר השדות רצוניים. המידע ישמש אך ורק לטיפול בפנייתכם ולמתן שירותים משפטיים. המידע מועבר לשירות EmailJS לצורך משלוח מאובטח. יש לכם זכות לעיין, לתקן ולמחוק את המידע — פנו ל: Hadar@ai-lawyer.co.il."
+                      : "Data controller: Hadar Yatzkan, 46 Weizmann St., Givatayim, Israel. Name and email are required to respond; all other fields are optional. Information is used solely to handle your inquiry and provide legal services. Submissions are routed via EmailJS for secure delivery. You have the right to access, correct, and delete your data — contact Hadar@ai-lawyer.co.il."
                     }</p>
                   </div>
 

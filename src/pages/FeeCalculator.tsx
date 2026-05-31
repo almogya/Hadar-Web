@@ -5,6 +5,7 @@ import { Check, ChevronRight, ChevronLeft, Loader2, CheckCircle2 } from "lucide-
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
+import emailjs from "@emailjs/browser";
 
 // Area-specific dynamic questions (bilingual, not in translation files to keep them manageable)
 type AreaQuestion = { key: string; label: { he: string; en: string }; options: { key: string; label: { he: string; en: string } }[] };
@@ -152,37 +153,28 @@ const FeeCalculator = () => {
       return `${qLabel}: ${aLabel}`;
     }).join(" | ");
 
-    const formData = new FormData();
-    formData.append("name", form.name);
-    formData.append("email", form.email);
-    formData.append("phone", form.phone || "—");
-    formData.append("_replyto", form.email);
-    formData.append("תחום", areaLabel);
-    formData.append("שירות", serviceLabel);
-    formData.append("פרטים ספציפיים", dynamicAnswersSummary || "—");
-    formData.append("תיאור", form.description || "—");
-    formData.append("לוח זמנים", timelineLabel);
-    formData.append("תקציב", budgetLabels || "—");
-    formData.append("סוג התקשרות", engagementLabel || "—");
-    formData.append("זמן נוח לשיחה", form.contactTime || "—");
-    formData.append("_subject", `בקשה לשכר טרחה — ${areaLabel} — ${form.name}`);
-    formData.append("_template", "table");
-    formData.append("_captcha", "false");
-    formData.append("_cc", form.email);
-
     try {
-      const res = await fetch("https://formsubmit.co/ajax/hadaryatzkan@gmail.com", {
-        method: "POST",
-        headers: { "Accept": "application/json" },
-        body: formData,
-      });
-      const json = await res.json();
-      if (json.success === "true" || json.success === true) {
-        setSubmitted(true);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        throw new Error("FormSubmit rejected");
-      }
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_FEE_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          phone: form.phone || "—",
+          area: areaLabel,
+          service: serviceLabel,
+          details: dynamicAnswersSummary || "—",
+          description: form.description || "—",
+          timeline: timelineLabel,
+          budget: budgetLabels || "—",
+          engagement: engagementLabel || "—",
+          contact_time: form.contactTime || "—",
+          reply_to: form.email,
+        },
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+      );
+      setSubmitted(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } catch {
       toast.error(isHe ? "שגיאת רשת. בדקו את החיבור ונסו שוב." : "Network error. Please try again.");
     } finally {
