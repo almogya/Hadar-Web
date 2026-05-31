@@ -170,18 +170,14 @@ const FeeCalculator = () => {
     formData.append("_captcha", "false");
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/Hadar@ai-lawyer.co.il", {
+      await fetch("https://formsubmit.co/Hadar@ai-lawyer.co.il", {
         method: "POST",
-        headers: { Accept: "application/json" },
+        mode: "no-cors",
         body: formData,
       });
-      const data = await res.json().catch(() => ({}));
-      if (res.ok && data.success === "true") {
-        setSubmitted(true);
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        toast.error(isHe ? "שגיאה בשליחה. נסו שוב." : "Failed to send. Please try again.");
-      }
+
+      setSubmitted(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } catch {
       toast.error(isHe ? "שגיאת רשת. בדקו את החיבור ונסו שוב." : "Network error. Please try again.");
     } finally {

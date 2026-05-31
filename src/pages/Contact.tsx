@@ -39,19 +39,14 @@ const Contact = () => {
       formData.append("_captcha", "false");
       formData.append("_replyto", form.email);
 
-      const res = await fetch("https://formsubmit.co/ajax/Hadar@ai-lawyer.co.il", {
+      await fetch("https://formsubmit.co/Hadar@ai-lawyer.co.il", {
         method: "POST",
-        headers: { Accept: "application/json" },
+        mode: "no-cors",
         body: formData,
       });
 
-      const data = await res.json().catch(() => ({}));
-      if (res.ok && data.success === "true") {
-        setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
-        navigate(localePath("/thank-you"));
-      } else {
-        toast.error(lang === "he" ? "שגיאה בשליחה. נסו שוב." : "Failed to send. Please try again.");
-      }
+      setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
+      navigate(localePath("/thank-you"));
     } catch {
       toast.error(lang === "he" ? "שגיאת רשת. נסו שוב." : "Network error. Please try again.");
     } finally {
