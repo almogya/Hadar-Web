@@ -61,7 +61,7 @@ const Navbar = () => {
             />
             <div className="flex flex-col">
               <span className="text-xl font-bold leading-tight" style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.06em", color: "#1A3566" }}>
-                HY Law Offices
+                {lang === "he" ? "הדר יצקן - משרד עורכי דין" : "HY Law Offices"}
               </span>
               <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground font-medium">
                 {lang === "he"
