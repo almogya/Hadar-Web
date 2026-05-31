@@ -168,7 +168,7 @@ const FeeCalculator = () => {
     formData.append("_template", "table");
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/hadaryatzkan@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/Hadar@ai-lawyer.co.il", {
         method: "POST",
         body: formData,
       });

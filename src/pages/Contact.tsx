@@ -37,7 +37,7 @@ const Contact = () => {
       formData.append("_subject", `New Inquiry from ${form.name} — HY Law`);
       formData.append("_template", "table");
 
-      const res = await fetch("https://formsubmit.co/ajax/hadaryatzkan@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/Hadar@ai-lawyer.co.il", {
         method: "POST",
         body: formData,
       });
