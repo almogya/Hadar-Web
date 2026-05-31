@@ -12,7 +12,7 @@ export const he = {
     insights: "מאמרים",
     feeCalculator: "מחשבון שכר",
     contact: "צור קשר",
-    cta: "לקביעת פגישת ייעוץ",
+    cta: "צור קשר",
   },
 
   hero: {

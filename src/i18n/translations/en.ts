@@ -10,7 +10,7 @@ export const en = {
     insights: "Insights",
     feeCalculator: "Fee Estimator",
     contact: "Contact",
-    cta: "Schedule a Consultation",
+    cta: "Contact Us",
   },
 
   hero: {
