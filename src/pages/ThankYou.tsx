@@ -24,8 +24,8 @@ const ThankYou = () => {
           </p>
           <p className="text-sm text-muted-foreground mb-8">
             {isHe
-              ? "שימו לב: שליחת טופס יצירת קשר אינה יוצרת יחסי עורך דין-לקוח. אין לשלוח מידע חסוי עד שנוצרה התקשרות רשמית."
-              : "Please note: submitting a contact form does not create an attorney-client relationship. Do not send confidential information until a formal engagement has been agreed upon."}
+              ? "שימו לב: שליחת טופס יצירת קשר אינה יוצרת יחסי עורך דין-לקוח."
+              : "Please note: submitting a contact form does not create an attorney-client relationship."}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to={localePath("/")} className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground text-sm font-semibold tracking-wide hover:bg-navy-light transition-colors">
