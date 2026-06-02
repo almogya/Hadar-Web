@@ -32,6 +32,10 @@ import Terms from "./pages/Terms";
 import Disclaimer from "./pages/Disclaimer";
 import Accessibility from "./pages/Accessibility";
 import NotFound from "./pages/NotFound";
+import CookieBanner from "@/components/CookieBanner";
+import { initAnalytics } from "@/lib/analytics";
+
+if (typeof window !== "undefined") initAnalytics();
 
 const queryClient = new QueryClient();
 
@@ -42,6 +46,7 @@ const AppShell = ({ children }: { children: React.ReactNode }) => (
         <Toaster />
         <Sonner />
         {children}
+        <CookieBanner />
       </TooltipProvider>
     </QueryClientProvider>
   </ThemeProvider>
