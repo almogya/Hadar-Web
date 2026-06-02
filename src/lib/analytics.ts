@@ -1,4 +1,4 @@
-const GA_ID = "G-XXXXXXXXXX"; // החלף ב-Measurement ID שלך מ-Google Analytics
+const GA_ID = "G-9CN7ZJ2RST";
 
 export function loadGA() {
   if (typeof window === "undefined") return;
