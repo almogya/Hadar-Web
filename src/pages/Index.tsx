@@ -153,11 +153,6 @@ const Index = () => {
               {lang === "he" ? "מחשבון שכר טרחה" : "Fee Estimator"}
             </Link>
           </div>
-          {lang === "he" && (
-            <p className="mt-8 mx-auto max-w-xl text-[11px] leading-relaxed" style={{ color: "rgba(255,255,255,0.28)" }}>
-              משרד עורכי הדין עושה שימוש בבינה מלאכותית ככלי עזר בלבד ותוך חיסיון עורך דין–לקוח מלא. השימוש אינו מחליף שיקול דעת אנושי או אחריות מקצועית של עורך הדין המטפל.
-            </p>
-          )}
         </div>
       </section>
 
