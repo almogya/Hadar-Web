@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useLanguage } from "@/i18n/LanguageContext";
 import { loadGA } from "@/lib/analytics";
 
 const STORAGE_KEY = "hy-cookie-consent";
 
 const CookieBanner = () => {
-  const { lang, localePath } = useLanguage();
   const [visible, setVisible] = useState(false);
+  const [isHe, setIsHe] = useState(true);
 
   useEffect(() => {
     if (typeof window !== "undefined" && localStorage.getItem(STORAGE_KEY) === null) {
+      setIsHe(!window.location.pathname.startsWith("/en"));
       setVisible(true);
     }
   }, []);
@@ -28,8 +28,6 @@ const CookieBanner = () => {
 
   if (!visible) return null;
 
-  const isHe = lang === "he";
-
   return (
     <div
       role="dialog"
@@ -41,14 +39,14 @@ const CookieBanner = () => {
           {isHe ? (
             <>
               אנו משתמשים בעוגיות (Cookies) לצורך ניתוח תנועה ושיפור השירות.{" "}
-              <Link to={localePath("/privacy-policy")} className="underline text-white/90 hover:text-[#C9A227] transition-colors">
+              <Link to={isHe ? "/he/privacy-policy" : "/en/privacy-policy"} className="underline text-white/90 hover:text-[#C9A227] transition-colors">
                 מדיניות הפרטיות
               </Link>
             </>
           ) : (
             <>
               We use cookies to analyze traffic and improve our service.{" "}
-              <Link to={localePath("/privacy-policy")} className="underline text-white/90 hover:text-[#C9A227] transition-colors">
+              <Link to="/en/privacy-policy" className="underline text-white/90 hover:text-[#C9A227] transition-colors">
                 Privacy Policy
               </Link>
             </>
