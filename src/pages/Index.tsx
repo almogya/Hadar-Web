@@ -440,6 +440,18 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── Tagline strip ── */}
+      {lang === "he" && (
+        <section className="py-10 bg-background border-y border-border">
+          <div className="container text-center">
+            <p className="font-display font-bold tracking-wide" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)", color: "#1A3566" }}>
+              מובילים במשפט.{" "}
+              <span style={{ color: "#C9A227" }}>מבינים טכנולוגיה.</span>
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* ── Final CTA ── */}
       <section className="py-24" style={{ backgroundColor: "#081527" }}>
         <div className="container max-w-2xl text-center">
