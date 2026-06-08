@@ -129,23 +129,23 @@ const Index = () => {
           <h1 className="text-white font-bold mb-6 mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px", whiteSpace: "pre-line" }}>
             {lang === "he" ? (
               <>
-                {t.hero.h1.split("יודע").map((part, i, arr) =>
+                {t.hero.h1.split("שיודע").map((part, i, arr) =>
                   i < arr.length - 1 ? (
                     <span key={i}>
                       {part}
-                      <span className="relative inline-block" style={{ zIndex: 0 }}>
+                      <span className="relative inline-block">
+                        שיודע
                         <span
-                          className="absolute inset-0"
+                          className="absolute bottom-0 left-0 w-full"
                           style={{
-                            background: "rgba(201,162,39,0.35)",
-                            borderRadius: "3px",
+                            height: "3px",
+                            background: "#C9A227",
+                            borderRadius: "2px",
                             animation: "underlineGrow 0.9s ease both 0.4s",
                             transformOrigin: "right",
-                            zIndex: -1,
                           }}
                           aria-hidden="true"
                         />
-                        יודע
                       </span>
                     </span>
                   ) : part
