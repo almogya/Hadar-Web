@@ -487,7 +487,7 @@ const Index = () => {
           <Link
             to={localePath("/contact")}
             className="inline-flex items-center gap-2.5 px-10 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 hover:opacity-90"
-            style={{ backgroundColor: "#C9A227", color: "#0B1F3A" }}
+            style={{ backgroundColor: "#0B1F3A", color: "#C9A227", border: "2px solid #C9A227" }}
           >
             {t.ctaSection.cta1} <DirectionalIcon size={16} />
           </Link>
