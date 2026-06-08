@@ -5,13 +5,49 @@ import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
 import { useLanguage } from "@/i18n/LanguageContext";
 
-type ArticleKey = "aiCopyright" | "trademarkClearance" | "ipOwnership" | "defamationInternet";
+type ArticleKey =
+  | "aiCopyright"
+  | "trademarkClearance"
+  | "ipOwnership"
+  | "defamationInternet"
+  | "aiGeneratedCopyright"
+  | "trademarkDigitalProtection"
+  | "ipStrategyStartups"
+  | "digitalContentProtection"
+  | "copyrightTechTeams"
+  | "acumCopyright"
+  | "googleContentRemoval"
+  | "fakeGoogleReviews"
+  | "metaAccountBlocking"
+  | "websiteTermsOfUse"
+  | "ndaAgreement"
+  | "socialMediaCopyright"
+  | "trademarkRegistrationIsrael"
+  | "defamationLawsuitCosts"
+  | "aiLegalLiability"
+  | "reputationProtection";
 
 const SLUG_MAP: Record<string, ArticleKey> = {
   "ai-copyright-israel": "aiCopyright",
   "trademark-clearance-checklist": "trademarkClearance",
   "ip-ownership-startups": "ipOwnership",
   "internet-defamation-israel": "defamationInternet",
+  "ai-generated-copyright": "aiGeneratedCopyright",
+  "trademark-digital-protection": "trademarkDigitalProtection",
+  "ip-strategy-startups": "ipStrategyStartups",
+  "digital-content-protection": "digitalContentProtection",
+  "copyright-tech-teams": "copyrightTechTeams",
+  "acum-copyright-infringement": "acumCopyright",
+  "google-content-removal": "googleContentRemoval",
+  "fake-google-reviews": "fakeGoogleReviews",
+  "meta-account-blocking": "metaAccountBlocking",
+  "website-terms-of-use": "websiteTermsOfUse",
+  "nda-agreement": "ndaAgreement",
+  "social-media-copyright": "socialMediaCopyright",
+  "trademark-registration-israel": "trademarkRegistrationIsrael",
+  "defamation-lawsuit-costs": "defamationLawsuitCosts",
+  "ai-legal-liability": "aiLegalLiability",
+  "reputation-protection": "reputationProtection",
 };
 
 const PillarArticle = () => {
