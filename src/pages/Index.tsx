@@ -298,7 +298,7 @@ const Index = () => {
                   <div key={id} className="group relative flex flex-col items-center text-center">
                     <div
                       className="relative z-10 w-24 h-24 mb-6 rounded-full bg-background border border-mid-blue/20 flex flex-col items-center justify-center group-hover:border-accent transition-all duration-400"
-                      style={{ animation: `ring-pulse 2.4s ease-out ${i * 1.5}s infinite` }}
+                      style={{ animation: `ring-pulse 2.4s ease-out ${(PROCESS_STEPS.length - 1 - i) * 3}s infinite` }}
                     >
                       <span className="text-[9px] text-mid-blue font-bold tracking-[0.3em] uppercase mb-1">{t.stepLabel}</span>
                       <span className="text-2xl font-bold text-accent leading-none">{i + 1}</span>
