@@ -141,9 +141,8 @@ const Index = () => {
                             height: "3px",
                             background: "#C9A227",
                             borderRadius: "2px",
-                            animation: "underlineGrow 0.8s ease forwards 0.3s",
+                            animation: "underlineGrow 0.9s ease both 0.4s",
                             transformOrigin: "right",
-                            transform: "scaleX(0)",
                           }}
                           aria-hidden="true"
                         />
