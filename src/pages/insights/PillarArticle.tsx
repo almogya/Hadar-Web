@@ -130,6 +130,21 @@ const PillarArticle = () => {
             </ul>
           </div>
 
+          {/* FAQ */}
+          {article.faq && article.faq.length > 0 && (
+            <div className="mt-12">
+              <h2 className="section-h2 font-display font-semibold text-foreground mb-6">שאלות ותשובות</h2>
+              <div className="space-y-6">
+                {article.faq.map((item, i) => (
+                  <div key={i} className="border-b border-border pb-6">
+                    <h3 className="font-semibold text-foreground mb-2">{item.q}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* CTA */}
           <div className="mt-16 p-8 bg-primary text-center">
             <h2 className="text-2xl font-display font-bold text-primary-foreground mb-3">
