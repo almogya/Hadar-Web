@@ -75,7 +75,7 @@ const About = () => {
               {lang === "he" && (
                 <div className="mt-8 pt-8 border-t border-border">
                   <p className="font-bold text-foreground leading-snug" style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)" }}>
-                    {"בעידן ה-AI אתם צריכים עורך דין שמומחה בבינה מלאכותית".split("שמומחה").map((part, i, arr) =>
+                    {"בעידן ה-AI רק עורך דין שמומחה לבינה מלאכותית".split("שמומחה").map((part, i, arr) =>
                       i < arr.length - 1 ? (
                         <span key={i}>
                           {part}
