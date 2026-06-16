@@ -128,26 +128,28 @@ const Index = () => {
           <div className="w-12 h-[2px] mx-auto mb-10" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
           {t.hero.h1 && (
             <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white mb-6 mx-auto" style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', fontSize: lang === "he" ? "clamp(1.6rem, 3.6vw, 3rem)" : "clamp(2rem, 4.5vw, 4rem)", fontWeight: lang === "he" ? 600 : 700, lineHeight: 1.15, maxWidth: "820px", whiteSpace: "pre-line" }}>
-              {t.hero.h1.split(lang === "he" ? "לאורך כל הדרך" : "All the way").map((part, i, arr) =>
-                i < arr.length - 1 ? (
-                  <span key={i}>
-                    {part}
-                    <span className="relative inline-block">
-                      {lang === "he" ? "לאורך כל הדרך" : "All the way"}
-                      <span
-                        className="absolute bottom-0 left-0 w-full"
-                        style={{
-                          height: "3px",
-                          background: "#C9A227",
-                          borderRadius: "2px",
-                          animation: "underlineGrow 0.9s ease both 0.4s",
-                          transformOrigin: lang === "he" ? "right" : "left",
-                        }}
-                        aria-hidden="true"
-                      />
+              {lang === "he" ? t.hero.h1 : (
+                t.hero.h1.split("All the way").map((part, i, arr) =>
+                  i < arr.length - 1 ? (
+                    <span key={i}>
+                      {part}
+                      <span className="relative inline-block">
+                        All the way
+                        <span
+                          className="absolute bottom-0 left-0 w-full"
+                          style={{
+                            height: "3px",
+                            background: "#C9A227",
+                            borderRadius: "2px",
+                            animation: "underlineGrow 0.9s ease both 0.4s",
+                            transformOrigin: "left",
+                          }}
+                          aria-hidden="true"
+                        />
+                      </span>
                     </span>
-                  </span>
-                ) : part
+                  ) : part
+                )
               )}
             </h1>
           )}
