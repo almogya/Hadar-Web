@@ -143,8 +143,21 @@ const Index = () => {
                   {first}
                 </h1>
                 {second && (
-                  <p dir={lang === "he" ? "rtl" : "ltr"} className="mb-6 mx-auto" style={{ ...headingStyle, color: "#C9A227" }}>
-                    {second}
+                  <p dir={lang === "he" ? "rtl" : "ltr"} className="mb-6 mx-auto" style={headingStyle}>
+                    <span className="relative inline-block" style={{ color: "#C9A227" }}>
+                      {second}
+                      <span
+                        className="absolute bottom-0 left-0 w-full"
+                        style={{
+                          height: "3px",
+                          background: "#C9A227",
+                          borderRadius: "2px",
+                          animation: "underlineGrow 0.9s ease both 0.5s",
+                          transformOrigin: lang === "he" ? "right" : "left",
+                        }}
+                        aria-hidden="true"
+                      />
+                    </span>
                   </p>
                 )}
               </>
