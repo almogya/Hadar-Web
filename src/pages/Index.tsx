@@ -128,12 +128,12 @@ const Index = () => {
           <div className="w-12 h-[2px] mx-auto mb-10" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
           {t.hero.h1 && (
             <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white font-bold mb-6 mx-auto" style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px", whiteSpace: "pre-line" }}>
-              {t.hero.h1.split(lang === "he" ? "כל הדרך" : "all the way").map((part, i, arr) =>
+              {t.hero.h1.split(lang === "he" ? "כל הדרך" : "All the way").map((part, i, arr) =>
                 i < arr.length - 1 ? (
                   <span key={i}>
                     {part}
                     <span className="relative inline-block">
-                      {lang === "he" ? "כל הדרך" : "all the way"}
+                      {lang === "he" ? "כל הדרך" : "All the way"}
                       <span
                         className="absolute bottom-0 left-0 w-full"
                         style={{
