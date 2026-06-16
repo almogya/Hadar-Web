@@ -126,11 +126,11 @@ const Index = () => {
 
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48" style={{ transform: "translateY(12vh)" }}>
           <p
-            dir="ltr"
+            dir={lang === "he" ? "rtl" : "ltr"}
             className="mb-5 mx-auto text-white"
-            style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.08em", fontWeight: 700, fontSize: "clamp(1.5rem, 3vw, 2.5rem)", lineHeight: 1.1 }}
+            style={{ fontFamily: lang === "he" ? '"Heebo", sans-serif' : '"Playfair Display", Georgia, serif', letterSpacing: lang === "he" ? "0.02em" : "0.08em", fontWeight: 700, fontSize: "clamp(1.5rem, 3vw, 2.5rem)", lineHeight: 1.1 }}
           >
-            HY Law Offices
+            {lang === "he" ? "משרד עורכי דין הדר יצקן" : "HY Law Offices"}
           </p>
           <div className="w-12 h-[2px] mx-auto mb-8" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
           {t.hero.h1 && (
