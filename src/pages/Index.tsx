@@ -126,7 +126,7 @@ const Index = () => {
 
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48" style={{ transform: "translateY(12vh)" }}>
           {t.hero.h1 && (() => {
-            const accent = lang === "he" ? "מבינים טכנולוגיה." : "Fluent in tech.";
+            const accent = lang === "he" ? "משפט. טכנולוגיה." : "Fluent in tech.";
             const idx = t.hero.h1.indexOf(accent);
             const first = idx === -1 ? t.hero.h1 : t.hero.h1.slice(0, idx).trim();
             const second = idx === -1 ? "" : accent;
