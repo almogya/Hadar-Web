@@ -141,7 +141,7 @@ const Index = () => {
                           background: "#C9A227",
                           borderRadius: "2px",
                           animation: "underlineGrow 0.9s ease both 0.4s",
-                          transformOrigin: "left",
+                          transformOrigin: lang === "he" ? "right" : "left",
                         }}
                         aria-hidden="true"
                       />
