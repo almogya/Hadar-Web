@@ -136,7 +136,7 @@ const Index = () => {
           {t.hero.h1 && (
             <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white mb-6 mx-auto" style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', fontSize: lang === "he" ? "clamp(1.6rem, 3.6vw, 3rem)" : "clamp(1.9rem, 4vw, 3.4rem)", fontWeight: lang === "he" ? 600 : 700, lineHeight: 1.2, maxWidth: "820px", whiteSpace: "pre-line" }}>
               {(() => {
-                const accent = lang === "he" ? "מבינים טכנולוגיה." : "Fluent in technology.";
+                const accent = lang === "he" ? "מבינים טכנולוגיה." : "Fluent in tech.";
                 const idx = t.hero.h1.indexOf(accent);
                 if (idx === -1) return t.hero.h1;
                 return (
