@@ -129,12 +129,12 @@ const Index = () => {
           {t.hero.h1 && (
             <h1 className="text-white font-bold mb-6 mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px", whiteSpace: "pre-line" }}>
               {lang === "he" ? (
-                t.hero.h1.split("אנושי").map((part, i, arr) =>
+                t.hero.h1.split("Success").map((part, i, arr) =>
                   i < arr.length - 1 ? (
                     <span key={i}>
                       {part}
                       <span className="relative inline-block">
-                        אנושי
+                        Success
                         <span
                           className="absolute bottom-0 left-0 w-full"
                           style={{
