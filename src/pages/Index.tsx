@@ -127,7 +127,7 @@ const Index = () => {
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48" style={{ transform: "translateY(12vh)" }}>
           <div className="w-12 h-[2px] mx-auto mb-10" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
           {t.hero.h1 && (
-            <h1 dir="ltr" className="text-white font-bold mb-6 mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px", whiteSpace: "pre-line" }}>
+            <h1 dir="ltr" className="text-white font-bold mb-6 mx-auto" style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px", whiteSpace: "pre-line" }}>
               {t.hero.h1.split("all the way").map((part, i, arr) =>
                 i < arr.length - 1 ? (
                   <span key={i}>
