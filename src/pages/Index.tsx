@@ -476,12 +476,12 @@ const Index = () => {
           <p className="font-display font-bold tracking-wide" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)", color: "#1A3566" }}>
             {lang === "he" ? (
               <>
-                מובילים במשפט.{" "}
+                משרד עורכי דין הדר יצקן - מובילים במשפט.{" "}
                 <span style={{ color: "#C9A227" }}>מבינים טכנולוגיה.</span>
               </>
             ) : (
               <>
-                Leading in law.{" "}
+                HY Law Offices — Leading in law.{" "}
                 <span style={{ color: "#C9A227" }}>Fluent in technology.</span>
               </>
             )}
