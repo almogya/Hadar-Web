@@ -131,7 +131,7 @@ const Index = () => {
               {t.hero.h1}
             </h1>
           )}
-          <p className="mx-auto mb-3 leading-relaxed font-semibold" style={{ color: "rgba(255,255,255,0.75)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "580px" }}>
+          <p className="mx-auto mb-3 mt-[12vh] leading-relaxed font-semibold" style={{ color: "rgba(255,255,255,0.75)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "580px" }}>
             {lang === "he" ? (
               t.hero.sub.split("מענה מיידי").map((part, i, arr) =>
                 i < arr.length - 1 ? (
