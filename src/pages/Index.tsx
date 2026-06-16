@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, BarChart2, MessageSquareX, ScrollText, Eye, UserX, Camera, User, Users, Award } from "lucide-react";
-import heroNightImg from "@/assets/hero-trademark-shield.png";
+import heroNightImg from "@/assets/hero-office-skyline.jpg";
 import editorialImg from "@/assets/hero-editorial.jpg";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
