@@ -125,14 +125,7 @@ const Index = () => {
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(8,21,39,0.85) 0%, rgba(8,21,39,0.75) 60%, rgba(8,21,39,0.92) 100%)" }} aria-hidden="true" />
 
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48" style={{ transform: "translateY(12vh)" }}>
-          <p
-            dir={lang === "he" ? "rtl" : "ltr"}
-            className="mb-5 mx-auto text-white"
-            style={{ fontFamily: lang === "he" ? '"Heebo", sans-serif' : '"Playfair Display", Georgia, serif', letterSpacing: lang === "he" ? "0.02em" : "0.08em", fontWeight: 700, fontSize: "clamp(1.5rem, 3vw, 2.5rem)", lineHeight: 1.1 }}
-          >
-            {lang === "he" ? "משרד עורכי דין הדר יצקן" : "HY Law Offices"}
-          </p>
-          <div className="w-12 h-[2px] mx-auto mb-8" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
+          <div className="w-12 h-[2px] mx-auto mb-10" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
           {t.hero.h1 && (
             <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white mb-6 mx-auto" style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', fontSize: lang === "he" ? "clamp(1.6rem, 3.6vw, 3rem)" : "clamp(1.9rem, 4vw, 3.4rem)", fontWeight: lang === "he" ? 600 : 700, lineHeight: 1.2, maxWidth: "820px", whiteSpace: "pre-line" }}>
               {(() => {
