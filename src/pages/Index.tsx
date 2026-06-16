@@ -131,12 +131,12 @@ const Index = () => {
           </h1>
           <p className="mx-auto mb-3 leading-relaxed font-semibold" style={{ color: "rgba(255,255,255,0.75)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "580px" }}>
             {lang === "he" ? (
-              t.hero.sub.split("מענה מקצועי ואישי").map((part, i, arr) =>
+              t.hero.sub.split("בוטיק, צעיר ומקצועי").map((part, i, arr) =>
                 i < arr.length - 1 ? (
                   <span key={i}>
                     {part}
                     <span className="relative inline-block">
-                      מענה מקצועי ואישי
+                      בוטיק, צעיר ומקצועי
                       <span
                         className="absolute bottom-0 left-0 w-full"
                         style={{
