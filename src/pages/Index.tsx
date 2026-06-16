@@ -125,32 +125,27 @@ const Index = () => {
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(8,21,39,0.85) 0%, rgba(8,21,39,0.75) 60%, rgba(8,21,39,0.92) 100%)" }} aria-hidden="true" />
 
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48" style={{ transform: "translateY(12vh)" }}>
-          <div className="w-12 h-[2px] mx-auto mb-10" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
+          <p
+            dir="ltr"
+            className="mb-5 mx-auto text-white"
+            style={{ fontFamily: '"Playfair Display", Georgia, serif', letterSpacing: "0.08em", fontWeight: 700, fontSize: "clamp(1.5rem, 3vw, 2.5rem)", lineHeight: 1.1 }}
+          >
+            HY Law Offices
+          </p>
+          <div className="w-12 h-[2px] mx-auto mb-8" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
           {t.hero.h1 && (
-            <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white mb-6 mx-auto" style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', fontSize: lang === "he" ? "clamp(1.6rem, 3.6vw, 3rem)" : "clamp(2rem, 4.5vw, 4rem)", fontWeight: lang === "he" ? 600 : 700, lineHeight: 1.15, maxWidth: "820px", whiteSpace: "pre-line" }}>
-              {lang === "he" ? t.hero.h1 : (
-                t.hero.h1.split("All the way").map((part, i, arr) =>
-                  i < arr.length - 1 ? (
-                    <span key={i}>
-                      {part}
-                      <span className="relative inline-block">
-                        All the way
-                        <span
-                          className="absolute bottom-0 left-0 w-full"
-                          style={{
-                            height: "3px",
-                            background: "#C9A227",
-                            borderRadius: "2px",
-                            animation: "underlineGrow 0.9s ease both 0.4s",
-                            transformOrigin: "left",
-                          }}
-                          aria-hidden="true"
-                        />
-                      </span>
-                    </span>
-                  ) : part
-                )
-              )}
+            <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white mb-6 mx-auto" style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', fontSize: lang === "he" ? "clamp(1.6rem, 3.6vw, 3rem)" : "clamp(1.9rem, 4vw, 3.4rem)", fontWeight: lang === "he" ? 600 : 700, lineHeight: 1.2, maxWidth: "820px", whiteSpace: "pre-line" }}>
+              {(() => {
+                const accent = lang === "he" ? "מבינים טכנולוגיה." : "Fluent in technology.";
+                const idx = t.hero.h1.indexOf(accent);
+                if (idx === -1) return t.hero.h1;
+                return (
+                  <>
+                    {t.hero.h1.slice(0, idx)}
+                    <span style={{ color: "#C9A227" }}>{accent}</span>
+                  </>
+                );
+              })()}
             </h1>
           )}
           <p className="mx-auto mb-3 mt-[26vh] leading-relaxed font-semibold" style={{ color: "rgba(255,255,255,0.75)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "580px" }}>

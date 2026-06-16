@@ -15,7 +15,7 @@ export const en = {
 
   hero: {
     badge: "Boutique Law Firm · IP · Internet · Defamation",
-    h1: "With you. All the way.",
+    h1: "Leading in law. Fluent in technology.",
     h1Accent: "Internet Law Firm — with proven experience against Google, Meta & Amazon",
     sub: "A boutique law firm specializing in intellectual property, internet law, and defamation.",
     subDesc: "",
