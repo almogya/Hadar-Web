@@ -128,29 +128,27 @@ const Index = () => {
           <div className="w-12 h-[2px] mx-auto mb-10" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
           {t.hero.h1 && (
             <h1 dir="ltr" className="text-white font-bold mb-6 mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px", whiteSpace: "pre-line" }}>
-              {lang === "he" ? (
-                t.hero.h1.split("all the way").map((part, i, arr) =>
-                  i < arr.length - 1 ? (
-                    <span key={i}>
-                      {part}
-                      <span className="relative inline-block">
-                        all the way
-                        <span
-                          className="absolute bottom-0 left-0 w-full"
-                          style={{
-                            height: "3px",
-                            background: "#C9A227",
-                            borderRadius: "2px",
-                            animation: "underlineGrow 0.9s ease both 0.4s",
-                            transformOrigin: "left",
-                          }}
-                          aria-hidden="true"
-                        />
-                      </span>
+              {t.hero.h1.split("all the way").map((part, i, arr) =>
+                i < arr.length - 1 ? (
+                  <span key={i}>
+                    {part}
+                    <span className="relative inline-block">
+                      all the way
+                      <span
+                        className="absolute bottom-0 left-0 w-full"
+                        style={{
+                          height: "3px",
+                          background: "#C9A227",
+                          borderRadius: "2px",
+                          animation: "underlineGrow 0.9s ease both 0.4s",
+                          transformOrigin: "left",
+                        }}
+                        aria-hidden="true"
+                      />
                     </span>
-                  ) : part
-                )
-              ) : t.hero.h1}
+                  </span>
+                ) : part
+              )}
             </h1>
           )}
           <p className="mx-auto mb-3 mt-[26vh] leading-relaxed font-semibold" style={{ color: "rgba(255,255,255,0.75)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "580px" }}>
@@ -461,16 +459,23 @@ const Index = () => {
       </section>
 
       {/* ── Tagline strip ── */}
-      {lang === "he" && (
-        <section className="py-10 bg-background border-y border-border">
-          <div className="container text-center">
-            <p className="font-display font-bold tracking-wide" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)", color: "#1A3566" }}>
-              מובילים במשפט.{" "}
-              <span style={{ color: "#C9A227" }}>מבינים טכנולוגיה.</span>
-            </p>
-          </div>
-        </section>
-      )}
+      <section className="py-10 bg-background border-y border-border">
+        <div className="container text-center">
+          <p className="font-display font-bold tracking-wide" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)", color: "#1A3566" }}>
+            {lang === "he" ? (
+              <>
+                מובילים במשפט.{" "}
+                <span style={{ color: "#C9A227" }}>מבינים טכנולוגיה.</span>
+              </>
+            ) : (
+              <>
+                Leading in law.{" "}
+                <span style={{ color: "#C9A227" }}>Fluent in technology.</span>
+              </>
+            )}
+          </p>
+        </div>
+      </section>
 
       {/* ── Final CTA ── */}
       <section className="py-24" style={{ backgroundColor: "#081527" }}>

@@ -15,16 +15,12 @@ export const en = {
 
   hero: {
     badge: "Boutique Law Firm · IP · Internet · Defamation",
-    h1: "Smart Legal Protection for Private and Business Clients.",
+    h1: "With you. all the way.",
     h1Accent: "Internet Law Firm — with proven experience against Google, Meta & Amazon",
     sub: "A boutique law firm specializing in intellectual property, internet law, and defamation.",
     subDesc: "",
-    bullets: [
-      "Proven expertise in IP law, technology, and artificial intelligence",
-      "Direct experience representing clients against global tech platforms",
-      "Personal service from the attorney — not a secretary",
-    ],
-    cta1: "Schedule Initial Review",
+    bullets: [],
+    cta1: "Contact",
     cta2: "Send Inquiry",
     microcopy: "Reply within 24 hours · First call free · Full confidentiality",
     statement: "Managing rights, agreements, and legal risks in the AI era.",
@@ -33,14 +29,14 @@ export const en = {
   trust: {
     items: [
       { title: "Striving for Excellence", sub: "A young boutique firm in constant growth and development" },
-      { title: "Google, Meta & Amazon", sub: "Direct experience with global tech platforms" },
+      { title: "Dealing with the Big Players", sub: "Ongoing dealings with large firms" },
       { title: "Personal Attention for Every Client", sub: "Personal service and availability at all times" },
     ],
   },
 
   partners: {
-    heading: "We Are Strategic Partners in Your Success",
-    sub: "We believe that effective legal work in the digital world requires a deep understanding of both worlds — the technological and the legal. Our firm guides clients at every stage to protect their digital assets.",
+    heading: "Specializing in Every Commercial Field",
+    sub: "And we'll be glad to assist you across a wide range of matters.",
     items: ["Strategy", "Asset Protection", "Case Management", "Full Support", "Immediate Counsel", "Agreements & Contracts"],
   },
 
