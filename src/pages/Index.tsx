@@ -127,34 +127,32 @@ const Index = () => {
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48">
           <div className="w-12 h-[2px] mx-auto mb-10" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
           <h1 className="text-white font-bold mb-6 mx-auto" style={{ fontSize: "clamp(2rem, 4.5vw, 4rem)", lineHeight: 1.1, maxWidth: "820px", whiteSpace: "pre-line" }}>
-            {lang === "he" ? (
-              <>
-                {t.hero.h1.split("שמומחה").map((part, i, arr) =>
-                  i < arr.length - 1 ? (
-                    <span key={i}>
-                      {part}
-                      <span className="relative inline-block">
-                        שמומחה
-                        <span
-                          className="absolute bottom-0 left-0 w-full"
-                          style={{
-                            height: "3px",
-                            background: "#C9A227",
-                            borderRadius: "2px",
-                            animation: "underlineGrow 0.9s ease both 0.4s",
-                            transformOrigin: "right",
-                          }}
-                          aria-hidden="true"
-                        />
-                      </span>
-                    </span>
-                  ) : part
-                )}
-              </>
-            ) : t.hero.h1}
+            {t.hero.h1}
           </h1>
           <p className="mx-auto mb-3 leading-relaxed font-semibold" style={{ color: "rgba(255,255,255,0.75)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "580px" }}>
-            {t.hero.sub}
+            {lang === "he" ? (
+              t.hero.sub.split("מענה מקצועי ואישי").map((part, i, arr) =>
+                i < arr.length - 1 ? (
+                  <span key={i}>
+                    {part}
+                    <span className="relative inline-block">
+                      מענה מקצועי ואישי
+                      <span
+                        className="absolute bottom-0 left-0 w-full"
+                        style={{
+                          height: "2px",
+                          background: "#C9A227",
+                          borderRadius: "2px",
+                          animation: "underlineGrow 0.9s ease both 0.5s",
+                          transformOrigin: "right",
+                        }}
+                        aria-hidden="true"
+                      />
+                    </span>
+                  </span>
+                ) : part
+              )
+            ) : t.hero.sub}
           </p>
           {t.hero.subDesc && (
             <p className="mx-auto mb-10 leading-relaxed" style={{ color: "rgba(255,255,255,0.5)", fontSize: "clamp(0.875rem, 1.1vw, 1rem)", maxWidth: "580px" }}>
