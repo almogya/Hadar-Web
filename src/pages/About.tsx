@@ -72,33 +72,6 @@ const About = () => {
                 ))}
               </div>
 
-              {lang === "he" && (
-                <div className="mt-8 pt-8 border-t border-border">
-                  <p className="font-bold text-foreground leading-snug" style={{ fontSize: "clamp(1.1rem, 2vw, 1.4rem)" }}>
-                    {"בעידן ה-AI רק עורך דין שמומחה לבינה מלאכותית".split("שמומחה").map((part, i, arr) =>
-                      i < arr.length - 1 ? (
-                        <span key={i}>
-                          {part}
-                          <span className="relative inline-block">
-                            שמומחה
-                            <span
-                              className="absolute bottom-0 left-0 w-full"
-                              style={{
-                                height: "2px",
-                                background: "#C9A227",
-                                borderRadius: "2px",
-                                animation: "underlineGrow 0.9s ease both 0.3s",
-                                transformOrigin: "right",
-                              }}
-                              aria-hidden="true"
-                            />
-                          </span>
-                        </span>
-                      ) : part
-                    )}
-                  </p>
-                </div>
-              )}
             </div>
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative">
