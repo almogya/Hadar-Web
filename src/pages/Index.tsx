@@ -139,10 +139,9 @@ const Index = () => {
             } as const;
             return (
               <>
-                <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white mb-7 mx-auto" style={headingStyle}>
+                <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white mb-3 mx-auto" style={headingStyle}>
                   {first}
                 </h1>
-                <div className="w-12 h-[2px] mx-auto mb-7" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
                 {second && (
                   <p dir={lang === "he" ? "rtl" : "ltr"} className="mb-6 mx-auto" style={{ ...headingStyle, color: "#C9A227" }}>
                     {second}
