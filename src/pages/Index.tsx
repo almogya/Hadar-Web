@@ -125,22 +125,32 @@ const Index = () => {
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(8,21,39,0.85) 0%, rgba(8,21,39,0.75) 60%, rgba(8,21,39,0.92) 100%)" }} aria-hidden="true" />
 
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48" style={{ transform: "translateY(12vh)" }}>
-          <div className="w-12 h-[2px] mx-auto mb-10" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
-          {t.hero.h1 && (
-            <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white mb-6 mx-auto" style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', fontSize: lang === "he" ? "clamp(1.6rem, 3.6vw, 3rem)" : "clamp(1.9rem, 4vw, 3.4rem)", fontWeight: lang === "he" ? 600 : 700, lineHeight: 1.2, maxWidth: "820px", whiteSpace: "pre-line" }}>
-              {(() => {
-                const accent = lang === "he" ? "מבינים טכנולוגיה." : "Fluent in tech.";
-                const idx = t.hero.h1.indexOf(accent);
-                if (idx === -1) return t.hero.h1;
-                return (
-                  <>
-                    {t.hero.h1.slice(0, idx)}
-                    <span style={{ color: "#C9A227" }}>{accent}</span>
-                  </>
-                );
-              })()}
-            </h1>
-          )}
+          {t.hero.h1 && (() => {
+            const accent = lang === "he" ? "מבינים טכנולוגיה." : "Fluent in tech.";
+            const idx = t.hero.h1.indexOf(accent);
+            const first = idx === -1 ? t.hero.h1 : t.hero.h1.slice(0, idx).trim();
+            const second = idx === -1 ? "" : accent;
+            const headingStyle = {
+              fontFamily: '"Heebo", system-ui, -apple-system, sans-serif',
+              fontSize: lang === "he" ? "clamp(1.6rem, 3.6vw, 3rem)" : "clamp(1.9rem, 4vw, 3.4rem)",
+              fontWeight: lang === "he" ? 600 : 700,
+              lineHeight: 1.2,
+              maxWidth: "820px",
+            } as const;
+            return (
+              <>
+                <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white mb-7 mx-auto" style={headingStyle}>
+                  {first}
+                </h1>
+                <div className="w-12 h-[2px] mx-auto mb-7" style={{ backgroundColor: "#C9A227", opacity: 0.6 }} aria-hidden="true" />
+                {second && (
+                  <p dir={lang === "he" ? "rtl" : "ltr"} className="mb-6 mx-auto" style={{ ...headingStyle, color: "#C9A227" }}>
+                    {second}
+                  </p>
+                )}
+              </>
+            );
+          })()}
           <p className="mx-auto mb-3 mt-[26vh] leading-relaxed font-semibold" style={{ color: "rgba(255,255,255,0.75)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "580px" }}>
             {t.hero.sub}
           </p>
