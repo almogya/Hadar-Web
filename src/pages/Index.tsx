@@ -125,41 +125,48 @@ const Index = () => {
         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(8,21,39,0.85) 0%, rgba(8,21,39,0.75) 60%, rgba(8,21,39,0.92) 100%)" }} aria-hidden="true" />
 
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48" style={{ transform: "translateY(12vh)" }}>
-          {t.hero.h1 && (() => {
+          {(() => {
             const accent = lang === "he" ? "משפט. טכנולוגיה." : "Fluent in tech.";
-            const idx = t.hero.h1.indexOf(accent);
-            const first = idx === -1 ? t.hero.h1 : t.hero.h1.slice(0, idx).trim();
-            const second = idx === -1 ? "" : accent;
-            const headingStyle = {
-              fontFamily: '"Heebo", system-ui, -apple-system, sans-serif',
-              fontSize: lang === "he" ? "clamp(1.6rem, 3.6vw, 3rem)" : "clamp(1.9rem, 4vw, 3.4rem)",
-              fontWeight: lang === "he" ? 600 : 700,
-              lineHeight: 1.2,
-              maxWidth: "820px",
-            } as const;
             return (
               <>
-                <h1 dir={lang === "he" ? "rtl" : "ltr"} className="text-white mb-3 mx-auto" style={headingStyle}>
-                  {first}
+                {/* Animated logo: H → Hadar, Y → Yatzkan */}
+                <h1
+                  dir="ltr"
+                  aria-label="Hadar Yatzkan Law Offices"
+                  className="text-white mx-auto"
+                  style={{ fontFamily: '"Playfair Display", Georgia, serif', fontWeight: 700, fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)", lineHeight: 1.1, letterSpacing: "0.01em" }}
+                >
+                  <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
+                    H<span className="logo-reveal" style={{ animationDelay: "0.4s" }}>adar</span>
+                  </span>
+                  <span aria-hidden="true" style={{ display: "inline-block", width: "0.45em" }} />
+                  <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
+                    Y<span className="logo-reveal" style={{ animationDelay: "1.35s" }}>atzkan</span>
+                  </span>
                 </h1>
-                {second && (
-                  <p dir={lang === "he" ? "rtl" : "ltr"} className="mb-6 mx-auto" style={headingStyle}>
-                    <span className="relative inline-block" style={{ color: "#C9A227" }}>
-                      {second}
-                      <span
-                        className="absolute bottom-0 left-0 w-full"
-                        style={{
-                          height: "3px",
-                          background: "#C9A227",
-                          borderRadius: "2px",
-                          animation: "underlineGrow 0.9s ease both 0.5s",
-                          transformOrigin: lang === "he" ? "right" : "left",
-                        }}
-                        aria-hidden="true"
-                      />
-                    </span>
-                  </p>
-                )}
+                <p
+                  dir="ltr"
+                  className="mx-auto mt-3"
+                  style={{ fontFamily: '"Playfair Display", Georgia, serif', color: "rgba(255,255,255,0.6)", letterSpacing: "0.42em", fontSize: "clamp(0.65rem, 1.4vw, 0.95rem)", textTransform: "uppercase", animation: "logoFadeUp 0.9s ease both 2.3s" }}
+                >
+                  Law Offices
+                </p>
+                <p dir={lang === "he" ? "rtl" : "ltr"} className="mb-6 mt-5 mx-auto" style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', fontSize: "clamp(1.3rem, 3vw, 2.2rem)", fontWeight: 600, lineHeight: 1.2 }}>
+                  <span className="relative inline-block" style={{ color: "#C9A227" }}>
+                    {accent}
+                    <span
+                      className="absolute bottom-0 left-0 w-full"
+                      style={{
+                        height: "3px",
+                        background: "#C9A227",
+                        borderRadius: "2px",
+                        animation: "underlineGrow 0.9s ease both 2.8s",
+                        transformOrigin: lang === "he" ? "right" : "left",
+                      }}
+                      aria-hidden="true"
+                    />
+                  </span>
+                </p>
               </>
             );
           })()}

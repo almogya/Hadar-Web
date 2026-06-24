@@ -255,6 +255,23 @@
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
 }
+
+/* Logo letter-expand reveal (H → Hadar, Y → Yatzkan) */
+@keyframes letterExpand {
+  from { max-width: 0; opacity: 0; }
+  to   { max-width: 8ch; opacity: 1; }
+}
+.logo-reveal {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  animation: letterExpand 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes logoFadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-6px); }
