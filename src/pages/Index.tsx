@@ -133,7 +133,7 @@ const Index = () => {
                   dir="ltr"
                   aria-label="Hadar Yatzkan Law Offices"
                   className="mx-auto"
-                  style={{ fontFamily: '"Playfair Display", Georgia, serif', fontWeight: 700, fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)", lineHeight: 1.1, letterSpacing: "0.06em", color: "#2B5DAA" }}
+                  style={{ fontFamily: '"Playfair Display", Georgia, serif', fontWeight: 700, fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)", lineHeight: 1.1, letterSpacing: "0.06em", color: "#C9A227" }}
                 >
                   <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
                     H<span className="logo-reveal" style={{ animationDelay: "2s" }}>adar{" "}</span>
