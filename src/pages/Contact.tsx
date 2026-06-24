@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import emailjs from "@emailjs/browser";
 import { EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_CONTACT_TEMPLATE } from "@/lib/emailConfig";
+import { trackLead } from "@/lib/analytics";
 
 const MATTER_KEYS = ["ip", "trademarks", "copyright", "ai", "tech", "litigation", "general"] as const;
 
@@ -43,6 +44,7 @@ const Contact = () => {
         },
         { publicKey: EMAILJS_PUBLIC_KEY }
       );
+      trackLead("contact_form");
       setForm({ name: "", email: "", phone: "", company: "", matterType: "", message: "", consent: false });
       navigate(localePath("/thank-you"));
     } catch {

@@ -7,6 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import emailjs from "@emailjs/browser";
 import { EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_FEE_TEMPLATE } from "@/lib/emailConfig";
+import { trackLead } from "@/lib/analytics";
 
 // Area-specific dynamic questions (bilingual, not in translation files to keep them manageable)
 type AreaQuestion = { key: string; label: { he: string; en: string }; options: { key: string; label: { he: string; en: string } }[] };
@@ -172,6 +173,7 @@ const FeeCalculator = () => {
         },
         { publicKey: EMAILJS_PUBLIC_KEY }
       );
+      trackLead("fee_calculator");
       setSubmitted(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch {

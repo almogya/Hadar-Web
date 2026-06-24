@@ -14,3 +14,10 @@ export function initAnalytics() {
     loadGA();
   }
 }
+
+/** Fire a GA4 "generate_lead" conversion event on successful form submission. */
+export function trackLead(source: string) {
+  if (typeof gtag !== "undefined") {
+    gtag("event", "generate_lead", { source, currency: "ILS", value: 0 });
+  }
+}
