@@ -438,8 +438,8 @@ const FeeCalculator = () => {
               const Icon = [Scale, Briefcase, Layers, Clock][i] ?? Scale;
               return (
                 <div key={item.title} className="p-6 bg-background border border-border text-center">
-                  <Icon className="mx-auto mb-3 text-accent" size={28} strokeWidth={1.5} aria-hidden="true" />
-                  <h3 className="font-display font-semibold text-accent mb-2 text-base">{item.title}</h3>
+                  <Icon className="mx-auto mb-3 text-primary" size={28} strokeWidth={1.5} aria-hidden="true" />
+                  <h3 className="font-display font-semibold text-primary mb-2 text-base">{item.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               );
