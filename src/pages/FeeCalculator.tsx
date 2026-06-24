@@ -120,8 +120,6 @@ const FeeCalculator = () => {
 
   const canAdvance = () => {
     if (step === 1) return !!form.area;
-    if (step === 2) return !!form.service;
-    if (step === 3) return !!form.timeline;
     return false;
   };
 
@@ -251,17 +249,17 @@ const FeeCalculator = () => {
                 {/* Progress bar */}
                 <div className="mb-10">
                   <div className="flex justify-between items-center mb-3">
-                    <span className="text-xs text-muted-foreground">{fc.stepLabel} {step} {fc.of} 4</span>
-                    <span className="text-xs text-accent font-medium">{Math.round((step / 4) * 100)}%</span>
+                    <span className="text-xs text-muted-foreground">{fc.stepLabel} {step} {fc.of} 2</span>
+                    <span className="text-xs text-accent font-medium">{Math.round((step / 2) * 100)}%</span>
                   </div>
                   <div className="h-1.5 bg-border rounded-full overflow-hidden">
                     <div
                       className="h-full bg-accent transition-all duration-500"
-                      style={{ width: `${(step / 4) * 100}%` }}
+                      style={{ width: `${(step / 2) * 100}%` }}
                     />
                   </div>
                   <div className="flex justify-between mt-3">
-                    {[1, 2, 3, 4].map(n => (
+                    {[1, 2].map(n => (
                       <span key={n} className={`text-[11px] font-medium ${n <= step ? "text-accent" : "text-muted-foreground/40"}`}>
                         {n}
                       </span>
@@ -275,72 +273,27 @@ const FeeCalculator = () => {
                     <input type="text" name="website" tabIndex={-1} autoComplete="off" value={honeypot} onChange={e => setHoneypot(e.target.value)} />
                   </div>
 
-                  {/* ── Step 1: Practice Area ── */}
+                  {/* ── Step 1: Practice Area + Description ── */}
                   {step === 1 && (
-                    <div>
-                      <h2 className="text-xl font-display font-semibold text-foreground mb-6">{fc.step1Title}</h2>
-                      <div className="grid grid-cols-2 gap-3">
-                        {fc.areas.map(area => (
-                          <button
-                            key={area.key}
-                            type="button"
-                            onClick={() => setForm(f => ({ ...f, area: area.key, areaAnswers: {} }))}
-                            className={btnOption(form.area === area.key)}
-                          >
-                            {form.area === area.key && <Check size={14} className="inline me-2 text-accent" />}
-                            {area.label}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* ── Step 2: Case Details ── */}
-                  {step === 2 && (
                     <div className="space-y-8">
-                      <h2 className="text-xl font-display font-semibold text-foreground">{fc.step2Title}</h2>
-
-                      {/* Service type */}
                       <div>
-                        <p className="text-xs font-semibold uppercase tracking-wide text-foreground mb-3">{fc.serviceLabel}</p>
-                        <div className="space-y-2">
-                          {fc.services.map(s => (
+                        <h2 className="text-xl font-display font-semibold text-foreground mb-6">{fc.step1Title}</h2>
+                        <div className="grid grid-cols-2 gap-3">
+                          {fc.areas.map(area => (
                             <button
-                              key={s.key}
+                              key={area.key}
                               type="button"
-                              onClick={() => setForm(f => ({ ...f, service: s.key }))}
-                              className={btnOption(form.service === s.key)}
+                              onClick={() => setForm(f => ({ ...f, area: area.key, areaAnswers: {} }))}
+                              className={btnOption(form.area === area.key)}
                             >
-                              {form.service === s.key && <Check size={14} className="inline me-2 text-accent" />}
-                              {s.label}
+                              {form.area === area.key && <Check size={14} className="inline me-2 text-accent" />}
+                              {area.label}
                             </button>
                           ))}
                         </div>
                       </div>
 
-                      {/* Dynamic area-specific questions */}
-                      {dynamicQuestions.map(q => (
-                        <div key={q.key}>
-                          <p className="text-xs font-semibold uppercase tracking-wide text-foreground mb-3">
-                            {isHe ? q.label.he : q.label.en}
-                          </p>
-                          <div className="grid grid-cols-2 gap-2">
-                            {q.options.map(opt => (
-                              <button
-                                key={opt.key}
-                                type="button"
-                                onClick={() => setForm(f => ({ ...f, areaAnswers: { ...f.areaAnswers, [q.key]: opt.key } }))}
-                                className={btnOption(form.areaAnswers[q.key] === opt.key)}
-                              >
-                                {form.areaAnswers[q.key] === opt.key && <Check size={14} className="inline me-2 text-accent" />}
-                                {isHe ? opt.label.he : opt.label.en}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-
-                      {/* Description */}
+                      {/* Brief description */}
                       <div>
                         <label className="block text-xs font-semibold uppercase tracking-wide text-foreground mb-2">
                           {fc.descLabel}
@@ -357,70 +310,8 @@ const FeeCalculator = () => {
                     </div>
                   )}
 
-                  {/* ── Step 3: Scope & Timeline ── */}
-                  {step === 3 && (
-                    <div className="space-y-8">
-                      <h2 className="text-xl font-display font-semibold text-foreground">{fc.step3Title}</h2>
-
-                      {/* Timeline */}
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-wide text-foreground mb-3">{fc.timelineLabel}</p>
-                        <div className="space-y-2">
-                          {fc.timelineOptions.map(o => (
-                            <button
-                              key={o.key}
-                              type="button"
-                              onClick={() => setForm(f => ({ ...f, timeline: o.key }))}
-                              className={btnOption(form.timeline === o.key)}
-                            >
-                              {form.timeline === o.key && <Check size={14} className="inline me-2 text-accent" />}
-                              {o.label}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Budget (multi-select checkboxes) */}
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-wide text-foreground mb-1">{fc.budgetLabel}</p>
-                        <p className="text-xs text-muted-foreground mb-3">{fc.disclaimer}</p>
-                        <div className="grid grid-cols-2 gap-2">
-                          {fc.budgetOptions.map(o => (
-                            <button
-                              key={o.key}
-                              type="button"
-                              onClick={() => handleBudgetToggle(o.key)}
-                              className={btnOption(form.budget.includes(o.key))}
-                            >
-                              {form.budget.includes(o.key) && <Check size={14} className="inline me-2 text-accent" />}
-                              {o.label}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Engagement type */}
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-wide text-foreground mb-3">{fc.engagementLabel}</p>
-                        <div className="space-y-2">
-                          {fc.engagementOptions.map(o => (
-                            <button
-                              key={o.key}
-                              type="button"
-                              onClick={() => setForm(f => ({ ...f, engagement: o.key }))}
-                              className={btnOption(form.engagement === o.key)}
-                            >
-                              {form.engagement === o.key && <Check size={14} className="inline me-2 text-accent" />}
-                              {o.label}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* ── Step 4: Contact Info ── */}
-                  {step === 4 && (
+                  {/* ── Step 2: Contact Info ── */}
+                  {step === 2 && (
                     <div className="space-y-6">
                       <div>
                         <h2 className="text-xl font-display font-semibold text-foreground">{fc.step4Title}</h2>
@@ -511,7 +402,7 @@ const FeeCalculator = () => {
                       </button>
                     ) : <div />}
 
-                    {step < 4 ? (
+                    {step < 2 ? (
                       <button
                         type="button"
                         disabled={!canAdvance()}
