@@ -146,8 +146,8 @@ const Index = () => {
                 </h1>
                 <p
                   dir="ltr"
-                  className="mx-auto mt-3"
-                  style={{ fontFamily: '"Playfair Display", Georgia, serif', color: "rgba(255,255,255,0.6)", letterSpacing: "0.42em", fontSize: "clamp(0.65rem, 1.4vw, 0.95rem)", textTransform: "uppercase", animation: "logoFadeUp 0.9s ease both 2.2s" }}
+                  className="mx-auto mt-2"
+                  style={{ fontFamily: '"Playfair Display", Georgia, serif', fontWeight: 700, color: "rgba(255,255,255,0.78)", letterSpacing: "0.12em", fontSize: "clamp(1rem, 2vw, 1.6rem)", animation: "logoFadeUp 0.9s ease both 2.2s" }}
                 >
                   Law Offices
                 </p>
