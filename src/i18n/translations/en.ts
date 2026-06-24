@@ -37,7 +37,7 @@ export const en = {
   partners: {
     heading: "Specializing in Every Commercial Field",
     sub: "And we'll be glad to assist you across a wide range of matters.",
-    items: ["Strategy", "Asset Protection", "Case Management", "Full Support", "Immediate Counsel", "Agreements & Contracts"],
+    items: ["Strategy", "IP Asset Protection", "Case Management", "Expertise Across Fields", "Immediate Counsel", "Agreements & Contracts"],
   },
 
   audiences: {

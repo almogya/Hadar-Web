@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, BarChart2, MessageSquareX, ScrollText, Eye, UserX, Camera, User, Users, Award } from "lucide-react";
+import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, BarChart2, MessageSquareX, ScrollText, Eye, UserX, Camera, User, Users, Award, Shapes } from "lucide-react";
 import heroNightImg from "@/assets/hero-office-skyline.jpg";
 import editorialImg from "@/assets/hero-editorial.jpg";
 import Layout from "@/components/Layout";
@@ -36,7 +36,7 @@ const PROCESS_STEPS = [
 ] as const;
 
 /** Partners section icons */
-const PARTNER_ICONS = [Handshake, Shield, Briefcase, MessageSquare, FileSearch, FileText] as const;
+const PARTNER_ICONS = [Handshake, Shield, Briefcase, Shapes, FileSearch, FileText] as const;
 
 /** Stable audience icons */
 const AUDIENCES = [
