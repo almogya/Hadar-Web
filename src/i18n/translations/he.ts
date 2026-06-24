@@ -1695,7 +1695,7 @@ export const he = {
       { key: "full", label: "ייצוג מלא בתיק" },
     ],
     step4Title: "לאן לשלוח את ההצעה?",
-    step4Sub: "תקבלו תשובה תוך 24 שעות.",
+    step4Sub: "בהתאם לכללי לשכת עורכי הדין את ההצעה נשלח באופן פרטי למייל.",
     nameLabel: "שם מלא",
     namePlaceholder: "ישראל ישראלי",
     emailLabel: "כתובת מייל",
