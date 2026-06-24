@@ -128,21 +128,19 @@ const Index = () => {
           {(() => {
             return (
               <>
-                {/* Typewriter logo: Hadar Yatzkan */}
+                {/* Logo expand: HY → HADAR YATZKAN (ADAR unfolds from H, ATZKAN from Y) */}
                 <h1
                   dir="ltr"
                   aria-label="Hadar Yatzkan Law Offices"
-                  className="text-white mx-auto"
-                  style={{ fontFamily: '"Playfair Display", Georgia, serif', fontWeight: 700, fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)", lineHeight: 1.1, letterSpacing: "0.01em" }}
+                  className="mx-auto"
+                  style={{ fontFamily: '"Playfair Display", Georgia, serif', fontWeight: 700, fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)", lineHeight: 1.1, letterSpacing: "0.01em", color: "#C9A227" }}
                 >
-                  <span aria-hidden="true" className="typewriter" style={{ animation: "typeReveal 1.5s steps(26, end) both 0.4s" }}>
-                    Hadar Yatzkan
+                  <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
+                    H<span className="logo-reveal" style={{ animationDelay: "0.5s" }}>adar{" "}</span>
                   </span>
-                  <span
-                    aria-hidden="true"
-                    className="inline-block align-text-bottom"
-                    style={{ width: "0.05em", height: "0.95em", marginInlineStart: "0.12em", backgroundColor: "#C9A227", animation: "caretBlink 0.9s step-end infinite 0.4s" }}
-                  />
+                  <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
+                    Y<span className="logo-reveal" style={{ animationDelay: "1.5s" }}>atzkan</span>
+                  </span>
                 </h1>
                 <p
                   dir="ltr"
