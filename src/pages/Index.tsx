@@ -263,18 +263,24 @@ const Index = () => {
           <img src={editorialImg} alt="" className="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
           <div className="absolute inset-0" style={{ backgroundColor: "rgba(8,21,39,0.55)" }} aria-hidden="true" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex flex-wrap gap-10 justify-center px-10">
-              {t.partners.items.map((item, i) => {
-                const Icon = PARTNER_ICONS[i];
-                return (
-                  <div key={i} className="flex flex-col items-center gap-2 text-center">
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "rgba(201,162,39,0.12)", border: "1px solid rgba(201,162,39,0.25)" }}>
-                      <Icon size={18} style={{ color: "#C9A227" }} aria-hidden="true" />
-                    </div>
-                    <span className="text-xs font-medium" style={{ color: "rgba(255,255,255,0.7)" }}>{item}</span>
-                  </div>
-                );
-              })}
+            <div className="flex flex-col gap-8 px-6 w-full">
+              {[[0], [1, 2], [3, 4, 5]].map((row, ri) => (
+                <div key={ri} className="flex gap-8 sm:gap-10 justify-center">
+                  {row.map(i => {
+                    const item = t.partners.items[i];
+                    if (!item) return null;
+                    const Icon = PARTNER_ICONS[i];
+                    return (
+                      <div key={i} className="flex flex-col items-center gap-2 text-center w-20">
+                        <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "rgba(201,162,39,0.12)", border: "1px solid rgba(201,162,39,0.25)" }}>
+                          <Icon size={18} style={{ color: "#C9A227" }} aria-hidden="true" />
+                        </div>
+                        <span className="text-xs font-medium leading-tight" style={{ color: "rgba(255,255,255,0.7)" }}>{item}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
             </div>
           </div>
         </div>
