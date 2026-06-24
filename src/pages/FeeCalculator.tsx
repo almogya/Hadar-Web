@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { toast } from "sonner";
 import { Link } from "react-router-dom";
-import { Check, ChevronRight, ChevronLeft, Loader2, CheckCircle2 } from "lucide-react";
+import { Check, ChevronRight, ChevronLeft, Loader2, CheckCircle2, Scale, Briefcase, Layers, Clock } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -434,12 +434,16 @@ const FeeCalculator = () => {
         <div className="container max-w-3xl">
           <h2 className="text-2xl font-display font-bold text-foreground mb-8">{fc.infoTitle}</h2>
           <div className="grid sm:grid-cols-2 gap-6 mb-12">
-            {fc.infoItems.map(item => (
-              <div key={item.title} className="p-6 bg-background border border-border">
-                <h3 className="font-display font-semibold text-foreground mb-2 text-base">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
+            {fc.infoItems.map((item, i) => {
+              const Icon = [Scale, Briefcase, Layers, Clock][i] ?? Scale;
+              return (
+                <div key={item.title} className="p-6 bg-background border border-border text-center">
+                  <Icon className="mx-auto mb-3 text-accent" size={28} strokeWidth={1.5} aria-hidden="true" />
+                  <h3 className="font-display font-semibold text-accent mb-2 text-base">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                </div>
+              );
+            })}
           </div>
 
           {/* Rich text for SEO */}
