@@ -136,16 +136,16 @@ const Index = () => {
                   style={{ fontFamily: '"Playfair Display", Georgia, serif', fontWeight: 700, fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)", lineHeight: 1.1, letterSpacing: "0.06em", color: "#C9A227" }}
                 >
                   <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
-                    H<span className="logo-reveal" style={{ animationDelay: "0.6s" }}>adar{" "}</span>
+                    H<span className="logo-reveal" style={{ animationDelay: "1s" }}>adar{" "}</span>
                   </span>
                   <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
-                    Y<span className="logo-reveal" style={{ animationDelay: "2.4s" }}>atzkan</span>
+                    Y<span className="logo-reveal" style={{ animationDelay: "4.2s" }}>atzkan</span>
                   </span>
                 </h1>
                 <p
                   dir="ltr"
                   className="mx-auto mt-3"
-                  style={{ fontFamily: '"Playfair Display", Georgia, serif', color: "rgba(255,255,255,0.6)", letterSpacing: "0.42em", fontSize: "clamp(0.65rem, 1.4vw, 0.95rem)", textTransform: "uppercase", animation: "logoFadeUp 1s ease both 4.3s" }}
+                  style={{ fontFamily: '"Playfair Display", Georgia, serif', color: "rgba(255,255,255,0.6)", letterSpacing: "0.42em", fontSize: "clamp(0.65rem, 1.4vw, 0.95rem)", textTransform: "uppercase", animation: "logoFadeUp 1.2s ease both 0.3s" }}
                 >
                   Law Offices
                 </p>
@@ -154,7 +154,7 @@ const Index = () => {
                   className="mb-6 mt-6 mx-auto"
                   style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', color: "#C9A227", fontSize: "clamp(1.05rem, 2.4vw, 1.7rem)", fontWeight: 600, letterSpacing: "0.06em", lineHeight: 1.2 }}
                 >
-                  <span aria-hidden="true" className="typewriter" style={{ animation: "typeReveal 1.6s steps(28, end) both 4.8s" }}>
+                  <span aria-hidden="true" className="typewriter" style={{ animation: "typeReveal 2.6s steps(28, end) both 7.2s" }}>
                     IP. INTERNET. DEFAMATION.
                   </span>
                 </p>
