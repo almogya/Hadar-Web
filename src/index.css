@@ -256,17 +256,18 @@
   to   { transform: scaleX(1); }
 }
 
-/* Logo letter-expand reveal (H → Hadar, Y → Yatzkan) */
-@keyframes letterExpand {
-  from { max-width: 0; opacity: 0; }
-  to   { max-width: 8ch; opacity: 1; }
+/* Typewriter (code-typing) reveal */
+@keyframes typeReveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
 }
-.logo-reveal {
+.typewriter {
   display: inline-block;
-  overflow: hidden;
   white-space: nowrap;
-  vertical-align: bottom;
-  animation: letterExpand 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes caretBlink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
 }
 @keyframes logoFadeUp {
   from { opacity: 0; transform: translateY(8px); }

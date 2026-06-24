@@ -126,45 +126,38 @@ const Index = () => {
 
         <div className="relative z-10 w-full text-center px-6 py-40 md:py-48" style={{ transform: "translateY(12vh)" }}>
           {(() => {
-            const accent = lang === "he" ? "משפט. טכנולוגיה." : "Fluent in tech.";
             return (
               <>
-                {/* Animated logo: H → Hadar, Y → Yatzkan */}
+                {/* Typewriter logo: Hadar Yatzkan */}
                 <h1
                   dir="ltr"
                   aria-label="Hadar Yatzkan Law Offices"
                   className="text-white mx-auto"
                   style={{ fontFamily: '"Playfair Display", Georgia, serif', fontWeight: 700, fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)", lineHeight: 1.1, letterSpacing: "0.01em" }}
                 >
-                  <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
-                    H<span className="logo-reveal" style={{ animationDelay: "0.4s" }}>adar</span>
+                  <span aria-hidden="true" className="typewriter" style={{ animation: "typeReveal 1.5s steps(26, end) both 0.4s" }}>
+                    Hadar Yatzkan
                   </span>
-                  <span aria-hidden="true" style={{ display: "inline-block", width: "0.45em" }} />
-                  <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
-                    Y<span className="logo-reveal" style={{ animationDelay: "1.35s" }}>atzkan</span>
-                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="inline-block align-text-bottom"
+                    style={{ width: "0.05em", height: "0.95em", marginInlineStart: "0.12em", backgroundColor: "#C9A227", animation: "caretBlink 0.9s step-end infinite 0.4s" }}
+                  />
                 </h1>
                 <p
                   dir="ltr"
                   className="mx-auto mt-3"
-                  style={{ fontFamily: '"Playfair Display", Georgia, serif', color: "rgba(255,255,255,0.6)", letterSpacing: "0.42em", fontSize: "clamp(0.65rem, 1.4vw, 0.95rem)", textTransform: "uppercase", animation: "logoFadeUp 0.9s ease both 2.3s" }}
+                  style={{ fontFamily: '"Playfair Display", Georgia, serif', color: "rgba(255,255,255,0.6)", letterSpacing: "0.42em", fontSize: "clamp(0.65rem, 1.4vw, 0.95rem)", textTransform: "uppercase", animation: "logoFadeUp 0.9s ease both 2.2s" }}
                 >
                   Law Offices
                 </p>
-                <p dir={lang === "he" ? "rtl" : "ltr"} className="mb-6 mt-5 mx-auto" style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', fontSize: "clamp(1.3rem, 3vw, 2.2rem)", fontWeight: 600, lineHeight: 1.2 }}>
-                  <span className="relative inline-block" style={{ color: "#C9A227" }}>
-                    {accent}
-                    <span
-                      className="absolute bottom-0 left-0 w-full"
-                      style={{
-                        height: "3px",
-                        background: "#C9A227",
-                        borderRadius: "2px",
-                        animation: "underlineGrow 0.9s ease both 2.8s",
-                        transformOrigin: lang === "he" ? "right" : "left",
-                      }}
-                      aria-hidden="true"
-                    />
+                <p
+                  dir="ltr"
+                  className="mb-6 mt-6 mx-auto"
+                  style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', color: "#C9A227", fontSize: "clamp(1.05rem, 2.4vw, 1.7rem)", fontWeight: 600, letterSpacing: "0.06em", lineHeight: 1.2 }}
+                >
+                  <span aria-hidden="true" className="typewriter" style={{ animation: "typeReveal 1.6s steps(28, end) both 2.6s" }}>
+                    IP. INTERNET. DEFAMATION.
                   </span>
                 </p>
               </>
