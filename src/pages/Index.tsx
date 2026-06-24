@@ -154,7 +154,7 @@ const Index = () => {
                   className="mb-6 mt-6 mx-auto"
                   style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', color: "#C9A227", fontSize: "clamp(1.05rem, 2.4vw, 1.7rem)", fontWeight: 600, letterSpacing: "0.06em", lineHeight: 1.2 }}
                 >
-                  <span aria-hidden="true" className="typewriter" style={{ animation: "typeReveal 2.6s steps(28, end) both 5.2s" }}>
+                  <span aria-hidden="true" className="typewriter" style={{ animation: "typeReveal 2.6s steps(28, end) both 4.2s" }}>
                     IP. INTERNET. DEFAMATION.
                   </span>
                 </p>
