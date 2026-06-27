@@ -15,8 +15,8 @@ const About = () => {
     name: "Hadar Yatzkan",
     alternateName: "הדר יצקן",
     jobTitle: lang === "he" ? "עורך דין" : "Attorney-at-Law",
-    url: "https://ai-law.co.il",
-    image: "https://ai-law.co.il/og-image.jpg",
+    url: "https://ai-lawyer.co.il",
+    image: "https://ai-lawyer.co.il/og-image.jpg",
     email: "Hadar@ai-lawyer.co.il",
     telephone: "+972542234726",
     address: {
@@ -41,7 +41,7 @@ const About = () => {
     worksFor: {
       "@type": "LegalService",
       name: "HY Law Offices",
-      url: "https://ai-law.co.il",
+      url: "https://ai-lawyer.co.il",
     },
   };
 

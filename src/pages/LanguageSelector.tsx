@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { Head } from "vite-react-ssg";
 import logo from "@/assets/logo.png";
 
 const LanguageSelector = () => {
@@ -22,6 +23,14 @@ const LanguageSelector = () => {
       className="min-h-screen flex flex-col items-center justify-center"
       style={{ backgroundColor: "#0B1F3A" }}
     >
+      <Head>
+        <title>HY Law Offices — Hadar Yatzkan | IP, Internet & Defamation Law, Israel</title>
+        <meta name="description" content="HY Law Offices — Adv. Hadar Yatzkan. Boutique intellectual property, internet, defamation, and technology law firm in Givatayim, Israel. Choose your language." />
+        <link rel="canonical" href="https://ai-lawyer.co.il/" />
+        <link rel="alternate" hrefLang="he" href="https://ai-lawyer.co.il/he" />
+        <link rel="alternate" hrefLang="en" href="https://ai-lawyer.co.il/en" />
+        <link rel="alternate" hrefLang="x-default" href="https://ai-lawyer.co.il/" />
+      </Head>
       {/* Centered lockup */}
       <div className="flex flex-col items-center text-center px-8 max-w-lg">
         {/* Logo */}

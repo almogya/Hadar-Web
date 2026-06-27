@@ -35,25 +35,13 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
   ssgOptions: {
     dirStyle: "nested",
     onPageRendered: (route: string, html: string) => {
-      const DOMAIN = "https://ai-law.co.il";
       const isHe = route.startsWith("/he");
-      const pathWithoutLang = route.replace(/^\/(en|he)/, "") || "";
-      const selfUrl = route === "/" ? `${DOMAIN}/` : `${DOMAIN}${route}`;
-      const heUrl = `${DOMAIN}/he${pathWithoutLang}`;
-      const enUrl = `${DOMAIN}/en${pathWithoutLang}`;
-
-      // Fix lang + dir on <html> element
-      let result = isHe
+      // Ensure correct lang + dir on the <html> element of the static output.
+      // Per-page <title>, meta, canonical and hreflang are injected by SEOHead
+      // (react-helmet) on every route, so they are intentionally not duplicated here.
+      return isHe
         ? html.replace(/<html[^>]*>/, '<html lang="he" dir="rtl">')
         : html.replace(/<html[^>]*>/, '<html lang="en" dir="ltr">');
-
-      // Inject canonical + hreflang into static HTML so crawlers without JS see correct values
-      const headTags = route === "/"
-        ? `  <link rel="canonical" href="${DOMAIN}/" />\n  <link rel="alternate" hreflang="he" href="${DOMAIN}/he" />\n  <link rel="alternate" hreflang="en" href="${DOMAIN}/en" />\n  <link rel="alternate" hreflang="x-default" href="${DOMAIN}/" />`
-        : `  <link rel="canonical" href="${selfUrl}" />\n  <link rel="alternate" hreflang="he" href="${heUrl}" />\n  <link rel="alternate" hreflang="en" href="${enUrl}" />\n  <link rel="alternate" hreflang="x-default" href="${DOMAIN}/" />`;
-
-      result = result.replace("</head>", `${headTags}\n  </head>`);
-      return result;
     },
     includedRoutes: async (paths: string[]) => {
       const langs = ["he", "en"];

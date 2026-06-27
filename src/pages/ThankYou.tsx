@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
@@ -9,6 +10,13 @@ const ThankYou = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Thank You | HY Law Offices"
+        description="Your message has been received."
+        titleHe="תודה | HY Law Offices — הדר יצקן"
+        descriptionHe="הודעתכם התקבלה."
+        noindex
+      />
       <section className="py-24">
         <div className="container max-w-2xl text-center">
           <div className="w-20 h-20 mx-auto mb-8 bg-gold-light flex items-center justify-center">

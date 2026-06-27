@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
 import { useState, useRef } from "react";
@@ -59,6 +60,12 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Contact HY Law Offices | Hadar Yatzkan, Givatayim"
+        description="Contact Adv. Hadar Yatzkan — HY Law Offices in Givatayim, Israel — on intellectual property, internet defamation, copyright, trademarks, and technology law."
+        titleHe="צור קשר | משרד עורכי הדין הדר יצקן, גבעתיים"
+        descriptionHe="יצירת קשר עם עו״ד הדר יצקן — משרד עורכי דין בגבעתיים — בנושאי קניין רוחני, לשון הרע באינטרנט, זכויות יוצרים, סימני מסחר ודיני טכנולוגיה."
+      />
       {/* Hero */}
       <section className="py-28 bg-section-alt">
         <div className="container">

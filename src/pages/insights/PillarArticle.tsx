@@ -61,11 +61,54 @@ const PillarArticle = () => {
   const article = t.pillarArticles[key];
   const common = t.pillarArticles;
 
+  const DOMAIN = "https://ai-lawyer.co.il";
+  const articleUrl = `${DOMAIN}/${lang}/insights/${slug}`;
+  const authorName = isHe ? "עו״ד הדר יצקן" : "Adv. Hadar Yatzkan";
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.metaDesc,
+    inLanguage: lang,
+    author: { "@type": "Person", name: authorName, url: `${DOMAIN}/${lang}/about` },
+    publisher: {
+      "@type": "Organization",
+      name: "HY Law Offices",
+      logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.webp` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: isHe ? "דף הבית" : "Home", item: `${DOMAIN}/${lang}` },
+      { "@type": "ListItem", position: 2, name: isHe ? "מאמרים" : "Insights", item: `${DOMAIN}/${lang}/insights` },
+      { "@type": "ListItem", position: 3, name: article.title, item: articleUrl },
+    ],
+  };
+
+  const faqSchema = article.faq && article.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: article.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  } : null;
+
   return (
     <Layout>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
       <SEOHead
         title={article.metaTitle}
         description={article.metaDesc}
+        type="article"
       />
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

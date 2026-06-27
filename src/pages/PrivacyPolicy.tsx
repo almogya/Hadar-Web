@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const PrivacyPolicy = () => {
@@ -6,6 +7,12 @@ const PrivacyPolicy = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Privacy Policy | HY Law Offices"
+        description="How HY Law Offices collects, uses, and protects personal information submitted through the website, and your rights under Israeli privacy law."
+        titleHe="מדיניות פרטיות | HY Law Offices — הדר יצקן"
+        descriptionHe="כיצד משרד עורכי הדין הדר יצקן אוסף, מעבד ומגן על מידע אישי הנמסר באתר, וזכויותיכם לפי חוק הגנת הפרטיות."
+      />
       <section className="py-24">
         <div className="container max-w-3xl">
           <h1 className="text-4xl font-display font-bold text-foreground mb-8">{t.privacyPolicy.h1}</h1>

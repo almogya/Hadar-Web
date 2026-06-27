@@ -1,5 +1,12 @@
+# robots.txt — HY Law Offices (Hadar Yatzkan)
+# All public pages and rendering assets (CSS/JS/images) are crawlable.
+
 User-agent: *
 Allow: /
-Disallow: /thank-you
 
-Sitemap: https://ai-law.co.il/sitemap.xml
+# Thank-you pages carry a noindex meta directive (kept crawlable so it is honoured).
+
+# Machine-readable site summary for AI crawlers and agents:
+# https://ai-lawyer.co.il/llms.txt
+
+Sitemap: https://ai-lawyer.co.il/sitemap.xml

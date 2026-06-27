@@ -209,17 +209,45 @@ AI companies trained their models on vast amounts of internet content — books,
   faqTitle: "FAQ",
 };
 
+const DOMAIN = "https://ai-lawyer.co.il";
+const SLUG = "ai-ip-ownership-2026";
+
 const AiIpArticle = () => {
   const { lang, localePath } = useLanguage();
   const t = lang === "he" ? he : en;
+  const isHe = lang === "he";
+  const articleUrl = `${DOMAIN}/${lang}/insights/${SLUG}`;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: t.title,
+    description: t.metaDesc,
+    inLanguage: lang,
+    author: { "@type": "Person", name: isHe ? "עו״ד הדר יצקן" : "Adv. Hadar Yatzkan", url: `${DOMAIN}/${lang}/about` },
+    publisher: { "@type": "Organization", name: "HY Law Offices", logo: { "@type": "ImageObject", url: `${DOMAIN}/logo.webp` } },
+    mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: isHe ? "דף הבית" : "Home", item: `${DOMAIN}/${lang}` },
+      { "@type": "ListItem", position: 2, name: isHe ? "מאמרים" : "Insights", item: `${DOMAIN}/${lang}/insights` },
+      { "@type": "ListItem", position: 3, name: t.title, item: articleUrl },
+    ],
+  };
 
   return (
     <Layout>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <SEOHead
         title={en.metaTitle}
         description={en.metaDesc}
         titleHe={he.metaTitle}
         descriptionHe={he.metaDesc}
+        type="article"
       />
       <article className="py-24 md:py-32">
         <div className="container max-w-3xl">

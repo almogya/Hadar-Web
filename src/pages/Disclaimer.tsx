@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import SEOHead from "@/components/SEOHead";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const Disclaimer = () => {
@@ -6,6 +7,12 @@ const Disclaimer = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Legal Disclaimer | HY Law Offices"
+        description="Legal disclaimer for the HY Law Offices website. Content is for general information only and does not create an attorney-client relationship."
+        titleHe="הבהרה משפטית | HY Law Offices — הדר יצקן"
+        descriptionHe="הבהרה משפטית לאתר משרד עורכי הדין הדר יצקן. התכנים מספקים מידע כללי בלבד ואינם יוצרים יחסי עורך דין–לקוח."
+      />
       <section className="py-24">
         <div className="container max-w-3xl">
           <h1 className="text-4xl font-display font-bold text-foreground mb-8">{t.disclaimer.h1}</h1>

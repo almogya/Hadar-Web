@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { LucideIcon } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
@@ -47,6 +47,7 @@ const PracticeAreaLayout = ({
 }: PracticeAreaLayoutProps) => {
   const { lang, localePath } = useLanguage();
   const isHe = lang === "he";
+  const location = useLocation();
 
   const resolvedSeoTitle = seoTitle || `${title} | HY Law Offices | Israel`;
   const resolvedSeoTitleHe = seoTitleHe || `${titleHe} | HY Law Offices | ישראל`;
@@ -55,8 +56,20 @@ const PracticeAreaLayout = ({
   const resolvedSeoDescHe =
     seoDescHe || `${introHe.slice(0, 155)}`;
 
+  const DOMAIN = "https://ai-lawyer.co.il";
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: isHe ? "דף הבית" : "Home", item: `${DOMAIN}/${lang}` },
+      { "@type": "ListItem", position: 2, name: isHe ? "תחומי עיסוק" : "Practice Areas", item: `${DOMAIN}/${lang}/practice-areas` },
+      { "@type": "ListItem", position: 3, name: isHe ? titleHe : title, item: `${DOMAIN}${location.pathname}` },
+    ],
+  };
+
   return (
     <Layout>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <SEOHead
         title={resolvedSeoTitle}
         description={resolvedSeoDesc}
