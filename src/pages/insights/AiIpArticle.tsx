@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CheckCircle, AlertTriangle } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
+import ArticleCTA from "@/components/ArticleCTA";
 import DirectionalIcon from "@/components/DirectionalIcon";
 import { useLanguage } from "@/i18n/LanguageContext";
 
@@ -327,13 +328,7 @@ const AiIpArticle = () => {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 p-8 bg-primary text-center">
-            <h2 className="text-2xl font-display font-bold text-primary-foreground mb-3">{t.ctaTitle}</h2>
-            <p className="text-primary-foreground/70 text-sm mb-6">{t.ctaSub}</p>
-            <Link to={localePath("/contact")} className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-primary text-sm font-semibold tracking-wide hover:bg-accent/90 transition-colors">
-              {t.ctaBtn} <DirectionalIcon size={16} />
-            </Link>
-          </div>
+          <ArticleCTA />
         </div>
       </article>
     </Layout>

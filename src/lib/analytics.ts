@@ -21,3 +21,10 @@ export function trackLead(source: string) {
     gtag("event", "generate_lead", { source, currency: "ILS", value: 0 });
   }
 }
+
+/** Fire a named GA4 event (no-op if analytics isn't loaded). Used for CRO funnel tracking. */
+export function trackEvent(name: string, params?: Record<string, string | number>) {
+  if (typeof gtag !== "undefined") {
+    gtag("event", name, params || {});
+  }
+}

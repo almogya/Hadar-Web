@@ -1,10 +1,11 @@
 import { ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { LucideIcon } from "lucide-react";
+import { LucideIcon, Phone, MessageCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import DirectionalIcon from "@/components/DirectionalIcon";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { trackEvent } from "@/lib/analytics";
 
 interface PracticeAreaLayoutProps {
   icon: LucideIcon;
@@ -148,6 +149,8 @@ const PracticeAreaLayout = ({
             </p>
             <Link
               to={localePath("/contact")}
+              data-cta="service-page-cta"
+              onClick={() => trackEvent("service_cta_click", { location: "practice_area" })}
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -161,9 +164,29 @@ const PracticeAreaLayout = ({
                 borderRadius: "4px",
               }}
             >
-              {isHe ? "לקביעת פגישת ייעוץ" : "Schedule a Consultation"}
+              {isHe ? "השאירו פרטים לבדיקה ראשונית" : "Leave Details for an Initial Review"}
               <DirectionalIcon size={16} className="shrink-0" />
             </Link>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "24px", marginTop: "20px" }}>
+              <a
+                href="tel:+972542234726"
+                data-cta="phone-click"
+                onClick={() => trackEvent("click_phone", { location: "practice_area" })}
+                style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "rgba(255,255,255,0.7)", fontSize: "13px", textDecoration: "none" }}
+              >
+                <Phone size={14} strokeWidth={1.8} /> {isHe ? "התקשרו" : "Call"}
+              </a>
+              <a
+                href={`https://wa.me/972542234726?text=${encodeURIComponent(isHe ? "שלום, הגעתי מהאתר. אשמח לבדיקה ראשונית בנושא משפטי." : "Hello, I came from the website. I'd like an initial review of a legal matter.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="whatsapp-click"
+                onClick={() => trackEvent("click_whatsapp", { location: "practice_area" })}
+                style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "rgba(255,255,255,0.7)", fontSize: "13px", textDecoration: "none" }}
+              >
+                <MessageCircle size={14} strokeWidth={1.8} /> WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </section>

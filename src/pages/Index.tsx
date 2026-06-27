@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
-import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, BarChart2, MessageSquareX, ScrollText, Eye, UserX, Camera, User, Users, Award, Shapes } from "lucide-react";
+import { Shield, Scale, Brain, Globe, Briefcase, Gavel, CheckCircle, MessageSquare, FileSearch, FileText, Cpu, Handshake, AlertTriangle, BarChart2, MessageSquareX, ScrollText, Eye, UserX, Camera, User, Users, Award, Shapes, Phone, MessageCircle, Mail } from "lucide-react";
 import heroNightImg from "@/assets/hero-office-skyline.jpg";
 import editorialImg from "@/assets/hero-editorial.jpg";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
+import LeadForm from "@/components/LeadForm";
 import DirectionalIcon from "@/components/DirectionalIcon";
 import { useLanguage } from "@/i18n/LanguageContext";
+import { trackEvent } from "@/lib/analytics";
 import {
   Accordion,
   AccordionContent,
@@ -176,14 +178,16 @@ const Index = () => {
             </p>
           )}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              to={localePath("/contact")}
+            <a
+              href="#lead-form"
+              data-cta="hero-primary"
+              onClick={() => trackEvent("service_cta_click", { location: "hero_primary" })}
               className="group inline-flex items-center gap-2.5 px-9 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 hover:opacity-90 hover:scale-[1.02] animate-shimmer-btn"
               style={{ color: "#081527" }}
             >
               <DirectionalIcon icon="arrow" size={15} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
               {t.hero.cta1}
-            </Link>
+            </a>
             <Link
               to={localePath("/fee-calculator")}
               className="inline-flex items-center gap-2 px-7 py-4 text-[14px] font-semibold border border-white/25 hover:border-white/45 transition-all duration-200"
@@ -191,6 +195,60 @@ const Index = () => {
             >
               {lang === "he" ? "מחשבון שכר טרחה" : "Fee Estimator"}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Lead form band (CRO) ── */}
+      <section id="lead-form" className="py-12 md:py-16 bg-section-alt border-b border-border scroll-mt-24">
+        <div className="container">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-5xl mx-auto">
+            {/* Direct-contact column */}
+            <div className="order-2 lg:order-1 text-center lg:text-start">
+              <h2 className="font-display font-bold text-foreground text-2xl md:text-3xl leading-tight mb-3">
+                {lang === "he" ? "מעדיפים לדבר עכשיו?" : "Prefer to talk now?"}
+              </h2>
+              <p className="text-muted-foreground text-[15px] leading-relaxed mb-7 max-w-md mx-auto lg:mx-0">
+                {lang === "he"
+                  ? "אפשר ליצור קשר ישיר ונחזור אליכם לבדיקה ראשונית של המקרה."
+                  : "Reach us directly and we'll get back to you for an initial review of your case."}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                <a
+                  href="tel:+972542234726"
+                  data-cta="phone-click"
+                  onClick={() => trackEvent("click_phone", { location: "lead_band" })}
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold border border-border bg-background text-foreground rounded-md hover:border-accent hover:text-accent transition-colors"
+                >
+                  <Phone size={16} strokeWidth={1.8} />
+                  {lang === "he" ? "התקשרו" : "Call"}
+                </a>
+                <a
+                  href={`https://wa.me/972542234726?text=${encodeURIComponent(lang === "he" ? "שלום, הגעתי מהאתר. אשמח לבדיקה ראשונית בנושא משפטי." : "Hello, I came from the website. I'd like an initial review of a legal matter.")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="whatsapp-click"
+                  onClick={() => trackEvent("click_whatsapp", { location: "lead_band" })}
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold border border-[#25D366]/40 bg-background text-[#1faa52] rounded-md hover:bg-[#25D366]/10 transition-colors"
+                >
+                  <MessageCircle size={16} strokeWidth={1.8} />
+                  WhatsApp
+                </a>
+                <a
+                  href="mailto:Hadar@ai-lawyer.co.il"
+                  data-cta="email-click"
+                  onClick={() => trackEvent("click_email", { location: "lead_band" })}
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold border border-border bg-background text-foreground rounded-md hover:border-accent hover:text-accent transition-colors"
+                >
+                  <Mail size={16} strokeWidth={1.8} />
+                  {lang === "he" ? "אימייל" : "Email"}
+                </a>
+              </div>
+            </div>
+            {/* Lead form card */}
+            <div className="order-1 lg:order-2 w-full max-w-[420px] mx-auto lg:ms-auto lg:me-0">
+              <LeadForm variant="navy" source="hero" />
+            </div>
           </div>
         </div>
       </section>

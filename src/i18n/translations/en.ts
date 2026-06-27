@@ -20,7 +20,7 @@ export const en = {
     sub: "A boutique law firm specializing in intellectual property, internet law, and defamation.",
     subDesc: "",
     bullets: [],
-    cta1: "Contact",
+    cta1: "Initial Case Review",
     cta2: "Send Inquiry",
     microcopy: "Reply within 24 hours · First call free · Full confidentiality",
     statement: "Managing rights, agreements, and legal risks in the AI era.",
