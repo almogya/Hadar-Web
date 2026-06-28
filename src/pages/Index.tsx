@@ -178,8 +178,8 @@ const Index = () => {
               </h2>
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-7 max-w-md mx-auto lg:mx-0">
                 {lang === "he"
-                  ? "אפשר ליצור קשר ישירות, או להשאיר טופס פנייה"
-                  : "Contact us directly, or leave an inquiry form."}
+                  ? "דברו איתנו ישירות במגוון דרכים"
+                  : "Talk to us directly in a variety of ways."}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <a
