@@ -248,8 +248,7 @@ const Index = () => {
                     <Icon size={17} style={{ color: "#C9A227" }} aria-hidden="true" />
                   </div>
                   <div className="w-8 h-px mb-3" style={{ backgroundColor: "rgba(201,162,39,0.35)" }} aria-hidden="true" />
-                  <p className="text-sm font-bold text-primary-foreground tracking-wide leading-snug mb-1">{item.title}</p>
-                  {item.sub && <p className="text-xs leading-snug" style={{ color: "rgba(255,255,255,0.42)" }}>{item.sub}</p>}
+                  <p className="text-sm font-bold text-primary-foreground tracking-wide leading-snug">{item.title}</p>
                 </div>
               );
             })}
