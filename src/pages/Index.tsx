@@ -221,15 +221,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── Firm tagline (relocated from hero) ── */}
-      <section className="py-10 bg-background border-b border-border">
-        <div className="container text-center">
-          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed font-semibold max-w-3xl mx-auto">
-            {t.hero.sub}
-          </p>
-        </div>
-      </section>
-
       {/* ── Trust Bar ── */}
       <section className="py-10 bg-primary border-b border-primary-foreground/10">
         <div className="container">
@@ -388,6 +379,15 @@ const Index = () => {
               })}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Firm tagline (relocated below process) ── */}
+      <section className="py-10 bg-background border-b border-border">
+        <div className="container text-center">
+          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed font-semibold max-w-3xl mx-auto">
+            {t.hero.sub}
+          </p>
         </div>
       </section>
 
