@@ -35,12 +35,12 @@ const LeadForm = ({ variant = "navy", source = "hero", heading, headingHe, sub, 
   const lastSubmit = useRef(0);
 
   const t = {
-    heading: isHe ? (headingHe ?? "פרסום לשון הרע? כל דקה חשובה.") : (heading ?? "Facing online defamation? Every minute counts."),
+    heading: isHe ? (headingHe ?? "נקלעתם לסכסוך לשון הרע? כל דקה חשובה.") : (heading ?? "Caught in a defamation dispute? Every minute counts."),
     sub: isHe ? (subHe ?? "") : (sub ?? ""),
     name: isHe ? "שם מלא" : "Full name",
     phone: isHe ? "טלפון" : "Phone",
     email: isHe ? 'דוא"ל' : "Email",
-    submit: isHe ? "שלחו פרטים" : "Send Details",
+    submit: isHe ? "השאירו פרטים" : "Leave Details",
     sending: isHe ? "שולח..." : "Sending...",
     micro: isHe
       ? "הפנייה הראשונית אינה יוצרת יחסי עו״ד–לקוח. אין לשלוח מידע חסוי לפני התקשרות רשמית."
