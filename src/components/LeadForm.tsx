@@ -36,7 +36,7 @@ const LeadForm = ({ variant = "navy", source = "hero", heading, headingHe, sub, 
 
   const t = {
     heading: isHe ? (headingHe ?? "פרסום לשון הרע? כל דקה חשובה.") : (heading ?? "Facing online defamation? Every minute counts."),
-    sub: isHe ? (subHe ?? "מלאו פרטים ונתקדם") : (sub ?? "Fill in your details and we'll take it from there."),
+    sub: isHe ? (subHe ?? "השאירו פרטים. אנחנו נמשיך מכאן.") : (sub ?? "Leave your details. We'll take it from here."),
     name: isHe ? "שם מלא" : "Full name",
     phone: isHe ? "טלפון" : "Phone",
     email: isHe ? 'דוא"ל' : "Email",
