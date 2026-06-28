@@ -101,19 +101,19 @@ export const he = {
     items: [
       {
         quote: "Hadar helped me recover my Google Business account after it was suspended without cause. He was incredibly professional, kind, and effective throughout the entire process. If you're looking for a top-tier lawyer who offers expert service at a very fair price, I highly recommend him.",
-        name: "A.zonenfeld",
+        name: "A. Zonenfeld",
         role: "ביקורת Google ⭐⭐⭐⭐⭐",
         verified: true,
       },
       {
         quote: "ממליץ בחום. עו\"ד סופר מקצועי, אדיב, שירותי. בא לקראתי בנושא התשלומים. נתן הרגשה שהאמת אכפת לו והוא רוצה לנצח במשפט בדיוק כמוני. מספר אחד. ממליץ בחום!!",
-        name: "ג.כהן",
+        name: "ג. כהן",
         role: "ביקורת Google ⭐⭐⭐⭐⭐",
         verified: true,
       },
       {
         quote: "אם את מחפשים עו\"ד שידאג לזכויות יוצרים שלכם, בצורה מקצועית, בדיוק עד לפרטים הכי קטנים, קשוב, אז תיצרו קשר עם עו\"ד הדר יצקן. יכולה להעיד שקיבלתי שרות מצויין, ממליצה לכם גם, מבטיחה שתבינו כבר בשיחה הראשונה שמולכם עו\"ד מקצוען!!!",
-        name: "א.לאקי",
+        name: "א. לאקי",
         role: "ביקורת Google ⭐⭐⭐⭐⭐",
         verified: true,
       },
