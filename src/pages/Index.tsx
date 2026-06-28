@@ -155,7 +155,7 @@ const Index = () => {
                     <span
                       key={w}
                       className="inline-block"
-                      style={{ marginInlineEnd: "0.35em", animation: `logoFadeUp 0.5s ease both ${1.8 + i * 0.5}s` }}
+                      style={{ marginInlineEnd: "0.35em", animation: `logoFadeUp 0.5s ease both ${2 + i * 1}s` }}
                     >
                       {w}
                     </span>
