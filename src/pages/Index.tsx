@@ -377,8 +377,7 @@ const Index = () => {
                     <div className="w-10 h-10 mb-4 flex items-center justify-center">
                       <Icon className="text-mid-blue group-hover:text-accent transition-colors duration-300" size={24} strokeWidth={1.5} aria-hidden="true" />
                     </div>
-                    <h3 className="font-display text-base font-semibold text-foreground mb-2">{step.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
+                    <h3 className="font-display text-base font-semibold text-foreground">{step.title}</h3>
                     {i < t.process.steps.length - 1 && (
                       <div className="md:hidden flex justify-center my-6">
                         <div className="w-px h-8 bg-border" />
