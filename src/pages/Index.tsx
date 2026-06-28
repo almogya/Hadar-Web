@@ -179,12 +179,12 @@ const Index = () => {
             {/* Direct-contact column */}
             <div className="order-2 lg:order-1 text-center lg:text-start">
               <h2 className="font-display font-bold text-foreground text-2xl md:text-3xl leading-tight mb-3">
-                {lang === "he" ? "מעדיפים לדבר עכשיו?" : "Prefer to talk now?"}
+                {lang === "he" ? "איך נוח לכם לדבר איתנו?" : "How would you like to reach us?"}
               </h2>
               <p className="text-muted-foreground text-[15px] leading-relaxed mb-7 max-w-md mx-auto lg:mx-0">
                 {lang === "he"
-                  ? "אפשר ליצור קשר ישיר ונחזור אליכם לבדיקה ראשונית של המקרה."
-                  : "Reach us directly and we'll get back to you for an initial review of your case."}
+                  ? "אפשר ליצור קשר ישירות, או להשאיר טופס פנייה"
+                  : "Contact us directly, or leave an inquiry form."}
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <a
