@@ -152,11 +152,11 @@ const Index = () => {
                   Law Offices
                 </p>
                 <p
-                  dir="ltr"
+                  dir={lang === "he" ? "rtl" : "ltr"}
                   className="mb-6 mt-6 mx-auto"
                   style={{ fontFamily: '"Heebo", system-ui, -apple-system, sans-serif', color: "#C9A227", fontSize: "clamp(1.05rem, 2.4vw, 1.7rem)", fontWeight: 600, letterSpacing: "0.06em", lineHeight: 1.2 }}
                 >
-                  {["IP.", "INTERNET.", "DEFAMATION."].map((w, i) => (
+                  {(lang === "he" ? ["קניין רוחני.", "אינטרנט.", "לשון הרע"] : ["IP.", "INTERNET.", "DEFAMATION."]).map((w, i) => (
                     <span
                       key={w}
                       className="inline-block"
