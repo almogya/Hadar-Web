@@ -44,7 +44,7 @@ export const he = {
 
   audiences: {
     badge: "למי זה מתאים",
-    heading: "לקוחות המשרד",
+    heading: "הלקוחות שלנו",
     items: [
       {
         title: "עסקים וסטארטאפים",
