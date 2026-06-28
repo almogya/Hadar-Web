@@ -17,7 +17,7 @@ export const en = {
     badge: "Boutique Law Firm · IP · Internet · Defamation",
     h1: "Leading in law. Fluent in tech.",
     h1Accent: "Internet Law Firm — with proven experience against Google, Meta & Amazon",
-    sub: "A boutique law firm specializing in intellectual property, internet law, and defamation.",
+    sub: "We believe in fair-priced legal service — without compromising on personal, professional attention.",
     subDesc: "",
     bullets: [],
     cta1: "Contact Us",
