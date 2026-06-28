@@ -36,7 +36,7 @@ const LeadForm = ({ variant = "navy", source = "hero", heading, headingHe, sub, 
 
   const t = {
     heading: isHe ? (headingHe ?? "פרסום לשון הרע? כל דקה חשובה.") : (heading ?? "Facing online defamation? Every minute counts."),
-    sub: isHe ? (subHe ?? "השאירו פרטים. אנחנו נמשיך מכאן.") : (sub ?? "Leave your details. We'll take it from here."),
+    sub: isHe ? (subHe ?? "") : (sub ?? ""),
     name: isHe ? "שם מלא" : "Full name",
     phone: isHe ? "טלפון" : "Phone",
     email: isHe ? 'דוא"ל' : "Email",
@@ -136,7 +136,7 @@ const LeadForm = ({ variant = "navy", source = "hero", heading, headingHe, sub, 
         <Scale className="text-accent shrink-0" size={20} strokeWidth={1.6} aria-hidden="true" />
         <h2 className="font-display font-bold text-lg leading-tight">{t.heading}</h2>
       </div>
-      <p className={`text-[13px] mb-5 leading-relaxed ${isNavy ? "text-white/60" : "text-muted-foreground"}`}>{t.sub}</p>
+      {t.sub && <p className={`text-[13px] mb-5 leading-relaxed ${isNavy ? "text-white/60" : "text-muted-foreground"}`}>{t.sub}</p>}
 
       <form onSubmit={handleSubmit} noValidate className="space-y-3">
         {/* Honeypot */}
