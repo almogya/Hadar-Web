@@ -137,12 +137,7 @@ const Index = () => {
                   className="mx-auto"
                   style={{ fontFamily: '"Playfair Display", Georgia, serif', fontWeight: 700, fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)", lineHeight: 1.1, letterSpacing: "0.06em", color: "#C9A227" }}
                 >
-                  <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
-                    H<span className="logo-reveal" style={{ animationDelay: "2s" }}>adar{" "}</span>
-                  </span>
-                  <span aria-hidden="true" style={{ whiteSpace: "nowrap" }}>
-                    Y<span className="logo-reveal" style={{ animationDelay: "2s" }}>atzkan</span>
-                  </span>
+                  <span aria-hidden="true">HY</span>
                 </h1>
                 <p
                   dir="ltr"
@@ -160,7 +155,7 @@ const Index = () => {
                     <span
                       key={w}
                       className="inline-block"
-                      style={{ marginInlineEnd: "0.35em", animation: `logoFadeUp 0.5s ease both ${4.2 + i * 1}s` }}
+                      style={{ marginInlineEnd: "0.35em", animation: `logoFadeUp 0.5s ease both ${0.8 + i * 0.45}s` }}
                     >
                       {w}
                     </span>
