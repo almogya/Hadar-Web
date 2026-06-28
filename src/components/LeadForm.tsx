@@ -222,8 +222,6 @@ const LeadForm = ({ variant = "navy", source = "hero", heading, headingHe, sub, 
         </button>
 
         {status === "error" && <p className="text-red-400 text-[12px] text-center" role="alert">{t.errGeneral}</p>}
-
-        <p className={`text-[10.5px] leading-relaxed pt-1 ${isNavy ? "text-white/40" : "text-muted-foreground/70"}`}>{t.micro}</p>
       </form>
     </div>
   );
