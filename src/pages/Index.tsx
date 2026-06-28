@@ -377,26 +377,22 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ── Firm tagline (relocated below process) ── */}
-      <section className="py-10 bg-background border-b border-border">
-        <div className="container text-center">
-          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed font-semibold max-w-3xl mx-auto">
-            {t.hero.sub}
-          </p>
-        </div>
-      </section>
-
-      {/* ── Secondary CTA: Fee calculator (relocated from hero) ── */}
+      {/* ── Firm tagline + fee-calculator CTA (side by side) ── */}
       <section className="py-12 bg-section-alt border-y border-border">
-        <div className="container text-center">
-          <Link
-            to={localePath("/fee-calculator")}
-            data-cta="fee-calculator-cta"
-            onClick={() => trackEvent("service_cta_click", { location: "after_process" })}
-            className="inline-flex items-center gap-2 px-8 py-4 text-[14px] font-semibold border border-border bg-background text-foreground rounded-md hover:border-accent hover:text-accent transition-colors"
-          >
-            {lang === "he" ? "מחשבון שכר טרחה" : "Fee Estimator"}
-          </Link>
+        <div className="container">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 max-w-4xl mx-auto text-center md:text-start">
+            <p className="text-muted-foreground text-lg leading-relaxed font-semibold">
+              {t.hero.sub}
+            </p>
+            <Link
+              to={localePath("/fee-calculator")}
+              data-cta="fee-calculator-cta"
+              onClick={() => trackEvent("service_cta_click", { location: "after_process" })}
+              className="shrink-0 inline-flex items-center gap-2 px-8 py-4 text-[14px] font-semibold border border-border bg-background text-foreground rounded-md hover:border-accent hover:text-accent transition-colors"
+            >
+              {lang === "he" ? "מחשבון שכר טרחה" : "Fee Estimator"}
+            </Link>
+          </div>
         </div>
       </section>
 
