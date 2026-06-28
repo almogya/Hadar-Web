@@ -169,33 +169,6 @@ const Index = () => {
               </>
             );
           })()}
-          <p className="mx-auto mb-3 mt-[26vh] leading-relaxed font-semibold" style={{ color: "rgba(255,255,255,0.75)", fontSize: "clamp(1rem, 1.4vw, 1.125rem)", maxWidth: "580px" }}>
-            {t.hero.sub}
-          </p>
-          {t.hero.subDesc && (
-            <p className="mx-auto mb-10 leading-relaxed" style={{ color: "rgba(255,255,255,0.5)", fontSize: "clamp(0.875rem, 1.1vw, 1rem)", maxWidth: "580px" }}>
-              {t.hero.subDesc}
-            </p>
-          )}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="#lead-form"
-              data-cta="hero-primary"
-              onClick={() => trackEvent("service_cta_click", { location: "hero_primary" })}
-              className="group inline-flex items-center gap-2.5 px-9 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 hover:opacity-90 hover:scale-[1.02] animate-shimmer-btn"
-              style={{ color: "#081527" }}
-            >
-              <DirectionalIcon icon="arrow" size={15} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
-              {t.hero.cta1}
-            </a>
-            <Link
-              to={localePath("/fee-calculator")}
-              className="inline-flex items-center gap-2 px-7 py-4 text-[14px] font-semibold border border-white/25 hover:border-white/45 transition-all duration-200"
-              style={{ color: "rgba(255,255,255,0.65)" }}
-            >
-              {lang === "he" ? "מחשבון שכר טרחה" : "Fee Estimator"}
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -250,6 +223,15 @@ const Index = () => {
               <LeadForm variant="navy" source="hero" />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Firm tagline (relocated from hero) ── */}
+      <section className="py-10 bg-background border-b border-border">
+        <div className="container text-center">
+          <p className="text-muted-foreground text-lg md:text-xl leading-relaxed font-semibold max-w-3xl mx-auto">
+            {t.hero.sub}
+          </p>
         </div>
       </section>
 
@@ -360,6 +342,22 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ── Primary CTA (relocated from hero) ── */}
+      <section className="py-12 bg-background border-b border-border">
+        <div className="container text-center">
+          <a
+            href="#lead-form"
+            data-cta="hero-primary"
+            onClick={() => trackEvent("service_cta_click", { location: "after_partners" })}
+            className="group inline-flex items-center gap-2.5 px-9 py-4 text-[15px] font-bold tracking-wide transition-all duration-200 hover:opacity-90 hover:scale-[1.02] animate-shimmer-btn"
+            style={{ color: "#081527" }}
+          >
+            <DirectionalIcon icon="arrow" size={15} className="group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 transition-transform" />
+            {t.hero.cta1}
+          </a>
+        </div>
+      </section>
+
       {/* ── How We Work ── */}
       <section className="py-28 md:py-36 bg-section-alt" aria-labelledby="process-heading">
         <div className="container">
@@ -397,6 +395,20 @@ const Index = () => {
               })}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Secondary CTA: Fee calculator (relocated from hero) ── */}
+      <section className="py-12 bg-section-alt border-y border-border">
+        <div className="container text-center">
+          <Link
+            to={localePath("/fee-calculator")}
+            data-cta="fee-calculator-cta"
+            onClick={() => trackEvent("service_cta_click", { location: "after_process" })}
+            className="inline-flex items-center gap-2 px-8 py-4 text-[14px] font-semibold border border-border bg-background text-foreground rounded-md hover:border-accent hover:text-accent transition-colors"
+          >
+            {lang === "he" ? "מחשבון שכר טרחה" : "Fee Estimator"}
+          </Link>
         </div>
       </section>
 
