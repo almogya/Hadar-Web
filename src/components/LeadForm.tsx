@@ -40,7 +40,7 @@ const LeadForm = ({ variant = "navy", source = "hero", heading, headingHe, sub, 
     name: isHe ? "שם מלא" : "Full name",
     phone: isHe ? "טלפון" : "Phone",
     email: isHe ? 'דוא"ל' : "Email",
-    submit: isHe ? "השאירו פרטים" : "Leave Details",
+    submit: isHe ? "שלח טופס" : "Submit",
     sending: isHe ? "שולח..." : "Sending...",
     micro: isHe
       ? "הפנייה הראשונית אינה יוצרת יחסי עו״ד–לקוח. אין לשלוח מידע חסוי לפני התקשרות רשמית."
