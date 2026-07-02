@@ -575,6 +575,38 @@ export const en = {
         pillar: true,
         slug: "defamation-limitation",
       },
+      {
+        title: "Defamation Against a Business: How to Sue Over a False Review That Hurts Revenue",
+        excerpt: "A false review or harmful publication against a business can hurt revenue. When it is defamation, how to sue, and the legal tools for a business harmed online.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "business-defamation",
+      },
+      {
+        title: "A Customer Threatens to Post a Negative Review Unless Refunded — Extortion or a Right?",
+        excerpt: "When a threat to post a review crosses into extortion, the business's rights, and how to act correctly with a threatening customer — without giving in or escalating.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "review-blackmail",
+      },
+      {
+        title: "Defamation Between Business Competitors: Comparative Advertising, Posts and Rumors",
+        excerpt: "A competitor spreads rumors or a harmful comparative publication? When it is defamation or a commercial tort, the tools available to a harmed business, and how to act.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "competitor-defamation",
+      },
+      {
+        title: "A Company's Defamation Claim — How Is It Different From an Individual's?",
+        excerpt: "Can a company sue for defamation? The differences from an individual's claim, which damages can be claimed, and the strategic considerations in a corporate claim.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "corporate-defamation",
+      },
     ],
   },
 
@@ -1824,6 +1856,142 @@ export const en = {
         { q: "I discovered an old publication still online — is it too late?", a: "There may be a cause of action based on 'continuing publication' or from the date of discovery, but this is a complex issue. Don't rely on it — consult immediately about the deadlines." },
         { q: "When does the limitation clock start?", a: "In principle from the date of publication. If you did not and could not have known of it, the clock may start from the date of discovery — so document the discovery date too." },
         { q: "What happens if I missed the year?", a: "The claim will be dismissed in limine due to limitation, regardless of the strength of the cause of action. So it is critical to act early and not wait." }
+      ],
+    },
+
+    businessDefamation: {
+      title: "Defamation Against a Business: How to Sue Over a False Review That Hurts Revenue",
+      metaTitle: "Business Defamation | False Reviews & Lost Revenue | HY Law",
+      metaDesc: "A false review or harmful publication against a business can hurt revenue. When it is defamation, how to sue, and the compensation — a guide for businesses harmed online.",
+      intro: "For a business, a false review or harmful online publication is not just a matter of pride — it can directly hurt revenue, cause loss of clients and harm the ability to grow. A single post on Google, Facebook or a recommendations group can reach thousands of potential clients within days. This guide explains when a publication against a business constitutes defamation, how to sue, and the legal tools available to a harmed business owner — from content removal to compensation.",
+      sections: [
+        { heading: "1. When Is a Review Against a Business Defamation?", body: "The Defamation Act, 1965, expressly protects against harm to a business too — a publication that may harm a person in their occupation, business or profession is defamation. But remember: a customer has a full right to share a genuine experience and express a candid, even negative, opinion. The problem begins when the publication includes false facts — a claim that the business defrauded, knowingly sold a defective product, stole, or broke the law — when these are untrue. The distinction between legitimate criticism ('the service was poor') and a false fact ('they defrauded me') is the line between permitted publication and a cause of action." },
+        { heading: "2. A Business Can Sue — Including No-Proof Compensation", body: "A business, whether a licensed dealer or a company, may sue for harm to its commercial reputation. Section 7A allows compensation without proof of damage — up to ILS 50,000 per publication, and double with intent to harm (amounts index-linked and updated). Beyond that, a business that can prove financial loss — a documented drop in revenue, order cancellations, lost contracts that can be linked to the publication — may claim higher compensation. Documenting the harm (sales data before and after the publication, customer responses referring to the publication) is critical to establishing a significant claim." },
+        { heading: "3. First Steps — Quick Removal", body: "When a business discovers a harmful publication, time is critical — every day it remains online causes cumulative harm. Preserve evidence immediately: screenshot with URL, date and extent of exposure. In parallel, act for removal: report to the platform (Google, Facebook) content that violates policy, and approach the group admin in recommendation groups. Do not respond in public escalation — an aggressive response can amplify exposure. The first legal step is usually a demand letter seeking removal, an apology and compensation. In urgent cases — a court injunction ordering immediate removal." },
+        { heading: "4. Professional Response to Reviews and Reputation Protection", body: "Alongside legal tools, managing reviews correctly reduces harm. To legitimate criticism — a professional, matter-of-fact, non-confrontational response protects your reputation in the eyes of potential customers. To a false, harmful publication — legal action. It is important to routinely monitor publications about the business (Google Alerts, review monitoring) to discover early and act in time. A combination of professional response, targeted legal action against false publications, and building a genuine positive presence — creates resilience that makes it harder to harm the business reputation." }
+      ],
+      checklist: [
+        "Distinguish legitimate criticism from a false, degrading fact",
+        "Document the publication immediately — URL, date, extent of exposure",
+        "Gather evidence of harm — sales data before/after, cancellations",
+        "Act in parallel for removal (platform report) and a demand letter",
+        "Do not respond in public escalation that amplifies exposure",
+        "Set up ongoing monitoring (Google Alerts) for the business name"
+      ],
+      pitfalls: [
+        "Suing over a legitimate negative opinion — not defamation in itself",
+        "An aggressive public response that increases distribution",
+        "Failing to document financial loss — limits you to statutory compensation only",
+        "Waiting while the publication harms revenue every day",
+        "Missing the one-year limitation period"
+      ],
+      faq: [
+        { q: "A customer wrote a negative review — can I sue?", a: "Only if it includes false facts (e.g., 'they defrauded,' 'knowingly sold a defective product') that are untrue. Genuine opinion and legitimate criticism ('the service was poor') are protected." },
+        { q: "Can a business get compensation without proving how much it lost?", a: "Yes. A business may claim compensation without proof of damage under Section 7A. If you prove financial loss (a drop in revenue) — you can claim beyond that." },
+        { q: "How do I remove a false review from Google?", a: "Report a policy violation to Google, and in parallel send a demand letter to the publisher. If the review is false and harmful, a court injunction may also be considered." },
+        { q: "How long does a business have to sue?", a: "One year from discovery of the publication — a short limitation period. So it is important to document and act quickly, especially when the publication harms revenue on an ongoing basis." }
+      ],
+    },
+
+    reviewBlackmail: {
+      title: "A Customer Threatens to Post a Negative Review Unless Refunded — Extortion or a Right?",
+      metaTitle: "Threat of a Negative Review | Extortion or a Right | HY Law",
+      metaDesc: "A customer threatens to post a negative review unless refunded or compensated? When it is extortion, the business's rights, and how to act correctly — a practical guide.",
+      intro: "A common and troubling scenario for businesses: a dissatisfied customer threatens to post a devastating negative review — on Google, Facebook or in groups — unless they receive a refund, discount or compensation. Is this a legitimate consumer right, or extortion? The line is thin and significant. This guide explains when a threat to post a review crosses into extortion, the business's rights, and how to act correctly with a threatening customer — without giving in to extortion and without unnecessary escalation.",
+      sections: [
+        { heading: "1. The Thin Line Between a Legitimate Complaint and Extortion", body: "A customer has a full right to complain, demand a refund for a defective product or poor service, and even post a genuine review. This is legitimate consumer conduct. The problem begins when the customer uses the threat of publication as leverage to obtain something they are not entitled to, or when the threat involves publishing false facts. The distinction: a legitimate demand ('the product is defective, I'm owed a refund') vs. extortion ('pay me or I'll destroy your reputation in reviews'). The more the threat is framed as pressure to obtain an undeserved benefit, and involves a threat of false publication, the closer it comes to the criminal domain of extortion." },
+        { heading: "2. Extortion — Also a Criminal Matter", body: "Extortion by threats is a criminal offense under the Penal Law. Threatening to publish information (even true information, in certain circumstances) to compel a person to give something or perform an act may fall within extortion. When a customer threatens to publish a false, harmful review unless paid — it is a combination of defamation (the threatened publication) and extortion (the threat). The meaning: a business may have not only civil causes of action but also the option of a criminal complaint. It is important to document the threat itself — messages, emails, recordings (subject to the law) — as evidence of extortion." },
+        { heading: "3. How to Act With a Threatening Customer", body: "First — do not give in to extortion rashly, but also do not escalate. Document everything: keep the messages, emails and correspondence in which the customer frames the threat and the demand. Do not respond in anger or with threats of your own. If there is a legitimate complaint (a defective product) — consider handling it on its merits, separately from the threat. If it is clear extortion — consult a lawyer about a demand letter, and in serious cases a police complaint. A measured, documented response protects you legally and prevents escalation." },
+        { heading: "4. If the Review Was Already Posted", body: "If the customer has already posted a false review after the threat went unanswered, the situation moves to removal and a possible claim. Document the review and the preceding threat — the combination strengthens the case. Approach the platform for removal, and send a demand letter seeking removal, an apology and compensation. The fact that the publication came after a threat and as a response to a refusal to pay — strengthens the claim of bad faith and intent to harm, and may affect the level of compensation. Continuous documentation of every stage is the key." }
+      ],
+      checklist: [
+        "Document the threat — messages, emails and correspondence in full",
+        "Distinguish a legitimate complaint from extortion (pressure for a benefit)",
+        "Do not give in rashly, but also do not escalate with your own threats",
+        "Handle a legitimate complaint (if any) separately from the threat",
+        "In clear extortion — consider a demand letter and a police complaint",
+        "If a review was posted — document both it and the preceding threat"
+      ],
+      pitfalls: [
+        "Giving in to extortion rashly — invites further demands",
+        "Responding in anger or with your own threats — harms you legally",
+        "Failing to document the threat — weakens evidence of extortion and bad faith",
+        "Confusing a legitimate consumer complaint with extortion",
+        "Ignoring the criminal track in clear extortion"
+      ],
+      faq: [
+        { q: "A customer threatens a negative review unless I refund — is that extortion?", a: "It depends on circumstances. A legitimate demand for a refund on a defective product is a right. But threatening to post a review (especially a false one) as pressure to obtain something undeserved may constitute extortion — a criminal offense." },
+        { q: "What do I do when I'm threatened with a review?", a: "Document the threat in full, do not give in rashly and do not escalate. Handle a legitimate complaint separately. In clear extortion — consult about a demand letter and a police complaint." },
+        { q: "The customer posted a false review after I refused to pay — now what?", a: "Document the review and the preceding threat. Approach the platform for removal and send a demand letter. The link between the threat and the publication strengthens a claim of bad faith and intent to harm." },
+        { q: "Can I record the customer making the threat?", a: "Recording a conversation you are party to is permitted in Israel. The recording can serve as evidence of the threat and extortion. Consult on the proper use of the evidence." }
+      ],
+    },
+
+    competitorDefamation: {
+      title: "Defamation Between Business Competitors: Comparative Advertising, Posts and Rumors",
+      metaTitle: "Defamation Between Competitors | Comparative Ads | HY Law",
+      metaDesc: "A competitor spreads rumors or a harmful comparative publication about you? When publication between competitors is defamation or a commercial tort, and how to protect the business.",
+      intro: "Business competition is legitimate and desirable — but sometimes a competitor crosses the line: spreading false rumors, publishing a misleading and harmful comparison, or writing fake reviews under a false identity. Harm from a competitor is especially dangerous because it is deliberate, targeted and sometimes ongoing. This guide explains when publication between competitors constitutes defamation or a separate commercial tort, the legal tools available to a business harmed by a competitor, and how to act.",
+      sections: [
+        { heading: "1. Competitor Publication — Defamation and Beyond", body: "When a competitor publishes false, degrading facts about you — that your product is dangerous, that you defraud customers, that you are in financial difficulty — this is defamation under the Defamation Act, 1965. But harm from a competitor may give rise to additional causes of action: the Commercial Torts Law, 1999, prohibits a 'false description' — publishing false information about a competitor's business or product. So a business harmed by a competitor may sue both under defamation and under a commercial tort, broadening the tools and remedies available to it." },
+        { heading: "2. Comparative Advertising — When It Crosses the Line", body: "Comparative advertising ('our product is better than X') is not prohibited per se, and in some cases is even permitted. The problem begins when the comparison is based on false facts, deliberately misleading, or presents the competitor's product in a false and harmful light. The distinction: a factual, true comparison ('we are cheaper') vs. a false description ('their product is dangerous/defective') without basis. A false comparative publication may constitute both defamation and a commercial tort. It is important to document the comparative publication and examine whether the factual claims in it are true." },
+        { heading: "3. Fake Reviews and Rumors Under a False Identity", body: "A common and improper tactic: a competitor writing fake negative reviews about your business under a fake profile, or spreading false rumors in groups. This is a combination of defamation and impersonation. The challenge: identifying the source, which is sometimes anonymous (see the limitations discussed in the guide on unmasking an anonymous user). Nonetheless, patterns can sometimes be identified — timing, style, identifying details — and a link to the competitor established. In such cases, alongside content removal, action can be taken against the competitor both under defamation and under a commercial tort, and in serious cases even a criminal aspect." },
+        { heading: "4. How to Protect the Business From a Harmful Competitor", body: "Acting against harm from a competitor requires a strategy: document every suspicious publication, rumor or review, including timing and context. Gather evidence linking the publication to the competitor. Approach the platforms for content removal. A demand letter to the competitor, detailing both causes of action (defamation and a commercial tort), is a strong step — an identified competitor with a tangible business is more exposed than an anonymous user. In cases of ongoing harm or significant loss, a claim and injunction may be considered. Systematic documentation is the basis for any action." }
+      ],
+      checklist: [
+        "Document every suspicious publication/rumor/review, including timing and context",
+        "Gather evidence linking the publication to the competitor",
+        "Check whether two causes of action apply — defamation and a commercial tort",
+        "For comparative advertising — examine whether the factual claims are true",
+        "Approach the platforms for content removal",
+        "Consider a demand letter detailing both causes of action"
+      ],
+      pitfalls: [
+        "Ignoring the commercial-tort cause of action (Commercial Torts Law) alongside defamation",
+        "Failing to document the link between the publication and the competitor",
+        "Assuming comparative advertising is always prohibited — it is permitted if factual and true",
+        "Failing to identify patterns linking fake reviews to the competitor",
+        "Waiting while the competitor continues the ongoing harm"
+      ],
+      faq: [
+        { q: "A competitor spreads false rumors about me — what can I do?", a: "You may have two causes of action: defamation and a commercial tort (false description). Document, gather evidence linking to the competitor, approach for removal and consider a demand letter or claim." },
+        { q: "Can a competitor publish a comparison between the products?", a: "A factual, true comparison is permitted. The problem is when the comparison is based on false facts or presents your product in a false and harmful light — then it is defamation and/or a commercial tort." },
+        { q: "I suspect a competitor writes fake reviews about me — what do I do?", a: "Document the reviews and patterns (timing, style). Identifying an anonymous source is complex, but a link to the competitor can sometimes be established. You can act for removal and sue under both causes of action." },
+        { q: "What's the difference between a defamation claim and a commercial tort?", a: "Defamation protects reputation; the Commercial Torts Law prohibits a false description of a competitor's business/product. In harm from a competitor, both causes of action sometimes apply together." }
+      ],
+    },
+
+    corporateDefamation: {
+      title: "A Company's Defamation Claim — How Is It Different From an Individual's?",
+      metaTitle: "Corporate Defamation Claim | Company vs Individual | HY Law",
+      metaDesc: "Can a company sue for defamation? The difference between a corporate claim and an individual's, which damages can be claimed, and the compensation — a practical guide.",
+      intro: "When a harmful publication is directed at a company or corporation — rather than an individual — unique questions arise: can a company even sue for defamation? How does it differ from an individual's claim? And which damages can be claimed? This guide explains a corporation's standing in defamation law, the practical differences from an individual's claim, and the considerations in a claim by a company harmed in its commercial reputation.",
+      sections: [
+        { heading: "1. A Corporation Can Sue for Defamation", body: "The Defamation Act, 1965, applies to corporations too. A company, association or registered partnership can sue for harm to its commercial reputation, just like an individual. A publication that may harm a business, its products, services or credibility — claims that the company defrauds, that its products are dangerous, that it is in financial difficulty or acts unlawfully — may constitute defamation against the corporation. Commercial reputation is a valuable asset, and harm to it is recognized as a cause of action. That said, there are practical differences between a corporate claim and an individual's." },
+        { heading: "2. The Differences From an Individual's Claim", body: "The main difference is in the nature of the harm. An individual can also sue for mental anguish and personal suffering; a corporation, which has no 'feelings,' focuses mainly on harm to commercial reputation and the economic loss resulting from it. So in a corporate claim, greater weight is given to proven financial loss — a drop in revenue, lost clients and deals, harm to business relationships and market trust. Compensation without proof of damage (Section 7A) applies to corporations too, but a corporation that establishes actual economic loss can claim higher compensation accordingly." },
+        { heading: "3. Which Damages a Corporation Can Claim", body: "A harmed corporation can claim: compensation without proof of damage under Section 7A; compensation for proven financial loss — a documented drop in sales, contract cancellations, loss of clients that can be linked to the publication; and harm to reputation and brand value. Documenting the harm is critical: sales reports before and after the publication, correspondence with clients who cancelled following the publication, and an expert opinion on the harm to brand value. The larger the company and the more established its reputation, the more significant the harm may be — but it also requires solid evidentiary support." },
+        { heading: "4. Strategic Considerations in a Corporate Claim", body: "A corporation has unique considerations in choosing a strategy. First, the 'Streisand Effect' — a large company suing a small customer may be perceived as persecution and harm reputation more than the original publication. Second, PR considerations — sometimes quiet removal is preferable to a public proceeding. Third, who the publisher is — a customer, competitor, journalist or anonymous user — each presents different considerations. A corporation must balance protecting its reputation against the reputational risks of legal proceedings. Professional advice combining legal and reputational considerations is critical." }
+      ],
+      checklist: [
+        "Confirm the publication harms the company's commercial reputation",
+        "Document the publication and the extent of exposure",
+        "Gather evidence of economic loss — sales reports, cancellations, lost contracts",
+        "Consider the Streisand Effect before a public claim",
+        "Examine who the publisher is and the resulting considerations",
+        "Combine legal and reputational considerations in the strategy"
+      ],
+      pitfalls: [
+        "Assuming a company cannot sue for defamation — it can",
+        "Focusing on mental anguish (relevant to an individual) instead of economic loss",
+        "Failing to document the financial loss needed to establish a corporate claim",
+        "Ignoring the Streisand Effect in a large company's claim against an individual",
+        "Taking legal action without weighing the reputational aspect"
+      ],
+      faq: [
+        { q: "Can a company sue for defamation?", a: "Yes. The Defamation Act applies to corporations too. A company may sue for harm to its commercial reputation, including compensation without proof of damage." },
+        { q: "How is it different from an individual's claim?", a: "An individual can also sue for mental anguish; a corporation focuses on harm to commercial reputation and economic loss. So proven financial loss carries greater weight in a company's claim." },
+        { q: "Which damages can a company claim?", a: "Compensation without proof of damage (Section 7A), and compensation for proven financial loss — a drop in sales, contract cancellations and loss of clients that can be linked to the publication, and harm to reputation." },
+        { q: "Should a large company sue a small customer?", a: "You must weigh the 'Streisand Effect' — such a claim may be perceived as persecution and harm reputation more than the publication. Sometimes quiet removal is preferable. Combining legal and reputational considerations matters." }
       ],
     },
   },
