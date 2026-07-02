@@ -551,6 +551,30 @@ export const en = {
         pillar: true,
         slug: "defamation-defenses",
       },
+      {
+        title: "Libel vs. Slander vs. Defamation — What's the Difference in Israeli Law?",
+        excerpt: "What is the difference between 'libel,' 'slander' and 'defamation'? Is there a distinction between written and spoken publication, and what is the truly meaningful distinction (civil vs. criminal).",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "libel-vs-slander",
+      },
+      {
+        title: "How Much Compensation Can You Get in a Defamation Claim? (Including No-Proof Damages)",
+        excerpt: "Compensation without proof of damage (Section 7A), damages for proven loss, and the factors that set the amount — a practical guide to a realistic assessment before filing.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "defamation-compensation",
+      },
+      {
+        title: "Limitation in a Defamation Claim — How Long Do You Have to Sue?",
+        excerpt: "The short limitation period (one year), when the clock starts, a continuing publication that remains online, and how to avoid missing the costly deadline.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "defamation-limitation",
+      },
     ],
   },
 
@@ -1698,6 +1722,108 @@ export const en = {
         { q: "I wrote 'in my opinion' — does that make it protected opinion?", a: "Not automatically. The court examines how a reasonable person understands the publication. Presenting a false fact does not become protected merely because you added 'in my opinion.'" },
         { q: "Who has to prove the defense — me or the claimant?", a: "The burden of proving the defenses (truth, good faith) falls on the defendant-publisher. Once defamation is shown to have been published, you must establish the defense." },
         { q: "Is sharp criticism of a public figure protected?", a: "Genuine opinion on a person's conduct in a public role enjoys broad protection, even if sharp — as long as it is opinion and not the presentation of false facts." }
+      ],
+    },
+
+    libelVsSlander: {
+      title: "Libel vs. Slander vs. Defamation — What's the Difference in Israeli Law?",
+      metaTitle: "Libel vs Slander vs Defamation | Israeli Law | HY Law",
+      metaDesc: "What is the difference between 'libel,' 'slander' and 'defamation'? Is there a distinction between written and spoken publication in Israeli law? A full explanation.",
+      intro: "Many use the terms 'libel,' 'slander' and 'defamation' interchangeably and wonder whether they are different things or the same matter. In Anglo-American law there is a distinction between libel (written publication) and slander (spoken publication), but in Israel the situation is different. This guide clarifies the relationship between the terms, explains why Israeli law draws no distinction between written and spoken, and the practical meaning for anyone considering a claim or worried they published defamation.",
+      sections: [
+        { heading: "1. In Israel It Is One Concept", body: "In Israeli law there is no substantive difference between the colloquial notions of libel/slander — it is one legal concept. The statutory term used by the Defamation Act, 1965, is 'defamation' (lashon hara), which covers all harmful publications that may humiliate a person, degrade them, or harm their business or occupation. There is no need to agonize over the terminology — the law is one, and it applies to all of them in the same way. A 'libel lawyer' and a 'defamation lawyer' are the same field of specialization." },
+        { heading: "2. No Distinction Between Written and Spoken", body: "Unlike English law, where libel (written) and slander (spoken) are treated differently, in Israel the law applies to all forms of publication equally: writing, speech, image, video, post, comment, voice message and more. The Act's definition of 'publication' is deliberately broad and covers any means. The meaning: a defamatory statement made orally in a meeting or a group call may constitute defamation just like a written post — as long as it reached a third party other than the person harmed. Extent and reach affect the level of compensation, but not the existence of the cause of action." },
+        { heading: "3. Civil vs. Criminal", body: "A distinction that does exist and matters: defamation can be a civil tort (grounds for a damages claim) and also a criminal offense. Most cases are civil — the person harmed claims compensation and remedies. But the Act also establishes a criminal offense of publishing defamation with intent to harm, handled through the criminal track. This distinction — civil vs. criminal — is the meaningful practical distinction, far more than the question of terminology. In serious cases (systematic defamation, clear intent to harm), a criminal complaint may be considered alongside the civil claim." },
+        { heading: "4. What Really Matters — Not the Name, but the Elements", body: "Instead of focusing on the terminology, it is worth focusing on the legal elements: Did publication occur (the content reached a third party)? Does the content meet the definition of defamation? Is it a false fact (strong claim) or mere opinion (protected)? Does the publisher have a defense (truth, good faith)? And what is the limitation period (one year from discovery)? These are the questions that determine the fate of the case — whether you call it 'libel,' 'slander' or 'defamation.' Early documentation and professional consultation matter in any case." }
+      ],
+      checklist: [
+        "Don't agonize over terminology — 'libel,' 'slander' and 'defamation' are the same field here",
+        "Remember the law applies to oral statements too, not only writing",
+        "Confirm 'publication' occurred — the content reached a third party",
+        "Distinguish a false fact (strong claim) from opinion (protected)",
+        "Check whether the criminal track also fits in serious cases",
+        "Document the publication and check limitation (one year from discovery)"
+      ],
+      pitfalls: [
+        "Unnecessary agonizing over 'libel' vs 'defamation' — it's the same thing",
+        "Assuming only written publication counts — oral statements count too",
+        "Ignoring the possibility of the criminal track in serious cases",
+        "Focusing on the name of the tort instead of its elements",
+        "Missing the one-year limitation period out of terminological confusion"
+      ],
+      faq: [
+        { q: "What's the difference between libel, slander and defamation?", a: "In Israeli law there is no substantive difference — it is one concept. 'Defamation' is the statutory term, and libel/slander are colloquial notions for the same thing (Israel does not distinguish written from spoken)." },
+        { q: "Does an oral statement count as defamation like a written post?", a: "Yes. In Israel, unlike English law, there is no distinction between written and spoken. The law applies to all forms of publication as long as the content reached a third party." },
+        { q: "Is defamation a civil or criminal matter?", a: "Mainly civil (a damages claim), but it is also a criminal offense when the publication was made with intent to harm. In serious cases a criminal complaint may be considered alongside a claim." },
+        { q: "Do I need a 'libel' lawyer or a 'defamation' lawyer?", a: "The same lawyer. Both terms refer to the same field of specialization — defamation litigation." }
+      ],
+    },
+
+    defamationCompensation: {
+      title: "How Much Compensation Can You Get in a Defamation Claim? (Including No-Proof Damages)",
+      metaTitle: "Defamation Compensation Israel | How Much Can You Get | HY Law",
+      metaDesc: "How much compensation is awarded in a defamation claim? Compensation without proof of damage (Section 7A), damages for proven loss, and the factors that set the amount.",
+      intro: "The first question of anyone harmed by defamation is 'how much can I get?' The answer depends on several factors — the type of publication, the extent of distribution, the intent, and the harm caused. This guide explains the two main compensation tracks: compensation without proof of damage under Section 7A, and compensation for proven financial loss, and details the factors a court considers in setting the amount — to enable a realistic assessment before filing a claim.",
+      sections: [
+        { heading: "1. Compensation Without Proof of Damage (Section 7A)", body: "The great advantage of a defamation claim is the mechanism of compensation without proof of damage. Section 7A allows the court to award compensation even without the person harmed proving exactly how much money they lost — it is enough to prove that defamation was published. The ceiling: up to ILS 50,000 per publication, and where the court is satisfied that the publication was made with intent to harm — up to double. These amounts are index-linked and updated (per Section 7A(e)), so the actual ceiling is higher than stated — in cases of intent to harm it currently reaches a higher figure. Verify the updated amount at the time of claim." },
+        { heading: "2. Compensation for Proven Financial Loss", body: "Beyond statutory compensation, a person harmed who can prove actual loss — a documented drop in revenue, lost clients or specific contracts that can be linked to the publication, or mental harm supported by an expert opinion — may claim higher compensation according to the proven loss. For a business, proven financial loss can significantly exceed the statutory ceiling. But the burden of proving financial loss falls on the claimant, so documentation — sales data, cancellations, client correspondence — is critical. A combination of statutory compensation and compensation for proven loss is the route to the highest compensation." },
+        { heading: "3. The Factors That Determine the Amount", body: "Compensation is not a fixed sum — the court awards according to the circumstances. Among the factors: the extent of distribution of the publication (how many were exposed, shares, views); the severity of the statements and the degree of harm to reputation; the apparent credibility of the publication in the public's eyes; the standing of the person harmed and harm to their livelihood; the publisher's intent and whether they acted maliciously; and the parties' conduct — whether the publisher removed and apologized or insisted. A viral, deliberate and especially harmful publication will lead to higher compensation. Prompt removal and an apology by the publisher may reduce it." },
+        { heading: "4. What Is Realistic to Expect — and How to Maximize", body: "In practice, courts usually award below the statutory ceiling, according to severity and reach — but in serious, viral cases or with proven loss the amounts are much higher. It is important to manage realistic expectations: a defamation claim is an effective tool, but amounts in Israel are lower than in the US. To maximize: document the extent of exposure and harm, preserve evidence, act quickly (before the content spreads), and consider claiming for each publication separately where there are several. Professional advice will help assess the likely compensation and choose a strategy." }
+      ],
+      checklist: [
+        "Document the extent of exposure — views, shares, comments",
+        "Gather evidence of financial loss — sales data, cancellations, correspondence",
+        "For multiple publications — consider claiming for each separately",
+        "Verify the updated statutory amount (index-linked)",
+        "Act quickly — before the publication spreads and causes harm",
+        "Manage realistic expectations — amounts in Israel are moderate"
+      ],
+      pitfalls: [
+        "Expecting US-level compensation — in Israel it is significantly lower",
+        "Failing to document financial loss — limits you to statutory compensation only",
+        "Ignoring the extent of distribution as a central factor in the amount",
+        "Not claiming for each publication separately where there are several",
+        "Waiting, allowing the publication to spread and the harm to grow"
+      ],
+      faq: [
+        { q: "How much can I get without proving damage?", a: "Under Section 7A — up to ILS 50,000 per publication, and up to double with intent to harm. The amounts are index-linked and updated, so the actual ceiling is higher than stated. Verify the current amount." },
+        { q: "Can I get more than the statutory ceiling?", a: "Yes, if you prove actual financial loss — a drop in revenue, lost contracts or documented mental harm. Then compensation can exceed the ceiling according to the proven loss." },
+        { q: "What determines the amount of compensation?", a: "The extent of distribution, severity of the publication, the publisher's intent, harm to reputation and livelihood, and the parties' conduct. A viral, deliberate publication leads to higher compensation." },
+        { q: "Do courts usually award the maximum amount?", a: "Usually they award below the ceiling, according to severity and reach. But in serious, viral cases or with proven loss the amounts are significantly higher." }
+      ],
+    },
+
+    defamationLimitation: {
+      title: "Limitation in a Defamation Claim — How Long Do You Have to Sue?",
+      metaTitle: "Defamation Claim Limitation | One Year | HY Law",
+      metaDesc: "How long do you have to file a defamation claim? The short limitation period (one year), continuing publication, and when the clock starts — a practical guide.",
+      intro: "One of the costliest mistakes in defamation claims is missing the deadline. Unlike most civil claims, whose limitation period is long, a defamation claim has an especially short limitation period. Those who wait may find that the claim was barred before they even filed it. This guide explains the limitation period in defamation, when the clock starts, how content that remains published is treated, and how to avoid missing the deadline.",
+      sections: [
+        { heading: "1. The Short Limitation Period — One Year", body: "A defamation claim is time-barred one year from the date of publication — significantly shorter than the ordinary civil limitation period (seven years). This is a deliberate exception: the legislature sought to encourage prompt action in reputation matters, where time is critical. The practical meaning: someone harmed by defamation must act quickly — document, and sometimes already send a demand letter or file a claim within a relatively short time. Prolonged waiting, in the hope that 'it will work out' or the publication will disappear on its own, may bar the right to sue." },
+        { heading: "2. When Does the Clock Start?", body: "The starting point is the date of publication. But in cases where the person harmed did not know and could not have known of the publication at the time it was made, the clock may start from a later date — from when they learned of the publication. This depends on circumstances and evidence, so it is important to document not only the publication but also the date of its discovery. In any case, do not rely on 'postponing' the clock — the safe assumption is that the clock starts ticking immediately, so act as early as possible after discovery." },
+        { heading: "3. A Continuing Publication That Remains Online", body: "A common question online: what happens when the publication remains online over time — an old post, article or review that keeps appearing? Here the issue of 'continuing publication' arises: some argue that as long as the content is accessible and continues to be exposed, it is a renewed harm. This is a complex, fact-dependent legal issue, and it should not be relied upon as a substitute for acting in time. The safe approach: act immediately upon discovering the publication and do not rely on the continuity argument. If you discovered an old publication that continues to harm you, consult quickly about the relevant deadlines." },
+        { heading: "4. How to Avoid Missing the Deadline", body: "Practical rules: as soon as you discover a harmful publication, document it and the date of discovery immediately. Do not wait — even if you prefer to try to resolve it amicably, do so in parallel with preserving your legal rights. Send a demand letter early, and if there is no response — file a claim before the year lapses. If you are hesitating, consult a lawyer early and not at the last minute — so there is time to examine evidence, draft a demand, and file on time. Missing the year will lead to dismissal of the claim in limine, regardless of the strength of the cause of action." }
+      ],
+      checklist: [
+        "Document the publication and the date of its discovery immediately",
+        "Remember — only one year's limitation from the date of publication",
+        "Don't wait: act to preserve rights in parallel with amicable attempts",
+        "Send a demand letter early, not at the last minute",
+        "Consult a lawyer early to be able to file on time",
+        "Don't rely on the 'continuing publication' argument as a substitute for timely action"
+      ],
+      pitfalls: [
+        "Waiting in the hope 'it will work out' — the claim is time-barred within a year",
+        "Assuming defamation limitation is like ordinary claims (seven years)",
+        "Relying on the 'continuing publication' argument instead of acting in time",
+        "Failing to document the date of discovery (relevant to when the clock starts)",
+        "Approaching a lawyer at the last minute without time to prepare"
+      ],
+      faq: [
+        { q: "How long do I have to file a defamation claim?", a: "One year from the date of publication — significantly shorter than ordinary limitation (seven years). So it is important to act quickly." },
+        { q: "I discovered an old publication still online — is it too late?", a: "There may be a cause of action based on 'continuing publication' or from the date of discovery, but this is a complex issue. Don't rely on it — consult immediately about the deadlines." },
+        { q: "When does the limitation clock start?", a: "In principle from the date of publication. If you did not and could not have known of it, the clock may start from the date of discovery — so document the discovery date too." },
+        { q: "What happens if I missed the year?", a: "The claim will be dismissed in limine due to limitation, regardless of the strength of the cause of action. So it is critical to act early and not wait." }
       ],
     },
   },
