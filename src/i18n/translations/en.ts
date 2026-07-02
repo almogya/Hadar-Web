@@ -527,6 +527,30 @@ export const en = {
         pillar: true,
         slug: "supplier-rating-defamation",
       },
+      {
+        title: "What Is Defamation? The Complete Guide to the Defamation Act",
+        excerpt: "What counts as defamation under Israeli law? Definition, what 'publication' means, the line from legitimate criticism, the defenses (truth and good faith) and damages.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "defamation-law-guide",
+      },
+      {
+        title: "A Defamation Claim: Every Step From the First Letter to Judgment",
+        excerpt: "How does a defamation claim proceed? Demand letter, filing, pre-trial, evidence and judgment — a guide to the steps, timelines and alternative routes.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "defamation-lawsuit-steps",
+      },
+      {
+        title: "Defenses Under the Defamation Act: Truth, Good Faith and Opinion",
+        excerpt: "What defenses are available to a defamation defendant? Truth of the publication, good faith, expression of opinion and permitted publications — and who bears the burden of proof.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "defamation-defenses",
+      },
     ],
   },
 
@@ -1571,6 +1595,109 @@ export const en = {
         { q: "My business was harmed by a false warning post — what do I do?", a: "Document the post and the extent of exposure, approach the group admin with a removal demand, and send a demand letter. If there are false facts — there is a cause of action, including compensation without proof of damage." },
         { q: "I admin a recommendations group — am I liable for the content?", a: "It depends on circumstances — mainly whether you knew of false content and failed to remove it after an approach. It is advisable to set clear rules and remove serious, unsubstantiated factual accusations." },
         { q: "How do I warn about a bad supplier without risking a claim?", a: "Stick to facts you experienced and can back up, distinguish opinion from factual assertion, and avoid criminal accusations without basis. 'Truth of the publication' is a defense — but the burden is on you." }
+      ],
+    },
+
+    defamationLawGuide: {
+      title: "What Is Defamation? The Complete Guide to the Defamation Act",
+      metaTitle: "What Is Defamation? Complete Guide | Defamation Lawyer | HY Law",
+      metaDesc: "What counts as defamation under Israeli law? Definition, examples, the line from legitimate criticism, the defenses and damages — a comprehensive guide.",
+      intro: "Defamation is one of the legal areas that touches everyone in the digital age — a post, review, article or rumor can harm your reputation, livelihood and relationships. But not every negative statement is defamation, and the line between legitimate criticism and defamation is thin and significant. This comprehensive guide explains what defamation is under the Defamation Act, 1965, what is required to sue, which defenses exist, and what the damages are — a foundation for anyone harmed or worried they published defamation.",
+      sections: [
+        { heading: "1. The Statutory Definition of Defamation", body: "The Defamation Act, 1965, defines defamation as a publication that may humiliate a person in the eyes of others or make them a target of hatred, contempt or ridicule; degrade a person for acts, conduct or traits attributed to them; harm a person in their office, business, occupation or profession; or degrade them for their race, origin, religion, place of residence, age, sex, sexual orientation or disability. Importantly, the test is objective — not what the publisher intended, but how a reasonable person would understand the publication. Even a hint, sarcasm or indirect presentation may be defamatory if the implied meaning is harmful." },
+        { heading: "2. What Is 'Publication' and to Whom the Act Applies", body: "For defamation to exist, 'publication' is required — meaning the content reached at least one person other than the person harmed. Publication includes speech, writing, image, video, post, comment, email, WhatsApp message and more. Online distribution is a clear publication due to reach. The Act also protects corporations — a company or association can sue for harm to its commercial reputation. The deceased are protected to a degree, and family members may act in certain circumstances. The publication can be civil (grounds for a damages claim) and, in serious cases, even criminal." },
+        { heading: "3. Legitimate Criticism vs. Defamation — the Dividing Line", body: "The Act balances the right to reputation against freedom of expression, so not every negative statement is prohibited. Genuine opinion ('I was not satisfied with the service'), criticism on a public matter, and satire are protected. The problem begins when false, degrading facts are presented: a claim that a person stole, defrauded, committed an offense or acted dishonestly, without basis. The distinction between 'opinion' and a 'factual assertion' is the heart of the legal analysis. Even framing as a 'question' or 'warning' may cross the line if the factual message is false and harmful." },
+        { heading: "4. Defenses Under the Act", body: "Even where a publication is prima facie defamatory, the Act provides defenses. The central one is 'truth of the publication' (Section 14) — the statements are true and there is public interest in them. Another is 'good faith' (Section 15) across a range of situations: a moral/social duty to convey information, expression of opinion, criticism of a work or of someone holding public office, and more. There are also permitted publications (Section 13) — e.g., in legal proceedings and in parliament. The burden of proving the defenses falls on the publisher, so documentation and reliability of information are critical." },
+        { heading: "5. Damages and Remedies", body: "A person harmed by defamation can claim monetary compensation, an injunction to remove the publication, and publication of an apology/correction. Section 7A allows compensation without proof of damage — up to ILS 50,000 per publication, and up to double where the publication was made with intent to harm. These amounts are index-linked and updated, so the actual ceiling is higher than stated — verify the current figure. Where actual financial loss is proven, more may be claimed. Remember the short limitation period — one year from discovery of the publication — and act quickly, usually starting with a proper demand letter." }
+      ],
+      checklist: [
+        "Check whether the publication presents a false fact (strong claim) or mere opinion (weak claim)",
+        "Confirm 'publication' occurred — the content reached a third party besides you",
+        "Document the publication immediately — screenshot with URL, date and name",
+        "Check the limitation period — one year from discovery",
+        "Consider a demand letter before a claim",
+        "Consult a lawyer to assess grounds, possible defenses and remedies"
+      ],
+      pitfalls: [
+        "Confusing permitted negative opinion with a false factual assertion",
+        "Assuming the test is the publisher's intent — it is objective (a reasonable person)",
+        "Waiting more than a year from discovery — the claim becomes time-barred",
+        "Failing to document the publication before it is deleted",
+        "Ignoring the possibility that defenses (truth, good faith) apply to the publisher"
+      ],
+      faq: [
+        { q: "Is every negative statement about me defamation?", a: "No. Genuine opinion and legitimate criticism are protected. Defamation mainly exists when false, degrading facts are presented (e.g., an accusation of theft or fraud) that are untrue." },
+        { q: "What do I need to prove to sue for defamation?", a: "That publication occurred (the content reached a third party) and that the publication meets the definition of defamation (may humiliate, degrade or harm). For compensation without proof of damage there is no need to prove exact monetary loss." },
+        { q: "How long do I have to file a defamation claim?", a: "One year from discovery of the publication — significantly shorter than the ordinary limitation period. So it is important to document and act quickly." },
+        { q: "Can I sue over a hint and not only a direct statement?", a: "Yes. The test is how a reasonable person understands the publication. A hint, sarcasm or indirect presentation whose implied meaning is harmful may constitute defamation." }
+      ],
+    },
+
+    defamationLawsuitSteps: {
+      title: "A Defamation Claim: Every Step From the First Letter to Judgment",
+      metaTitle: "Defamation Claim Steps | From Letter to Judgment | HY Law",
+      metaDesc: "How does a defamation claim proceed in Israel? Demand letter, filing, pre-trial, evidence and judgment — a full guide to the steps, timelines and costs.",
+      intro: "Someone harmed by defamation who is considering a claim first wants to understand what the process actually looks like — what happens from discovery to judgment, how long it takes and how much it costs. This guide details the steps of a defamation claim in Israel in order, from the first letter through filing to the decision, and explains when alternative routes — a demand letter, mediation or an injunction — are preferable to a full proceeding.",
+      sections: [
+        { heading: "1. Documentation and Demand Letter — Before the Claim", body: "The first step, even before court, is documentation: a screenshot of the publication with URL, date, publisher name and extent of exposure. Then, in most cases, a proper demand letter is sent — requiring removal of the publication, publication of an apology, and sometimes compensation, within a set response time. A demand letter is an effective tool: it often resolves the dispute quickly and at low cost, and establishes documentation for a future claim if unanswered. The cost of a demand letter is significantly lower than a full claim." },
+        { heading: "2. Filing the Claim and the Pleadings", body: "If the demand letter did not help, a claim is filed. Defamation claims are usually filed in the magistrate's court (for claims up to ILS 2.5 million), or in small claims court in simple cases. The statement of claim details the publication, why it is defamatory, and the remedy sought (compensation, injunction, apology). The defendant files a defense, in which they may plead defenses (truth, good faith) or deny. At this stage the issues in dispute — on which the court will decide — are set." },
+        { heading: "3. Pre-Trial, Affidavits and Evidence", body: "After the pleadings there is a pre-trial — a preliminary hearing to clarify the case, disclose documents and attempt settlement. The parties then file examination-in-chief affidavits (the written evidence), followed by an evidentiary hearing in which witnesses are cross-examined. In defamation cases, the central evidence is usually the publication itself and its extent, alongside evidence of harm. It is important to preserve all original documentation. The evidentiary stage is the core of the trial, and the defenses raised by the defendant are examined there too." },
+        { heading: "4. Summations, Judgment and Timelines", body: "After the evidence, the parties file summations, and the court issues judgment. The full proceeding in magistrate's court averages between one and three years. A significant share of cases end in settlement at an earlier stage. A faster route: an application for a temporary injunction — a decision can be obtained within days requiring immediate removal, and sometimes the temporary order itself resolves the dispute. Mediation can significantly shorten the proceeding and save costs. A realistic assessment of prospects and choosing the right route are critical." }
+      ],
+      checklist: [
+        "Document the publication immediately — URL, date, publisher name and extent of exposure",
+        "Consider a demand letter as a first step — effective and inexpensive",
+        "Check the appropriate forum (small claims / magistrate's court)",
+        "Preserve all original evidence for the evidentiary stage",
+        "Check limitation — one year from discovery",
+        "Consider a temporary injunction in urgent cases"
+      ],
+      pitfalls: [
+        "Skipping a demand letter that could have resolved matters cheaply and quickly",
+        "Filing a claim without assessing prospects and possible defenses",
+        "Failing to preserve original documentation needed at the evidentiary stage",
+        "Missing the one-year limitation period",
+        "Expecting a fast process — a full claim usually takes one to three years"
+      ],
+      faq: [
+        { q: "How long does a defamation claim take?", a: "In magistrate's court — an average of one to three years to judgment. Most cases settle earlier. Mediation and a temporary injunction can shorten it significantly." },
+        { q: "Is a demand letter mandatory before a claim?", a: "Not always mandatory, but highly recommended — it often resolves the dispute cheaply and quickly and establishes documentation. In urgent cases you can go straight to an injunction." },
+        { q: "Which court hears a defamation claim?", a: "Usually the magistrate's court. In simple cases and small amounts you can sue in small claims court (fast and cheap, without representation)." },
+        { q: "Can I get quick removal before the claim ends?", a: "Yes — an application for a temporary injunction is heard as an urgent motion, and the court can order removal within days if the conditions are met." }
+      ],
+    },
+
+    defamationDefenses: {
+      title: "Defenses Under the Defamation Act: Truth, Good Faith and Opinion",
+      metaTitle: "Defamation Defenses | Truth & Good Faith | HY Law",
+      metaDesc: "What defenses are available to a defamation defendant? Truth of the publication, good faith, expression of opinion and permitted publications — a full guide and the burden of proof.",
+      intro: "Not every publication that meets the definition of defamation will lead to liability. The Defamation Act, 1965, balances the right to reputation against freedom of expression, and therefore provides a range of defenses to the publisher. Understanding the defenses is essential for both sides: for the defendant — to know whether a defense applies; for the claimant — to assess the prospects. This guide explains the central defenses, the conditions for each, and the burden of proof.",
+      sections: [
+        { heading: "1. Truth of the Publication (Section 14)", body: "The strongest defense is 'truth.' Section 14 provides a defense if the published matter was true and there was public interest in the publication. Both conditions are required cumulatively: both truth and public interest. 'Public interest' is not mere curiosity — the public must have a legitimate interest in the information. This defense is not defeated by an incidental detail that is untrue, if it does not cause real harm. The burden of proving that the publication is true falls on the defendant — so documentation, evidence and source reliability are critical to establishing the defense." },
+        { heading: "2. The Good-Faith Defense (Section 15)", body: "Section 15 provides a defense where the publication was made in good faith in one of several defined situations: where the publisher had a legal, moral or social duty to publish; where the publication is an expression of opinion on the conduct of the person harmed in a public role or a public matter; criticism of a work the person harmed published; a fair report of a public assembly; and more. Good faith is a central condition — a publication made with intent to harm or without a reasonable basis will not enjoy the defense. The Act even sets presumptions of when a publication is deemed made in bad faith (e.g., if it was untrue and the publisher took no steps to verify)." },
+        { heading: "3. Expression of Opinion vs. Assertion of Fact", body: "One of the most important distinctions is between expression of opinion and assertion of fact. Genuine opinion on a public matter or on a person's conduct in their role enjoys broad protection — even sharp opinion. By contrast, presenting a false fact is not protected as 'opinion.' Courts examine how a reasonable person understands the publication — as a subjective position or a factual claim. Framing as 'in my opinion' does not automatically turn a false fact into protected opinion. This distinction often determines the fate of the claim." },
+        { heading: "4. Permitted Publications and the Burden of Proof", body: "Section 13 defines permitted publications that do not create liability at all — e.g., publication during a Knesset debate, a judicial proceeding, or an official report. These are broad immunities reflecting a clear public interest. A key point regarding all the defenses: the burden of proof falls on the defendant-publisher. That is, once the claimant has proven that defamation was published, the publisher must prove that a defense applies. Therefore, anyone publishing sensitive information must document their sources and checks in advance — the documentation is what will enable establishing a defense when the time comes." }
+      ],
+      checklist: [
+        "Check whether the publication is true and of public interest (Section 14 defense)",
+        "Document your information sources and the checks you performed in advance",
+        "Clearly distinguish between expression of opinion and a factual assertion",
+        "Ensure the publication was made in good faith and in one of the Section 15 situations",
+        "Remember that the burden of proving the defense falls on the publisher",
+        "Consult before publishing sensitive information or after receiving a demand letter"
+      ],
+      pitfalls: [
+        "Assuming 'in my opinion' automatically turns a false fact into protected opinion",
+        "Relying on 'truth' without documented evidence to establish it",
+        "Publishing without reasonable checking — undermines the good-faith defense",
+        "Ignoring the 'public interest' requirement alongside truth",
+        "Not understanding that the burden of the defense is on the publisher, not the claimant"
+      ],
+      faq: [
+        { q: "If what I wrote is true — am I protected?", a: "Truth is a strong defense (Section 14), but there must also be public interest in the publication, and the burden of proving truth is on you. So documentation and evidence are critical." },
+        { q: "I wrote 'in my opinion' — does that make it protected opinion?", a: "Not automatically. The court examines how a reasonable person understands the publication. Presenting a false fact does not become protected merely because you added 'in my opinion.'" },
+        { q: "Who has to prove the defense — me or the claimant?", a: "The burden of proving the defenses (truth, good faith) falls on the defendant-publisher. Once defamation is shown to have been published, you must establish the defense." },
+        { q: "Is sharp criticism of a public figure protected?", a: "Genuine opinion on a person's conduct in a public role enjoys broad protection, even if sharp — as long as it is opinion and not the presentation of false facts." }
       ],
     },
   },
