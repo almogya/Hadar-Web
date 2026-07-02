@@ -26,7 +26,10 @@ type ArticleKey =
   | "trademarkRegistrationIsrael"
   | "defamationLawsuitCosts"
   | "aiLegalLiability"
-  | "reputationProtection";
+  | "reputationProtection"
+  | "facebookDefamation"
+  | "whatsappDefamation"
+  | "anonymousDefamation";
 
 const SLUG_MAP: Record<string, ArticleKey> = {
   "ai-copyright-israel": "aiCopyright",
@@ -49,6 +52,9 @@ const SLUG_MAP: Record<string, ArticleKey> = {
   "defamation-lawsuit-costs": "defamationLawsuitCosts",
   "ai-legal-liability": "aiLegalLiability",
   "reputation-protection": "reputationProtection",
+  "facebook-defamation": "facebookDefamation",
+  "whatsapp-defamation": "whatsappDefamation",
+  "anonymous-defamation-disclosure": "anonymousDefamation",
 };
 
 const PillarArticle = () => {

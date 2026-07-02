@@ -810,4 +810,60 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ====== Defamation cluster (batch 1) ====== -->
+  <url>
+    <loc>https://ai-lawyer.co.il/he/insights/facebook-defamation</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/facebook-defamation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/facebook-defamation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/facebook-defamation"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/en/insights/facebook-defamation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/facebook-defamation"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/facebook-defamation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/facebook-defamation"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/he/insights/whatsapp-defamation</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/whatsapp-defamation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/whatsapp-defamation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/whatsapp-defamation"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/en/insights/whatsapp-defamation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/whatsapp-defamation"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/whatsapp-defamation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/whatsapp-defamation"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/he/insights/anonymous-defamation-disclosure</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/anonymous-defamation-disclosure"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/anonymous-defamation-disclosure"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/anonymous-defamation-disclosure"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/en/insights/anonymous-defamation-disclosure</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/anonymous-defamation-disclosure"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/anonymous-defamation-disclosure"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/anonymous-defamation-disclosure"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

@@ -479,6 +479,30 @@ export const en = {
         pillar: true,
         slug: "internet-defamation-israel",
       },
+      {
+        title: "Defamation on Facebook: Can a Post Cost You Tens of Thousands of Shekels?",
+        excerpt: "A defamatory post, comment or share on Facebook can lead to a defamation claim. What counts as publication, likely damages, and how to act — whether you were harmed or received a demand letter.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "facebook-defamation",
+      },
+      {
+        title: "Defamation in a WhatsApp Group: When Does a Message Become a Claim?",
+        excerpt: "A defamatory WhatsApp group message can constitute defamation. When a message crosses the line, likely damages, and the risk even for someone who merely forwarded another's message.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "whatsapp-defamation",
+      },
+      {
+        title: "Anonymous Online Defamation: How Do You Unmask an Anonymous User?",
+        excerpt: "Defamed anonymously online? A guide to unmasking an anonymous publisher in Israel, the limits of the Mor v. Barak ruling, and alternative routes to remove content and protect your name.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "anonymous-defamation-disclosure",
+      },
     ],
   },
 
@@ -1319,6 +1343,108 @@ export const en = {
         { q: "What is the Streisand Effect and how can I avoid it?", a: "The Streisand Effect occurs when attempts to suppress information actually cause it to spread more widely, as the legal action itself becomes news. To avoid it, experienced counsel will assess whether legal action or strategic communication is the better response. In some cases, ignoring or professionally responding to content is more effective than legal intervention." },
         { q: "How do I monitor my business reputation online?", a: "Set up Google Alerts for your business name, key personnel names, and relevant brand terms. Use social media monitoring tools. For significant brands, professional online reputation monitoring services provide comprehensive coverage including news, forums, and social media." },
         { q: "Can I include non-disparagement clauses in employee and business contracts?", a: "Yes, and it is recommended. Non-disparagement clauses in employment agreements and business contracts prohibit parties from making disparaging public statements about the other party after the relationship ends. They are generally enforceable in Israel provided they are reasonably defined and include reciprocal obligations." },
+      ],
+    },
+
+    facebookDefamation: {
+      title: "Defamation on Facebook: Can a Post Cost You Tens of Thousands of Shekels?",
+      metaTitle: "Facebook Defamation Lawyer Israel | Online Defamation | HY Law",
+      metaDesc: "A defamatory post, comment or share on Facebook can lead to a defamation claim. What counts as publication, likely damages, and how to act — a practical guide.",
+      intro: "Facebook is the most common arena for online defamation in Israel. A single post, group comment or share of defamatory content can expose the publisher — and sometimes those who shared or commented — to substantial claims. This guide explains when a Facebook publication constitutes defamation under the Defamation Act, 1965, the likely compensation, and how to act whether you were harmed or received a demand letter.",
+      sections: [
+        { heading: "1. When Does a Facebook Post or Comment Constitute Defamation?", body: "The Defamation Act applies to any publication, and social media is no different from a newspaper — often it is more serious because of rapid reach. A publication is defamatory if it may degrade, humiliate, or harm a person's reputation, occupation or business. On Facebook this includes a profile post, a group comment, a business-page post, and even images or memes. Legitimate criticism or genuine opinion is not necessarily defamation — the problem arises when false factual assertions are made (e.g., that a person stole, defrauded, or committed an offense) that are untrue." },
+        { heading: "2. Compensation: How Much Can It Cost?", body: "Section 7A allows compensation without proof of damage — up to ILS 50,000 per publication, and up to double where the publication was made with intent to harm. These amounts are index-linked and updated, so the actual ceiling is higher than stated — verify the current figure at the time of claim. On Facebook, the extent of exposure (number of friends, shares, comments) is a central factor. A post in a large group or one that goes viral significantly increases the risk. Where actual financial loss is proven — lost clients, cancelled deals — damages beyond the statutory amount may be claimed." },
+        { heading: "3. Were You Harmed? First Steps", body: "Preserve evidence immediately: screenshot the post/comment with the date, publisher name and URL, and document the extent of exposure (likes, shares, comments). Do not respond hastily in public — an aggressive response can escalate and amplify exposure (the 'Streisand Effect'). You can report to Facebook, but it tends to protect content that appears to be 'opinion.' The first legal step is usually a proper demand letter seeking removal and an apology — which often resolves the matter without a claim. In urgent cases you can seek a court injunction to remove the publication." },
+        { heading: "4. Received a Demand Letter About a Post? Don't Rush", body: "If you received a demand alleging that you published defamation, do not delete and do not apologize before consulting — deletion or apology may be construed as an admission. Conversely, leaving the publication up may increase the harm and damages. The Act provides real defenses: 'truth of the publication' (the statements are true and of public interest), 'good-faith opinion,' and legitimate criticism. A lawyer will assess whether a defense applies and whether to remove, correct, or respond. A correct response at the early stage can prevent a claim or materially reduce exposure." }
+      ],
+      checklist: [
+        "Screenshot the full post/comment with URL, date and publisher name",
+        "Document the extent of exposure — likes, shares and comments",
+        "Do not respond publicly in haste — avoid escalation and the Streisand Effect",
+        "Check the limitation period — one year from discovering the publication",
+        "Use a proper demand letter before filing a claim",
+        "If you received a demand — do not delete/apologize before legal advice"
+      ],
+      pitfalls: [
+        "Deleting a post or apologizing immediately, which may be construed as an admission",
+        "An aggressive public response that increases distribution",
+        "Waiting more than a year from discovery — the claim becomes time-barred",
+        "Assuming a 'closed' group post is not a publication — it is",
+        "Failing to preserve evidence before the content is deleted"
+      ],
+      faq: [
+        { q: "The defamatory post was deleted — can I still sue?", a: "Yes, if you documented it (screenshot with URL and date). A publication already made gives rise to a claim even if later deleted. That's why preserving evidence immediately matters." },
+        { q: "Someone wrote about me in a closed Facebook group — does it count?", a: "Yes. A publication in a group, even a closed one, is a 'publication' as long as it reached at least one person other than the person harmed. Group size affects the level of compensation." },
+        { q: "How long do I have to file a claim over a post?", a: "A defamation claim is time-barred one year from discovery of the publication — significantly shorter than usual. Act quickly and document." },
+        { q: "Can I write a negative review of a business on Facebook?", a: "Yes — genuine opinion and legitimate criticism are protected. The risk arises when false facts (e.g., accusations of theft or fraud) that are untrue are presented." }
+      ],
+    },
+
+    whatsappDefamation: {
+      title: "Defamation in a WhatsApp Group: When Does a Message Become a Claim?",
+      metaTitle: "WhatsApp Defamation Lawyer Israel | Online Defamation | HY Law",
+      metaDesc: "A defamatory WhatsApp group message can constitute defamation and give rise to a claim. When a message crosses the line, likely damages, and evidence — a practical guide.",
+      intro: "WhatsApp groups — work, building committees, parents or neighborhood — have become a common arena for disputes that end in defamation claims. A single message sent in anger to a group of dozens can constitute a defamatory publication and expose the sender to compensation. This guide explains when a WhatsApp message crosses the line from criticism to a claim, how evidence is gathered, and the risk even for someone who merely forwarded another's message.",
+      sections: [
+        { heading: "1. A Group Message = Publication Under the Act", body: "Under the Defamation Act, 1965, 'publication' occurs when harmful content reaches at least one person other than the person harmed. A WhatsApp group message, seen by all group members, is a clear publication — sometimes more serious than a private message, because of the distribution. A private message between two people only usually does not constitute 'publication' (unless the recipient is not the person harmed). The larger and more communal the group (work colleagues, neighbors), the more serious the harm to reputation and the higher the likely compensation." },
+        { heading: "2. When Does a Message Cross the Line?", body: "Not every critical message is defamation. It is permitted to complain, warn and express opinion. The problem begins when false, degrading facts are attributed to a person — e.g., that they stole from the committee, defrauded clients, are a criminal, or claims about their integrity. Even a message framed as a 'warning to members' may be defamatory if false. The Act balances against freedom of expression and recognizes defenses — truth of the publication, good faith, and a moral/social duty to convey information — but these are examined carefully, and the burden of proof is on the publisher." },
+        { heading: "3. Liability of the Forwarder and Group Admin", body: "A critical point: under case law, forwarding or sharing a defamatory message may be considered an independent publication — so someone who merely forwarded another's content may bear liability, not just the original author. As for a group admin, liability depends on the circumstances: knowledge of the content, involvement, and failure to remove after being notified may impose liability in some cases. Therefore, if a harmful message is published in a group you manage, it is advisable to document and consider removal, and not to forward the content further." },
+        { heading: "4. Gathering Evidence and Acting Correctly", body: "Evidence is critical: screenshot the message including the sender's name, date and time, and the group name and member count. Export the chat for full documentation. Do not respond within the group in escalation. The first step is usually a demand letter seeking removal, an apology in the group, and compensation. If the message continues to spread or causes immediate harm (e.g., to livelihood), an injunction may be considered. A defamation claim over a WhatsApp message is particularly suited to small claims court in simple cases, or magistrate's court for significant claims." }
+      ],
+      checklist: [
+        "Screenshot the message with sender name, date, time and group name",
+        "Export the group chat for full, verifiable documentation",
+        "Document the group size — it affects the scope of publication and damages",
+        "Do not forward the message — forwarding may impose liability on you",
+        "Send a demand letter seeking removal and an apology in the group",
+        "Check limitation — one year from discovering the message"
+      ],
+      pitfalls: [
+        "Forwarding a defamatory message — may impose liability on you",
+        "An escalating response inside the group that widens the dispute",
+        "Assuming a 'private' group message is not a publication — it is",
+        "Deleting your message without keeping a copy for evidence",
+        "Waiting beyond the one-year limitation period"
+      ],
+      faq: [
+        { q: "I forwarded someone else's message — am I liable?", a: "Possibly. Under case law, forwarding may be treated as an independent publication, so someone who shared it further may bear liability. Do not forward content that appears defamatory." },
+        { q: "A private message between me and one person — is it defamation?", a: "Usually not. 'Publication' requires the content to reach a third party other than the person harmed. A message between two people only usually does not constitute publication." },
+        { q: "I admin a group where defamation was posted — what's my liability?", a: "An admin's liability depends on circumstances — knowledge, involvement, and failure to remove. It is advisable to document and consider removing harmful content brought to your attention, and to seek advice." },
+        { q: "Can I sue over WhatsApp in small claims court?", a: "Yes; in simple cases small claims is a fast, low-cost route. For significant or complex claims, magistrate's court with representation is preferable." }
+      ],
+    },
+
+    anonymousDefamation: {
+      title: "Anonymous Online Defamation: How Do You Unmask an Anonymous User?",
+      metaTitle: "Unmasking Anonymous Defamation | Mor Ruling | HY Law",
+      metaDesc: "Defamed anonymously online? A guide to unmasking an anonymous publisher in Israel, the limits of the Mor v. Barak ruling, and alternative routes to act.",
+      intro: "One of the most complex issues in online defamation law is anonymous publication — a talkback, forum comment or fake profile. The person harmed knows what was published but not who published it, and without identification it is hard to file a claim. This guide explains the state of Israeli law on unmasking anonymous users, the significant limitation set by the Supreme Court, and the alternative routes available to remove the content and protect one's good name.",
+      sections: [
+        { heading: "1. The Legal Obstacle: the Mor v. Barak ITC Ruling", body: "In the leading ruling LCA 4447/07 Mor v. Barak ITC (2010), the Supreme Court held that, absent explicit statutory authorization, a court lacks the power to order an internet service provider or platform to disclose the identity of an anonymous user who published harmful content. The practical implication: Israel has no general, simple civil mechanism to unmask an anonymous publisher, and this is a real obstacle for those harmed. To date, no legislation comprehensively regulating this has been completed, so one must act via alternative and creative routes." },
+        { heading: "2. Possible Routes to Uncover Identity", body: "Despite the limitation, routes exist: first, approaching the platform itself (Google, Facebook, the news site) with a removal request — sometimes the platform removes content that violates its terms even without disclosing identity. Second, in serious cases amounting to a criminal offense (e.g., threats, harassment, extortion), a police complaint may lead to an investigation in which identity is lawfully uncovered. Third, sometimes the publisher can be identified from the content itself (identifying details, style, context). Fourth, targeted legal proceedings in certain circumstances. A lawyer will assess which route is realistic in the circumstances." },
+        { heading: "3. Removing Content When Identity Cannot Be Uncovered", body: "When unmasking is impractical, the focus shifts to removing the content and minimizing harm. With Google, removal requests can be filed (content violating policy, personal information, removal from search results). With social media platforms — reporting a terms-of-use violation. With news sites and forums — approaching the editor/operator, who may bear independent liability for content it hosts once notified. Removing the publication, even without identifying the publisher, protects one's good name and stops further distribution." },
+        { heading: "4. Liability of the Platform and Site Operator", body: "The question of a site operator's, forum admin's or platform's liability for anonymous content published on it is complex and fact-dependent. Generally, the more a host knows of harmful content and fails to remove it after being notified, the greater its exposure to liability. An orderly, documented approach to the operator demanding removal is an important step — both for actual removal and to establish evidence that the host knew and did not act. Document every approach and response." }
+      ],
+      checklist: [
+        "Immediately document the anonymous publication — screenshot with URL, date and time",
+        "Approach the platform with a removal request for a terms-of-use violation",
+        "Assess whether the content amounts to a criminal offense — if so, consider a police complaint",
+        "Look for identifying details within the publication itself",
+        "Approach the site/forum operator in writing, documented, demanding removal",
+        "Consult a lawyer on the realistic route in the circumstances"
+      ],
+      pitfalls: [
+        "Assuming it is easy to compel an ISP to disclose identity — the Mor ruling limits this",
+        "Wasting time on unmasking attempts instead of focusing on content removal",
+        "Failing to document the publication before it is deleted",
+        "An undocumented approach to the site operator — undermines establishing its liability",
+        "Ignoring the criminal aspect in cases of threats, harassment or extortion"
+      ],
+      faq: [
+        { q: "Can I compel Google/Facebook to reveal who wrote about me?", a: "Under the Mor v. Barak ruling (2010), absent explicit legislation there is no general civil mechanism to compel unmasking of an anonymous user. So the focus is usually on content removal and alternative routes." },
+        { q: "If identity can't be uncovered — is there nothing to do?", a: "There is. You can act to remove the content via the platform or site operator, and in serious cases via a criminal complaint. The main goal is to stop the harm." },
+        { q: "When does anonymous publication become a criminal matter?", a: "When it includes threats, menacing harassment, extortion or other offenses. In such cases the police are authorized to investigate and uncover identity by lawful means." },
+        { q: "Is the forum operator liable for an anonymous defamatory comment?", a: "It depends on circumstances — mainly whether it knew of the content and failed to remove it after notification. A documented removal demand matters both for removal and to establish liability." }
       ],
     },
   },
