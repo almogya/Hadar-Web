@@ -503,6 +503,30 @@ export const en = {
         pillar: true,
         slug: "anonymous-defamation-disclosure",
       },
+      {
+        title: "Defamation on Instagram and TikTok: Story, Comment or Video",
+        excerpt: "A defamatory story, reel, comment or TikTok video can constitute defamation. What counts as publication on visual platforms, handling content that disappears, and likely damages.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "instagram-tiktok-defamation",
+      },
+      {
+        title: "Sharing and Liking: Are They Defamation Too? The Nidaily Ruling and Case Law",
+        excerpt: "Do sharing or liking a defamatory post expose you to a defamation claim? What case law says about sharing vs. liking, and how to avoid liability when distributing another's content.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "share-like-defamation",
+      },
+      {
+        title: "Defamation in Supplier-Rating Groups ('Recommended/Not Recommended'): the Legal Risk",
+        excerpt: "A negative recommendation or 'not recommended supplier' warning in Facebook groups can constitute defamation. What is permitted, and the risk to the business, publisher and group admins.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "supplier-rating-defamation",
+      },
     ],
   },
 
@@ -1445,6 +1469,108 @@ export const en = {
         { q: "If identity can't be uncovered — is there nothing to do?", a: "There is. You can act to remove the content via the platform or site operator, and in serious cases via a criminal complaint. The main goal is to stop the harm." },
         { q: "When does anonymous publication become a criminal matter?", a: "When it includes threats, menacing harassment, extortion or other offenses. In such cases the police are authorized to investigate and uncover identity by lawful means." },
         { q: "Is the forum operator liable for an anonymous defamatory comment?", a: "It depends on circumstances — mainly whether it knew of the content and failed to remove it after notification. A documented removal demand matters both for removal and to establish liability." }
+      ],
+    },
+
+    instagramTiktokDefamation: {
+      title: "Defamation on Instagram and TikTok: Story, Comment or Video",
+      metaTitle: "Instagram & TikTok Defamation Lawyer | Online Defamation | HY Law",
+      metaDesc: "A defamatory story, reel, comment or TikTok video can constitute defamation. What counts as publication on visual platforms, damages, and how to act — a practical guide.",
+      intro: "Instagram and TikTok are fast, visual platforms — and precisely because of this, harmful publications on them spread quickly and can reach a huge audience within hours. A 24-hour story, a reel, a TikTok video, a comment or a tag — all can constitute defamation under the Defamation Act, 1965. This guide explains when content on visual networks crosses the line, how to handle content that disappears (like a story), and what to do to remove it and protect your good name.",
+      sections: [
+        { heading: "1. Publication on Visual Networks — Even a Story That Disappears Counts", body: "Any content exposed to a third party other than the person harmed constitutes 'publication.' On Instagram and TikTok this includes a post, reel, video, story, comment and tag. A unique challenge: a story disappears after 24 hours — so it is critical to document it immediately (screen recording, screenshot). Even if the content disappears, the publication already made gives rise to a claim. On TikTok, a viral video can reach hundreds of thousands of views, dramatically increasing the extent of harm and likely compensation. Tagging a person or business in defamatory content increases the harm and exposure." },
+        { heading: "2. When Does Visual Content Constitute Defamation?", body: "The principle is the same across platforms: content is defamatory if it may degrade, humiliate or harm a person's name, occupation or business. On visual networks this may appear as an accusation video, a false review of a business, exposure of embarrassing details, or a degrading meme. Genuine opinion and legitimate criticism are protected — but presenting false facts ('this business defrauds,' 'this person is a criminal') is not. On networks with a young audience and rapid distribution, even a publication that seems 'lighthearted' can cause real harm and give rise to a claim." },
+        { heading: "3. Removing Content from Instagram and TikTok", body: "Both platforms operate reporting mechanisms for harmful content, harassment and impersonation. Reporting a community-guidelines violation may lead to removal, but the platforms tend to leave content that appears to be 'opinion.' Alongside the platform route, a demand letter to the publisher seeking removal and an apology is an effective step. In urgent cases — a viral video harming one's livelihood — a court injunction may be considered. It is important to act quickly: as the content gathers views and shares, the harm grows and the ability to remove it shrinks." },
+        { heading: "4. Documentation and Acting Correctly", body: "Because content on visual networks may disappear or be deleted, immediate documentation is critical: record the story/video, screenshot with the account name, date and view/like count, and save the link. Do not respond in public escalation. Send a proper demand letter, and in serious cases seek an injunction. A defamation claim over online content suits small claims court in simple cases, or magistrate's court for significant claims. Remember the short limitation period — one year from discovery." }
+      ],
+      checklist: [
+        "Document immediately — record stories/videos before they disappear",
+        "Screenshot with the account name, date and view/like count",
+        "Report to the platform for a community-guidelines violation / harassment / impersonation",
+        "Send a demand letter seeking removal and an apology",
+        "For a viral video harming livelihood — consider an injunction",
+        "Act within one year of discovery (limitation)"
+      ],
+      pitfalls: [
+        "Failing to document a story before it disappears after 24 hours",
+        "An escalating public response that increases views and shares",
+        "Assuming 'lighthearted' or humorous content cannot be defamation",
+        "Waiting while the video gains virality and harm",
+        "Missing the one-year limitation period"
+      ],
+      faq: [
+        { q: "A defamatory story disappeared after a day — can I sue?", a: "Yes, if you documented it (screen recording/screenshot with date). The publication already made gives rise to a claim even if the story disappeared. So you must document immediately." },
+        { q: "A TikTok video went viral — how does that affect compensation?", a: "The extent of views and shares is a central factor. A viral video dramatically increases the scope of publication and likely compensation, and sometimes justifies an urgent injunction." },
+        { q: "I was tagged in a defamatory post — what do I do?", a: "Document, remove the tag on your end, and report to the platform. The tag itself increases exposure and harm, and can strengthen your claim against the publisher." },
+        { q: "Can I post a negative review of a business on TikTok?", a: "Yes — genuine opinion and legitimate criticism are protected. The risk lies in presenting false facts (e.g., an accusation of fraud) that are untrue." }
+      ],
+    },
+
+    shareLikeDefamation: {
+      title: "Sharing and Liking: Are They Defamation Too? The Nidaily Ruling and Case Law",
+      metaTitle: "Sharing & Liking as Defamation | Nidaily Ruling | HY Law",
+      metaDesc: "Do sharing or liking a defamatory post expose you to a defamation claim? What case law says about sharing vs. liking, and how to avoid liability — a practical guide.",
+      intro: "A question that concerns everyone active on social networks: if I 'liked' or shared a defamatory post someone else wrote — am I exposed to a defamation claim? This has enormous practical implications, since millions of users share and comment daily. This guide explains the important distinction drawn in case law between a share and a like, and why someone who forwards harmful content may bear independent liability — even if they did not write it.",
+      sections: [
+        { heading: "1. A Share May Be an Independent Publication", body: "The key principle: sharing a defamatory publication may be considered an independent 'publication' under the Defamation Act, 1965 — so the sharer may bear liability separately from the original author. The reasoning: the share expands the distribution of the harmful content to a new audience (the sharer's friends list), thereby materially contributing to the harm to reputation. The practical meaning is sharp: do not forward or share content that appears defamatory, even if you are merely 'distributing' and not the source. Quoting or adding your own comment may also increase exposure." },
+        { heading: "2. A Like — Does It Also Create Liability?", body: "Case law (known in this context as the 'Nidaily' matter) addressed the distinction between a like and a share. The accepted approach distinguishes between actions: a mere 'like,' which does not necessarily distribute the content to a new audience the way a share does, is assessed differently from an active 'share' that distributes the publication. However, this is a developing area and the outcome depends on the circumstances and how the platform distributes the action. Caution is required: do not assume a 'small' online action carries no risk — the legal implication depends on context, distribution and intent." },
+        { heading: "3. Liability of Someone Who Distributed, Quoted or Added a Comment", body: "Beyond a simple share, additional actions increase exposure: quoting the publication (copy-paste), screenshotting and distributing it, adding a supportive comment that adopts the harmful content, or distributing in groups. The more active the action and the more it expands distribution, the greater the risk of liability. Adding your own words ('look what X did') may turn you from a distributor into an independent publisher. The guiding rule: if you would not write the content yourself — do not distribute it." },
+        { heading: "4. How to Avoid Liability When Distributing Content", body: "Practical rules of caution: do not share or forward content containing factual accusations about a person or business you have not verified. Do not adopt harmful content with a supportive comment. If you shared by mistake — remove the share immediately and document. If you received a demand letter over a share, do not delete/apologize before advice (may be construed as an admission), but also do not leave it unexamined. Remember: the fact that the content was written by someone else does not confer automatic immunity on the person who distributed it." }
+      ],
+      checklist: [
+        "Do not share/forward content with unverified factual accusations",
+        "Do not add a comment that adopts someone else's harmful content",
+        "If you shared by mistake — remove immediately and document",
+        "Check source and reliability before sharing sensitive content",
+        "Received a demand over a share? Consult before deleting/apologizing",
+        "Remember — distribution may create independent liability"
+      ],
+      pitfalls: [
+        "Assuming someone who shared another's content is not liable — they may be",
+        "Adding a supportive comment that turns you into an independent publisher",
+        "Distributing a screenshot of a defamatory publication in groups",
+        "Deleting the share without documenting or without advice after a demand",
+        "Relying on 'I only liked it' as an absolute defense"
+      ],
+      faq: [
+        { q: "I shared someone else's post — can I be sued?", a: "Yes, possibly. Under case law a share may be considered an independent publication, so the sharer may bear liability separately from the original author, because the share expands distribution." },
+        { q: "What is the legal difference between a like and a share?", a: "Likes and shares are assessed differently in case law. A share that distributes content to a new audience tends to be treated as publication; a mere like is assessed differently. The outcome depends on circumstances and how it is distributed." },
+        { q: "I shared by mistake and then deleted — is it fine?", a: "Quick deletion helps but does not erase a publication already made. Document the removal and seek advice if you received a demand. Prompt, good-faith action can reduce exposure." },
+        { q: "I added a 'look what they did' comment to another's post — does that raise risk?", a: "Yes. Adopting the content and adding your own message may turn you from a distributor into an independent publisher, increasing exposure to liability." }
+      ],
+    },
+
+    supplierRatingDefamation: {
+      title: "Defamation in Supplier-Rating Groups ('Recommended/Not Recommended'): the Legal Risk",
+      metaTitle: "Defamation in Supplier Recommendation Groups | Lawyer | HY Law",
+      metaDesc: "A negative recommendation or a 'not recommended supplier' warning in Facebook groups can constitute defamation. What is permitted, the risk to the business and publisher, and how to act.",
+      intro: "Facebook groups for 'recommended and not recommended,' professional recommendations and supplier warnings have become a central tool in consumer decisions — and a charged legal arena. A 'not recommended supplier' warning post can destroy a business within hours, while a publisher who presented false facts is exposed to a defamation claim. This guide explains the balance between a consumer's right to warn and recommend and a business's right to its good name, and the legal risk to both sides and to group admins.",
+      sections: [
+        { heading: "1. A Negative Recommendation — Legitimate Criticism or Defamation?", body: "A consumer has a full right to share a genuine experience and express a candid opinion about a service received — even a negative one. This is legitimate, legally protected criticism. The problem begins when the post includes false facts: a claim that the supplier is a 'fraud,' 'thief,' 'dangerous' or a 'con,' without basis. The distinction between opinion ('I was not satisfied with the service') and a false fact ('he stole money from me') is the dividing line between permitted publication and defamation. Even a general good-faith warning may cross the line if it is false and harmful." },
+        { heading: "2. The Risk to the Business — and What Can Be Done", body: "For a business, a warning post in a group of tens of thousands can cause immediate, ongoing harm — loss of clients and revenue. If the publication includes false facts, the business has a cause of action, including the possibility of compensation without proof of damage (Section 7A) and higher compensation for proven financial loss. A corporation may sue for harm to its commercial reputation just like a private person. The first step is usually documentation, approaching the group admin with a removal demand, and a demand letter to the publisher. In urgent cases — an injunction." },
+        { heading: "3. Liability of Group Admins", body: "Admins of recommendation groups are in a sensitive position. Their liability for content published in their group is fact-dependent — mainly whether they knew of harmful content and failed to remove it after being notified, and their degree of involvement. An admin who approves, promotes or refuses to remove a false publication after a documented approach increases their exposure. Admins are advised to set clear group rules, remove content containing serious, unsubstantiated factual accusations, and document approaches. An orderly written approach to the admin is an important step both for removal and to establish liability." },
+        { heading: "4. Posted a Negative Recommendation? How to Stay on the Safe Side", body: "To warn or recommend without risk: stick to facts you personally experienced and can back up (documentation, correspondence, receipts). Clearly distinguish between opinion ('I was not satisfied') and a serious factual assertion. Avoid criminal accusations ('thief,' 'con') without solid basis. If you received a demand letter, do not delete/apologize rashly but also do not ignore it — consult. Remember: 'truth of the publication' is a defense, but the burden of proof is on you, so documenting the genuine experience is critical." }
+      ],
+      checklist: [
+        "Distinguish between personal opinion and a serious factual assertion",
+        "Back every factual claim with documentation (correspondence, receipts, photos)",
+        "Avoid criminal accusations ('thief,' 'con') without solid basis",
+        "Harmed business — document, approach the group admin, send a demand letter",
+        "Group admins — remove unsubstantiated accusations brought to your attention",
+        "Act within one year of discovery (limitation)"
+      ],
+      pitfalls: [
+        "Presenting a false fact as a 'warning to members' — crosses the line of permitted opinion",
+        "Accusing a supplier of criminality ('fraud,' 'thief') without solid basis",
+        "A group admin who refuses to remove a false publication after a documented approach",
+        "A business that responds with public escalation instead of an orderly approach",
+        "Failing to keep documentation of the genuine experience to support a 'truth' defense"
+      ],
+      faq: [
+        { q: "Can I write in a group that a supplier is 'not recommended'?", a: "You may share a genuine experience and express a candid opinion. The risk arises when adding false facts (e.g., that the supplier 'stole' or is a 'fraud') that are untrue — these may constitute defamation." },
+        { q: "My business was harmed by a false warning post — what do I do?", a: "Document the post and the extent of exposure, approach the group admin with a removal demand, and send a demand letter. If there are false facts — there is a cause of action, including compensation without proof of damage." },
+        { q: "I admin a recommendations group — am I liable for the content?", a: "It depends on circumstances — mainly whether you knew of false content and failed to remove it after an approach. It is advisable to set clear rules and remove serious, unsubstantiated factual accusations." },
+        { q: "How do I warn about a bad supplier without risking a claim?", a: "Stick to facts you experienced and can back up, distinguish opinion from factual assertion, and avoid criminal accusations without basis. 'Truth of the publication' is a defense — but the burden is on you." }
       ],
     },
   },
