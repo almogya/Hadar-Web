@@ -607,6 +607,46 @@ export const en = {
         pillar: true,
         slug: "corporate-defamation",
       },
+      {
+        title: "Defamation at Work: Termination Letters, Hearings and Slander Between Employees",
+        excerpt: "False accusations between employees or a defamatory termination letter may constitute defamation. What an employer may do, and when a cause of action exists.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "workplace-defamation",
+      },
+      {
+        title: "A Former Employer Defamed You in a Reference? Here's What to Do",
+        excerpt: "A former employer gave false, defamatory information to a new employer and cost you a job? When it is defamation, the employer's defenses, and how to act.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "employer-reference-defamation",
+      },
+      {
+        title: "Defamation in Neighbor Disputes and Building Committee Groups",
+        excerpt: "False accusations in the building committee group or a neighbor dispute that escalated into slander? When it is defamation, and how to act without escalating.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "neighbors-defamation",
+      },
+      {
+        title: "Defamation in Divorce Proceedings — Can You Sue Over False Accusations?",
+        excerpt: "A spouse spreads false accusations online or to family during a divorce? When it is defamation, the protection for statements in the proceeding, and how to act.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "divorce-defamation",
+      },
+      {
+        title: "A False Police Complaint — Does It Constitute Defamation?",
+        excerpt: "Someone filed a false police complaint against you? When a complaint is protected and when it is defamation or a criminal offense, and how to act.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "false-police-complaint",
+      },
     ],
   },
 
@@ -1992,6 +2032,236 @@ export const en = {
         { q: "How is it different from an individual's claim?", a: "An individual can also sue for mental anguish; a corporation focuses on harm to commercial reputation and economic loss. So proven financial loss carries greater weight in a company's claim." },
         { q: "Which damages can a company claim?", a: "Compensation without proof of damage (Section 7A), and compensation for proven financial loss — a drop in sales, contract cancellations and loss of clients that can be linked to the publication, and harm to reputation." },
         { q: "Should a large company sue a small customer?", a: "You must weigh the 'Streisand Effect' — such a claim may be perceived as persecution and harm reputation more than the publication. Sometimes quiet removal is preferable. Combining legal and reputational considerations matters." }
+      ],
+    },
+
+    workplaceDefamation: {
+      title: "Defamation at Work: Termination Letters, Hearings and Slander Between Employees",
+      metaTitle: "Workplace Defamation | Employer and Employees | HY Law",
+      metaDesc: "False accusations between employees, a defamatory termination letter or slander at work may constitute defamation. What an employer may do, and when a cause of action exists — a guide.",
+      intro: "The workplace is a charged arena for human relations, and at times for disputes that end in false accusations, slander between employees, or harmful publications within disciplinary and termination proceedings. A defamatory publication in an employment context can severely harm an employee's good name and livelihood. This guide explains when statements at work constitute defamation, what an employer is permitted to do within legitimate management, and when an employee has a cause of action.",
+      sections: [
+        {
+          heading: "1. When Is a Statement at Work Defamation?",
+          body: "The Defamation Act, 5725-1965 applies to employment relations too. A statement liable to disgrace an employee or harm their job — such as a false accusation of theft, harassment, dishonesty or professional failure — may constitute defamation, so long as it is false and was published to a third party (other employees, a future employer). However, an employer has legitimate latitude for management: objective performance reviews, well-founded professional criticism, and lawful disciplinary proceedings are not defamation. The distinction: an objective, well-founded assessment versus a false, disgracing factual accusation spread beyond what was necessary."
+        },
+        {
+          heading: "2. Termination Letters and Hearing Proceedings",
+          body: "A termination letter or hearing protocol containing serious accusations can be sensitive. If the letter includes false factual claims ('dismissed for theft') and was spread beyond the legitimate recipients, it may be defamation. Conversely, conducting a lawful termination and hearing process, with objective reasons conveyed only to the relevant parties, enjoys protection. Important for the employee: keep the termination letter and protocols, and document to whom they were distributed. Important for the employer: ensure objective wording, on a factual basis, and limited distribution only to necessary parties."
+        },
+        {
+          heading: "3. Slander Between Employees",
+          body: "Disputes between employees — gossip, false accusations, spreading rumors about a colleague — may constitute defamation when they include false, disgracing facts. Distribution in the team's WhatsApp group, an internal email or a meeting constitutes 'publication.' However, a good-faith report of improper conduct to a competent authority (for example, a harassment complaint to a supervisor) may be protected under a duty or the good-faith defense. The distinction between a legitimate good-faith report and spreading false slander is the dividing line. Documenting the slander and the scope of its distribution matters for establishing a claim."
+        },
+        {
+          heading: "4. What to Do — a Harmed Employee",
+          body: "An employee harmed by a false accusation: document the publication (letter, email, message, protocol) and the scope of its distribution. Do not respond by escalating. Consider an orderly approach — a warning letter demanding correction, apology and removal. In appropriate cases, you can sue for defamation, sometimes alongside labor-law claims. Important: employment relations are complex, and there may be additional considerations (continued employment, future references). Consulting a lawyer familiar with both defamation law and labor law helps choose the right path while protecting your full interests."
+        }
+      ],
+      checklist: [
+        "Document the publication (letter, email, message, protocol) and who received it",
+        "Distinguish permitted objective assessment from a false factual accusation",
+        "Keep termination letters and hearing protocols",
+        "Do not respond by escalating at work",
+        "Consider a warning letter demanding correction and apology",
+        "Consult a lawyer familiar with defamation and labor law"
+      ],
+      pitfalls: [
+        "Confusing permitted professional criticism with defamation",
+        "Failing to document the scope of the accusation's distribution",
+        "Ignoring the good-faith defense for reporting misconduct to a competent authority",
+        "Escalating at work and worsening the dispute",
+        "Missing the one-year limitation period"
+      ],
+      faq: [
+        { q: "The employer wrote in my termination letter that I stole — is that defamation?", a: "If the claim is false and was spread beyond the legitimate recipients — it may be. An objective termination with genuine reasons distributed only to necessary parties enjoys protection." },
+        { q: "A colleague is spreading false rumors about me at work — can I sue?", a: "If the rumors include false, disgracing facts and were spread to others — there may be a defamation claim. A good-faith report of misconduct to a competent authority may be protected." },
+        { q: "May an employer write a negative performance review?", a: "Yes. An objective, well-founded assessment, even a negative one, is legitimate management and not defamation. The problem is with false, disgracing factual accusations." },
+        { q: "What should I do if I was falsely accused at work?", a: "Document the publication and the scope of its distribution, do not escalate, and consider a warning letter. Consult a lawyer familiar with both defamation and labor law." }
+      ],
+    },
+
+    employerReferenceDefamation: {
+      title: "A Former Employer Defamed You in a Reference to a New Employer? Here's What to Do",
+      metaTitle: "Defamatory Employer Reference | Defamation | HY Law",
+      metaDesc: "A former employer gave false, defamatory information to a new employer and cost you a job? When it is defamation, the employer's defenses, and how to act — a practical guide.",
+      intro: "One of the most frustrating situations in the job market: you are advancing toward a new position, but the moment the new employer contacts your former employer for a reference — negative, sometimes false, information is given about you, costing you the job. Is a former employer allowed to say whatever they want? This guide explains when a negative reference from an employer constitutes defamation, the defenses that may be available to the employer, and how to act if defamation cost you a position.",
+      sections: [
+        {
+          heading: "1. When a Negative Reference Crosses Into Defamation",
+          body: "A former employer may give a candid, objective assessment of a former employee — that is legitimate conduct. The problem begins when the employer conveys false, disgracing factual information: a claim that the employee stole, was dismissed for dishonesty, or failed in a way that did not occur in reality. Conveying such false information to a potential employer constitutes 'publication' (the information reached a third party) and may be defamation. The distinction: a candid, well-founded assessment ('struggled to meet deadlines') versus a false factual assertion ('he stole from the register'). The harm here is especially severe because it directly damages livelihood and employment prospects."
+        },
+        {
+          heading: "2. The Employer's Good-Faith Defense",
+          body: "The employer may have a good-faith defense (Section 15 of the Act): conveying information about a former employee, in response to an inquiry from a potential employer, may be regarded as fulfilling a moral or social duty or expressing an opinion on a matter of legitimate interest. But the defense is conditioned on good faith — conveying information the employer knew to be false, or acting out of vindictiveness and malice, will not enjoy the defense. Conveying information without a reasonable basis, or beyond what was necessary, may also negate it. The burden of proving good faith is on the employer, so it is important to document exactly what was conveyed and in what circumstances."
+        },
+        {
+          heading: "3. How to Prove What Was Conveyed",
+          body: "The central challenge in these cases is evidentiary: what exactly was said in the conversation between the former employer and the new one? Usually it is a phone call with no record. Courses of action: if the new employer is willing to share what they were told (for example, in writing or as a witness), that is key evidence. Sometimes the defamation is documented in an email or message. If you were rejected from a position immediately after references were checked, that is circumstantial evidence. Document everything: the time of the rejection, the referee's name, and everything you were told. An evidentiary foundation is the key in these cases."
+        },
+        {
+          heading: "4. What to Do — and Which Remedies",
+          body: "If a former employer defamed you and cost you a position: document the publication and the harm (the rejection, the lost income). Consider a warning letter to the former employer detailing the claim and demanding correction and apology. In appropriate cases you can sue for defamation — including compensation without proof of damage, and compensation for proven financial loss (the lost job and income). Here the financial loss can be significant. It is important to act quickly — both because of the short limitation period and to document the evidence while it is fresh."
+        }
+      ],
+      checklist: [
+        "Document the rejection and its timing (circumstantial evidence)",
+        "Find out whether the new employer will share what was conveyed",
+        "Gather every record — emails, messages, referee names",
+        "Distinguish a permitted candid assessment from a false factual assertion",
+        "Consider a warning letter demanding correction and apology",
+        "Act quickly — short limitation and fresh evidence"
+      ],
+      pitfalls: [
+        "Assuming a former employer 'may say whatever they want' — not when it is false",
+        "Failing to document the rejection as circumstantial evidence of harm",
+        "Not trying to obtain from the new employer what was conveyed",
+        "Ignoring the option to claim financial loss (the lost job)",
+        "Waiting, which loses evidence and approaches the limitation period"
+      ],
+      faq: [
+        { q: "May a former employer give negative information about me?", a: "A candid, objective assessment — yes, and sometimes it is covered by the good-faith defense. But conveying false, disgracing factual information (for example that you stole) is not protected and may be defamation." },
+        { q: "How do I prove what was said in the reference call?", a: "That is the central challenge. Possible evidence: the new employer willing to share what was conveyed, written records, and a rejection from the position immediately after references were checked (circumstantial evidence)." },
+        { q: "Which remedies can I obtain?", a: "Compensation without proof of damage, and compensation for proven financial loss — here the lost job and income can be significant. Alongside this, a demand for correction and apology." },
+        { q: "When will the employer not have a good-faith defense?", a: "When they conveyed information they knew to be false, acted out of vindictiveness and malice, or conveyed information without a reasonable basis and beyond what was necessary. The burden of proving good faith is on them." }
+      ],
+    },
+
+    neighborsDefamation: {
+      title: "Defamation in Neighbor Disputes and Building Committee Groups",
+      metaTitle: "Defamation Between Neighbors | Committee Groups | HY Law",
+      metaDesc: "False accusations in the building committee group or a neighbor dispute that escalated into slander? When it is defamation, and how to act without escalating tensions — a practical guide.",
+      intro: "Neighbor disputes are among the most tense — partly because the parties keep living side by side. The WhatsApp groups of the building committee have become an arena where a dispute over parking, noise or payments quickly escalates into personal accusations and slander. A defamatory publication in a neighbors' group may constitute defamation — but it also demands special sensitivity, because the parties remain neighbors. This guide explains when a statement in a neighbor dispute crosses into defamation, and how to act without setting the building ablaze.",
+      sections: [
+        {
+          heading: "1. The Building Committee Group = Publication",
+          body: "A message in the building's or committee's WhatsApp group, exposed to all the residents, is a clear 'publication' under the Defamation Act, 5725-1965. A dispute over committee dues, parking, noise or use of common property may escalate into personal accusations: a claim that a neighbor 'stole' from the committee fund, is a 'harasser,' a 'criminal' or a 'liar.' When the accusation is false and disgracing — it may be defamation. However, an objective, legitimate complaint ('my parking spot is taken again') or expressing an opinion about conduct is not defamation. The dividing line is between an objective complaint and a false factual accusation."
+        },
+        {
+          heading: "2. Neighbor Disputes That Escalate",
+          body: "Beyond groups, neighbor disputes sometimes spread in other ways: notes on the notice board, statements to other neighbors, posts in neighborhood groups. All of these may constitute publication. The unique challenge in neighbor disputes: personal tension is high, and the parties continue to live together. So an aggressive response — a counter-publication, mutual accusations — only escalates and widens the mutual harm, and sometimes exposes you to a claim as well. Restraint and documentation are preferable to escalation. Consider whether the dispute can be resolved through neighborhood mediation before a legal process."
+        },
+        {
+          heading: "3. Liability of the Building Group Admin",
+          body: "The admin of the building's WhatsApp group or the committee chair are in a sensitive position. Their liability for harmful content published in the group is fact-dependent — mainly on whether they knew and did not remove after it was brought to their attention, and the degree of their involvement. Building group admins are advised to set clear rules, to rein in discussions that escalate into personal accusations, and to remove defamatory content. Documenting the publication and the group's scope matters if you decide to act. Usually, in neighbor disputes, a quick, restrained resolution is preferable to a process that only deepens the tension in the building."
+        },
+        {
+          heading: "4. How to Act Without Setting the Building Ablaze",
+          body: "In a neighbor dispute, the strategy differs from an ordinary claim because of the need to keep living together. Document the defamatory publication (screenshot, note) and the scope of its distribution, but do not respond by escalating. Consider a restrained approach — an orderly letter demanding removal and apology, which sometimes calms the situation. If the harm is severe and ongoing, you can sue — but weigh the cost of a drawn-out process against a neighbor. Neighborhood mediation is sometimes the most effective solution. Professional consultation will help balance protecting your good name with keeping the peace in the building."
+        }
+      ],
+      checklist: [
+        "Document the publication (message, note, post) and the scope of its distribution",
+        "Distinguish an objective complaint from a false factual accusation",
+        "Do not respond by escalating — a counter-publication exposes you too",
+        "Consider a restrained letter demanding removal and apology",
+        "Explore neighborhood mediation before a legal process",
+        "Balance protecting your name with peace in the building"
+      ],
+      pitfalls: [
+        "An aggressive response that escalates and exposes you to a claim too",
+        "Confusing a legitimate objective complaint with a false accusation",
+        "An exhausting legal process against a neighbor instead of a restrained solution",
+        "Failing to document the publication in the building group",
+        "Ignoring neighborhood mediation as an effective tool"
+      ],
+      faq: [
+        { q: "A neighbor wrote in the building group that I'm a thief — is that defamation?", a: "If the accusation is false and was spread to residents — it may be. The group constitutes 'publication.' An objective complaint ('the parking is taken') or an opinion about conduct is not defamation." },
+        { q: "Should I sue a neighbor over slander?", a: "You can, but weigh the cost — you continue to live together. Sometimes a restrained letter or neighborhood mediation is more effective than a process that deepens tension in the building." },
+        { q: "Is the building group admin liable for slander there?", a: "It depends on the circumstances — mainly whether they knew and did not remove after it was brought to their attention. Admins are advised to set rules and rein in escalation into personal accusations." },
+        { q: "How do I respond without escalating the dispute?", a: "Document, do not respond by escalating, and consider a restrained letter or mediation. A legal process is possible for severe harm, but weigh the cost of an ongoing dispute against a neighbor." }
+      ],
+    },
+
+    divorceDefamation: {
+      title: "Defamation in Divorce Proceedings — Can You Sue Over False Accusations?",
+      metaTitle: "Defamation in Divorce | False Accusations | HY Law",
+      metaDesc: "A spouse spreads false accusations online or to family during a divorce? When it is defamation, the protection for statements in the legal proceeding, and how to act — a guide.",
+      intro: "Divorce proceedings are among the most emotionally charged, and are sometimes accompanied by harsh accusations — some true, some exaggerated and some entirely false. When a spouse spreads false accusations — on social media, to extended family, or to mutual friends — the question arises whether one can sue for defamation alongside the divorce proceedings. This guide explains the balance between the right to a good name and freedom of expression in a family dispute, and when statements in divorce proceedings cross into defamation.",
+      sections: [
+        {
+          heading: "1. Accusations Outside the Legal Proceeding",
+          body: "One must distinguish between statements within the legal proceeding and publication outside it. When a spouse spreads false, disgracing accusations outside the courtroom — an online post, messages to family and friends, a story to neighbors — this is a 'publication' that may be defamation, exactly as in any other context. A false accusation of an offense, of violence that did not occur, or of disgracing conduct that did not happen — may give rise to a cause of action separate from the divorce proceedings. Even within a divorce dispute, there is no 'license' to spread harmful lies to third parties."
+        },
+        {
+          heading: "2. Immunity for Statements in the Legal Proceeding",
+          body: "In contrast to external publication, statements made within the legal proceeding itself — in pleadings, affidavits, testimony in court — enjoy broad protection. Section 13 of the Act defines permitted publications, which include publication in the course of a judicial hearing. The rationale: parties must be able to raise claims in the proceeding without fear of a counter-defamation suit over every claim. Therefore, an accusation asserted in a statement of claim or in testimony — even if it turns out to be untrue — will usually not give rise to a defamation claim. This protection is broad, but does not apply to publication outside the proceeding."
+        },
+        {
+          heading: "3. False Complaints to Authorities in a Divorce Context",
+          body: "A sensitive issue: complaints to authorities (police, welfare) in the context of a divorce and custody dispute. A genuine, good-faith complaint to a competent authority is protected — the law encourages reporting offenses and risk to children. But a knowingly false complaint, filed maliciously to harm the other party or gain a custody advantage, does not enjoy the same protection, and may even constitute the criminal offense of conveying false information. This is an especially complex and sensitive area requiring great caution and professional advice — both for someone harmed by a false complaint and for someone considering filing one."
+        },
+        {
+          heading: "4. Strategy — Defamation Alongside the Divorce Proceeding",
+          body: "When a defamation issue arises in a divorce, a comprehensive strategy is needed. Often it is preferable to address the accusations within the divorce proceeding itself (for example, in their effect on custody and property) rather than in a separate defamation claim. That said, a public, defamatory publication outside the proceeding — especially online, harming reputation and livelihood — may justify separate action. Document the external publications, do not respond by escalating in a way that will be used against you in the family proceeding, and consult a lawyer who combines a family-law and defamation perspective. Coordination between the proceedings is essential."
+        }
+      ],
+      checklist: [
+        "Distinguish statements within the proceeding (protected) from external publication",
+        "Document defamatory external publications (online, messages to family)",
+        "Do not respond by escalating in a way used against you in the family proceeding",
+        "For false complaints to authorities — consult with great caution",
+        "Consider addressing the accusations within the divorce proceeding",
+        "Coordinate the divorce proceeding with any defamation action"
+      ],
+      pitfalls: [
+        "Assuming statements in the pleadings give rise to defamation — they are protected",
+        "Assuming 'in divorce anything goes' — a false external publication is not protected",
+        "Escalating in a way that harms you in the family proceeding",
+        "Filing a false complaint to authorities — may be a criminal offense",
+        "Failing to coordinate a defamation claim with the divorce proceeding"
+      ],
+      faq: [
+        { q: "My spouse is spreading lies about me online during the divorce — can I sue?", a: "Yes. A false, disgracing publication outside the legal proceeding (a post, messages to family) may be defamation and give rise to a separate cause of action, exactly as in any other context." },
+        { q: "An accusation asserted in the divorce statement of claim — is that defamation?", a: "Usually not. Statements within the legal proceeding (pleadings, affidavits, testimony) enjoy broad protection as permitted publication, even if they turn out to be untrue." },
+        { q: "My spouse filed a false police complaint against me — what do I do?", a: "A genuine, good-faith complaint is protected. But a knowingly false, malicious complaint is not, and may even be a criminal offense. This is a sensitive area requiring professional advice." },
+        { q: "Is it better to sue for defamation or handle it in the divorce proceeding?", a: "It depends on the circumstances. Often it is preferable to address the accusations within the divorce proceeding. A public external publication harming reputation may justify separate action. Coordination between the proceedings is essential." }
+      ],
+    },
+
+    falsePoliceComplaint: {
+      title: "A False Police Complaint — Does It Constitute Defamation?",
+      metaTitle: "False Police Complaint | Defamation and Liability | HY Law",
+      metaDesc: "Someone filed a false police complaint against you? When a complaint is protected and when it is defamation or a criminal offense, and how to act if harmed by a false report — a guide.",
+      intro: "Discovering that someone filed a false complaint against you with the police is a jarring experience — both because of the investigation itself and because of the harm to your good name. The question arises immediately: can you sue the complainant for defamation? The answer is complex and balances two interests: encouraging citizens to report offenses on one hand, and protecting someone harmed by a malicious false complaint on the other. This guide explains when a police complaint is protected, when it crosses into defamation or a criminal offense, and how to act.",
+      sections: [
+        {
+          heading: "1. A Good-Faith Complaint — Protected",
+          body: "The law encourages citizens to report offenses, so a good-faith approach to a competent authority (the police) enjoys broad protection. A person who genuinely believes an offense was committed, and reports it to the police, will not be regarded as publishing defamation even if the complaint is ultimately not proven or is closed. The rationale is clear: if every closed complaint exposed the complainant to a claim, citizens would refrain from reporting. The good-faith defense (Section 15) and the complaint being an approach to a competent authority provide significant protective cover for someone who complained sincerely — even if they erred."
+        },
+        {
+          heading: "2. A Knowingly False Complaint — Not Protected",
+          body: "The protection is not absolute. A complaint filed with knowledge that it is false, out of malice and intent to harm — rather than a sincere belief that an offense was committed — does not enjoy the good-faith defense. Moreover, conveying false information to the police is in itself a criminal offense under the Penal Law. So someone who filed a malicious false complaint is exposed not only to possible civil liability for defamation, but also to criminal proceedings against them. The central distinction is subjective: did the complainant sincerely believe the complaint (protected), or know it was false and act maliciously (not protected)."
+        },
+        {
+          heading: "3. Publishing the Complaint Beyond the Police",
+          body: "An important distinction: filing the complaint with the police is one thing, but spreading the complaint's content to third parties is another. Someone who did not settle for filing a complaint with the police, but also published widely (online, to acquaintances) that the person is a 'criminal' or committed the act — carried out a separate publication that is not covered by the protection of approaching a competent authority. Such a publication, if false, may well be defamation. It is therefore important to check not only whether a complaint was filed, but whether its content was spread beyond the investigating authority."
+        },
+        {
+          heading: "4. Harmed by a False Complaint? Here's What to Do",
+          body: "If you were harmed by a false complaint: first, cooperate with the investigation and prove your innocence. Document the proceeding and its outcome (the file's closure, an acquittal). If there are indications that the complaint was filed maliciously and with knowledge that it was false — consult about the option of a defamation claim and/or a criminal complaint for conveying false information. If the complaint's content was spread beyond the police — that is an additional cause of action. Important: these cases are complex and the good-faith defense is broad, so professional examination of the evidence of malice is required before acting. Document everything and act cautiously, with professional guidance."
+        }
+      ],
+      checklist: [
+        "Cooperate with the investigation and document its outcome (closure/acquittal)",
+        "Check whether there are indications of malice and knowledge the complaint was false",
+        "Check whether the complaint's content was spread beyond the police (an additional cause of action)",
+        "Consult about a defamation claim and/or a complaint for false information",
+        "Document the entire proceeding and the harm to your good name",
+        "Act cautiously — the good-faith defense for a complaint is broad"
+      ],
+      pitfalls: [
+        "Assuming every closed complaint entitles you to sue — a good-faith complaint is protected",
+        "Ignoring that a knowingly false complaint is also a criminal offense",
+        "Failing to distinguish filing a police complaint from spreading its content widely",
+        "Acting hastily without evidence of the complainant's malice",
+        "Failing to document the investigation's outcome (closure/acquittal) as evidence"
+      ],
+      faq: [
+        { q: "Someone filed a false complaint against me — can I sue for defamation?", a: "It depends. A good-faith complaint is protected, even if closed. But if it was filed with knowledge that it was false and maliciously — the protection is negated, and a civil claim as well as a criminal complaint for conveying false information may be possible." },
+        { q: "Is a false complaint a criminal offense?", a: "Yes. Conveying false information to the police is a criminal offense under the Penal Law. So someone who files a malicious false complaint is exposed to criminal proceedings too, not only civil ones." },
+        { q: "The complainant also told everyone I'm a criminal — is that different?", a: "Yes, very much. Filing a complaint with the police is protected, but spreading the complaint's content to third parties is a separate publication not covered by that protection, and if false — may be defamation." },
+        { q: "What should I do if I was harmed by a false complaint?", a: "Cooperate with the investigation, document its outcome, and check whether there is evidence of malice. Then consult about a defamation claim and/or a criminal complaint. These cases are complex and require professional guidance." }
       ],
     },
   },
