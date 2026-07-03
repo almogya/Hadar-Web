@@ -1200,4 +1200,114 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ====== Defamation cluster (batch 6: procedure) ====== -->
+  <url>
+    <loc>https://ai-lawyer.co.il/he/insights/defamation-warning-letter</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/defamation-warning-letter"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/defamation-warning-letter"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/defamation-warning-letter"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/en/insights/defamation-warning-letter</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/defamation-warning-letter"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/defamation-warning-letter"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/defamation-warning-letter"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/he/insights/received-defamation-warning</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/received-defamation-warning"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/received-defamation-warning"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/received-defamation-warning"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/en/insights/received-defamation-warning</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/received-defamation-warning"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/received-defamation-warning"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/received-defamation-warning"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/he/insights/defamation-small-claims</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/defamation-small-claims"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/defamation-small-claims"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/defamation-small-claims"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/en/insights/defamation-small-claims</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/defamation-small-claims"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/defamation-small-claims"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/defamation-small-claims"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/he/insights/defamation-evidence</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/defamation-evidence"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/defamation-evidence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/defamation-evidence"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/en/insights/defamation-evidence</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/defamation-evidence"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/defamation-evidence"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/defamation-evidence"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/he/insights/defamation-injunction</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/defamation-injunction"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/defamation-injunction"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/defamation-injunction"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/en/insights/defamation-injunction</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/defamation-injunction"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/defamation-injunction"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/defamation-injunction"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/he/insights/criminal-defamation</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/criminal-defamation"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/criminal-defamation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/criminal-defamation"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/en/insights/criminal-defamation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/criminal-defamation"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/criminal-defamation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/criminal-defamation"/>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

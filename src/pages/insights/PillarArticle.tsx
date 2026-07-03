@@ -47,7 +47,13 @@ type ArticleKey =
   | "employerReferenceDefamation"
   | "neighborsDefamation"
   | "divorceDefamation"
-  | "falsePoliceComplaint";
+  | "falsePoliceComplaint"
+  | "warningLetter"
+  | "receivedWarning"
+  | "defamationSmallClaims"
+  | "defamationEvidence"
+  | "defamationInjunction"
+  | "criminalDefamation";
 
 const SLUG_MAP: Record<string, ArticleKey> = {
   "ai-copyright-israel": "aiCopyright",
@@ -91,6 +97,12 @@ const SLUG_MAP: Record<string, ArticleKey> = {
   "neighbors-defamation": "neighborsDefamation",
   "divorce-defamation": "divorceDefamation",
   "false-police-complaint": "falsePoliceComplaint",
+  "defamation-warning-letter": "warningLetter",
+  "received-defamation-warning": "receivedWarning",
+  "defamation-small-claims": "defamationSmallClaims",
+  "defamation-evidence": "defamationEvidence",
+  "defamation-injunction": "defamationInjunction",
+  "criminal-defamation": "criminalDefamation",
 };
 
 const PillarArticle = () => {

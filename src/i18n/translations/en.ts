@@ -647,6 +647,54 @@ export const en = {
         pillar: true,
         slug: "false-police-complaint",
       },
+      {
+        title: "A Warning Letter Before a Defamation Claim — What to Include and How to Draft It",
+        excerpt: "A warning letter is the first and important step before a defamation claim. What it must include, how to draft it, and why proper wording affects the entire process.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "defamation-warning-letter",
+      },
+      {
+        title: "You Received a Defamation Warning Letter — How to Respond and What Not to Do",
+        excerpt: "You received a demand letter claiming you published defamation? What to do immediately, what not to do, and how to assess whether you really broke the law.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "received-defamation-warning",
+      },
+      {
+        title: "A Defamation Claim in Small Claims Court — Advantages, Limits and Amounts",
+        excerpt: "Can you sue for defamation in small claims court? The advantages, the limitations, the amount cap and when this route fits — and when a regular proceeding is preferable.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "defamation-small-claims",
+      },
+      {
+        title: "How to Collect Evidence of Online Defamation — Screenshots, Documentation and Verification",
+        excerpt: "A harmful online publication may be deleted at any moment. How to collect and document defamation evidence — screenshots, saving links, verification and exposure records.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "defamation-evidence",
+      },
+      {
+        title: "An Injunction to Remove a Defamatory Publication — When You Can Get One and How",
+        excerpt: "Can you get an injunction ordering removal of a defamatory publication? The balance against freedom of expression, when the court grants one, and interim vs. permanent orders.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "defamation-injunction",
+      },
+      {
+        title: "Criminal Defamation — When It Is a Criminal Offense and Not Just a Civil Claim",
+        excerpt: "Defamation can also be a criminal offense, not only a civil tort. When the publication crosses into criminal, what a private criminal complaint is, and the difference from a civil claim.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "criminal-defamation",
+      },
     ],
   },
 
@@ -2262,6 +2310,282 @@ export const en = {
         { q: "Is a false complaint a criminal offense?", a: "Yes. Conveying false information to the police is a criminal offense under the Penal Law. So someone who files a malicious false complaint is exposed to criminal proceedings too, not only civil ones." },
         { q: "The complainant also told everyone I'm a criminal — is that different?", a: "Yes, very much. Filing a complaint with the police is protected, but spreading the complaint's content to third parties is a separate publication not covered by that protection, and if false — may be defamation." },
         { q: "What should I do if I was harmed by a false complaint?", a: "Cooperate with the investigation, document its outcome, and check whether there is evidence of malice. Then consult about a defamation claim and/or a criminal complaint. These cases are complex and require professional guidance." }
+      ],
+    },
+
+    warningLetter: {
+      title: "A Warning Letter Before a Defamation Claim — What to Include and How to Draft It",
+      metaTitle: "Defamation Warning Letter | Proper Drafting | HY Law",
+      metaDesc: "A warning letter is the first and important step before a defamation claim. What it must include, how to draft it, and why proper wording affects the entire process — a practical guide.",
+      intro: "A warning (demand) letter is usually the first and most important step in dealing with a defamatory publication. A well-drafted letter can obtain removal, correction and an apology without any legal proceeding — and sometimes also lays the foundation for a future claim if the other side does not cooperate. Conversely, a hastily drafted letter may miss demands, expose you, or even give the publisher a 'warning' that lets them delete evidence. This guide explains what a warning letter must include and how to draft it correctly.",
+      sections: [
+        {
+          heading: "1. The Role of the Warning Letter",
+          body: "The warning letter serves several purposes: first, it signals to the publisher that the publication is considered defamation and must be removed, and sometimes that is enough to achieve the goal without a claim. Second, it formally documents the demand, the date you learned of the publication and the removal demand — documentation that can serve in a future proceeding, for example to establish that the publisher continued to publish despite the warning (relevant to proving intent to harm and the amount of compensation). Third, it makes clear to the other side that you are serious. Although the law does not require a warning letter before a claim, in practice it is almost always the right move."
+        },
+        {
+          heading: "2. What the Letter Must Include",
+          body: "An effective warning letter includes: (a) precise identification of the harmful publication — where it was published, when, and what was said (with a quote and link); (b) an explanation of why the publication constitutes defamation under the law; (c) reference to the fact that the publication is false or harmful; (d) clear demands — removal of the publication, publishing a correction and apology, and sometimes a compensation demand; (e) a clear deadline for a response (for example 7 days); (f) a warning that non-compliance will lead to legal proceedings. The wording should be firm but objective, without counter-slander that could expose you."
+        },
+        {
+          heading: "3. Documenting the Evidence Before Sending",
+          body: "A critical point sometimes forgotten: a warning letter alerts the publisher, who may delete the publication immediately — thereby eliminating the central evidence. So before sending the letter, fully document the publication: screenshots including the URL, date and time, and preferably also a certification verifying the time of capture. If the publication is on social media — save a link and document the exposure and reach. Only after full documentation should you send the warning. Early documentation ensures that even if the publisher deletes it — you hold evidence of the publication that existed."
+        },
+        {
+          heading: "4. After Sending — What to Expect",
+          body: "After sending the warning, several scenarios are possible: the other side removes and apologizes (success — consider whether to settle for that); the other side offers a settlement or negotiation; the other side ignores or refuses; or the other side responds with denial and defense claims (truth in the publication, good faith, expression of opinion). The response dictates the next step. If the warning did not help and the harm justifies it, you can file a claim — with the warning letter itself serving as evidence that you gave an opportunity to correct. It is important to keep a copy of the letter and proof of delivery."
+        }
+      ],
+      checklist: [
+        "Fully document the publication before sending the warning (the publisher may delete)",
+        "Precisely identify the publication — place, date, quote and link",
+        "Explain why it is defamation under the law",
+        "Include clear demands — removal, correction, apology and sometimes compensation",
+        "Set a clear response deadline and warn of proceedings",
+        "Keep a copy and proof of delivery of the letter"
+      ],
+      pitfalls: [
+        "Sending a warning without documenting first — the publisher deletes and the evidence vanishes",
+        "Defamatory, aggressive wording that exposes you to defamation",
+        "Vague demands with no clear response deadline",
+        "Failing to keep a copy and proof of delivery",
+        "A warning sent after the one-year limitation has nearly passed"
+      ],
+      faq: [
+        { q: "Must I send a warning letter before a defamation claim?", a: "The law does not require it, but in practice it is almost always right — it can obtain removal without a claim, and documents that you gave an opportunity to correct, which strengthens the case." },
+        { q: "What is most important before sending the warning?", a: "To fully document the publication — screenshots with URL, date and time. The letter alerts the publisher, who may delete immediately and eliminate the evidence." },
+        { q: "What must the letter include?", a: "Precise identification of the publication, an explanation of why it is defamation, clear demands (removal, correction, apology, sometimes compensation), a response deadline, and a warning of proceedings." },
+        { q: "What if the letter is ignored?", a: "If the harm justifies it, you can file a claim — with the warning letter serving as evidence that you gave an opportunity to correct. Keep a copy and proof of delivery." }
+      ],
+    },
+
+    receivedWarning: {
+      title: "You Received a Defamation Warning Letter — How to Respond and What Not to Do",
+      metaTitle: "Received a Defamation Warning | Proper Response | HY Law",
+      metaDesc: "You received a demand letter claiming you published defamation? What to do immediately, what not to do, and how to assess whether you really broke the law — a practical response guide.",
+      intro: "Receiving a warning letter claiming you published defamation is stressful, and many respond with mistakes that worsen their situation — ignoring it, an angry response, or another publication. But a warning letter is not a claim, and the way you respond can prevent a legal proceeding entirely or, alternatively, aggravate it. This guide explains what to do immediately upon receiving a warning letter, what absolutely not to do, and how to assess whether you are really exposed to liability.",
+      sections: [
+        {
+          heading: "1. What to Do Immediately",
+          body: "First — do not panic and do not respond hastily. Read the letter carefully and understand exactly what is claimed: which publication, when, and what the demands are. Second — keep a copy of your publication and of the letter. Third — note the response deadline set in the letter; ignoring it may lead to a claim being filed. Fourth — avoid any further publication on the same matter, which may be considered a repeat publication and aggravate things. If the matter is serious (a significant compensation demand, a genuinely problematic publication), consult a lawyer before you respond in writing."
+        },
+        {
+          heading: "2. What Absolutely Not to Do",
+          body: "Several common mistakes that worsen the situation: (a) ignoring — this may lead directly to a claim and harm you; (b) responding in anger or with a counter-publication — any counter-accusation may turn you into a defamation publisher yourself; (c) re-publishing the same content or 'correcting' it in a way that makes things worse; (d) admitting liability in writing without advice; (e) deleting evidence in a way that will look like concealment — although removing the defamatory publication itself may in fact be the right step that reduces harm. The distinction between legitimate removal and destroying evidence requires judgment."
+        },
+        {
+          heading: "3. Did You Really Break the Law?",
+          body: "Not every warning letter is justified. You must examine: does the publication really constitute defamation? Do you have a defense? The main defenses: 'truth in the publication' — if what you wrote is true and there is public interest in it; 'expression of opinion in good faith' — if it is an opinion and not a factual assertion; 'good faith' in the circumstances listed in the law (for example, a reasonable response, a report to a competent authority). Sometimes the letter is inflated, and your publication is protected. A professional assessment of the strength of your defenses against the claims is critical before deciding whether to remove, apologize, or stand your ground."
+        },
+        {
+          heading: "4. Formulating the Response",
+          body: "After assessing the situation, response options: if the publication is indeed problematic and undefended — consider removal and an apology, which usually end the matter and prevent a claim; if you have a good defense — you can reply with a reasoned letter rejecting the demand; sometimes the solution is a settlement (removal without admission, or partial correction). A written response should be measured and carefully drafted — every word may be used in a future proceeding. In serious cases, it is advisable that a lawyer draft or review the response. A correct and prompt response often prevents escalation into a claim."
+        }
+      ],
+      checklist: [
+        "Read the letter carefully and understand what is claimed and demanded",
+        "Keep a copy of your publication and of the letter",
+        "Note the response deadline — do not ignore it",
+        "Avoid any further publication on the same matter",
+        "Examine whether you have a defense (truth, opinion, good faith)",
+        "Consult a lawyer before a written response in a serious case"
+      ],
+      pitfalls: [
+        "Ignoring the letter — may lead directly to a claim",
+        "Responding in anger or with a counter-publication that makes you a defamation publisher",
+        "Re-publishing the same content, aggravating the harm",
+        "Admitting liability in writing without legal advice",
+        "Caving to an inflated letter despite having a good defense"
+      ],
+      faq: [
+        { q: "I received a warning letter — must I respond?", a: "It is highly advisable. Ignoring it may lead to a claim being filed. But do not respond hastily — read carefully, keep copies, and in a serious case consult before responding in writing." },
+        { q: "Should I just remove the publication?", a: "If the publication is problematic and undefended — removal and an apology usually end the matter. But if you have a good defense (truth, opinion, good faith), it may not be necessary. A professional assessment helps." },
+        { q: "What is the worst mistake?", a: "Responding in anger or with a counter-publication — any counter-accusation may turn you into a defamation publisher yourself and open a second front against you." },
+        { q: "The letter demands high compensation — must I pay?", a: "Not necessarily. A warning letter is a demand, not a judgment, and the amount is sometimes inflated. Examine whether you have a defense, and consult before agreeing to pay or admitting liability." }
+      ],
+    },
+
+    defamationSmallClaims: {
+      title: "A Defamation Claim in Small Claims Court — Advantages, Limits and Amounts",
+      metaTitle: "Defamation in Small Claims | Advantages and Limits | HY Law",
+      metaDesc: "Can you sue for defamation in small claims court? The advantages, the limitations, the amount cap and when this route fits — and when a regular proceeding is preferable. A practical guide.",
+      intro: "Not every harm to reputation justifies an expensive, complex claim in the Magistrate's Court. The Small Claims Court offers a relatively fast, cheap and simple route — and it is relevant to defamation claims of a suitable scale too. But this route has significant limitations that are important to know before choosing it. This guide explains when it is worth suing for defamation in small claims, the advantages and limitations, and the amount cap.",
+      sections: [
+        {
+          heading: "1. What Is the Small Claims Court",
+          body: "The Small Claims Court is intended for civil claims of a limited amount (the cap is updated from time to time and stands at about NIS 34,000 — you should verify the exact current amount). Its distinctiveness: the proceeding is simple and fast, the fee is low, and usually the parties are not represented by lawyers but present their case themselves. The hearing is usually short, and the judge rules on the basis of the evidence presented. For a defamatory publication of medium scale, where the compensation sought falls within the cap, this is an accessible and efficient route that saves time and money."
+        },
+        {
+          heading: "2. Advantages of the Route for a Defamation Claim",
+          body: "The advantages are especially pronounced in 'small' defamation cases: (a) low cost — a reduced fee and no attorney's fees to conduct the proceeding; (b) speed — usually a single hearing and a judgment within a few months, versus years in a regular proceeding; (c) simplicity — no complex procedure. It is important to remember that Section 7A of the Act allows compensation without proof of damage (up to a cap set in the law), which fits small claims well — you can claim statutory compensation without proving financial loss, as long as the amount is within the small claims cap."
+        },
+        {
+          heading: "3. The Limitations to Know",
+          body: "Alongside the advantages, there are substantive limitations: (a) an amount cap — if the harm is severe and justifies compensation higher than the cap, the route is unsuitable (or you waive the difference); (b) lack of representation — you conduct the case yourself, which is challenging in defamation cases involving legal questions (defenses, interpretation of the publication); (c) limited appeal — an appeal of a small claims judgment requires leave, and is not a vested right; (d) the other side is usually unrepresented too. In legally complex cases, the lack of representation may harm your chances despite the advantages."
+        },
+        {
+          heading: "4. When to Choose Small Claims and When a Regular Proceeding",
+          body: "Small claims suits fit when the publication is clear and obvious, the compensation sought is within the cap, and the case does not raise particularly complex legal questions. A regular proceeding in the Magistrate's Court fits when the harm is severe and justifies high compensation, when there is significant proven financial loss, when the case is legally complex and requires representation, or when a thorough proceeding with a full right of appeal matters to you. Even for those who choose small claims, a one-time professional consultation before filing — to draft the statement of claim and assess the chances — can significantly improve the outcome."
+        }
+      ],
+      checklist: [
+        "Check whether the compensation sought falls within the small claims cap",
+        "Assess whether the case is simple or raises complex legal questions",
+        "Remember: Section 7A allows compensation without proof of damage (up to a cap)",
+        "Prepare to conduct the case yourself (no representation)",
+        "Document the publication well — the evidence is the foundation",
+        "Consider a one-time consultation to draft the statement of claim"
+      ],
+      pitfalls: [
+        "Choosing small claims when the harm justifies compensation above the cap",
+        "Ignoring legal complexity that is hard to manage without representation",
+        "Expecting a full appeal — it requires leave only",
+        "A weakly drafted statement of claim without understanding the tort's elements",
+        "Insufficient documentation of the publication as evidence"
+      ],
+      faq: [
+        { q: "Can you sue for defamation in small claims?", a: "Yes, as long as the compensation sought is within the small claims cap. It is a fast, cheap route suited to medium-scale publications, especially given compensation without proof of damage (Section 7A)." },
+        { q: "What is the amount cap?", a: "The cap is updated from time to time and stands at about NIS 34,000 — you should verify the exact current amount. If the harm justifies more, consider a regular proceeding." },
+        { q: "Can I be represented by a lawyer in small claims?", a: "As a rule, no — the parties present their own case. But a one-time consultation before filing, to draft the statement of claim and assess the chances, is permitted and recommended." },
+        { q: "When is a regular proceeding preferable?", a: "When the harm is severe and justifies compensation above the cap, when there is significant financial loss, when the case is legally complex and requires representation, or when a full right of appeal matters." }
+      ],
+    },
+
+    defamationEvidence: {
+      title: "How to Collect Evidence of Online Defamation — Screenshots, Documentation and Verification",
+      metaTitle: "Evidence of Online Defamation | Documentation | HY Law",
+      metaDesc: "A harmful online publication may be deleted at any moment. How to collect and document defamation evidence — screenshots, saving links, verification and exposure records — a practical guide.",
+      intro: "In online defamation cases, the most important evidence — the publication itself — may be deleted at any moment, especially after the publisher realizes you are about to act. Correct, early documentation of the publication is sometimes the difference between a winning case and one that collapses for lack of evidence. This guide explains how to collect, document and verify evidence of online defamation — before it disappears — to build a solid evidentiary foundation.",
+      sections: [
+        {
+          heading: "1. Document Immediately — Before the Publication Is Deleted",
+          body: "The first rule: the moment you come across a harmful publication, document it immediately, even before you approach the publisher or send a warning. The reason: once the publisher realizes you are aware, they may delete the publication — and with it the evidence. Do not rely on it 'staying there.' Capture, save, back up — all before any other action. Early documentation ensures that even if the publication is deleted, you hold evidence that it existed, when, and what was written in it."
+        },
+        {
+          heading: "2. How to Document Correctly — Screenshots and Links",
+          body: "An effective screenshot includes: the full content of the publication, the publisher's/account's name, the date and time of the publication, and the URL visible in the address bar. Capture the full context — not just the harmful sentence, but the thread around it, to prevent a claim that it was taken out of context. Save the direct link to the publication. If possible, also document the number of views, likes, shares and comments — this data attests to the scope of exposure, which is very relevant to the amount of compensation. It is preferable to document from several devices and in several copies."
+        },
+        {
+          heading: "3. Verification and Reliability of the Evidence",
+          body: "A simple screenshot can ostensibly be edited, so the more serious the case, the more worthwhile it is to strengthen the reliability of the documentation. Ways to strengthen it: issuing a certification documenting the time of capture and its originality; documentation via a service that verifies the date; keeping the original files with their metadata; and in serious cases, documentation accompanied by a competent professional. If the publication was deleted but still exists in a search engine's cache or in a web archive service — document it from there too. The more verified the evidence, the harder it is for the other side to claim it was edited or fabricated."
+        },
+        {
+          heading: "4. Additional Evidence Beyond the Publication",
+          body: "Beyond the publication itself, collect supporting evidence: witnesses who saw the publication (especially important to prove the 'publication' element — that the content reached a third party); documentation of the harm caused (messages from customers who saw it, canceled deals, harm to revenue); and relevant correspondence. In an anonymous publication — collect every detail that may help identify the publisher. Keep everything in an organized, backed-up folder. A comprehensive evidentiary foundation — the documented publication, proof of exposure, and proof of harm — is the basis for a successful defamation claim, whether in a regular proceeding or in small claims."
+        }
+      ],
+      checklist: [
+        "Document the publication immediately — before any approach to the publisher",
+        "Capture full content, the publisher's name, date, time and URL",
+        "Document the full context to prevent a 'taken out of context' claim",
+        "Document views, shares and comments (evidence of exposure scope)",
+        "Strengthen documentation reliability with certification/date verification",
+        "Collect evidence of exposure (witnesses) and of the harm caused"
+      ],
+      pitfalls: [
+        "Approaching the publisher before documenting — they delete and the evidence vanishes",
+        "Capturing only the harmful sentence without the surrounding context",
+        "Failing to document the URL and the publication date",
+        "Relying on a single screenshot without verification in a serious case",
+        "Failing to document the scope of exposure, relevant to the compensation amount"
+      ],
+      faq: [
+        { q: "What is most important in collecting evidence of online defamation?", a: "To document immediately, before any approach to the publisher. The moment they realize you are aware, they may delete the publication and with it the central evidence." },
+        { q: "Is an ordinary screenshot enough as evidence?", a: "For simple cases usually yes, but a screenshot can ostensibly be edited. In a serious case, strengthen reliability with date certification, keeping original files with metadata, and sometimes accompanied documentation." },
+        { q: "What should the screenshot include?", a: "Full content, the publisher's/account's name, date and time, a visible URL, and the context around the publication — to prevent a claim that it was taken out of context." },
+        { q: "The publication is already deleted — is there still evidence?", a: "Maybe. Check whether it exists in a search engine's cache or a web archive service, and collect testimony from those who saw it. Early documentation would have prevented this in the first place." }
+      ],
+    },
+
+    defamationInjunction: {
+      title: "An Injunction to Remove a Defamatory Publication — When You Can Get One and How",
+      metaTitle: "Defamation Injunction | Removing a Publication | HY Law",
+      metaDesc: "Can you get an injunction ordering removal of a defamatory publication? The balance against freedom of expression, when the court grants one, and the difference between an interim and a permanent order — a guide.",
+      intro: "When a harmful, damaging publication about you appears, the natural desire is to remove it from the web immediately — not to wait years for a judgment. An injunction is the legal tool intended to order removal or to prohibit publication. But here two fundamental rights collide: the right to a good name versus freedom of expression, and the courts are very cautious about orders that restrict publication in advance. This guide explains when you can obtain an injunction in defamation matters, how, and what the limitations are.",
+      sections: [
+        {
+          heading: "1. Interim Injunction vs. Permanent Injunction",
+          body: "One must distinguish between two types of orders. An interim injunction is granted during the proceeding, before a final ruling, and its purpose is to prevent immediate harm — for example, removing a publication until the claim is examined. A permanent injunction is granted at the end of the proceeding, as part of the judgment, after it has been determined that this is indeed defamation. The distinction is substantive: an interim order restricts publication even before it is proven to be prohibited, so the courts are very cautious in granting interim orders that silence publication in advance. A permanent order, after a ruling, is granted more readily."
+        },
+        {
+          heading: "2. The Balance Against Freedom of Expression",
+          body: "The central obstacle in granting a defamation injunction is freedom of expression. The case law regards prior restraint of publication ('censorship') as a severe harm to freedom of expression, so the bar for granting an interim order preventing publication is especially high. The court will usually prefer to leave the publication in place and compensate after the fact if it is found to have been prohibited, rather than silence in advance an expression that may be protected. That said, when it is clear that the publication is false, severely harmful, and without public value — the inclination to grant an order increases. This balance is the heart of the ruling in every request for a defamation injunction."
+        },
+        {
+          heading: "3. What the Court Examines",
+          body: "In a request for an interim injunction, the court examines several considerations: (a) the claim's prospects — is this prima facie clear defamation with no defense; (b) the balance of convenience — who would suffer greater harm, the injured party if the publication remains, or the publisher if it is removed; (c) the applicant's urgency and good faith; (d) whether the harm can be compensated monetarily after the fact (if so — the need for an order diminishes). The more obvious the publication is as false, damaging defamation, and the more the balance of convenience leans toward the injured party, the greater the chance of an order. This proceeding is relatively fast and requires good evidentiary preparation."
+        },
+        {
+          heading: "4. Orders Against Platforms and Practical Limitations",
+          body: "Beyond an order against the publisher, one sometimes seeks an order requiring a platform (social network, website, search engine) to remove or block content. Here there is additional complexity — jurisdiction, the platform's identity, and its removal mechanisms. It is important to be realistic: even an order that is granted does not always guarantee full and immediate removal from everywhere online, especially for a publication that has already been shared and spread. So an injunction is an important but not exclusive tool — it combines with warning letters, direct approaches to platforms, and the compensation claim. Professional guidance is essential to manage the request and draft it with the required urgency."
+        }
+      ],
+      checklist: [
+        "Distinguish an interim order (during the proceeding) from a permanent order (in the judgment)",
+        "Prepare for a high bar — freedom of expression makes an interim order harder",
+        "Establish strong claim prospects — clear defamation with no defense",
+        "Show a balance of convenience leaning your way and harm hard to compensate in money",
+        "Act with urgency and good faith — delay harms the request",
+        "Also consider a direct approach to the platform alongside the order"
+      ],
+      pitfalls: [
+        "Expecting an easy interim order — the bar is high due to freedom of expression",
+        "A request over a publication with a possible defense (truth, opinion)",
+        "Delay in filing that weakens the urgency claim",
+        "Assuming an order guarantees full and immediate removal from the entire web",
+        "Relying on an order alone without warning letters and approaches to the platform"
+      ],
+      faq: [
+        { q: "Can you get an order requiring removal of a defamatory publication?", a: "Yes, but it is not simple. The courts are cautious about an interim order restricting publication in advance due to freedom of expression. The bar is especially high for an interim order; a permanent order after a ruling is granted more readily." },
+        { q: "Why is it hard to get a defamation injunction?", a: "Because of freedom of expression. Prior restraint of publication is considered a severe harm, so the court usually prefers to compensate after the fact rather than silence in advance an expression that may be protected." },
+        { q: "What does the court examine in the request?", a: "The claim's prospects (clear defamation with no defense), the balance of convenience, urgency and good faith, and whether the harm can be compensated monetarily after the fact. The more obvious and damaging the publication — the greater the chance." },
+        { q: "Can you require a social network to remove content?", a: "Sometimes yes, but it is complex (jurisdiction, removal mechanisms). Even an order does not always guarantee full removal from the entire web, so it is worth combining direct approaches to the platform." }
+      ],
+    },
+
+    criminalDefamation: {
+      title: "Criminal Defamation — When It Is a Criminal Offense and Not Just a Civil Claim",
+      metaTitle: "Criminal Defamation | Offense and Private Complaint | HY Law",
+      metaDesc: "Defamation can also be a criminal offense, not only a civil tort. When the publication crosses into criminal, what a private criminal complaint is, and the difference from a civil claim — a guide.",
+      intro: "Most people are familiar with defamation as a ground for a civil claim for compensation. But the Defamation Act also establishes a criminal offense — in more serious cases. The distinction between the civil and criminal spheres matters: it affects what must be proven, the proceeding, and the possible outcome. This guide explains when a defamatory publication crosses into the criminal sphere, what a private criminal complaint is, and the practical difference between the civil and criminal routes.",
+      sections: [
+        {
+          heading: "1. Civil Tort vs. Criminal Offense",
+          body: "The law distinguishes between two spheres. In the civil sphere (Section 7), publishing defamation to one person or more other than the injured party constitutes a civil tort, entitling compensation — including compensation without proof of damage. In the criminal sphere (Section 6), the requirements are stricter: the offense exists only when the publication was made with intent to harm, and to two or more persons other than the injured party. That is, the criminal requires both a stricter mental element (intent to harm) and a broader scope of publication (at least two, not one). The penalty set in the law for the offense is one year's imprisonment."
+        },
+        {
+          heading: "2. When a Publication Crosses Into the Criminal Sphere",
+          body: "Not all defamation is criminal. The criminal threshold is high and requires both elements: intent to harm — negligence or recklessness is not enough, but an actual intent to harm the injured party; and publication to two or more persons (besides the injured party). A publication made, for example, to only one person, or without intent to harm, can give rise to a civil cause of action but not a criminal offense. In practice, the prosecuting authority very rarely brings criminal charges for defamation offenses, reserving it for serious and clear-cut cases. So the criminal route is uncommon, but it exists and is relevant in appropriate cases."
+        },
+        {
+          heading: "3. A Private Criminal Complaint",
+          body: "An important feature of the defamation offense: it is among the offenses in which the law allows the injured party to file a 'private criminal complaint' — that is, to initiate the criminal proceeding themselves, even without the State (the prosecution) doing so. This means: an injured party who believes a criminal defamation offense was committed against them can, through a lawyer, conduct a private criminal proceeding against the publisher. This is a powerful tool, but complex and demanding, requiring meeting a criminal burden of proof (beyond reasonable doubt) and all the elements of the offense — including the intent to harm and publication to at least two people."
+        },
+        {
+          heading: "4. Civil or Criminal — Which Is Preferable",
+          body: "For most injured parties, the civil route is preferable and more practical: the burden of proof is lighter (balance of probabilities rather than beyond reasonable doubt), there is no need to prove intent to harm, publication to one person suffices, and the outcome — monetary compensation — directly benefits the injured party. The criminal route (via a private complaint) is relevant mainly when the harm is severe and especially deliberate, and when there is value in a criminal conviction beyond compensation. Sometimes the two can be combined. The choice between the routes is strategic and fact-dependent, and requires a professional assessment of the evidence, the elements, and the goal you seek to achieve."
+        }
+      ],
+      checklist: [
+        "Distinguish: civil (Section 7, publication to one, no intent) from criminal (Section 6)",
+        "The criminal requires intent to harm and publication to at least two people",
+        "Remember: the penalty for the criminal offense is one year's imprisonment",
+        "Check the option of a private criminal complaint in serious cases",
+        "Assess the stricter criminal burden of proof (beyond reasonable doubt)",
+        "Consult for a strategic choice between the routes"
+      ],
+      pitfalls: [
+        "Assuming all defamation is a criminal offense — the threshold is high",
+        "Ignoring the intent-to-harm requirement in the criminal sphere",
+        "Ignoring the requirement of publication to at least two (not one) in the criminal",
+        "Choosing a private criminal complaint without preparing for the stricter burden of proof",
+        "Ignoring that the civil route is usually more practical and beneficial"
+      ],
+      faq: [
+        { q: "Can defamation be a criminal offense?", a: "Yes. Section 6 of the Act establishes a criminal offense when the publication was made with intent to harm and to two or more persons other than the injured party. The penalty is one year's imprisonment. The threshold is higher than the civil sphere." },
+        { q: "What is the difference between civil and criminal defamation?", a: "The civil requires publication to at least one person (other than the injured), with no intent. The criminal is stricter: it requires intent to harm and publication to at least two people, and proof beyond reasonable doubt." },
+        { q: "What is a private criminal complaint?", a: "A tool that allows the injured party to initiate a criminal proceeding against the publisher themselves, even without the prosecution. It is powerful but demanding — it requires meeting a criminal burden of proof and all the elements of the offense." },
+        { q: "Is the civil or criminal route preferable?", a: "Usually the civil is more practical — a lighter burden of proof, no need for intent to harm, publication to one suffices, and the outcome is compensation for the injured party. The criminal is relevant for severe, especially deliberate harm." }
       ],
     },
   },
