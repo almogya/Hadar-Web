@@ -695,6 +695,70 @@ export const en = {
         pillar: true,
         slug: "criminal-defamation",
       },
+      {
+        title: "Landmark Defamation Rulings — The Principles Every Injured Party Should Know",
+        excerpt: "Which landmark rulings shaped defamation law in Israel? The reasonable-reader test, unmasking anonymous users, the balance against freedom of expression — a review of principles.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "defamation-precedents",
+      },
+      {
+        title: "Defamation Against a Group — When You Can Sue for Collective Harm",
+        excerpt: "A harmful publication against a group, sector or public — can a group member sue? Section 4 of the Act, the distinction between a large public and an identifiable group.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "group-defamation",
+      },
+      {
+        title: "Freedom of Expression vs. the Right to a Good Name — How the Court Balances",
+        excerpt: "Defamation law is a balance between freedom of expression and the right to a good name. How the court balances, when expression prevails, and when the good name.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "free-speech-vs-reputation",
+      },
+      {
+        title: "Defamation of a Deceased Person — Can the Family Sue?",
+        excerpt: "Defamation was published about a person who has died — can the family sue? Section 5 of the Act, why there is no civil cause of action, and when you can still act.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "deceased-defamation",
+      },
+      {
+        title: "Republishing Defamation — The Liability of the Sharer, Quoter and Reporter",
+        excerpt: "You shared, quoted or reported another person's publication — and you are exposed? Why republishing is an independent publication, and when a defense applies.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "republishing-defamation",
+      },
+      {
+        title: "Liability of a Group Admin, Website and Platform for Others' Harmful Content",
+        excerpt: "Are a Facebook/WhatsApp group admin, website owner or platform liable for defamatory content that users posted? The 'notice and takedown' principle and the degree of involvement.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "platform-admin-liability",
+      },
+      {
+        title: "AI Defamation — Who Is Liable When a Chatbot Fabricates Defamatory Facts",
+        excerpt: "A chatbot or AI engine attributed to you acts you never did (a 'hallucination')? Who is liable — the developer, the user who published it? Open questions in the AI era.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "ai-defamation",
+      },
+      {
+        title: "Deepfakes and Defamation — Fabricated AI-Generated Publications and Legal Tools",
+        excerpt: "A fabricated AI-generated video, image or recording showing you doing something you never did? Which legal tools are available to you — defamation, privacy and more.",
+        date: "July 2026",
+        category: "defamation",
+        pillar: true,
+        slug: "deepfake-defamation",
+      },
     ],
   },
 
@@ -2586,6 +2650,374 @@ export const en = {
         { q: "What is the difference between civil and criminal defamation?", a: "The civil requires publication to at least one person (other than the injured), with no intent. The criminal is stricter: it requires intent to harm and publication to at least two people, and proof beyond reasonable doubt." },
         { q: "What is a private criminal complaint?", a: "A tool that allows the injured party to initiate a criminal proceeding against the publisher themselves, even without the prosecution. It is powerful but demanding — it requires meeting a criminal burden of proof and all the elements of the offense." },
         { q: "Is the civil or criminal route preferable?", a: "Usually the civil is more practical — a lighter burden of proof, no need for intent to harm, publication to one suffices, and the outcome is compensation for the injured party. The criminal is relevant for severe, especially deliberate harm." }
+      ],
+    },
+
+    defamationPrecedents: {
+      title: "Landmark Defamation Rulings — The Principles Every Injured Party Should Know",
+      metaTitle: "Defamation Case Law | Landmark Rulings | HY Law",
+      metaDesc: "Which landmark rulings shaped defamation law in Israel? The reasonable-reader test, unmasking anonymous users, the balance against freedom of expression — a review of principles.",
+      intro: "Defamation law in Israel is not exhausted by the wording of the statute — it has been shaped in large part by court rulings that determined how to interpret a publication, how to balance reputation against freedom of expression, and when defenses apply. Knowing the foundational principles from the case law helps both the injured party and the publisher assess their position. This guide reviews central principles established in the case law — with the caveat that the law evolves, and every case is judged on its merits and requires current advice.",
+      sections: [
+        {
+          heading: "1. The Reasonable-Reader Test",
+          body: "A foundational principle developed in the case law: whether a publication constitutes defamation is examined by an objective standard — how the 'reasonable reader' or 'reasonable person' understands the publication in its context, and not by the publisher's intent or the injured party's feeling alone. The court examines the natural and ordinary meaning of the words, including implied messages and 'hints.' This principle is central: sometimes a publication that is not expressly defamatory is considered defamation because of the implied meaning a reasonable reader ascribes to it, and sometimes the reverse — a blunt expression is interpreted in context as an opinion or exaggeration rather than a factual assertion."
+        },
+        {
+          heading: "2. The Balance Against Freedom of Expression",
+          body: "The case law has repeatedly emphasized that defamation law is a point of balance between two fundamental rights — the right to a good name (part of human dignity) and freedom of expression. In this balance, special weight is given to freedom of expression in matters of public concern, in criticism of elected officials and public figures, and in political discourse — where the 'thick skin' required is greater and the defenses are construed broadly. Conversely, harm to a private person's dignity, in matters of no public interest, receives stronger protection for the good name. This balance accompanies almost every ruling in the field."
+        },
+        {
+          heading: "3. Unmasking Anonymous Publishers",
+          body: "One of the most influential rulings on online defamation was handed down in the Mor case (LCA 4447/07): it was held that, absent an express statutory arrangement, the court has no general civil mechanism to compel an internet provider or platform to reveal the identity of an anonymous user who published defamation. The ruling's significance is far-reaching: a defamation claim against an anonymous online publisher encounters a real obstacle at the identification stage. Despite legislative attempts and creative approaches, this remains a central challenge that requires a tailored strategy in anonymous-publication cases."
+        },
+        {
+          heading: "4. Principles in Awarding Compensation",
+          body: "On the compensation question, the case law developed standards for setting the amount: the severity of the publication and its content, the scope of distribution and exposure, the degree of harm to the injured party and their standing, the publisher's conduct (including whether they apologized and removed it or persisted), and the degree of fault. Section 7A allows compensation without proof of damage up to a cap, and double the cap for a publication made with intent to harm. The case law emphasizes that compensation is meant both to remedy the harm and to deter. It is important to remember that compensation amounts derive from concrete circumstances, and there is no uniform 'tariff' — each case is judged on its merits."
+        }
+      ],
+      checklist: [
+        "Understand that the publication is judged by the reasonable reader, not the publisher's intent",
+        "Consider the context — fact vs. opinion, express vs. implied message",
+        "Remember the balance against freedom of expression, especially in public matters",
+        "Know the Mor ruling — the difficulty of unmasking an anonymous publisher",
+        "Assess compensation by severity, distribution, harm and the publisher's conduct",
+        "Consult — the case law evolves and each case is judged on its merits"
+      ],
+      pitfalls: [
+        "Assuming the publisher's intent is decisive — the test is the reasonable reader",
+        "Ignoring the context that turns a blunt expression into a protected opinion",
+        "Expecting easy unmasking of an anonymous publisher despite the Mor ruling",
+        "Expecting a uniform compensation 'tariff' — the amount depends on circumstances",
+        "Relying on old case law without checking current developments"
+      ],
+      faq: [
+        { q: "How is it determined whether a publication is defamation?", a: "By the 'reasonable reader' test — how a reasonable person understands the publication in context, including implied messages, and not by the publisher's intent or the injured party's feeling alone." },
+        { q: "What is the Mor ruling and why does it matter?", a: "In the Mor case (LCA 4447/07) it was held that there is no general civil mechanism to compel a platform to reveal an anonymous user. This creates a real obstacle in online defamation claims against an anonymous publisher." },
+        { q: "Are public figures less protected?", a: "The case law gives special weight to freedom of expression in criticism of elected officials and public figures and in political discourse, so the required 'thick skin' is greater and the defenses are construed broadly." },
+        { q: "How is the compensation amount determined in the case law?", a: "By the severity of the publication, the scope of distribution, the degree of harm and standing, and the publisher's conduct (apology/persistence). There is no uniform tariff — each case is judged on its merits, alongside Section 7A." }
+      ],
+    },
+
+    groupDefamation: {
+      title: "Defamation Against a Group — When You Can Sue for Collective Harm",
+      metaTitle: "Group Defamation | Collective Harm | HY Law",
+      metaDesc: "A harmful publication against a group, sector or public — can a group member sue? Section 4 of the Act, the distinction between a large public and an identifiable group, and when a cause of action arises.",
+      intro: "What happens when a harmful publication is aimed not at a specific person, but at an entire group — 'all the employees at company X,' members of a sector, a professional or ethnic group? Can every member of the group sue? This is the question of 'defamation of a public,' and the law regulates it in a special way. This guide explains the distinction between a publication against a large, unidentified public — which usually does not give rise to a personal cause of action — and a publication against a small, identifiable group, in which each member may be personally harmed.",
+      sections: [
+        {
+          heading: "1. The Rule — Defamation of a Public (Section 4)",
+          body: "Section 4 of the Act deals with 'defamation of a body of people or of a public.' The rule: a publication aimed at a large, unspecified public — such as an entire professional group, members of a sector or ethnic group — is indeed considered defamation, but it does not give rise to a civil action or a private complaint by someone who belongs to that public. The rationale: when the harm is spread over a broad public, it does not crystallize into concrete personal harm to a specific plaintiff. So, as a rule, a person cannot sue merely because they belong to a large group harmed by a harmful generalization."
+        },
+        {
+          heading: "2. The Exception — a Small, Identifiable Group",
+          body: "Here lies the central exception: the smaller and more defined the group, the greater the chance that the publication 'points to' each of its members personally. If the group is so small that the harmful statement in fact refers to each individual in it in a way that allows them to be identified — every member may be personally harmed and have a cause of action. For example, a statement about 'the three managers in the department' differs substantively from a statement about 'all managers in Israel.' The distinction between a large, dispersed public and a small group whose members are identifiable is the heart of the ruling on whether a personal cause of action arises."
+        },
+        {
+          heading: "3. When the Publication Identifies an Individual Within the Group",
+          body: "Another situation in which a cause of action arises: even in a publication ostensibly aimed at a group, if the circumstances allow a specific person to be identified as the subject of the statement — they may sue personally. Identification can stem from identifying details, from context, or from the fact that it is clear to reasonable readers who is meant even without naming them. That is, 'wrapping' a harmful publication in group language does not grant immunity if, in practice, the specific injured party can be identified. The question is always: can a reasonable reader link the harmful statement to a specific, identifiable person."
+        },
+        {
+          heading: "4. What to Do in Collective Harm",
+          body: "If you were harmed by a publication aimed at a group you belong to: first, examine the group's size and degree of identification — the smaller and more defined it is, the greater your chances of a personal cause of action. Second, check whether the circumstances allow you to be personally identified as the subject of the statement. Third, if a corporation or organized body was harmed (as opposed to a 'public'), there may be additional causes of action (for the corporation itself). Fourth, consider whether adjacent torts exist (commercial torts, invasion of privacy). This is a complex area in which the precise classification of the publication is decisive — so a professional assessment is essential before acting."
+        }
+      ],
+      checklist: [
+        "Examine the group's size — a large public usually gives no personal cause of action",
+        "The smaller and more defined the group — the greater the chance of a personal cause of action",
+        "Check whether the circumstances personally identify you as the statement's subject",
+        "Distinguish a 'public' (Section 4) from a harmed corporation",
+        "Consider adjacent torts (commercial, privacy)",
+        "Consult — the precise classification of the publication is decisive"
+      ],
+      pitfalls: [
+        "Assuming every member of a large group can sue — Section 4 bars it",
+        "Ignoring the exception of a small, identifiable group",
+        "Missing possible personal identification within a group publication",
+        "Confusing harm to a corporation with harm to a 'public'",
+        "Acting without assessing the group's size and degree of identification"
+      ],
+      faq: [
+        { q: "Can I sue over a publication against a group I belong to?", a: "It depends on the group's size. For a publication against a large, unspecified public, Section 4 negates a personal cause of action. But in a small, identifiable group, where the statement points to each member — it may be possible." },
+        { q: "What determines whether a personal cause of action arises?", a: "The degree of identification. The smaller and more defined the group, and the more the harmful statement can be linked to each individual or a specific person — the greater the chance of a personal cause of action." },
+        { q: "A publication about 'all members of the profession' — can I sue?", a: "As a rule, no. This is a large, dispersed public, and under Section 4 a member of such a public cannot sue personally, even if the generalization is harmful." },
+        { q: "What if I specifically can be identified within the group?", a: "Then a cause of action may arise. If the circumstances allow a reasonable reader to personally identify you as the statement's subject, group 'wrapping' does not grant the publisher immunity." }
+      ],
+    },
+
+    freeSpeechVsReputation: {
+      title: "Freedom of Expression vs. the Right to a Good Name — How the Court Balances",
+      metaTitle: "Free Speech vs. Reputation | The Balance | HY Law",
+      metaDesc: "Defamation law is a balance between freedom of expression and the right to a good name. How the court balances, when expression prevails, and when the good name — guiding principles.",
+      intro: "Every defamation case is essentially a meeting point between two fundamental rights that collide: freedom of expression — a cornerstone of a democratic society — and the right to a good name and dignity, which is itself anchored as a constitutional right. Understanding the balance between them is essential: it dictates when a harmful publication will be protected and when it will be considered prohibited defamation. This guide explains how courts balance the values, and the considerations that tip the scale one way or the other.",
+      sections: [
+        {
+          heading: "1. Two Fundamental Rights in Collision",
+          body: "Freedom of expression is considered among the system's 'fundamental liberties,' a value that enables public discourse, criticism and oversight of the government. Conversely, the right to a good name derives from human dignity — protected in Basic Law: Human Dignity and Liberty — and protects a person from false humiliation and disgrace. Defamation law is the mechanism that reconciles the two: it does not silence expression, but neither does it abandon the good name. Every ruling is the product of a balance between the intensity of the harm to the good name and the value of the expression — and above all, whether it involves genuine public interest."
+        },
+        {
+          heading: "2. When Freedom of Expression Prevails",
+          body: "The weight given to freedom of expression is especially strong in a matter of public value: criticism of elected officials and public figures, exposing corruption or failure, reliable journalistic reporting, and political discourse. In these areas the case law broadens the defenses (truth in a publication of public interest; expression of opinion in good faith), and expects public figures to have greater 'thick skin.' Opinion, criticism, satire and rhetorical exaggeration are also largely protected — as long as they do not masquerade as a false factual assertion. The idea: public discourse should not be chilled for fear of lawsuits."
+        },
+        {
+          heading: "3. When the Right to a Good Name Prevails",
+          body: "Conversely, the scale tips toward protecting the good name when the publication is false, factual (not opinion), severely harmful, and devoid of public value. Harm to a private person's dignity, in their personal affairs, without any contribution to public discourse, does not enjoy the umbrella of freedom of expression. Spreading false facts as if they were true is not 'protected expression' either — for a factual lie has no value that justifies harming a good name. The more factual, false, devoid of public interest, and intended to harm the publication is — the greater the weight for protecting the injured party."
+        },
+        {
+          heading: "4. Practical Considerations for Publisher and Injured Party",
+          body: "Understanding the balance helps both sides. For the publisher: before a critical publication, ask — is this a fact I can substantiate, or an opinion? Is there public interest? Am I acting in good faith and proportionately? For the injured party: examine whether the publication is factual and false or a protected opinion, and whether it involves public interest that grants the publisher a defense. A sober assessment of where the publication sits on the balancing axis — even before turning to the courts — saves unnecessary battles and points to the right strategy. In this field, the nuance is decisive."
+        }
+      ],
+      checklist: [
+        "Identify whether the publication is a fact (provable) or an opinion",
+        "Check whether the publication involves genuine public interest",
+        "Remember: public figures require greater 'thick skin'",
+        "Distinguish protected criticism and satire from a false fact",
+        "Assess the intensity of the harm against the value of the expression",
+        "Position the publication on the balancing axis before turning to the courts"
+      ],
+      pitfalls: [
+        "Presenting a false factual assertion in the guise of an 'opinion'",
+        "Assuming all criticism of a private person is protected as free speech",
+        "Ignoring public interest as a central consideration in the balance",
+        "Expecting a public figure to receive protection like a private person",
+        "Turning to the courts without assessing the publication's position in the balance"
+      ],
+      faq: [
+        { q: "Does freedom of expression always prevail over the good name?", a: "No. It is a balance. Freedom of expression prevails in matters of public value (criticism of public figures, political discourse), but the good name prevails in a factual, false and harmful publication devoid of public interest." },
+        { q: "Is expressing an opinion always protected?", a: "A sincere opinion in good faith is largely protected, including criticism and satire. But an 'opinion' that is in fact a false factual assertion does not enjoy the protection — the distinction between opinion and fact is decisive." },
+        { q: "Why are public figures less protected?", a: "Because criticism of them is part of democratic discourse and public oversight. The case law expects them to have greater 'thick skin' and broadens the defenses for substantive criticism of them." },
+        { q: "When does the right to a good name clearly prevail?", a: "When the publication is false, factual (not opinion), severely harmful, and devoid of public value — especially toward a private person in their personal affairs. A factual lie has no value that justifies the harm." }
+      ],
+    },
+
+    deceasedDefamation: {
+      title: "Defamation of a Deceased Person — Can the Family Sue?",
+      metaTitle: "Defamation of the Deceased | Family Rights | HY Law",
+      metaDesc: "Defamation was published about a person who has died — can the family sue? Section 5 of the Act, why there is no civil cause of action, and when you can still act. A clarifying guide.",
+      intro: "A harmful publication about a person who has passed away is a source of deep pain for the family, who seek to protect their memory and good name. But here the law differs substantively from defamation of a living person: the law regulates 'defamation of the dead' in a separate section, with a significant limitation. This guide explains what the law provides regarding a harmful publication about a deceased person, why the family generally has no civil cause of action, and when and by what means action can still be taken.",
+      sections: [
+        {
+          heading: "1. Section 5 — Defamation of the Dead",
+          body: "Section 5 of the Act establishes a unique rule: defamation published about a person after their death is treated as defamation of a living person — that is, the publication itself is considered defamation — but it does not give rise to a civil action or a private complaint. This means: although the publication is defined as defamation, the law does not grant the family the right to sue for civil damages or to file a private complaint over the harm to the deceased's memory. This is a substantive difference from a publication about a living person, where a full civil cause of action arises. The rule is meant to balance protecting the memory of the dead against flooding the system with claims."
+        },
+        {
+          heading: "2. Why There Is No Civil Cause of Action",
+          body: "The rationale: the right to a good name is a personal right of the person themselves, and it is difficult to 'bequeath' it like an ordinary property right. The legislature chose not to allow family members to sue for civil compensation on behalf of the deceased for harm to their memory. That said, the law does not ignore the harm entirely — it recognizes that this is defamation, and certain family members (spouse, parent, child, sibling) are regarded as 'injured' for certain purposes in the law, mainly in the criminal-public sphere. But in the civil sphere — the path to a damages claim for harm to the deceased themselves is blocked."
+        },
+        {
+          heading: "3. When Action Is Still Possible",
+          body: "There are situations in which action is still possible. First and foremost: if the publication, even though it concerns the deceased, also independently harms the living family members — for example, attributing to them a wrongful act, or harming their own good name — then they themselves may have a personal cause of action, which is not limited by Section 5. Second, in the criminal-public sphere other tools may exist. Third, one can sometimes act through extra-judicial channels — approaching a platform to remove harmful content. The distinction between harm to the deceased (a blocked cause of action) and independent harm to the living (a possible cause of action) is the key."
+        },
+        {
+          heading: "4. What Is Worth Doing",
+          body: "If defamation was published about a family member who has died: first, understand the limitation — a civil claim on behalf of the deceased for harm to their memory is generally not possible. Second, carefully examine whether the publication also harms you, the living, personally and independently — if so, you may have your own cause of action. Third, consider a direct approach to the platform or publisher requesting removal, which is sometimes effective even without a proceeding. Fourth, consult a lawyer to assess the possible paths in the specific circumstances. Although the classic civil path is blocked, you are not always left helpless."
+        }
+      ],
+      checklist: [
+        "Understand: a civil claim on behalf of the deceased for harm to their memory is generally blocked (Section 5)",
+        "Examine whether the publication also harms you, the living, independently",
+        "If you suffered personal harm — you may have your own cause of action",
+        "Consider a direct approach to the platform to remove the content",
+        "Check whether tools exist in the criminal-public sphere",
+        "Consult to assess the paths in the specific circumstances"
+      ],
+      pitfalls: [
+        "Assuming the family can sue for civil compensation on behalf of the deceased",
+        "Missing independent harm to the living family members (a possible cause of action)",
+        "Ignoring extra-judicial removal channels",
+        "Confusing recognition of the publication as defamation with the existence of a civil cause of action",
+        "Giving up entirely without examining alternative paths"
+      ],
+      faq: [
+        { q: "Can I sue over defamation published about a relative who died?", a: "As a rule, not in the civil sphere. Section 5 provides that a publication about the dead is considered defamation, but it does not give rise to a civil action or a private complaint for harm to the deceased's memory." },
+        { q: "Why can't compensation be claimed on behalf of the deceased?", a: "Because the right to a good name is personal, and the legislature chose not to allow 'bequeathing' a civil cause of action for harm to the memory of the dead. The publication is recognized as defamation, but without a civil cause of action." },
+        { q: "When can action still be taken?", a: "Mainly if the publication also independently harms the living family members (attributing to them a wrongful act) — then they may have a personal cause of action. You can also consider approaching the platform for removal." },
+        { q: "Is there a way to remove a harmful publication about the deceased?", a: "Sometimes yes, through extra-judicial channels — approaching the platform or publisher with a removal request. Even if the civil path is blocked, you are not always left helpless." }
+      ],
+    },
+
+    republishingDefamation: {
+      title: "Republishing Defamation — The Liability of the Sharer, Quoter and Reporter",
+      metaTitle: "Republishing Defamation | Sharer Liability | HY Law",
+      metaDesc: "You shared, quoted or reported another person's publication — and you are exposed? Why republishing is an independent publication, and when a defense applies. A practical guide.",
+      intro: "A common mistake: 'I just shared it — I didn't write it.' But in defamation law, someone who shares, quotes, forwards or repeats another person's harmful publication may bear independent liability of their own. The notion that the 'distributor' is exempt from liability merely because they are not the 'source' is fundamentally wrong. This guide explains why republishing is considered an independent publication, when the sharer is exposed, and when a defense may be available — a critical topic in the age of networks, where content is distributed with a click.",
+      sections: [
+        {
+          heading: "1. Republishing = An Independent Publication",
+          body: "A foundational principle: every 'publication' of defamation gives rise to liability, and for this purpose repeating an existing publication or distributing it is also considered a publication in its own right. Someone who shared a defamatory post, quoted a harmful statement, forwarded a message or attached a link with endorsement — carried out an independent 'publication,' and is not protected merely because the content was originally written by someone else. The logic: every distribution widens the circle of exposure and the harm to the injured party. So, legally, sharing is not 'neutral' — it is an act of publication that may impose liability on the sharer themselves."
+        },
+        {
+          heading: "2. Sharing, Quoting and Forwarding Online",
+          body: "In the age of networks, the distinction is critical. Sharing a defamatory post, a retweet, forwarding a WhatsApp message, quoting in an article or a post — all of these may be considered republishing that gives rise to liability. Even a 'like' may, in certain circumstances and depending on developments, raise questions (although its status is more contested and complex than active sharing). The practical meaning: before you share content that may be defamatory, stop — the very act of distribution may expose you, even if you did not create the content and added nothing to it."
+        },
+        {
+          heading: "3. When a Defense May Be Available",
+          body: "Not every repetition of a publication imposes liability without a defense. Defenses may be available depending on the circumstances: fair and balanced media reporting on a publication or a proceeding may fall under permitted publications or the good-faith defense; quoting for the purpose of legitimate criticism or expressing an opinion may be protected; and distribution in good faith in the circumstances listed in the law. But the defenses are conditioned on good faith, proportionality, and the distributor not adopting the harmful content as truth and not widening the harm beyond what was necessary. A 'casual' share of defamatory content, without a protective context, will usually not enjoy a defense."
+        },
+        {
+          heading: "4. Practical Precautionary Rules",
+          body: "To avoid finding yourself liable for another's publication: do not share or forward content that appears defamatory without verifying its reliability; do not add endorsement or reinforcement ('so true!', 'pass it on') to harmful content; if you reported on a publication, do so fairly, in a balanced and qualified manner, without adopting the accusation as fact. If you already shared it and it turns out the content is defamatory — consider immediate removal. Remember: online, clicking 'share' is an act of publication in every respect, and the sharer's liability stands on its own, separate from the original creator's liability."
+        }
+      ],
+      checklist: [
+        "Internalize: sharing/quoting/forwarding are an independent publication giving rise to liability",
+        "Do not share content that appears defamatory without verifying its reliability",
+        "Do not add endorsement or reinforcement to harmful content",
+        "When reporting on a publication — do so fairly, in a balanced and qualified manner",
+        "If you shared content that turns out to be defamatory — consider immediate removal",
+        "Remember that defenses are conditioned on good faith and proportionality"
+      ],
+      pitfalls: [
+        "Assuming 'I just shared it' exempts from liability — it does not",
+        "Adding endorsement/reinforcement that makes you an adopter of the content",
+        "Casual sharing without a protective context of reporting or criticism",
+        "Distributing harmful content without checking its reliability",
+        "Keeping the share up even after it turns out the content is defamatory"
+      ],
+      faq: [
+        { q: "I shared a defamatory post someone else wrote — am I liable?", a: "Quite possibly. Republishing is considered an independent publication. The very act of sharing widens the harm and may impose liability on you, even if you did not write the content." },
+        { q: "Do quoting or forwarding a message also count as publication?", a: "Yes. Quoting, a retweet, forwarding on WhatsApp and attaching a link with endorsement may all be considered republishing that gives rise to independent liability." },
+        { q: "When will I not be liable for a share?", a: "When a defense is available — fair and balanced reporting, quoting for legitimate criticism, or good-faith distribution under the law. But the defenses are conditioned on good faith, proportionality, and not adopting the content as truth." },
+        { q: "What should I do if I shared and then realized it was defamation?", a: "Consider immediate removal of the share. Keeping it up may aggravate your liability. Quick action and good faith work in your favor." }
+      ],
+    },
+
+    platformAdminLiability: {
+      title: "Liability of a Group Admin, Website and Platform for Others' Harmful Content",
+      metaTitle: "Group Admin & Platform Liability | Defamation | HY Law",
+      metaDesc: "Are a Facebook/WhatsApp group admin, website owner or platform liable for defamatory content that users posted? The 'notice and takedown' principle and the degree of involvement. A guide.",
+      intro: "When a user posts defamation in a Facebook group, a forum or a website's comment section — is only that user liable, or may the group admin, website owner or platform also bear liability? This is the question of 'intermediary liability,' which occupies the case law in the era of user-generated content. In Israel, unlike some countries, there is no comprehensive statutory arrangement granting intermediaries blanket immunity. This guide explains when an admin or platform may be liable for others' content, and what reduces or increases the exposure.",
+      sections: [
+        {
+          heading: "1. No Blanket Immunity in Israel",
+          body: "Contrary to the prevailing perception, in Israel there is no law granting platforms and intermediaries full immunity from liability for content that users publish. The issue is regulated mainly in the case law, which tries to balance the desire not to impose impossible liability on intermediaries for all content, against protecting injured parties. The result: intermediary liability is not automatic, but neither is it negated in advance — it is fact-dependent. The central questions: what is the intermediary's degree of involvement in the content, and whether they knew of the harmful content and refrained from removing it after it was brought to their attention."
+        },
+        {
+          heading: "2. The 'Notice and Takedown' Principle",
+          body: "A central principle that has crystallized: an intermediary who does not know of harmful content published by a user will usually not bear liability in the stage before it became known to them. But once it is brought to their attention — for example, by an approach from the injured party — and they refrain from removing it within a reasonable time, their exposure to liability increases significantly. The idea resembles a 'notice & takedown' mechanism: the approach to the intermediary creates knowledge, and the response (removal or ignoring) affects their liability. So, for the injured party, a documented approach to the intermediary demanding removal is an important step — it establishes knowledge."
+        },
+        {
+          heading: "3. A Group Admin — When Are They Exposed",
+          body: "The admin of a Facebook or WhatsApp group is in an intermediate position. They are not automatically liable for everything group members post, but the degree of their liability depends on the circumstances: whether they set up the group around a harmful purpose; the degree of their supervision and involvement; and whether they knew of defamatory content and refrained from removing it or removing the publisher. An admin who exercises active supervision, sets rules, and removes harmful content when it is brought to their attention — reduces their exposure. An admin who ignores complaints about defamatory content in their group — increases it. The case law in this area is developing."
+        },
+        {
+          heading: "4. Practical Recommendations — For Both Sides",
+          body: "For group admins and website operators: set clear rules of conduct, exercise reasonable supervision, and remove harmful content immediately once it is brought to your attention — documenting the removal protects you. Do not adopt or encourage defamatory content. For injured parties: locate the relevant intermediary (admin, website owner, platform), approach them in writing and in a documented manner demanding removal — this approach establishes 'knowledge'; and if it is not removed within a reasonable time, consider including the intermediary in the proceeding too. This is a complex and evolving area in which a professional assessment of the degree of liability in the concrete circumstances is essential before acting."
+        }
+      ],
+      checklist: [
+        "Know: in Israel there is no blanket immunity for intermediaries and platforms",
+        "An admin/website is usually not liable before they knew of the content",
+        "A documented approach demanding removal establishes 'knowledge'",
+        "Failure to remove within a reasonable time after knowledge increases exposure",
+        "For admins: set rules, supervise, and remove harmful content immediately",
+        "Consult — liability is fact-dependent and developing in the case law"
+      ],
+      pitfalls: [
+        "Assuming a platform/admin is immune from all liability — they are not",
+        "For the injured party: failing to document the approach to the intermediary that establishes knowledge",
+        "For the admin: ignoring a complaint about defamatory content in the group",
+        "Adopting or encouraging harmful content a user posted",
+        "Acting without assessing the degree of involvement and knowledge in the circumstances"
+      ],
+      faq: [
+        { q: "Is a Facebook group admin liable for what members post?", a: "Not automatically. Their liability is fact-dependent — the degree of involvement and supervision, and whether they knew of defamatory content and refrained from removing it. Supervision and removal reduce exposure; ignoring increases it." },
+        { q: "Is there immunity for platforms in Israel like abroad?", a: "No. There is no comprehensive statutory arrangement granting blanket immunity. The issue is regulated in the case law, and liability is fact-dependent — not automatic, but not negated in advance either." },
+        { q: "What is the 'notice and takedown' principle?", a: "An intermediary is usually not liable before they knew of the content, but once it is brought to their attention and they do not remove it within a reasonable time — their exposure increases. So a documented approach demanding removal is important." },
+        { q: "I was harmed by content in a group — should I approach the admin?", a: "Yes. A written, documented approach demanding removal establishes 'knowledge' of the admin/platform. If it is not removed within a reasonable time, you can consider including them in the proceeding too." }
+      ],
+    },
+
+    aiDefamation: {
+      title: "AI Defamation — Who Is Liable When a Chatbot Fabricates Defamatory Facts",
+      metaTitle: "AI and Defamation | Liability | HY Law",
+      metaDesc: "A chatbot or AI engine attributed to you acts you never did (a 'hallucination')? Who is liable — the developer, the user who published it? Open questions in defamation in the AI era. A guide.",
+      intro: "AI models sometimes produce 'hallucinations' — erroneous factual claims presented with full confidence, including attributing wrongful acts, offenses or failures to real people who never committed them. When a chatbot 'fabricates' a defamatory fact about a person, a new and complex question arises: who is liable? This is a developing area in which the law has not yet crystallized. This guide explains the legal framework, the open liability questions, and the practical steps for someone harmed by a defamatory AI-generated publication.",
+      sections: [
+        {
+          heading: "1. When AI 'Fabricates' a Defamatory Fact",
+          body: "Language-based AI engines generate text based on statistical patterns, and sometimes 'fabricate' information that sounds credible but is entirely false — for example, that a person was convicted of an offense, dismissed in disgrace, or committed a shameful act, when none of it occurred. If such content is presented to a user, and certainly if it is distributed further, the elements of defamation are ostensibly present: a false, disgracing statement about an identifiable person. But applying defamation law — built around a human 'publisher' with thought and intent — to a machine's output raises new conceptual difficulties that the case law is only beginning to grapple with."
+        },
+        {
+          heading: "2. The Question of 'Publication' and Liability",
+          body: "Defamation law requires 'publication' — the content reaching a third party. When a chatbot presents an answer to a single user, there is a question whether 'publication' occurs; but when the user distributes the output further, or when the system presents content to many, the issue sharpens. The liability question is even more complex: is the company that developed or operates the model liable? Is the user who entered the query and distributed the answer? The mental-element requirements (intent, negligence, good faith) and the statutory defenses were built around a human publisher, and applying them to a model developer or a user requires new interpretation. These are open questions not yet fully resolved."
+        },
+        {
+          heading: "3. The Liability of the User Who Distributes",
+          body: "A relatively clear, practical point: a user who receives defamatory content from AI and chooses to distribute it — to publish it online, send it to others, present it as fact — may bear liability as a publisher, exactly as in republishing any content. The fact that the content 'came from AI' does not grant immunity; someone who adopts and distributes a defamatory claim is liable for its distribution. So, an important warning: do not rely on a chatbot's output as a verified fact, and certainly do not distribute AI-generated defamatory claims without independent verification. The best defense against liability is not to distribute unverified content."
+        },
+        {
+          heading: "4. Harmed by AI? Practical Steps",
+          body: "If an AI engine attributes false, defamatory information to you: first, document — capture the full output, the query that led to it, the date, and the system's name. Second, check whether the information is distributed further or presented to others. Third, many platforms allow reporting erroneous content and requesting a correction — an orderly approach may lead to a fix. Fourth, if the content was distributed by a person, consider action against them as a publisher. Fifth, this is a new and developing legal area — a professional consultation will help identify the relevant path in the circumstances. Document everything, since the output may change between runs."
+        }
+      ],
+      checklist: [
+        "Document the full output, the query, the date and the system's name",
+        "Check whether the defamatory content is distributed further or shown to others",
+        "Do not distribute AI-generated defamatory content yourself without verification",
+        "Use the platform's reporting and correction mechanisms",
+        "If a person distributed the output — consider action against them as a publisher",
+        "Consult — this is a new and developing area with no crystallized law"
+      ],
+      pitfalls: [
+        "Assuming 'it came from AI' grants immunity to whoever distributes — it does not",
+        "Distributing a chatbot's defamatory output without independent verification",
+        "Failing to document the output, which may change between runs",
+        "Relying on an AI answer as a verified fact",
+        "Expecting clear, settled law in an area still crystallizing"
+      ],
+      faq: [
+        { q: "A chatbot fabricated false information about me — is that defamation?", a: "The elements of a false, disgracing statement are ostensibly present. But applying defamation law, built around a human publisher, to a machine's output raises new questions the law has not yet fully resolved." },
+        { q: "Who is liable — the developing company or the user?", a: "This is an open and complex question. It is relatively clear that a user who distributes defamatory output may be liable as a publisher. The liability of the model's developer/operator has not been fully resolved and depends on the law's development." },
+        { q: "If AI wrote it, am I protected when I share it?", a: "No. The fact that the content 'came from AI' does not grant immunity. Someone who adopts and distributes a defamatory claim is liable for its distribution, exactly as in republishing any content." },
+        { q: "What should I do if AI defames me?", a: "Document the full output, the query and the date; check whether it is distributed; use the platform's reporting and correction mechanisms; and if a person distributed it — consider action against them. Consult — this is a developing area." }
+      ],
+    },
+
+    deepfakeDefamation: {
+      title: "Deepfakes and Defamation — Fabricated AI-Generated Publications and Legal Tools",
+      metaTitle: "Deepfakes and Defamation | AI Forgery | HY Law",
+      metaDesc: "A fabricated AI-generated video, image or recording showing you doing something you never did? Which legal tools are available to you — defamation, privacy and more.",
+      intro: "Deepfake technology makes it possible to produce convincing fabricated videos, images and recordings, in which a person 'appears' or 'is heard' saying or doing things they never said or did. When such a forgery is defamatory — showing a person committing a shameful, criminal or humiliating act — the harm to their good name can be especially severe, because of the ostensible credibility of visual 'documentation.' This guide explains which legal tools are available to someone harmed by a defamatory deepfake — beyond defamation — and how to act.",
+      sections: [
+        {
+          heading: "1. A Defamatory Deepfake as Defamation",
+          body: "When a deepfake shows a person committing an act they did not commit — in a way that disgraces them, attributes an offense to them, or harms their job and business — the elements of defamation are present: 'publication' of false, disgracing content about an identifiable person. In fact, a deepfake may be especially severe: unlike a verbal statement, visual or audio 'documentation' is perceived as credible and convincing, so the harm and the spread may be greater. The fact that the content is fabricated does not weaken the defamation cause of action — on the contrary, the falsehood is the heart of the matter. Creating the forgery with intent to harm may also bear on the severity of the act and the compensation."
+        },
+        {
+          heading: "2. Legal Tools Beyond Defamation",
+          body: "A defamatory deepfake may be accompanied by additional torts that expand the toolbox: the Protection of Privacy Law, 5741-1981 may apply — for example, in using a person's likeness or voice, or in a publication liable to humiliate them; in a commercial context, commercial torts may apply (such as false description, if the forgery harms a business); and in serious cases criminal aspects may also exist. Combining the causes of action gives the injured party more than one angle of attack, and sometimes strengthens the available remedies — including an order to remove the content and compensation. Choosing the right combination of causes depends on the forgery's content and the circumstances."
+        },
+        {
+          heading: "3. The Challenge of Evidence and Verification",
+          body: "A central challenge in a deepfake is evidentiary — from two directions. On the injured party's side: one must prove the content is fabricated, which may require technical analysis of the forgery. On the other hand, the prevalence of deepfakes also creates a reverse risk — the claim that 'everything is fabricated' may be used to deny genuine documentation. So, in a deepfake case, it is especially important to: fully document the fabricated publication and the scope of its distribution; preserve evidence that the event did not occur (for example, an alibi, the source of the original image); and, in appropriate cases, use a technical examination. Establishing the forgery is a central component of the case."
+        },
+        {
+          heading: "4. Harmed by a Deepfake? Here's What to Do",
+          body: "If a defamatory deepfake was published about you: first, document immediately — save the video/image/recording, the place of publication, and the scope of distribution, before the content is removed or spread further. Second, act quickly for removal — approach the platform (many prohibit harmful deepfakes) and a warning letter to the publisher. Third, consider a request for an injunction to remove it, given the severity of the harm. Fourth, collect evidence that the event is fabricated. Fifth, consult quickly — combining the causes of action (defamation, privacy and more) and the remedies requires a tailored strategy. Speed of response is critical because of the viral potential of fabricated visual content."
+        }
+      ],
+      checklist: [
+        "Document the full forgery, the place of publication and the scope of distribution immediately",
+        "Preserve evidence that the event is fabricated (alibi, original source)",
+        "Approach the platform for removal — many prohibit harmful deepfakes",
+        "Consider a warning letter and an injunction request given the severity",
+        "Examine additional causes — privacy protection, commercial torts",
+        "Act quickly — fabricated visual content has viral potential"
+      ],
+      pitfalls: [
+        "Assuming the forgery is 'self-evident' — you must prove the content is fabricated",
+        "Delay in responding while the forgery spreads",
+        "Relying on defamation alone without adjacent torts",
+        "Failing to preserve evidence that the event did not occur",
+        "Failing to document the forgery before it is removed or spread further"
+      ],
+      faq: [
+        { q: "A fabricated deepfake showing me — is that defamation?", a: "Yes, if it is false, disgracing and identifies you. In fact a visual forgery may be especially severe because it is perceived as credible. The falsehood does not weaken the cause of action — it is the heart of the matter." },
+        { q: "What legal tools are there beyond defamation?", a: "The Protection of Privacy Law may apply (use of likeness/voice), and in a business context — commercial torts. In serious cases criminal aspects too. Combining the causes strengthens the remedies." },
+        { q: "How do you prove a video is a deepfake?", a: "Technical analysis of the forgery may be required, alongside evidence that the event did not occur (an alibi, the source of the original image). Establishing the forgery is a central component of the case." },
+        { q: "What should I do immediately if a deepfake of me is published?", a: "Document the forgery and the scope of distribution immediately, approach the platform for removal, consider a warning letter and an injunction, and collect evidence of fabrication. Act quickly — fabricated content has viral potential." }
       ],
     },
   },

@@ -53,7 +53,15 @@ type ArticleKey =
   | "defamationSmallClaims"
   | "defamationEvidence"
   | "defamationInjunction"
-  | "criminalDefamation";
+  | "criminalDefamation"
+  | "defamationPrecedents"
+  | "groupDefamation"
+  | "freeSpeechVsReputation"
+  | "deceasedDefamation"
+  | "republishingDefamation"
+  | "platformAdminLiability"
+  | "aiDefamation"
+  | "deepfakeDefamation";
 
 const SLUG_MAP: Record<string, ArticleKey> = {
   "ai-copyright-israel": "aiCopyright",
@@ -103,6 +111,14 @@ const SLUG_MAP: Record<string, ArticleKey> = {
   "defamation-evidence": "defamationEvidence",
   "defamation-injunction": "defamationInjunction",
   "criminal-defamation": "criminalDefamation",
+  "defamation-precedents": "defamationPrecedents",
+  "group-defamation": "groupDefamation",
+  "free-speech-vs-reputation": "freeSpeechVsReputation",
+  "deceased-defamation": "deceasedDefamation",
+  "republishing-defamation": "republishingDefamation",
+  "platform-admin-liability": "platformAdminLiability",
+  "ai-defamation": "aiDefamation",
+  "deepfake-defamation": "deepfakeDefamation",
 };
 
 const PillarArticle = () => {
