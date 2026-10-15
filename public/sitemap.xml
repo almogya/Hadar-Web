@@ -1455,5 +1455,23 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/he/insights/ai-trademark-registration</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/ai-trademark-registration"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/ai-trademark-registration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/ai-trademark-registration"/>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ai-lawyer.co.il/en/insights/ai-trademark-registration</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ai-lawyer.co.il/en/insights/ai-trademark-registration"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ai-lawyer.co.il/he/insights/ai-trademark-registration"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ai-lawyer.co.il/he/insights/ai-trademark-registration"/>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>

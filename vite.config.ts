@@ -115,6 +115,7 @@ export default defineConfig(({ mode, isSsrBuild }) => ({
         "/insights/platform-admin-liability",
         "/insights/ai-defamation",
         "/insights/deepfake-defamation",
+        "/insights/ai-trademark-registration",
         "/fee-calculator",
         "/contact",
         "/thank-you",

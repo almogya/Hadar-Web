@@ -759,6 +759,14 @@ export const en = {
         pillar: true,
         slug: "deepfake-defamation",
       },
+      {
+        title: "Filing a Trademark Application with the Help of AI? Everything You Need to Know",
+        excerpt: "Can you file a trademark application yourself with ChatGPT? Seven things to know — from database searches to renewal — and when to involve a lawyer from the start.",
+        date: "October 2026",
+        category: "trademarks",
+        pillar: true,
+        slug: "ai-trademark-registration",
+      },
     ],
   },
 
@@ -3019,6 +3027,75 @@ export const en = {
         { q: "How do you prove a video is a deepfake?", a: "Technical analysis of the forgery may be required, alongside evidence that the event did not occur (an alibi, the source of the original image). Establishing the forgery is a central component of the case." },
         { q: "What should I do immediately if a deepfake of me is published?", a: "Document the forgery and the scope of distribution immediately, approach the platform for removal, consider a warning letter and an injunction, and collect evidence of fabrication. Act quickly — fabricated content has viral potential." }
       ],
+    },
+    aiTrademarkFiling: {
+      title: "Filing a Trademark Application with the Help of AI? Everything You Need to Know",
+      metaTitle: "Registering a Trademark with AI | 7 Things to Know | HY Law",
+      metaDesc: "Filing a trademark application yourself with ChatGPT or another language model? Seven things to know: database searches, Nice classification, the Madrid Protocol, deadlines and renewal — and when to call a lawyer.",
+      intro: "You have decided to protect your business name or logo, settled on the details of the mark and are ready to file your first trademark application. Now the questions arise: can you file the application yourself? How can artificial intelligence help along the way? At what stage do you need a lawyer? And what does Madrid have to do with it? Adv. Hadar Yatzkan brings some order to one of the most sensitive processes in any business. Trademark registration is one of the main tools a business has for protecting its intellectual property. For years, registration was seen as a costly process, accessible mainly to businesses with resources. But an application can also be filed independently, without a lawyer, and AI tools make that option more accessible than ever.",
+      sections: [
+        {
+          heading: "What is a trademark and what does it do?",
+          body: "A trademark is the shield (the intellectual property) of every business. Its main role is to keep customers from being misled about the source of a product or service, and to protect your reputation from competitors. Contrary to popular belief, many marks are registered for words alone (a word mark), not necessarily for a logo (a figurative mark). Protection can be sought for different types of marks, covering a wide range of goods and services. The scope of registration is determined by the intended use of the mark in the market, and may also cover fields in which the mark is intended to be used in the future. Remember: a registration that has not been used in good faith for three years is exposed to a cancellation request.",
+        },
+        {
+          heading: "Trademark registration in a few prompts?",
+          body: "When a language model (a chatbot such as ChatGPT) is available to anyone, it is easy to think that registering a trademark is a matter of a few prompts. But a process that looks simple at first may turn out to be complex, and to require practical knowledge, among other things in filling out the forms. So if you have decided to file a trademark application yourself with the help of AI, here are seven things you should know.",
+        },
+        {
+          heading: "1. Searching trademark databases in Israel and worldwide",
+          body: "At the time of writing, you should not assume that the language model has access to the Israeli search databases on the website of the Registrar of Patents, Designs and Trademarks, or to the international trademark databases of the World Intellectual Property Organization (WIPO). So before turning to a language model, run a manual search in the official databases, and look for similar marks, not just identical ones. And note: even if the search turns up nothing, a mark that merely describes the product or service (for example, \"Sweet on the Hill\" for a patisserie) may be refused because it lacks distinctive character.",
+        },
+        {
+          heading: "2. Consider a paid language model",
+          body: "Once you have confirmed that no identical or similar mark exists, you can use a language model, and it is worth considering a paid one. For example, to get a simple explanation of a form field, or a preliminary check of whether the name you chose is descriptive. This expense may save part of the cost of legal services. However, even advanced models may produce wrong information or sources that do not exist, so verify the sources behind every answer.",
+        },
+        {
+          heading: "3. Using screenshots during the registration process",
+          body: "You can give the model screenshots documenting the steps of the process. Presenting the information this way may allow the model to interpret it more accurately than a verbal description alone. In some cases, the model's understanding of the information in a screenshot may be considerably better than its understanding of a verbal explanation.",
+        },
+        {
+          heading: "4. Specifying goods and services, and the Madrid Protocol",
+          body: "Trademark registration does not provide protection for all goods and services, only for those specified in the application, according to a uniform international classification (the Nice Classification). It is therefore recommended to use the WIPO tool, which lists the terms accepted for registration by the Israeli Trademarks Registrar. And what about Madrid? The Protocol, named after the city where it was signed, makes it possible to file, based on an Israeli application or registration, a single international application covering several countries.",
+        },
+        {
+          heading: "5. Received a notice from the examiner? It's not the end",
+          body: "The examiner on behalf of the Trademarks Registrar checks whether the application meets the conditions for registration. A notice of reasons why the application cannot be accepted, or of additional requirements and conditions, is not the end of the process. But watch the clock: you have three months to file a reasoned response, otherwise the application will be deemed abandoned (an extension may be requested for reasonable cause). At this stage it is possible, and even recommended, to get help from a lawyer.",
+        },
+        {
+          heading: "6. Acceptance of the mark is not final registration",
+          body: "After acceptance (approval of the application in examination), the application is published on the Registrar's website (the \"Trademarks Journal\"), and from the date of publication anyone has three months to file an opposition. Only if no opposition is filed, or it is decided in your favor, will the mark be registered.",
+        },
+        {
+          heading: "7. Tracking the renewal date",
+          body: "A registration is valid for ten years from the filing date of the application, not from the date registration was completed. The renewal request is filed in the three months before expiry. On the filing date itself, set a reminder for 9 years and 9 months ahead, using several channels: your phone calendar, email and another person. Missed it? There is a six-month grace period for an additional fee, after which the mark will be removed from the register.",
+        },
+        {
+          heading: "When should you consult a lawyer from the start?",
+          body: "It is not only the size of the business that matters. It is worth consulting in advance when you are a medium or large company, when the brand is a core asset of the business, when the name may be considered descriptive, or when activity abroad is planned. A registration that is inaccurate or too narrow in scope may not provide the protection it was sought for. Saving on registration costs in the short term may therefore lead to exposure and greater expenses later on.",
+        },
+      ],
+      checklist: [
+        "Search the Registrar's and WIPO's databases manually — for similar marks, not just identical ones",
+        "Check that the name does not merely describe the product or service",
+        "Verify the sources behind every answer the language model gives",
+        "Specify goods and services according to the Nice Classification, using the WIPO tool",
+        "Respond to an examiner's notice within three months",
+        "On the filing date, set a renewal reminder for 9 years and 9 months ahead",
+      ],
+      pitfalls: [
+        "Assuming the language model has access to trademark databases",
+        "Relying on sources the model produced without verifying them",
+        "Treating acceptance as final registration — there are still three months for oppositions",
+        "Counting the renewal date from completion of registration rather than from the filing date",
+        "Not using the registered mark in good faith for three years",
+      ],
+      links: [
+        { label: "Israeli Trademarks Registrar database", url: "https://trademarks.justice.gov.il/TradeMarkSearch/TradeMarkSearch?lang=he" },
+        { label: "WIPO Global Brand Database", url: "https://branddb.wipo.int/en/similarname?sort=score%20desc&start=0&rows=30&asStructure=%7B%22boolean%22:%22AND%22,%22bricks%22:%5B%5D%7D&_=1792054574089" },
+        { label: "WIPO goods and services tool (MGS)", url: "https://webaccess.wipo.int/mgs/" },
+      ],
+      authorNote: "Edited by Adv. Hadar Yatzkan. Nothing in this article constitutes legal advice or a substitute for case-specific review.",
     },
   },
 

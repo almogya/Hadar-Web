@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { CheckCircle, AlertTriangle } from "lucide-react";
+import { CheckCircle, AlertTriangle, ExternalLink } from "lucide-react";
 import Layout from "@/components/Layout";
 import SEOHead from "@/components/SEOHead";
 import ArticleCTA from "@/components/ArticleCTA";
@@ -61,7 +61,8 @@ type ArticleKey =
   | "republishingDefamation"
   | "platformAdminLiability"
   | "aiDefamation"
-  | "deepfakeDefamation";
+  | "deepfakeDefamation"
+  | "aiTrademarkFiling";
 
 const SLUG_MAP: Record<string, ArticleKey> = {
   "ai-copyright-israel": "aiCopyright",
@@ -119,6 +120,7 @@ const SLUG_MAP: Record<string, ArticleKey> = {
   "platform-admin-liability": "platformAdminLiability",
   "ai-defamation": "aiDefamation",
   "deepfake-defamation": "deepfakeDefamation",
+  "ai-trademark-registration": "aiTrademarkFiling",
 };
 
 const PillarArticle = () => {
@@ -257,6 +259,27 @@ const PillarArticle = () => {
                 ))}
               </div>
             </div>
+          )}
+
+          {/* Useful links */}
+          {"links" in article && article.links.length > 0 && (
+            <div className="mt-12">
+              <h2 className="section-h2 font-display font-semibold text-foreground mb-6">{isHe ? "קישורים שימושיים" : "Useful Links"}</h2>
+              <ul className="space-y-3">
+                {article.links.map((link) => (
+                  <li key={link.url}>
+                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-accent hover:underline">
+                      <ExternalLink size={14} className="shrink-0" />
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {"authorNote" in article && (
+            <p className="mt-10 text-sm text-muted-foreground italic">{article.authorNote}</p>
           )}
 
           {/* CTA */}
